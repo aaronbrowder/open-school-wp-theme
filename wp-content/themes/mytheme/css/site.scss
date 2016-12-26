@@ -1,0 +1,299 @@
+////////////////////////////////////////
+// Variables
+$header-font-family: 'Roboto Condensed',
+sans-serif;
+$green: #009102;
+$dark-green: #007A02;
+$faded-green: #288529;
+$green-background: url(/wp-content/themes/mytheme/images/green5.jpg);
+$dark-green-background: url(/wp-content/themes/mytheme/images/green6.jpg);
+////////////////////////////////////////
+// Globals
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin-top: 0;
+    font-family: $header-font-family;
+    font-weight: bold;
+    color: #333;
+}
+
+h1,
+h2 {
+    margin-top: 30px;
+}
+
+a {
+    font-weight: bold;
+    color: $green;
+    &:hover,
+    &:focus {
+        color: $dark-green;
+    }
+}
+
+// Override Bootstrap's default container.
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+////////////////////////////////////////
+// Wordpress stuff
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.size-full {
+    max-width: 100%;
+    height: auto;
+}
+
+////////////////////////////////////////
+// Nav
+.site-masthead-wrapper {
+    height: 41px;
+}
+
+.site-main-masthead,
+.site-sub-masthead {
+    font-family: $header-font-family;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
+}
+
+.site-nav-divider {
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.site-main-masthead {
+    background: $dark-green-background;
+    .menu {
+        float: right;
+    }
+}
+
+.site-sub-masthead {
+    background: $green-background;
+    nav {
+        margin-right: -5px;   
+    }
+    .menu-item a {
+        padding: 10px 15px;
+    }
+}
+
+nav {
+    .header-logo {
+        display: inline-block;
+        margin-top: 5px;
+    }
+    .menu {
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+    .menu-item {
+        position: relative;
+        display: inline-block;
+        a {
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+            display: inline-block;
+            padding: 10px;
+            font-size: 110%;
+            text-transform: uppercase;
+            &:hover,
+            &:focus {
+                color: #8FEA8A;
+                text-decoration: none;
+            }
+        }
+    }
+    .current-menu-item {
+        pointer-events: none;
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            margin-left: -5px;
+            vertical-align: middle;
+            content: " ";
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #fff;
+            border-left: 5px solid transparent;
+        }
+        &.has-children:after {
+            border-bottom-color: #658764;
+        }
+    }
+}
+
+////////////////////////////////////////
+// Home page
+.site-home {
+    a {
+        display: inline-block;
+    }
+}
+
+.site-home-title {
+    margin: auto;
+    max-width: 660px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+    h2 {
+        margin-top: 40px;
+        font-family: $header-font-family;
+        font-size: 32px;
+    }
+    p {
+        font-size: 18px;
+        text-align: justify;
+        strong {
+            color: #000;
+            font-weight: normal;
+        }
+    }
+}
+
+.site-home-video {
+    float: left;
+    iframe {
+        width: 660px !important;
+        height: 371px !important;
+    }
+}
+
+.site-home-announcements {
+    overflow: hidden;
+}
+
+.site-home-announcement {
+    margin-left: 32px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        background: $green-background;
+        text-shadow: 1px 1px 1px #000;
+        color: #fff;
+        padding: 7px 10px;
+        text-transform: uppercase;
+    }
+}
+
+.site-home-subbanners-wrapper {
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.site-home-subbanners {
+    margin-left: -1.6%;
+    margin-right: -3.2%;
+}
+
+.site-home-subbanner {
+    float: left;
+    text-align: center;
+    width: 32.8%;
+    padding: 0 1.8%;
+    img {
+        width: 100%;
+    }
+    .caption {
+        margin-top: 15px;
+        text-align: left;
+    }
+}
+
+////////////////////////////////////////
+// Pages
+.site-page {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.site-page-title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: $faded-green;
+}
+
+.site-page-title-prefix {
+    color: #888;
+}
+
+.site-page-meta {
+    margin-bottom: 20px;
+    color: #999;
+}
+
+////////////////////////////////////////
+// Footer
+.site-footer {
+    //background: $dark-green-background;
+    background: #333;
+    color: #bbb;
+    padding-top: 60px;
+    padding-bottom: 45px;
+}
+
+.site-footer-contact {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: #ddd;
+        text-transform: uppercase;
+    }
+    a {
+        color: #ddd;
+    }
+}
+
+.site-footer-contact {
+    float: left;
+    width: 50%;
+}
+
+.site-footer-social {
+    overflow: hidden;
+    text-align: right;
+}
