@@ -1,21 +1,21 @@
 /*
-Error: Inconsistent indentation: "\t   " was used for indentation, but the rest of the document was indented using 3 spaces.
-        on line 10 of /home/ubuntu/workspace/wp-content/themes/mytheme/index.php
+Error: Inconsistent indentation: 7 spaces were used for indentation, but the rest of the document was indented using 3 spaces.
+        on line 22 of /home/ubuntu/workspace/wp-content/themes/mytheme/front-page.php
 
-5: if (have_posts()) {
-6:    
-7:    while (have_posts()) {
-8:       
-9:       the_excerpt();
-10: 	   get_template_part('content', get_post_format());
-11: 	   
-12:    } ?>
-13:    
-14:    <nav>
-15:    	<ul class="pager">
+17:          <div class="site-home-announcement"><?php echo get_option('announcement4') ?></div>
+18:       </div>
+19:    </div>
+20:    
+21:    <div class="site-home-subbanners-wrapper">
+22:        <div class="container">
+23:            <div class="site-home-subbanners">
+24:              <div class="site-home-subbanner">
+25:                 <img src="<?php echo wp_get_attachment_url(get_option('subbanner1-image-attachment-id')); ?>">
+26:                 <div class="caption"><?php echo get_option('subbanner1-caption'); ?></div>
+27:              </div>
 
 Backtrace:
-/home/ubuntu/workspace/wp-content/themes/mytheme/index.php:10
+/home/ubuntu/workspace/wp-content/themes/mytheme/front-page.php:22
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:486:in `block in tabulate'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:444:in `each'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:444:in `each_with_index'
@@ -37,4 +37,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Inconsistent indentation: \"\t   \" was used for indentation, but the rest of the document was indented using 3 spaces.\A         on line 10 of /home/ubuntu/workspace/wp-content/themes/mytheme/index.php\A \A 5: if (have_posts()) {\A 6:    \A 7:    while (have_posts()) {\A 8:       \A 9:       the_excerpt();\A 10: 	   get_template_part('content', get_post_format());\A 11: 	   \A 12:    } ?>\A 13:    \A 14:    <nav>\A 15:    	<ul class=\"pager\">"; }
+  content: "Error: Inconsistent indentation: 7 spaces were used for indentation, but the rest of the document was indented using 3 spaces.\A         on line 22 of /home/ubuntu/workspace/wp-content/themes/mytheme/front-page.php\A \A 17:          <div class=\"site-home-announcement\"><?php echo get_option('announcement4') ?></div>\A 18:       </div>\A 19:    </div>\A 20:    \A 21:    <div class=\"site-home-subbanners-wrapper\">\A 22:        <div class=\"container\">\A 23:            <div class=\"site-home-subbanners\">\A 24:              <div class=\"site-home-subbanner\">\A 25:                 <img src=\"<?php echo wp_get_attachment_url(get_option('subbanner1-image-attachment-id')); ?>\">\A 26:                 <div class=\"caption\"><?php echo get_option('subbanner1-caption'); ?></div>\A 27:              </div>"; }
