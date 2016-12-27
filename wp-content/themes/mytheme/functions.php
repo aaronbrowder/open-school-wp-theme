@@ -4,7 +4,7 @@
 // Add scripts and stylesheets
 add_action('wp_enqueue_scripts', 'mytheme_scripts');
 function mytheme_scripts() {
-   wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6');
+   //wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6');
 	wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');
 	wp_enqueue_style('icons', get_template_directory_uri() . '/css/icons.css');
 	wp_enqueue_script('context-menu', get_template_directory_uri() . '/js/context-menu.js');
@@ -263,7 +263,7 @@ function get_page_id($menu_item) {
 function page_number() {
    global $paged;
    if ($paged > 1) { ?>
-      <span class="site-text-light">
+      <span class="text-light">
          &middot; Page <?php echo $paged; ?>
       </span>
    <?php }

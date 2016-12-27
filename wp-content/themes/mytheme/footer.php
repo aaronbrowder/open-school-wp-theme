@@ -1,6 +1,6 @@
-      <footer class="site-footer">
+      <footer class="footer">
          <div class="container">
-            <div class="site-footer-contact">
+            <div class="footer-contact">
                <h4>The Open School</h4>
                <p>
                   681 N. Rancho Santiago Blvd.
@@ -12,7 +12,7 @@
                </p>
                <p><a href="#">Contact Us</a></p>
             </div>
-            <div class="site-footer-social">
+            <div class="footer-social">
                <a href="<?php echo get_option('facebook') ?>" target="_blank" class="social-link">
                   <span class="icon icon-facebook"></span>
                </a>

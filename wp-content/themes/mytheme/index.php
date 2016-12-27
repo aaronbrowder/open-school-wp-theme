@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 	<div class="container">
-		<div class="row">
-		   <div class="col-sm-8">
-		      
+		<div class="column">
+		   <div class="page">
+   		      
       		<?php if (have_posts()) { ?>
       		   
       		   <h1>
       		      Blog
-      		      <span class="site-text-light">
+      		      <span class="text-light">
       		         &middot; The Open School
    		         </span>
       		      <?php
@@ -21,7 +21,7 @@
       				get_template_part('content', get_post_format());
       			} ?>
       			
-               <nav class="site-blog-paginator">
+               <nav class="blog-paginator">
                	<ul>
                		<li><?php next_posts_link('&laquo; Earlier Posts'); ?></li>
                		<li><?php previous_posts_link('Later Posts &raquo;'); ?></li>
@@ -30,7 +30,7 @@
       
       		<?php } ?>
       		
-         </div>
+   		</div>
 		</div>
 	</div>
 

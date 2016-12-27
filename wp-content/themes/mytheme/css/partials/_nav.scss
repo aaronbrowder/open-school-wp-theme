@@ -1,0 +1,125 @@
+@import '_variables.scss';
+.masthead-wrapper {
+   height: 39px;
+}
+
+.main-masthead,
+.sub-masthead {
+   font-family: $header-font-family;
+   font-weight: bold;
+   position: fixed;
+   width: 100%;
+}
+
+.nav-divider {
+   position: fixed;
+   width: 100%;
+   z-index: 100000;
+   box-shadow: 0 0 2px 1px #fff;
+}
+
+.main-masthead {
+   background: $header-background-dark;
+   z-index: 100002;
+   .menu {
+      float: right;
+   }
+   .menu-item a {
+      padding: 10px;
+   }
+}
+
+.sub-masthead {
+   background: $header-background-light;
+   box-shadow: 0 0 1px 1px #fff;
+   z-index: 100001;
+   nav {
+      margin-left: -5px;
+   }
+   .menu-item a {
+      padding: 8px 15px;
+   }
+}
+
+@mixin menu-item-with-arrow {
+   &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-left: -5px;
+      vertical-align: middle;
+      content: " ";
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #fff;
+      border-left: 5px solid transparent;
+   }
+}
+
+.masthead-wrapper nav {
+   .header-logo {
+      display: inline-block;
+      margin-top: 5px;
+   }
+   .menu {
+      margin: 0;
+      padding: 0;
+   }
+   .menu-item {
+      position: relative;
+      display: inline-block;
+      a {
+         color: #fff;
+         text-shadow: 1px 1px 1px #000;
+         display: inline-block;
+         font-size: 105%;
+         text-transform: uppercase;
+         &:hover,
+         &:focus {
+            color: $light-green;
+            text-decoration: none;
+         }
+      }
+      &.has-children:hover {
+         @include menu-item-with-arrow;
+      }
+   }
+   .current-menu-item {
+      @include menu-item-with-arrow;
+      &.has-children {
+         &:after {
+            border-bottom-color: #658764;
+         }
+      }
+   }
+   .context-menu {
+      display: none;
+      position: absolute;
+      min-width: 100%;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid #fff;
+   }
+   .context-menu-item {
+      background: #fff;
+      border: 1px solid #fff;
+      border-bottom: none;
+      display: block;
+      text-align: left;
+      white-space: nowrap;
+      border-bottom: 1px solid #d9d9d9;
+      border-right: 1px solid #d9d9d9;
+      box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35);
+      a {
+         display: inline-block;
+         width: 100%;
+         color: #444;
+         text-shadow: none;
+         padding: 7px 10px;
+         &:hover {
+            color: $green;
+         }
+      }
+   }
+}

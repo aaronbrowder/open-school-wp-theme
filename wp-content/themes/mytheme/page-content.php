@@ -1,4 +1,4 @@
-<div class="site-page">
+<div class="page">
     
    <?php
    
@@ -21,10 +21,10 @@
    
    ?>
     
-   <h2 class="site-page-title">
-      <span class="site-text-light"><?php echo $title_prefix; ?></span>
-      <?php the_title(); ?>
-   </h2>
+   <h1 class="page-title">
+      <span class="text-light"><?php echo $title_prefix; ?></span>
+      <span class="text-light-green"><?php the_title(); ?></span>
+   </h1>
    
    <?php the_content(); ?>
     

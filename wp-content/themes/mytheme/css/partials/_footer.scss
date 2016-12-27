@@ -1,0 +1,46 @@
+@import '_variables.scss';
+.footer {
+   background: #333;
+   color: #aaa;
+   padding-top: 60px;
+   padding-bottom: 45px;
+}
+
+.footer-contact {
+   h1,
+   h2,
+   h3,
+   h4,
+   h5 {
+      color: #ccc;
+      text-transform: uppercase;
+   }
+   a {
+      color: #ccc;
+      &:hover,&:focus {
+         color: #fff;
+      }
+   }
+}
+
+.footer-contact {
+   float: left;
+   width: 50%;
+}
+
+.footer-social {
+   overflow: hidden;
+   text-align: right;
+   margin-right: 10px;
+   .social-link {
+      color: #ddd;
+      font-size: 32px;
+      display: inline-block;
+      margin: 0 7px;
+      &:hover,
+      &:focus {
+         color: $light-green;
+         text-decoration: none;
+      }
+   }
+}

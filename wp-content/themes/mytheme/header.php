@@ -31,10 +31,10 @@
       $current_sub_menu_items;
       ?>
 
-      <div class="site-masthead-wrapper">
-         <div class="site-main-masthead">
+      <div class="masthead-wrapper">
+         <div class="main-masthead">
             <div class="container">
-               <nav class="site-nav">
+               <nav>
                   
                   <a class="header-logo" href="/">
                      <img height="30" src="<?php echo wp_get_attachment_url(get_option('header-logo-image-attachment-id')); ?>" alt="The Open School"/>
@@ -85,10 +85,10 @@
       </div>
       
       <?php if (!empty($current_sub_menu_items)) { ?>
-         <div class="site-masthead-wrapper">
-            <div class="site-sub-masthead">
+         <div class="masthead-wrapper">
+            <div class="sub-masthead">
                <div class="container">
-                  <nav class="site-nav">
+                  <nav>
                      <ul class="menu">
                         <?php foreach ($current_sub_menu_items as $item):
                            $id = get_page_id($item);
@@ -110,6 +110,6 @@
       <?php }
       
       if (empty($current_sub_menu_items)) { ?>
-         <div class="site-nav-divider"></div>
+         <div class="nav-divider"></div>
       <?php } ?>
    

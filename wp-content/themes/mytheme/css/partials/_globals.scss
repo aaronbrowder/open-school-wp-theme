@@ -1,0 +1,71 @@
+@import '_variables.scss';
+body {
+   font-family: 'Open Sans', Helvetica, sans-serif;
+   font-size: 15px;
+   color: #444;
+   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+   margin-top: 20px;
+   margin-bottom: 10px;
+   font-family: $header-font-family;
+   font-weight: bold;
+   color: #333;
+   line-height: 1.1;
+}
+
+h1 {
+   font-size: 36px;
+}
+
+h2 {
+   font-size: 30px;
+}
+
+h3 {
+   font-size: 24px;
+}
+
+h4 {
+   font-size: 18px;
+}
+
+a {
+   text-decoration: none;
+   font-weight: bold;
+   color: $green;
+   &:hover,
+   &:focus {
+      color: #000;
+      text-decoration: none;
+   }
+}
+
+.text-light {
+   color: #888;
+}
+
+.text-light-green {
+   color: $faded-green;
+}
+
+.container {
+   margin: auto;
+   padding: 0 15px;
+   @media (min-width: 1200px) {
+      width: 1000px;
+   }
+   &:after {
+      clear: both;
+      display: table;
+      content: ' ';
+   }
+}
+
+.column {
+   max-width: 700px;
+}
