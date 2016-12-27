@@ -249,7 +249,7 @@ function embed_video($video_url) {
    }
 }
 
-// Menu structure helpers
+// Helpers
 function get_menu_items() {
    $locations = get_nav_menu_locations();
    $menu = wp_get_nav_menu_object($locations['main-menu']);
@@ -258,4 +258,13 @@ function get_menu_items() {
 
 function get_page_id($menu_item) {
    return get_post_meta($menu_item->ID, '_menu_item_object_id', true);
+}
+
+function page_number() {
+   global $paged;
+   if ($paged > 1) { ?>
+      <span class="site-text-light">
+         &middot; Page <?php echo $paged; ?>
+      </span>
+   <?php }
 }

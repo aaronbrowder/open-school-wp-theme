@@ -9,18 +9,15 @@
    <p>
       <?php 
       the_date();
-      //blog_post_meta();
-      ?>
+      $comments_number = get_comments_number();
+      if ($comments_number > 0) { ?>
+         &middot;
+         <a href="<?php comments_link(); ?>">
+         	<?php	printf(_nx('One Comment', '%1$s Comments', $comments_number, 'comments title', 'textdomain'), number_format_i18n($comments_number)); ?>
+         </a>
+      <?php } ?>
    </p>
     
    <?php the_excerpt(); ?>
     
 </div>
-
-<?php function blog_post_meta() { ?>
-   by <a href="#"><?php the_author(); ?></a>
-   &middot;
-   <a href="<?php comments_link(); ?>">
-   	<?php	printf(_nx('One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'textdomain'), number_format_i18n(get_comments_number())); ?>
-   </a>
-<?php } ?>

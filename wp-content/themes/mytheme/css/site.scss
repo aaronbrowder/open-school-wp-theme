@@ -6,8 +6,10 @@ $green: #009102;
 $dark-green: #007A02;
 $light-green: #8FEA8A;
 $faded-green: #288529;
-$header-background-dark: url(/wp-content/themes/mytheme/images/green-dark.png);//#2D562A;
-$header-background-light: url(/wp-content/themes/mytheme/images/green-light.png);//#4D744A;
+$header-background-dark: url(/wp-content/themes/mytheme/images/green-dark.png),
+#2D562A;
+$header-background-light: url(/wp-content/themes/mytheme/images/green-light.png),
+#4D744A;
 ////////////////////////////////////////
 // Globals
 body {
@@ -43,8 +45,13 @@ a {
    color: $green;
    &:hover,
    &:focus {
-      color: $dark-green;
+      color: #000;
+      text-decoration: none;
    }
+}
+
+.site-text-light {
+   color: #888;
 }
 
 // Override Bootstrap's default container.
@@ -117,6 +124,22 @@ a {
    }
 }
 
+@mixin menu-item-with-arrow {
+   &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-left: -5px;
+      vertical-align: middle;
+      content: " ";
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #fff;
+      border-left: 5px solid transparent;
+   }
+}
+
 .site-nav {
    .header-logo {
       display: inline-block;
@@ -141,24 +164,13 @@ a {
             text-decoration: none;
          }
       }
+      &.has-children:hover {
+         @include menu-item-with-arrow;
+      }
    }
    .current-menu-item {
-      pointer-events: none;
-      &:after {
-         position: absolute;
-         bottom: 0;
-         left: 50%;
-         width: 0;
-         height: 0;
-         margin-left: -5px;
-         vertical-align: middle;
-         content: " ";
-         border-right: 5px solid transparent;
-         border-bottom: 5px solid #fff;
-         border-left: 5px solid transparent;
-      }
+      @include menu-item-with-arrow;
       &.has-children {
-         pointer-events: auto;
          &:after {
             border-bottom-color: #658764;
          }
@@ -179,10 +191,12 @@ a {
       display: block;
       text-align: left;
       white-space: nowrap;
-      border-bottom: 1px solid #ddd;
-      border-right: 1px solid #eee;
-      box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid #d9d9d9;
+      border-right: 1px solid #d9d9d9;
+      box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35);
       a {
+         display: inline-block;
+         width: 100%;
          color: #444;
          text-shadow: none;
          padding: 4px 10px;
@@ -288,13 +302,37 @@ a {
    color: $faded-green;
 }
 
-.site-page-title-prefix {
-   color: #888;
-}
-
 .site-page-meta {
    margin-bottom: 20px;
    color: #999;
+}
+
+////////////////////////////////////////
+// Blog
+.site-blog-paginator {
+   padding-top: 30px;
+   padding-bottom: 60px;
+   ul {
+      padding: 0;
+      margin: 0;
+      li {
+         display: inline-block;
+         margin-right: 10px;
+         a {
+            display: inline-block;
+            border: 1px solid #999;
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #333;
+            box-shadow: -2px 2px 2px #bbb;
+            &:hover,
+            &:focus {
+               background: #eee;
+               color: #000;
+            }
+         }
+      }
+   }
 }
 
 ////////////////////////////////////////

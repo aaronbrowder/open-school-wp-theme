@@ -27,7 +27,11 @@ a {
   font-weight: bold;
   color: #009102; }
   a:hover, a:focus {
-    color: #007A02; }
+    color: #000;
+    text-decoration: none; }
+
+.site-text-light {
+  color: #888; }
 
 @media (min-width: 1200px) {
   .container {
@@ -63,7 +67,7 @@ a {
   box-shadow: 0 0 2px 1px #fff; }
 
 .site-main-masthead {
-  background: url(/wp-content/themes/mytheme/images/green-dark.png);
+  background: url(/wp-content/themes/mytheme/images/green-dark.png), #2D562A;
   z-index: 100002; }
   .site-main-masthead .menu {
     float: right; }
@@ -71,7 +75,7 @@ a {
     padding: 10px; }
 
 .site-sub-masthead {
-  background: url(/wp-content/themes/mytheme/images/green-light.png);
+  background: url(/wp-content/themes/mytheme/images/green-light.png), #4D744A;
   box-shadow: 0 0 1px 1px #fff;
   z-index: 100001; }
   .site-sub-masthead nav {
@@ -97,9 +101,7 @@ a {
     .site-nav .menu-item a:hover, .site-nav .menu-item a:focus {
       color: #8FEA8A;
       text-decoration: none; }
-.site-nav .current-menu-item {
-  pointer-events: none; }
-  .site-nav .current-menu-item:after {
+  .site-nav .menu-item.has-children:hover:after {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -111,10 +113,20 @@ a {
     border-right: 5px solid transparent;
     border-bottom: 5px solid #fff;
     border-left: 5px solid transparent; }
-  .site-nav .current-menu-item.has-children {
-    pointer-events: auto; }
-    .site-nav .current-menu-item.has-children:after {
-      border-bottom-color: #658764; }
+.site-nav .current-menu-item:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  border-left: 5px solid transparent; }
+.site-nav .current-menu-item.has-children:after {
+  border-bottom-color: #658764; }
 .site-nav .context-menu {
   display: none;
   position: absolute;
@@ -129,10 +141,12 @@ a {
   display: block;
   text-align: left;
   white-space: nowrap;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #eee;
-  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2); }
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35); }
   .site-nav .context-menu-item a {
+    display: inline-block;
+    width: 100%;
     color: #444;
     text-shadow: none;
     padding: 4px 10px; }
@@ -177,7 +191,7 @@ a {
   .site-home-announcement h3,
   .site-home-announcement h4,
   .site-home-announcement h5 {
-    background: url(/wp-content/themes/mytheme/images/green-light.png);
+    background: url(/wp-content/themes/mytheme/images/green-light.png), #4D744A;
     text-shadow: 1px 1px 1px #000;
     color: #fff;
     padding: 7px 10px;
@@ -211,12 +225,29 @@ a {
   font-size: 40px;
   color: #288529; }
 
-.site-page-title-prefix {
-  color: #888; }
-
 .site-page-meta {
   margin-bottom: 20px;
   color: #999; }
+
+.site-blog-paginator {
+  padding-top: 30px;
+  padding-bottom: 60px; }
+  .site-blog-paginator ul {
+    padding: 0;
+    margin: 0; }
+    .site-blog-paginator ul li {
+      display: inline-block;
+      margin-right: 10px; }
+      .site-blog-paginator ul li a {
+        display: inline-block;
+        border: 1px solid #999;
+        border-radius: 8px;
+        padding: 12px 16px;
+        color: #333;
+        box-shadow: -2px 2px 2px #bbb; }
+        .site-blog-paginator ul li a:hover, .site-blog-paginator ul li a:focus {
+          background: #eee;
+          color: #000; }
 
 .site-footer {
   background: #333;

@@ -31,7 +31,7 @@ function registerEvents(menuItem, closeAllContextMenusCallback) {
             if (isClosing) {
                contextMenu.style.display = 'none';
             }
-         }, 150);
+         }, 50);
       });
    }
 }

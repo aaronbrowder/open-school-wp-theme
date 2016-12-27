@@ -22,7 +22,7 @@
    ?>
     
    <h2 class="site-page-title">
-      <span class="site-page-title-prefix"><?php echo $title_prefix; ?></span>
+      <span class="site-text-light"><?php echo $title_prefix; ?></span>
       <?php the_title(); ?>
    </h2>
    
