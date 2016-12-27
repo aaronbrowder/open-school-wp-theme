@@ -34,10 +34,10 @@
       <div class="site-masthead-wrapper">
          <div class="site-main-masthead">
             <div class="container">
-               <nav>
+               <nav class="site-nav">
                   
                   <a class="header-logo" href="/">
-                     <img height="30" src="<?php bloginfo('template_directory');?>/images/header-logo-small.png"/>
+                     <img height="30" src="<?php echo wp_get_attachment_url(get_option('header-logo-image-attachment-id')); ?>" alt="The Open School"/>
                   </a>
                   
                   <ul class="menu">
@@ -61,6 +61,20 @@
                            <a href="<?php echo $link; ?>">
                               <?php echo $item->title; ?>
                            </a>
+                           <?php if (!empty($children)) { ?>
+                              <ul class="context-menu">
+                                 <?php foreach ($children as $child) {
+                                    $child_id = get_page_id($child);
+                                    $child_link = get_page_link($child_id);
+                                    ?>
+                                    <li class="context-menu-item">
+                                       <a href="<?php echo $child_link; ?>">
+                                          <?php echo $child->title; ?>
+                                       </a>
+                                    </li>
+                                 <?php } ?>
+                              </ul>
+                           <?php } ?>
                         </li>
                            
                      <?php endforeach; ?>
@@ -74,16 +88,13 @@
          <div class="site-masthead-wrapper">
             <div class="site-sub-masthead">
                <div class="container">
-                  <nav>
+                  <nav class="site-nav">
                      <ul class="menu">
                         <?php foreach ($current_sub_menu_items as $item):
-                     
                            $id = get_page_id($item);
-                           $page = get_page($id);
                            $link = get_page_link($id);
                            $is_current = $id == $queried_object_id;
                            ?>
-                           
                            <li class="menu-item <?php echo ($is_current ? 'current-menu-item' : ''); ?>">
                               <a href="<?php echo $link; ?>">
                                  <?php echo $item->title; ?>
@@ -96,6 +107,9 @@
                </div>
             </div>
          </div>
-      <?php } ?>
+      <?php }
       
-      <div class="site-nav-divider"></div>
+      if (empty($current_sub_menu_items)) { ?>
+         <div class="site-nav-divider"></div>
+      <?php } ?>
+   

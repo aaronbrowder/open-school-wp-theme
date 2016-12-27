@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'icon';
+  src: url("/wp-content/themes/mytheme/css/fonts/icon/icon.eot");
+  src: url("/wp-content/themes/mytheme/css/fonts/icon/icon.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mytheme/css/fonts/icon/icon.woff") format("woff"), url("/wp-content/themes/mytheme/css/fonts/icon/icon.ttf") format("truetype"), url("/wp-content/themes/mytheme/css/fonts/icon/icon.svg#roboto_condensedbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 'icon';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; }
+
+.icon-facebook:before {
+  content: "\ea90"; }
+
+.icon-instagram:before {
+  content: "\ea92"; }
+
+.icon-twitter:before {
+  content: "\ea96"; }
+
+.icon-youtube:before {
+  content: "\ea9d"; }
+
+.icon-pinterest:before {
+  content: "\ead1"; }
+
+/*# sourceMappingURL=icons.css.map */

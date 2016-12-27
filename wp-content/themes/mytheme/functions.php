@@ -6,6 +6,8 @@ add_action('wp_enqueue_scripts', 'mytheme_scripts');
 function mytheme_scripts() {
    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6');
 	wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');
+	wp_enqueue_style('icons', get_template_directory_uri() . '/css/icons.css');
+	wp_enqueue_script('context-menu', get_template_directory_uri() . '/js/context-menu.js');
 }
 
 add_action('admin_enqueue_scripts', 'admin_scripts');
@@ -22,7 +24,9 @@ function admin_scripts() {
 add_action('wp_print_styles', 'mytheme_google_fonts');
 function mytheme_google_fonts() {
 	wp_register_style('RobotoCondensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed');
+	wp_register_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans');
 	wp_enqueue_style( 'RobotoCondensed');
+	wp_enqueue_style( 'OpenSans');
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -49,11 +53,15 @@ function image_attachment_callback($option_id) {
    $image_attachment_id = get_option($option_id);
    ?>
       <div class="image-preview-wrapper">
-   		<img class="image-preview" src="<?php echo wp_get_attachment_url($image_attachment_id); ?>" height="100">
+   		<img class="image-preview" src="<?php echo wp_get_attachment_url($image_attachment_id); ?>" height="100"/>
    	</div>
    	<input class="upload-image-button button" type="button" value="<?php _e('Select Image'); ?>" />
    	<input type="hidden" name="<?php echo $option_id; ?>" class="image-attachment-id" value="<?php echo $image_attachment_id; ?>">
    <?php
+}
+
+function header_logo_image_attachment_callback() { 
+   image_attachment_callback('header-logo-image-attachment-id');
 }
 
 function title_image_attachment_callback() { 
@@ -125,6 +133,8 @@ function edit_home_page_page_setup() {
    wp_enqueue_media();
    add_settings_section('content', 'Content', null, 'edit-home-page');
    
+   add_settings_field('header-logo-image-attachment-id', 'Header Logo Image', 'header_logo_image_attachment_callback', 'edit-home-page', 'content');
+
    add_settings_field('title-image-attachment-id', 'Title Image', 'title_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('title-tagline-header', 'Tagline Header', 'title_tagline_header_callback', 'edit-home-page', 'content');
    add_settings_field('title-tagline-text', 'Tagline Text', 'title_tagline_text_callback', 'edit-home-page', 'content');
@@ -142,6 +152,7 @@ function edit_home_page_page_setup() {
    add_settings_field('subbanner3-image-attachment-id', 'Sub-Banner 3', 'subbanner3_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner3-caption', 'Caption 3', 'subbanner3_caption_callback', 'edit-home-page', 'content');
    
+   register_setting('edit-home-page', 'header-logo-image-attachment-id');
    register_setting('edit-home-page', 'title-image-attachment-id');
    register_setting('edit-home-page', 'title-tagline-header');
    register_setting('edit-home-page', 'title-tagline-text');
@@ -159,40 +170,60 @@ function edit_home_page_page_setup() {
 }
 
 //////////////////////////////////////////////////////////////////////
-// Custom settings
-add_action('admin_menu', 'custom_settings_add_menu');
-function custom_settings_add_menu() {
-   add_menu_page('Custom_Settings', 'Custom Settings', 'manage_options', 'custom_settings', 'custom_settings_page', null, 99);
+// Edit footer
+add_action('admin_menu', 'edit_footer_add_menu');
+function edit_footer_add_menu() {
+   add_menu_page('Edit_Footer', 'Footer', 'manage_options', 'edit_footer', 'edit_footer_page', null, 4);
 }
 
-function custom_settings_page() { ?>
+function edit_footer_page() { ?>
    <div class="wrap">
-      <h1>Custom Settings</h1>
+      <h1>Edit Footer</h1>
       <form method="post" action="options.php">
          <?php
-            settings_fields('section');
-            do_settings_sections('theme-options');
+            settings_fields('edit-footer');
+            do_settings_sections('edit-footer');
             submit_button();
          ?>
       </form>
    </div>
 <?php }
 
-function setting_twitter() { ?>
-   <input type="text" name="twitter" id="twitter" value="<?php echo get_option('twitter') ?>"/>
+function facebook_callback() { ?>
+  <input type="text" name="facebook" size="70" value="<?php echo get_option('facebook'); ?>" />
 <?php }
 
-function setting_github() { ?>
-  <input type="text" name="github" id="github" value="<?php echo get_option('github'); ?>" />
+function twitter_callback() { ?>
+  <input type="text" name="twitter" size="70" value="<?php echo get_option('twitter'); ?>" />
 <?php }
 
-add_action('admin_init', 'custom_settings_page_setup');
-function custom_settings_page_setup() {
-   add_settings_section('section', 'All Settings', null, 'theme-options');
-   add_settings_field('twitter', 'Twitter URL', 'setting_twitter', 'theme-options', 'section');
-   add_settings_field('github', 'GitHub URL', 'setting_github', 'theme-options', 'section');
-   register_setting('section', 'twitter');
-   register_setting('section', 'github');
+function pinterest_callback() { ?>
+  <input type="text" name="pinterest" size="70" value="<?php echo get_option('pinterest'); ?>" />
+<?php }
+
+function instagram_callback() { ?>
+   <input type="text" name="instagram" size="70" value="<?php echo get_option('instagram') ?>"/>
+<?php }
+
+function youtube_callback() { ?>
+  <input type="text" name="youtube" size="70" value="<?php echo get_option('youtube'); ?>" />
+<?php }
+
+add_action('admin_init', 'edit_footer_page_setup');
+function edit_footer_page_setup() {
+   add_settings_section('content', 'Content', null, 'edit-footer');
+   
+   add_settings_field('facebook', 'Facebook URL', 'facebook_callback', 'edit-footer', 'content');
+   add_settings_field('twitter', 'Twitter URL', 'twitter_callback', 'edit-footer', 'content');
+   add_settings_field('pinterest', 'Pinterest URL', 'pinterest_callback', 'edit-footer', 'content');
+   add_settings_field('instagram', 'Instagram URL', 'instagram_callback', 'edit-footer', 'content');
+   add_settings_field('youtube', 'YouTube URL', 'youtube_callback', 'edit-footer', 'content');
+
+   register_setting('edit-footer', 'facebook');
+   register_setting('edit-footer', 'twitter');
+   register_setting('edit-footer', 'pinterest');
+   register_setting('edit-footer', 'instagram');
+   register_setting('edit-footer', 'youtube');
 }
 
 //////////////////////////////////////////////////////////////////////
