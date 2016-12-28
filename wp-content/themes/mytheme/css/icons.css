@@ -11,19 +11,22 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased; }
 
-.icon-facebook:before {
-  content: "\ea90"; }
-
-.icon-instagram:before {
-  content: "\ea92"; }
-
 .icon-twitter:before {
-  content: "\ea96"; }
+  content: "\f099"; }
 
-.icon-youtube:before {
-  content: "\ea9d"; }
+.icon-facebook:before {
+  content: "\f09a"; }
 
 .icon-pinterest:before {
-  content: "\ead1"; }
+  content: "\f0d2"; }
+
+.icon-youtube:before {
+  content: "\f167"; }
+
+.icon-instagram:before {
+  content: "\f16d"; }
+
+.icon-exclamation-circle:before {
+  content: "\f06a"; }
 
 /*# sourceMappingURL=icons.css.map */
