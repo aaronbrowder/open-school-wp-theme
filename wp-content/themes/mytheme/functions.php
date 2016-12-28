@@ -103,6 +103,10 @@ function subbanner_caption_callback($option_id) { ?>
    <textarea rows="7" cols="70" name="<?php echo $option_id; ?>"><?php echo get_option($option_id); ?></textarea>
 <?php }
 
+function subbanner0_image_attachment_callback() { 
+   image_attachment_callback('subbanner0-image-attachment-id');
+}
+
 function subbanner1_image_attachment_callback() { 
    image_attachment_callback('subbanner1-image-attachment-id');
 }
@@ -115,6 +119,14 @@ function subbanner3_image_attachment_callback() {
    image_attachment_callback('subbanner3-image-attachment-id');
 }
 
+function full_bleed_image_attachment_callback() { 
+   image_attachment_callback('full_bleed-image-attachment-id');
+}
+
+function subbanner0_caption_callback() {
+   subbanner_caption_callback('subbanner0-caption');
+}
+
 function subbanner1_caption_callback() {
    subbanner_caption_callback('subbanner1-caption');
 }
@@ -125,6 +137,10 @@ function subbanner2_caption_callback() {
 
 function subbanner3_caption_callback() {
    subbanner_caption_callback('subbanner3-caption');
+}
+
+function full_bleed_caption_callback() {
+   subbanner_caption_callback('full_bleed-caption');
 }
 
 add_action('admin_init', 'edit_home_page_page_setup');
@@ -144,12 +160,16 @@ function edit_home_page_page_setup() {
    add_settings_field('announcement3', 'Announcement 3', 'announcement3_callback', 'edit-home-page', 'content');
    add_settings_field('announcement4', 'Announcement 4', 'announcement4_callback', 'edit-home-page', 'content');
    
+   add_settings_field('subbanner0-image-attachment-id', 'Sub-Banner 0', 'subbanner0_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('subbanner0-caption', 'Caption 0', 'subbanner0_caption_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-image-attachment-id', 'Sub-Banner 1', 'subbanner1_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-caption', 'Caption 1', 'subbanner1_caption_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner2-image-attachment-id', 'Sub-Banner 2', 'subbanner2_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner2-caption', 'Caption 2', 'subbanner2_caption_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner3-image-attachment-id', 'Sub-Banner 3', 'subbanner3_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner3-caption', 'Caption 3', 'subbanner3_caption_callback', 'edit-home-page', 'content');
+   add_settings_field('full-bleed-image-attachment-id', 'Full-Bleed Image', 'full_bleed_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('full-bleed-caption', 'Full-Bleed Caption', 'full_bleed_caption_callback', 'edit-home-page', 'content');
    
    register_setting('edit-home-page', 'header-logo-image-attachment-id');
    register_setting('edit-home-page', 'title-image-attachment-id');
@@ -160,12 +180,16 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'announcement2');
    register_setting('edit-home-page', 'announcement3');
    register_setting('edit-home-page', 'announcement4');
+   register_setting('edit-home-page', 'subbanner0-image-attachment-id');
    register_setting('edit-home-page', 'subbanner1-image-attachment-id');
    register_setting('edit-home-page', 'subbanner2-image-attachment-id');
    register_setting('edit-home-page', 'subbanner3-image-attachment-id');
+   register_setting('edit-home-page', 'full-bleed-image-attachment-id');
+   register_setting('edit-home-page', 'subbanner0-caption');
    register_setting('edit-home-page', 'subbanner1-caption');
    register_setting('edit-home-page', 'subbanner2-caption');
    register_setting('edit-home-page', 'subbanner3-caption');
+   register_setting('edit-home-page', 'full-bleed-caption');
 }
 
 //////////////////////////////////////////////////////////////////////

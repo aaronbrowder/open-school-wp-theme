@@ -56,6 +56,9 @@ function subbanner($image_attachment_id, $caption) { ?>
       <div class="home-video">
          <?php embed_video(get_option('video-url')); ?>
       </div>
+      <div class="home-side-item">
+         <?php subbanner('subbanner0-image-attachment-id', 'subbanner0-caption'); ?>
+      </div>
    </div>
    
    <div class="home-subbanners-wrapper">
