@@ -85,3 +85,13 @@
 [28-Dec-2016 05:44:21 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/mytheme/functions.php:44
 [28-Dec-2016 05:44:21 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1302
 [28-Dec-2016 05:44:21 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1343}() /home/ubuntu/workspace/wp-admin/includes/template.php:1343
+[02-Jan-2017 01:26:34 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'school_meta_add_menu' not found or invalid function name in /home/ubuntu/workspace/wp-includes/class-wp-hook.php on line 298
+[02-Jan-2017 01:26:34 UTC] PHP Stack trace:
+[02-Jan-2017 01:26:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/index.php:0
+[02-Jan-2017 01:26:34 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/index.php:10
+[02-Jan-2017 01:26:34 UTC] PHP   3. require() /home/ubuntu/workspace/wp-admin/admin.php:138
+[02-Jan-2017 01:26:34 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-admin/menu.php:282
+[02-Jan-2017 01:26:34 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-admin/includes/menu.php:149
+[02-Jan-2017 01:26:34 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Jan-2017 01:26:34 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[02-Jan-2017 01:26:34 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298

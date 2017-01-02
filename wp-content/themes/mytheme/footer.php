@@ -3,14 +3,14 @@
             <div class="footer-contact">
                <h4>The Open School</h4>
                <p>
-                  681 N. Rancho Santiago Blvd.
-                  <br/>Orange, CA 92869
+                  <?php echo get_option('address1') ?>
+                  <br/><?php echo get_option('address2') ?>
                </p>
                <p>
-                  info@openschooloc.com
-                  <br/>(949) 373-5440
+                  <?php echo get_option('email') ?>
+                  <br/><?php echo get_option('phone') ?>
                </p>
-               <p><a href="#">Contact Us</a></p>
+               <p><a href="/contact-us">Contact Us</a></p>
             </div>
             <div class="footer-social">
                <a href="<?php echo get_option('facebook') ?>" target="_blank" class="social-link">

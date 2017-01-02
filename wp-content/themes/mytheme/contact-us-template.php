@@ -60,6 +60,8 @@ get_header(); ?>
             <input type="hidden" name="submitted" value="1">
             <button type="submit" class="contact-us-send">Send</button>
          </form>
+         <br/><br/>
+         <?php echo get_option('map') ?>
       </div>
    </div>
 </div>

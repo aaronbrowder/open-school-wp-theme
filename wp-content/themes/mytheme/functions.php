@@ -194,18 +194,18 @@ function edit_home_page_page_setup() {
 
 //////////////////////////////////////////////////////////////////////
 // Edit footer
-add_action('admin_menu', 'edit_footer_add_menu');
-function edit_footer_add_menu() {
-   add_menu_page('Edit_Footer', 'Footer', 'manage_options', 'edit_footer', 'edit_footer_page', null, 4);
+add_action('admin_menu', 'school_meta_add_menu');
+function school_meta_add_menu() {
+   add_menu_page('School_Meta', 'School Meta', 'manage_options', 'school_meta', 'school_meta_page', null, 4);
 }
 
-function edit_footer_page() { ?>
+function school_meta_page() { ?>
    <div class="wrap">
       <h1>Edit Footer</h1>
       <form method="post" action="options.php">
          <?php
-            settings_fields('edit-footer');
-            do_settings_sections('edit-footer');
+            settings_fields('school-meta');
+            do_settings_sections('school-meta');
             submit_button();
          ?>
       </form>
@@ -232,21 +232,51 @@ function youtube_callback() { ?>
   <input type="text" name="youtube" size="70" value="<?php echo get_option('youtube'); ?>" />
 <?php }
 
-add_action('admin_init', 'edit_footer_page_setup');
-function edit_footer_page_setup() {
-   add_settings_section('content', 'Content', null, 'edit-footer');
-   
-   add_settings_field('facebook', 'Facebook URL', 'facebook_callback', 'edit-footer', 'content');
-   add_settings_field('twitter', 'Twitter URL', 'twitter_callback', 'edit-footer', 'content');
-   add_settings_field('pinterest', 'Pinterest URL', 'pinterest_callback', 'edit-footer', 'content');
-   add_settings_field('instagram', 'Instagram URL', 'instagram_callback', 'edit-footer', 'content');
-   add_settings_field('youtube', 'YouTube URL', 'youtube_callback', 'edit-footer', 'content');
+function address1_callback() { ?>
+  <input type="text" name="address1" size="50" value="<?php echo get_option('address1'); ?>" />
+<?php }
 
-   register_setting('edit-footer', 'facebook');
-   register_setting('edit-footer', 'twitter');
-   register_setting('edit-footer', 'pinterest');
-   register_setting('edit-footer', 'instagram');
-   register_setting('edit-footer', 'youtube');
+function address2_callback() { ?>
+  <input type="text" name="address2" size="50" value="<?php echo get_option('address2'); ?>" />
+<?php }
+
+function email_callback() { ?>
+  <input type="text" name="email" size="50" value="<?php echo get_option('email'); ?>" />
+<?php }
+
+function phone_callback() { ?>
+  <input type="text" name="phone" size="50" value="<?php echo get_option('phone'); ?>" />
+<?php }
+
+function map_callback() { ?>
+  <input type="text" name="map" size="50" value="<?php echo htmlentities(get_option('map')); ?>" />
+<?php }
+
+add_action('admin_init', 'school_meta_page_setup');
+function school_meta_page_setup() {
+   add_settings_section('content', 'Content', null, 'school-meta');
+   
+   add_settings_field('facebook', 'Facebook URL', 'facebook_callback', 'school-meta', 'content');
+   add_settings_field('twitter', 'Twitter URL', 'twitter_callback', 'school-meta', 'content');
+   add_settings_field('pinterest', 'Pinterest URL', 'pinterest_callback', 'school-meta', 'content');
+   add_settings_field('instagram', 'Instagram URL', 'instagram_callback', 'school-meta', 'content');
+   add_settings_field('youtube', 'YouTube URL', 'youtube_callback', 'school-meta', 'content');
+   add_settings_field('address1', 'Address Line 1', 'address1_callback', 'school-meta', 'content');
+   add_settings_field('address2', 'Address Line 2', 'address2_callback', 'school-meta', 'content');
+   add_settings_field('email', 'Email', 'email_callback', 'school-meta', 'content');
+   add_settings_field('phone', 'Phone', 'phone_callback', 'school-meta', 'content');
+   add_settings_field('map', 'Map Embed Code', 'map_callback', 'school-meta', 'content');
+
+   register_setting('school-meta', 'facebook');
+   register_setting('school-meta', 'twitter');
+   register_setting('school-meta', 'pinterest');
+   register_setting('school-meta', 'instagram');
+   register_setting('school-meta', 'youtube');
+   register_setting('school-meta', 'address1');
+   register_setting('school-meta', 'address2');
+   register_setting('school-meta', 'email');
+   register_setting('school-meta', 'phone');
+   register_setting('school-meta', 'map');
 }
 
 //////////////////////////////////////////////////////////////////////
