@@ -26,6 +26,6 @@
       <span class="text-light-green"><?php the_title(); ?></span>
    </h1>
    
-   <?php the_content(); ?>
+   <?php the_content_with_substitutions(); ?>
     
 </div>

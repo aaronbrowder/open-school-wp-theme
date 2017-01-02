@@ -302,6 +302,21 @@ function embed_video($video_url) {
    }
 }
 
+// Content substitution
+function the_content_with_substitutions() {
+   $content = get_the_content($more_link_text, $stripteaser, $more_file);
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+   
+   $content = str_replace('{phone}', get_option('phone'), $content);
+   $content = str_replace('{email}', get_option('email'), $content);
+   $content = str_replace('{address}', get_option('address1') . '<br/>' . get_option('address2'), $content);
+   $content = str_replace('{map}', get_option('map'), $content);
+   $content = str_replace('{contactform}', render_php('contact-form.php'), $content);
+   
+   print_r($content);
+}
+
 // Helpers
 function get_menu_items() {
    $locations = get_nav_menu_locations();
@@ -325,4 +340,13 @@ function page_number() {
 function contact_form_generate_response($type, $message){
    if ($type == 'success') return "<div class='contact-us-success'>{$message}</div>";
    else return "<div class='contact-us-error'>{$message}</div>";
+}
+
+function render_php($path)
+{
+    ob_start();
+    include($path);
+    $var=ob_get_contents(); 
+    ob_end_clean();
+    return $var;
 }

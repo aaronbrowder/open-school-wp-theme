@@ -7,12 +7,16 @@ function hamburgerMenu() {
    var hamburger = document.getElementById('hamburger');
    var mainMenu = document.getElementById('main-menu');
    var menuItems = mainMenu.getElementsByClassName('header-menu-item');
-   
+
    window.onresize = function() {
       isMenuExpanded = false;
       hamburger.classList.remove('expanded');
       mainMenu.classList.remove('visible');
-   }
+      for (var i = 0; i < menuItems.length; i++) {
+         var menuItem = menuItems[i];
+         menuItem.classList.remove('expanded');
+      }
+   };
 
    hamburger.addEventListener('click', function() {
       isMenuExpanded = !isMenuExpanded;
