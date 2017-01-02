@@ -286,37 +286,40 @@ function register_main_menu() {
   register_nav_menu('main-menu', __('Main Menu', 'theme-slug'));
 }
 
-// Wordpress Titles
-add_theme_support('title-tag');
+//////////////////////////////////////////////////////////////////////
+// Shortcodes
 
-// Embed video
-function embed_video($video_url) {
-   $supported = wp_get_video_extensions();
-   $video_pathinfo = pathinfo($video_url);
-   $video_ext = $video_pathinfo['extension'];
-   if (in_array($video_ext, $supported)) {
-      wp_video_shortcode(array('src'=>$video_url));
-   } else {
-      $video = wp_oembed_get($video_url);
-      echo $video;
-   }
+// [phone]
+add_shortcode('phone', 'phone_shortcode_callback');
+function phone_shortcode_callback() {
+	return get_option('phone');
 }
 
-// Content substitution
-function the_content_with_substitutions() {
-   $content = get_the_content($more_link_text, $stripteaser, $more_file);
-	$content = apply_filters('the_content', $content);
-	$content = str_replace(']]>', ']]&gt;', $content);
-   
-   $content = str_replace('{phone}', get_option('phone'), $content);
-   $content = str_replace('{email}', get_option('email'), $content);
-   $content = str_replace('{address}', get_option('address1') . '<br/>' . get_option('address2'), $content);
-   $content = str_replace('{map}', get_option('map'), $content);
-   $content = str_replace('{contactform}', render_php('contact-form.php'), $content);
-   
-   print_r($content);
+// [email]
+add_shortcode('email', 'email_shortcode_callback');
+function email_shortcode_callback() {
+	return get_option('email');
 }
 
+// [address]
+add_shortcode('address', 'address_shortcode_callback');
+function address_shortcode_callback() {
+	return get_option('address1') . '<br/>' . get_option('address2');
+}
+
+// [map]
+add_shortcode('map', 'map_shortcode_callback');
+function map_shortcode_callback() {
+	return get_option('map');
+}
+
+// [contactform]
+add_shortcode('contactform', 'contactform_shortcode_callback');
+function contactform_shortcode_callback() {
+	return render_php('contact-form.php');
+}
+
+//////////////////////////////////////////////////////////////////////
 // Helpers
 function get_menu_items() {
    $locations = get_nav_menu_locations();
@@ -350,3 +353,17 @@ function render_php($path)
     ob_end_clean();
     return $var;
 }
+
+function embed_video($video_url) {
+   $supported = wp_get_video_extensions();
+   $video_pathinfo = pathinfo($video_url);
+   $video_ext = $video_pathinfo['extension'];
+   if (in_array($video_ext, $supported)) {
+      wp_video_shortcode(array('src'=>$video_url));
+   } else {
+      $video = wp_oembed_get($video_url);
+      echo $video;
+   }
+}
+
+add_theme_support('title-tag');
