@@ -9,3 +9,20 @@ $header-background-dark: url(/wp-content/themes/mytheme/images/green-dark.png),
 #2D562A;
 $header-background-light: url(/wp-content/themes/mytheme/images/green-light.png),
 #4D744A;
+@mixin min-tablet() {
+   @media (min-width: 768px) {
+      @content;
+   }
+}
+
+@mixin min-desktop() {
+   @media (min-width: 992px) {
+      @content;
+   }
+}
+
+@mixin min-large-desktop() {
+   @media (min-width: 1200px) {
+      @content;
+   }
+}

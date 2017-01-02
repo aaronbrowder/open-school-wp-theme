@@ -1,42 +1,49 @@
-document.addEventListener('DOMContentLoaded', main, false);
+document.addEventListener('DOMContentLoaded', contextMenu, false);
 
-function main() {
-   var menuItems = document.getElementsByClassName('menu-item has-children');
+function contextMenu() {
+   
+   var menuItems = document.getElementsByClassName('header-menu-item has-children');
    for (var i = 0; i < menuItems.length; i++) {
-      registerEvents(menuItems[i], function() { closeAllContextMenus(menuItems) });
+      registerEvents(menuItems[i], function() {
+         closeAllContextMenus(menuItems);
+      });
    }
-}
 
-function closeAllContextMenus(menuItems) {
-   for (var i = 0; i < menuItems.length; i++) {
-      var contextMenu = getContextMenu(menuItems[i]);
-      if (contextMenu) {
-         contextMenu.style.display = 'none';
+   function closeAllContextMenus(menuItems) {
+      for (var i = 0; i < menuItems.length; i++) {
+         var contextMenu = getContextMenu(menuItems[i]);
+         if (contextMenu) {
+            contextMenu.classList.remove('visible');
+         }
       }
    }
-}
 
-function registerEvents(menuItem, closeAllContextMenusCallback) {
-   var contextMenu = getContextMenu(menuItem);
-   if (contextMenu) {
-      var isClosing = false;
-      menuItem.addEventListener('mouseover', function() {
-         closeAllContextMenusCallback();
-         isClosing = false;
-         contextMenu.style.display = 'block';
-      });
-      menuItem.addEventListener('mouseleave', function() {
-         isClosing = true;
-         setTimeout(function() {
-            if (isClosing) {
-               contextMenu.style.display = 'none';
-            }
-         }, 50);
-      });
+   function registerEvents(menuItem, closeAllContextMenusCallback) {
+      var contextMenu = getContextMenu(menuItem);
+      if (contextMenu) {
+         var isClosing = false;
+         menuItem.addEventListener('mouseover', function() {
+            closeAllContextMenusCallback();
+            isClosing = false;
+            contextMenu.classList.add('visible');
+         });
+         menuItem.addEventListener('mouseleave', function() {
+            isClosing = true;
+            setTimeout(function() {
+               if (isClosing) {
+                  contextMenu.classList.remove('visible');
+               }
+            }, 50);
+         });
+         menuItem.addEventListener('click', function() {
+            closeAllContextMenusCallback();
+         });
+      }
    }
-}
 
-function getContextMenu(menuItem) {
-   var contextMenus = menuItem.getElementsByClassName('context-menu');
-   return contextMenus.length ? contextMenus[0] : null;
+   function getContextMenu(menuItem) {
+      var contextMenus = menuItem.getElementsByClassName('header-context-menu');
+      return contextMenus.length ? contextMenus[0] : null;
+   }
+
 }

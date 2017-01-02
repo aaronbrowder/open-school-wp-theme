@@ -4,9 +4,9 @@
 // Add scripts and stylesheets
 add_action('wp_enqueue_scripts', 'mytheme_scripts');
 function mytheme_scripts() {
-   //wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6');
-	wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');
+   wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');
 	wp_enqueue_script('context-menu', get_template_directory_uri() . '/js/context-menu.js');
+	wp_enqueue_script('hamburger-menu', get_template_directory_uri() . '/js/hamburger-menu.js');
 }
 
 add_action('admin_enqueue_scripts', 'admin_scripts');

@@ -1,0 +1,202 @@
+@import '_core.scss';
+@mixin menu-item-with-arrow {
+   &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-left: -5px;
+      vertical-align: middle;
+      content: " ";
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #fff;
+      border-left: 5px solid transparent;
+   }
+}
+
+.main-masthead-wrapper,
+.sub-masthead-wrapper {
+   height: 39px;
+}
+
+.sub-masthead-wrapper {
+   display: none;
+}
+
+.main-masthead,
+.sub-masthead {
+   font-family: $header-font-family;
+   font-weight: bold;
+   position: fixed;
+   width: 100%;
+}
+
+.nav-divider {
+   position: fixed;
+   width: 100%;
+   z-index: 100000;
+   box-shadow: 0 0 2px 1px #fff;
+}
+
+.main-masthead {
+   background: $header-background-dark;
+   z-index: 100002;
+   .header-menu {
+      float: right;
+   }
+}
+
+.sub-masthead {
+   background: $header-background-light;
+   box-shadow: 0 0 1px 1px #fff;
+   z-index: 100001;
+   nav {
+      margin-left: -5px;
+      .header-menu-item a {
+         padding: 8px 11px;
+      }
+   }
+}
+
+.main-masthead-wrapper nav,
+.sub-masthead-wrapper nav {
+   .header-logo {
+      display: inline-block;
+      margin-top: 5px;
+   }
+   .header-hamburger {
+      float: right;
+      color: #fff;
+      padding-top: 8px;
+      padding-right: 4px;
+      font-size: 22px;
+      &.expanded {}
+   }
+   .header-menu {
+      display: none;
+      padding: 0;
+      margin: 0 -10px;
+      width: calc(100% + 20px);
+      background: #444;
+      &.visible {
+         display: block;
+      }
+   }
+   .header-menu-item {
+      border-top: 1px solid #2d2d2d;
+      &.expanded {
+         .header-context-menu {
+            display: block;
+         }
+      }
+      a {
+         padding: 9px 12px;
+         color: #fff;
+         text-shadow: 1px 1px 1px #000;
+         display: block;
+         width: 100%;
+         font-size: 105%;
+         text-transform: uppercase;
+         &:hover,
+         &:focus {
+            color: $light-green;
+            text-decoration: none;
+         }
+      }
+   }
+   .header-context-menu {
+      display: none;
+      padding: 0;
+      background: #5d5d5d;
+   }
+   .header-context-menu-item {
+      display: block;
+      border-top: 1px solid #444;
+      padding-left: 12px;
+      a {
+         display: block;
+         width: 100%;
+      }
+   }
+}
+
+@include min-tablet {
+   .sub-masthead-wrapper {
+      display: block;
+   }
+   .main-masthead nav .header-menu-item a {
+      padding: 10px 7px;
+   }
+   .main-masthead-wrapper nav,
+   .sub-masthead-wrapper nav {
+      .header-menu {
+         display: block;
+         margin: 0;
+         width: auto;
+         background: none;
+      }
+      .header-menu-item {
+         position: relative;
+         display: inline-block;
+         border: none;
+         &.has-children:hover {
+            @include menu-item-with-arrow;
+         }
+         a {
+            display: block;
+         }
+      }
+      .header-current-menu-item {
+         @include menu-item-with-arrow;
+         &.has-children {
+            &:after {
+               border-bottom-color: #658764;
+            }
+         }
+      }
+      .header-context-menu {
+         display: none;
+         position: absolute;
+         min-width: 100%;
+         margin: 0;
+         padding: 0;
+         border-bottom: 1px solid #fff;
+         background: none;
+         &.visible {
+            display: block;
+         }
+      }
+      .header-context-menu-item {
+         background: #fff;
+         text-align: left;
+         white-space: nowrap;
+         padding: 0;
+         border: 1px solid #fff;
+         border-bottom: 1px solid #d9d9d9;
+         border-right: 1px solid #d9d9d9;
+         box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35);
+         a {
+            display: inline-block;
+            color: #444;
+            text-shadow: none;
+            padding: 7px 10px;
+            &:hover {
+               color: $green;
+            }
+         }
+      }
+      .header-hamburger {
+         display: none;
+      }
+   }
+}
+
+@include min-desktop {
+   .sub-masthead nav .header-menu-item a {
+      padding: 8px 15px;
+   }
+   .main-masthead nav .header-menu-item a {
+      padding: 10px;
+   }
+}

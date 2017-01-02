@@ -31,7 +31,7 @@
       $current_sub_menu_items;
       ?>
 
-      <div class="masthead-wrapper">
+      <div class="main-masthead-wrapper">
          <div class="main-masthead">
             <div class="container">
                <nav>
@@ -40,7 +40,11 @@
                      <img height="30" src="<?php echo wp_get_attachment_url(get_option('header-logo-image-attachment-id')); ?>" alt="The Open School"/>
                   </a>
                   
-                  <ul class="menu">
+                  <div id="hamburger" class="header-hamburger">
+                     <span class="icon icon-bars"></span>
+                  </div>
+                  
+                  <ul id="main-menu" class="header-menu">
                      <?php foreach ($top_menu_items as $item):
                         
                         $id = get_page_id($item);
@@ -54,20 +58,20 @@
                         }
                         ?>
                         
-                        <li class="menu-item<?php
-                                 echo ($is_current ? ' current-menu-item' : '');
+                        <li class="header-menu-item<?php
+                                 echo ($is_current ? ' header-current-menu-item' : '');
                                  echo (!empty($children) ? ' has-children' : '');
                                  ?>">
                            <a href="<?php echo $link; ?>">
                               <?php echo $item->title; ?>
                            </a>
                            <?php if (!empty($children)) { ?>
-                              <ul class="context-menu">
+                              <ul class="header-context-menu">
                                  <?php foreach ($children as $child) {
                                     $child_id = get_page_id($child);
                                     $child_link = get_page_link($child_id);
                                     ?>
-                                    <li class="context-menu-item">
+                                    <li class="header-context-menu-item">
                                        <a href="<?php echo $child_link; ?>">
                                           <?php echo $child->title; ?>
                                        </a>
@@ -85,17 +89,17 @@
       </div>
       
       <?php if (!empty($current_sub_menu_items)) { ?>
-         <div class="masthead-wrapper">
+         <div class="sub-masthead-wrapper">
             <div class="sub-masthead">
                <div class="container">
                   <nav>
-                     <ul class="menu">
+                     <ul class="header-menu">
                         <?php foreach ($current_sub_menu_items as $item):
                            $id = get_page_id($item);
                            $link = get_page_link($id);
                            $is_current = $id == $queried_object_id;
                            ?>
-                           <li class="menu-item <?php echo ($is_current ? 'current-menu-item' : ''); ?>">
+                           <li class="header-menu-item <?php echo ($is_current ? 'header-current-menu-item' : ''); ?>">
                               <a href="<?php echo $link; ?>">
                                  <?php echo $item->title; ?>
                               </a>

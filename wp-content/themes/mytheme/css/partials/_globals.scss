@@ -1,9 +1,10 @@
-@import '_variables.scss';
+@import '_core.scss';
 body {
    font-family: 'Open Sans', Helvetica, sans-serif;
    font-size: 15px;
    color: #444;
    margin: 0;
+   overflow-x: hidden;
 }
 
 h1,
@@ -45,6 +46,10 @@ a {
    }
 }
 
+iframe {
+   max-width: 100%;
+}
+
 .text-light {
    color: #888;
 }
@@ -55,8 +60,11 @@ a {
 
 .container {
    margin: auto;
-   padding: 0 15px;
-   @media (min-width: 1200px) {
+   padding: 0 10px;
+   @include min-tablet {
+      padding: 0 15px;
+   }
+   @include min-desktop {
       width: 1000px;
    }
    &:after {

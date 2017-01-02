@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "name": "Untitled Project",
-    "lastOpened": 1418773394855,
-    "created": 1482896294623
+    "name": "Untitled Project 1",
+    "lastOpened": 1483327519377,
+    "created": 1483327513835
   },
   "iconSets": [
     {
@@ -909,7 +909,10 @@
         {
           "name": "bars, navicon, reorder",
           "id": 178,
-          "order": 0
+          "order": 10,
+          "prevSize": 28,
+          "code": 61641,
+          "tempChar": ""
         },
         {
           "name": "list-ul",
@@ -952,7 +955,7 @@
           "order": 5,
           "prevSize": 28,
           "code": 61650,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "pinterest-square",
@@ -1640,7 +1643,7 @@
           "order": 2,
           "prevSize": 28,
           "code": 61799,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "xing",
@@ -1673,7 +1676,7 @@
           "order": 8,
           "prevSize": 28,
           "code": 61805,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "flickr",

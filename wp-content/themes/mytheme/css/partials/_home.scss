@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import '_core.scss';
 .home {
    a {
       display: inline-block;
@@ -20,7 +20,7 @@
    }
    p {
       color: #222;
-      font-size: 18px;
+      font-size: 17px;
       text-align: justify;
    }
 }
