@@ -40,7 +40,7 @@
 .contact-us-send {
   background: #009102;
   color: #fff;
-  padding: 12px 72px;
+  padding: 12px 60px;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -51,6 +51,19 @@
   cursor: pointer; }
   .contact-us-send:hover, .contact-us-send:focus {
     background: #007A02; }
+
+.contact-us-success, .contact-us-error {
+  padding: 7px 10px; }
+
+.contact-us-success {
+  background: #d4ffd1;
+  border: 1px solid #8FEA8A;
+  color: #007A02; }
+
+.contact-us-error {
+  background: #ffd2d1;
+  border: 1px solid #e88989;
+  color: #780000; }
 
 .footer {
   background: #333;

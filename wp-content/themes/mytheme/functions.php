@@ -291,3 +291,8 @@ function page_number() {
       </span>
    <?php }
 }
+
+function contact_form_generate_response($type, $message){
+   if ($type == 'success') return "<div class='contact-us-success'>{$message}</div>";
+   else return "<div class='contact-us-error'>{$message}</div>";
+}
