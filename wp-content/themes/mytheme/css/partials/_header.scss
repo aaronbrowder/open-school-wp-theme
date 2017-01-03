@@ -54,7 +54,8 @@
    nav {
       margin-left: -5px;
       .header-menu-item a {
-         padding: 8px 11px;
+         padding-left: 11px;
+         padding-right: 11px;
       }
    }
 }
@@ -91,7 +92,7 @@
          }
       }
       a {
-         padding: 9px 12px;
+         padding: 10px 12px;
          color: #fff;
          text-shadow: 1px 1px 1px #000;
          display: block;
@@ -126,7 +127,8 @@
       display: block;
    }
    .main-masthead nav .header-menu-item a {
-      padding: 10px 7px;
+      padding-left: 7px;
+      padding-right: 7px;
    }
    .main-masthead-wrapper nav,
    .sub-masthead-wrapper nav {
@@ -189,14 +191,22 @@
       .header-hamburger {
          display: none;
       }
+      .nav-divider {
+         display: none;
+         &.no-sub-header {
+            display: block;
+         }
+      }
    }
 }
 
 @include min-desktop {
    .sub-masthead nav .header-menu-item a {
-      padding: 8px 15px;
+      padding-left: 15px;
+      padding-right: 15px;
    }
    .main-masthead nav .header-menu-item a {
-      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
    }
 }

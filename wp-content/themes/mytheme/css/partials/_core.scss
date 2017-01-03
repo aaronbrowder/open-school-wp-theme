@@ -3,26 +3,34 @@ sans-serif;
 $green: #009102;
 $dark-green: #007A02;
 $light-green: #8FEA8A;
-$light-light-green: #d4ffd1;
+$light-light-green: #DCF7D7;
 $faded-green: #288529;
 $header-background-dark: url(/wp-content/themes/mytheme/images/green-dark.png),
 #2D562A;
 $header-background-light: url(/wp-content/themes/mytheme/images/green-light.png),
 #4D744A;
-@mixin min-tablet() {
+@mixin min-tablet {
    @media (min-width: 768px) {
       @content;
    }
 }
 
-@mixin min-desktop() {
+@mixin min-desktop {
    @media (min-width: 992px) {
       @content;
    }
 }
 
-@mixin min-large-desktop() {
+@mixin min-large-desktop {
    @media (min-width: 1200px) {
       @content;
+   }
+}
+
+@mixin clear-after {
+   &:after {
+      clear: both;
+      display: table;
+      content: ' ';
    }
 }

@@ -111,9 +111,6 @@
                </div>
             </div>
          </div>
-      <?php }
-      
-      if (empty($current_sub_menu_items)) { ?>
-         <div class="nav-divider"></div>
       <?php } ?>
-   
+      
+      <div class="nav-divider <?php empty($current_sub_menu_items) ? 'no-sub-header' : '' ?>"></div>

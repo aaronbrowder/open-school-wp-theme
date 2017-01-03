@@ -1,17 +1,5 @@
       <footer class="footer">
          <div class="container">
-            <div class="footer-contact">
-               <h4>The Open School</h4>
-               <p>
-                  <?php echo get_option('address1') ?>
-                  <br/><?php echo get_option('address2') ?>
-               </p>
-               <p>
-                  <?php echo get_option('email') ?>
-                  <br/><?php echo get_option('phone') ?>
-               </p>
-               <p><a href="/contact-us">Contact Us</a></p>
-            </div>
             <div class="footer-social">
                <a href="<?php echo get_option('facebook') ?>" target="_blank" class="social-link">
                   <span class="icon icon-facebook"></span>
@@ -28,6 +16,18 @@
                <a href="<?php echo get_option('youtube') ?>" target="_blank" class="social-link">
                   <span class="icon icon-youtube"></span>
                </a>
+            </div>
+            <div class="footer-contact">
+               <h4>The Open School</h4>
+               <p>
+                  <?php echo get_option('address1') ?>
+                  <br/><?php echo get_option('address2') ?>
+               </p>
+               <p>
+                  <?php echo get_option('email') ?>
+                  <br/><?php echo get_option('phone') ?>
+               </p>
+               <p><a href="/contact-us">Contact Us</a></p>
             </div>
          </div>
       </footer>

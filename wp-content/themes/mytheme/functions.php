@@ -67,6 +67,10 @@ function title_image_attachment_callback() {
    image_attachment_callback('title-image-attachment-id');
 }
 
+function mobile_title_image_attachment_callback() { 
+   image_attachment_callback('mobile-title-image-attachment-id');
+}
+
 function title_tagline_header_callback() { ?>
    <input type="text" size="50" name="title-tagline-header" value="<?php echo get_option('title-tagline-header'); ?>"/>
 <?php }
@@ -151,6 +155,7 @@ function edit_home_page_page_setup() {
    add_settings_field('header-logo-image-attachment-id', 'Header Logo Image', 'header_logo_image_attachment_callback', 'edit-home-page', 'content');
 
    add_settings_field('title-image-attachment-id', 'Title Image', 'title_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('mobile-title-image-attachment-id', 'Title Image (Mobile)', 'mobile_title_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('title-tagline-header', 'Tagline Header', 'title_tagline_header_callback', 'edit-home-page', 'content');
    add_settings_field('title-tagline-text', 'Tagline Text', 'title_tagline_text_callback', 'edit-home-page', 'content');
    
@@ -173,6 +178,7 @@ function edit_home_page_page_setup() {
    
    register_setting('edit-home-page', 'header-logo-image-attachment-id');
    register_setting('edit-home-page', 'title-image-attachment-id');
+   register_setting('edit-home-page', 'mobile-title-image-attachment-id');
    register_setting('edit-home-page', 'title-tagline-header');
    register_setting('edit-home-page', 'title-tagline-text');
    register_setting('edit-home-page', 'video-url');

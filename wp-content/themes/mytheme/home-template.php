@@ -35,7 +35,8 @@ function subbanner($image_attachment_id, $caption) { ?>
 <div class="home">
    
    <div class="home-title home-narrow-container">
-      <img height="100" src="<?php echo wp_get_attachment_url(get_option('title-image-attachment-id')); ?>" alt="The Open School">
+      <img class="home-logo-desktop" src="<?php echo wp_get_attachment_url(get_option('title-image-attachment-id')); ?>" alt="The Open School">
+      <img class="home-logo-mobile" src="<?php echo wp_get_attachment_url(get_option('mobile-title-image-attachment-id')); ?>" alt="The Open School">
       <h2><?php echo get_option('title-tagline-header'); ?></h2>
       <p><?php echo get_option('title-tagline-text'); ?></p>
    </div>
@@ -57,7 +58,9 @@ function subbanner($image_attachment_id, $caption) { ?>
          <?php embed_video(get_option('video-url')); ?>
       </div>
       <div class="home-side-item">
-         <?php subbanner('subbanner0-image-attachment-id', 'subbanner0-caption'); ?>
+         <img src="<?php echo wp_get_attachment_url(get_option('subbanner0-image-attachment-id')); ?>">
+         <div class="caption"><?php echo get_option('subbanner0-caption'); ?></div>
+         <div class="clear"></div>
       </div>
    </div>
    

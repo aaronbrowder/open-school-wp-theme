@@ -8,6 +8,7 @@
       background: #e9e9e9;
       padding: 0 12px;
       width: 1px;
+      font-size: 13px;
       white-space: nowrap;
    }
    input {
@@ -42,7 +43,8 @@
    }
 }
 
-.contact-us-success, .contact-us-error {
+.contact-us-success,
+.contact-us-error {
    padding: 7px 10px;
 }
 
@@ -56,4 +58,12 @@
    background: #ffd2d1;
    border: 1px solid #e88989;
    color: #780000;
+}
+
+@include min-tablet {
+   .contact-us-table {
+      th {
+         font-size: 14.5px;
+      }
+   }
 }
