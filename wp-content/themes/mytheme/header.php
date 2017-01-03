@@ -114,3 +114,5 @@
       <?php } ?>
       
       <div class="nav-divider <?php empty($current_sub_menu_items) ? 'no-sub-header' : '' ?>"></div>
+      
+      <div class="<?php echo empty($current_sub_menu_items) ? '' : 'has-double-header'; ?>">

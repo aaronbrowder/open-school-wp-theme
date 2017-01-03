@@ -9,6 +9,23 @@
    font-size: 40px;
 }
 
+.page-table-of-contents {
+   background: #ebebeb;
+   border-bottom: 1px solid #bbb;
+   padding: 6px 22px;
+   h3 {
+      margin-top: 12px;
+      font-weight: normal;
+   }
+   ul {
+      margin-top: 0;
+      padding-left: 20px;
+   }
+   li {
+      line-height: 1.8;
+   }
+}
+
 @include min-tablet {
    .page {
       margin-bottom: 40px;
@@ -19,5 +36,10 @@
    .page {
       margin-top: 30px;
       margin-bottom: 60px;
+   }
+   .page-table-of-contents {
+      li {
+         line-height: 1.4;
+      }
    }
 }

@@ -47,7 +47,8 @@ a {
 }
 
 blockquote {
-   background: #eee;
+   background: #ebebeb;
+   border-bottom: 1px solid #bbb;
    margin: 0;
    padding: 12px 16px;
 }
@@ -74,6 +75,14 @@ iframe {
    max-width: 700px;
 }
 
+h2[id]:before {
+   display: block;
+   content: " ";
+   visibility: hidden;
+   margin-top: -49px;
+   height: 49px;
+}
+
 @include min-tablet {
    body {
       font-size: 15px;
@@ -92,6 +101,10 @@ iframe {
    }
    .container {
       padding: 0 15px;
+   }
+   .has-double-header h2[id]:before {
+      margin-top: -88px;
+      height: 88px;
    }
 }
 
