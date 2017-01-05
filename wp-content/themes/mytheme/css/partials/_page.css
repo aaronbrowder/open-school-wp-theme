@@ -1,0 +1,36 @@
+.page {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.page-title {
+  margin-bottom: 20px;
+  font-size: 40px; }
+
+.page-table-of-contents {
+  background: #ebebeb;
+  border-bottom: 1px solid #bbb;
+  padding: 6px 22px; }
+  .page-table-of-contents h3 {
+    margin-top: 12px;
+    font-weight: normal; }
+  .page-table-of-contents ul {
+    margin-top: 0;
+    padding-left: 20px; }
+  .page-table-of-contents li {
+    line-height: 1.8; }
+
+.page-go-to-top {
+  color: #8FEA8A; }
+
+@media (min-width: 768px) {
+  .page {
+    margin-bottom: 40px; } }
+@media (min-width: 992px) {
+  .page {
+    margin-top: 30px;
+    margin-bottom: 60px; }
+
+  .page-table-of-contents li {
+    line-height: 1.4; } }
+
+/*# sourceMappingURL=_page.css.map */

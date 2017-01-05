@@ -8,7 +8,7 @@ function hamburgerMenu() {
    var mainMenu = document.getElementById('main-menu');
    var menuItems = mainMenu.getElementsByClassName('header-menu-item');
 
-   window.onresize = function() {
+   function collapseMenu() {
       isMenuExpanded = false;
       hamburger.classList.remove('expanded');
       mainMenu.classList.remove('visible');
@@ -16,12 +16,32 @@ function hamburgerMenu() {
          var menuItem = menuItems[i];
          menuItem.classList.remove('expanded');
       }
+   }
+
+   function hasAncestorWithId(el, id) {
+      while (el) {
+         if (el.id === id) return true;
+         el = el.parentElement;
+      }
+      return false;
+   }
+
+   window.onresize = function() {
+      collapseMenu();
    };
 
-   hamburger.addEventListener('click', function() {
+   document.addEventListener('click', function(event) {
+      if (isMenuExpanded) {
+         var isClickInsideMenu = !!hasAncestorWithId(event.target, 'main-menu');
+         if (!isClickInsideMenu) collapseMenu();
+      }
+   });
+
+   hamburger.addEventListener('click', function(event) {
       isMenuExpanded = !isMenuExpanded;
       hamburger.classList.toggle('expanded');
       mainMenu.classList.toggle('visible');
+      event.preventDefault();
    });
 
    for (var i = 0; i < menuItems.length; i++) {

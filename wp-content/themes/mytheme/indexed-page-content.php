@@ -13,6 +13,7 @@
       $split = explode('</h2>', $section);
       $header_text = $split[0];
       $content = $split[1];
+      $content = $content . '<a href="#">Go to top &nbsp;&#9652;</a>';
       $header_id = str_replace(' ', '_', $header_text);
       $section = "<h2 id='{$header_id}'>{$header_text}</h2>{$content}";
       $contents_list_item = "<li><a href='#{$header_id}'>{$header_text}</a></li>";
