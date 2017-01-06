@@ -3,10 +3,14 @@ document.addEventListener('DOMContentLoaded', hamburgerMenu, false);
 function hamburgerMenu() {
 
    var isMenuExpanded = false;
+   
+   var hamburgerId = 'hamburger';
+   var mainMenuId = 'main-menu';
+   var menuItemClassName = 'header-menu-item';
 
-   var hamburger = document.getElementById('hamburger');
-   var mainMenu = document.getElementById('main-menu');
-   var menuItems = mainMenu.getElementsByClassName('header-menu-item');
+   var hamburger = document.getElementById(hamburgerId);
+   var mainMenu = document.getElementById(mainMenuId);
+   var menuItems = mainMenu.getElementsByClassName(menuItemClassName);
 
    function collapseMenu() {
       isMenuExpanded = false;
@@ -32,8 +36,11 @@ function hamburgerMenu() {
 
    document.addEventListener('click', function(event) {
       if (isMenuExpanded) {
-         var isClickInsideMenu = !!hasAncestorWithId(event.target, 'main-menu');
-         if (!isClickInsideMenu) collapseMenu();
+         var isClickInsideMenu = !!hasAncestorWithId(event.target, mainMenuId);
+         if (!isClickInsideMenu) {
+            var isClickInsideButton = !!hasAncestorWithId(event.target, hamburgerId);
+            if (!isClickInsideButton) collapseMenu();
+         }
       }
    });
 
