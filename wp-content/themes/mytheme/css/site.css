@@ -627,9 +627,6 @@ h2[id]:before {
   .page-table-of-contents li {
     line-height: 1.8; }
 
-.page-go-to-top {
-  color: #8FEA8A; }
-
 @media (min-width: 768px) {
   .page {
     margin-bottom: 40px; } }

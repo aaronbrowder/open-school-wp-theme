@@ -23,8 +23,8 @@
       			
                <nav class="blog-paginator">
                	<ul>
-               		<li><?php next_posts_link('&laquo; Earlier Posts'); ?></li>
-               		<li><?php previous_posts_link('Later Posts &raquo;'); ?></li>
+               		<li><?php next_posts_link('&#9666;&nbsp; Earlier Posts'); ?></li>
+               		<li><?php previous_posts_link('Later Posts &nbsp;&#9658;'); ?></li>
                	</ul>
                </nav>
       

@@ -346,6 +346,16 @@ function page_number() {
    <?php }
 }
 
+function see_comments() {
+   $comments_number = get_comments_number();
+   if ($comments_number > 0) { ?>
+      &middot;
+      <a href="<?php comments_link(); ?>">
+      	<?php	printf(_nx('One Comment', '%1$s Comments', $comments_number, 'comments title', 'textdomain'), number_format_i18n($comments_number)); ?>
+      </a>
+   <?php }
+}
+
 function get_page_title_prefix() {
    global $wp_query;
    $queried_object_id = $wp_query->queried_object_id;
@@ -394,3 +404,5 @@ function embed_video($video_url) {
 }
 
 add_theme_support('title-tag');
+
+add_filter('show_admin_bar', '__return_false');
