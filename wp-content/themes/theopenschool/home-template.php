@@ -25,7 +25,7 @@ function announcement($id) {
 
 function subbanner($image_attachment_id, $caption) { ?>
    <div class="home-subbanner">
-      <img src="<?php echo wp_get_attachment_url(get_option($image_attachment_id)); ?>">
+      <?php echo wp_get_attachment_image(get_option($image_attachment_id), 'medium'); ?>
       <div class="caption"><?php echo get_option($caption); ?></div>
    </div>
 <?php }
@@ -58,7 +58,7 @@ function subbanner($image_attachment_id, $caption) { ?>
          <?php embed_video(get_option('video-url')); ?>
       </div>
       <div class="home-side-item">
-         <img src="<?php echo wp_get_attachment_url(get_option('subbanner0-image-attachment-id')); ?>">
+         <?php echo wp_get_attachment_image(get_option('subbanner0-image-attachment-id'), 'medium'); ?>
          <div class="caption"><?php echo get_option('subbanner0-caption'); ?></div>
          <div class="clear"></div>
       </div>

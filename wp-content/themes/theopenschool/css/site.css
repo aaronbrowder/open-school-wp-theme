@@ -250,13 +250,13 @@ h2[id]:before {
   box-shadow: 0 0 2px 1px #fff; }
 
 .main-masthead {
-  background: url(/wp-content/themes/mytheme/images/green-dark.png), #2D562A;
+  background: url(/wp-content/themes/theopenschool/images/green-dark.png), #2D562A;
   z-index: 100002; }
   .main-masthead .header-menu {
     float: right; }
 
 .sub-masthead {
-  background: url(/wp-content/themes/mytheme/images/green-light.png), #4D744A;
+  background: url(/wp-content/themes/theopenschool/images/green-light.png), #4D744A;
   box-shadow: 0 0 1px 1px #fff;
   z-index: 100001; }
   .sub-masthead nav {
@@ -478,12 +478,14 @@ h2[id]:before {
     display: table;
     content: ' '; }
   .home-side-item img {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
 
 .home-subbanner {
   margin-bottom: 30px; }
   .home-subbanner img {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
   .home-subbanner h1,
   .home-subbanner h2,
   .home-subbanner h3,
@@ -574,8 +576,8 @@ h2[id]:before {
     height: 371px !important; } }
 @font-face {
   font-family: 'icon';
-  src: url("/wp-content/themes/mytheme/css/fonts/icon/icon.eot");
-  src: url("/wp-content/themes/mytheme/css/fonts/icon/icon.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mytheme/css/fonts/icon/icon.woff") format("woff"), url("/wp-content/themes/mytheme/css/fonts/icon/icon.ttf") format("truetype"), url("/wp-content/themes/mytheme/css/fonts/icon/icon.svg#roboto_condensedbold") format("svg");
+  src: url("/wp-content/themes/theopenschool/css/fonts/icon/icon.eot");
+  src: url("/wp-content/themes/theopenschool/css/fonts/icon/icon.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/theopenschool/css/fonts/icon/icon.woff") format("woff"), url("/wp-content/themes/theopenschool/css/fonts/icon/icon.ttf") format("truetype"), url("/wp-content/themes/theopenschool/css/fonts/icon/icon.svg#roboto_condensedbold") format("svg");
   font-weight: normal;
   font-style: normal; }
 .icon {
