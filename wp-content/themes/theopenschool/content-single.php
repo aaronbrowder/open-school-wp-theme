@@ -3,14 +3,11 @@
 </h2>
 
 <blockquote>
-   from The Open School blog
    <?php
       $author = get_post_meta(get_the_ID(), 'Custom Author', true);
-      if (!empty($author)) {
-         ?> <br/>by <?php
-         echo $author;
-      } ?>
-   <br/>
+      if (!empty($author)) { ?>
+         by <?php echo $author; ?><br/>
+      <?php } ?>
    <?php the_date(); ?>
 </blockquote>
 

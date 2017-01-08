@@ -403,6 +403,14 @@ function embed_video($video_url) {
    }
 }
 
+function endsWith($haystack, $needle) {
+   $length = strlen($needle);
+   if ($length == 0) {
+      return true;
+   }
+   return (substr($haystack, -$length) === $needle);
+}
+
 add_theme_support('title-tag');
 
 add_filter('show_admin_bar', '__return_false');

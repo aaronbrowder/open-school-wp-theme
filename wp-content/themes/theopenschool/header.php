@@ -52,7 +52,11 @@
                         $link = get_page_link($id);
                         $children = array_filter($sub_menu_items, function($o) use ($item) { return $o->menu_item_parent == $item->ID; });
                         $children_ids = array_map('get_page_id', $children);
-                        $is_current = ($id == $queried_object_id) || in_array($queried_object_id, $children_ids);
+                        
+                        $is_current = ($id == $queried_object_id) 
+                           || in_array($queried_object_id, $children_ids)
+                           || (endsWith($link, '/blog/') && is_single());
+                        
                         if ($is_current) {
                            $current_sub_menu_items = $children;
                         }
