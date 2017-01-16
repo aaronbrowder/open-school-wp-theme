@@ -1,16 +1,9 @@
-<?php get_header(); ?>
+<?php
 
-<div class="container">
-   <div class="column">
-      
-      <?php if (have_posts()) {
-         while (have_posts()) {
-            the_post();
-            get_template_part('page-content', get_post_format());
-         }
-      } ?>
-   
+page_template(function() { ?>
+
+   <div class="page">
+      <?php the_content(); ?>
    </div>
-</div>
-
-<?php get_footer(); ?>
+   
+<?php });

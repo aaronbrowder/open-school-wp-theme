@@ -1,10 +1,10 @@
 .page {
   margin-top: 20px;
-  margin-bottom: 20px; }
-
-.page-title {
   margin-bottom: 20px;
-  font-size: 40px; }
+  max-width: 700px; }
+
+.page-wide {
+  max-width: none; }
 
 .page-table-of-contents {
   background: #ebebeb;
@@ -19,15 +19,28 @@
   .page-table-of-contents li {
     line-height: 1.8; }
 
-.page-go-to-top {
-  color: #8FEA8A; }
-
 @media (min-width: 768px) {
   .page {
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+
+  .page-staff:after {
+    clear: both;
+    display: table;
+    content: ' '; }
+
+  .page-staff-pic {
+    float: left; }
+
+  .page-staff-bio {
+    overflow: hidden;
+    margin-left: 14px; }
+    .page-staff-bio p {
+      margin: 0; } }
 @media (min-width: 992px) {
+  .page-title {
+    margin-top: 30px; }
+
   .page {
-    margin-top: 30px;
     margin-bottom: 60px; }
 
   .page-table-of-contents li {

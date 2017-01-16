@@ -20,7 +20,7 @@ h4 {
 }
 
 h1 {
-   font-size: 28px;
+   font-size: 30px;
 }
 
 h2 {
@@ -69,10 +69,6 @@ iframe {
    @include clear-after;
    margin: auto;
    padding: 0 10px;
-}
-
-.column {
-   max-width: 700px;
 }
 
 h2[id]:before {

@@ -126,9 +126,12 @@
    .sub-masthead-wrapper {
       display: block;
    }
+   .main-masthead nav {
+      margin: 0 -8px;
+   }
    .main-masthead nav .header-menu-item a {
-      padding-left: 7px;
-      padding-right: 7px;
+      padding-left: 3.8px;
+      padding-right: 3.8px;
    }
    .main-masthead-wrapper nav,
    .sub-masthead-wrapper nav {
@@ -200,7 +203,17 @@
    }
 }
 
+@media (min-width: 830px) {
+   .main-masthead nav .header-menu-item a {
+      padding-left: 7px;
+      padding-right: 7px;
+   }
+}
+
 @include min-desktop {
+   .main-masthead nav {
+      margin: 0;
+   }
    .sub-masthead nav .header-menu-item a {
       padding-left: 15px;
       padding-right: 15px;

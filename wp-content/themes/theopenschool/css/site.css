@@ -152,7 +152,7 @@ h4 {
   line-height: 1.1; }
 
 h1 {
-  font-size: 28px; }
+  font-size: 30px; }
 
 h2 {
   font-size: 24px; }
@@ -193,9 +193,6 @@ iframe {
     clear: both;
     display: table;
     content: ' '; }
-
-.column {
-  max-width: 700px; }
 
 h2[id]:before {
   display: block;
@@ -325,9 +322,12 @@ h2[id]:before {
   .sub-masthead-wrapper {
     display: block; }
 
+  .main-masthead nav {
+    margin: 0 -8px; }
+
   .main-masthead nav .header-menu-item a {
-    padding-left: 7px;
-    padding-right: 7px; }
+    padding-left: 3.8px;
+    padding-right: 3.8px; }
 
   .main-masthead-wrapper nav .header-menu,
   .sub-masthead-wrapper nav .header-menu {
@@ -412,7 +412,14 @@ h2[id]:before {
     .main-masthead-wrapper nav .nav-divider.no-sub-header,
     .sub-masthead-wrapper nav .nav-divider.no-sub-header {
       display: block; } }
+@media (min-width: 830px) {
+  .main-masthead nav .header-menu-item a {
+    padding-left: 7px;
+    padding-right: 7px; } }
 @media (min-width: 992px) {
+  .main-masthead nav {
+    margin: 0; }
+
   .sub-masthead nav .header-menu-item a {
     padding-left: 15px;
     padding-right: 15px; }
@@ -610,11 +617,11 @@ h2[id]:before {
 
 .page {
   margin-top: 20px;
-  margin-bottom: 20px; }
-
-.page-title {
   margin-bottom: 20px;
-  font-size: 40px; }
+  max-width: 700px; }
+
+.page-wide {
+  max-width: none; }
 
 .page-table-of-contents {
   background: #ebebeb;
@@ -629,12 +636,33 @@ h2[id]:before {
   .page-table-of-contents li {
     line-height: 1.8; }
 
+.page-staff-bio p {
+  margin-top: 4px; }
+
 @media (min-width: 768px) {
   .page {
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+
+  .page-staff {
+    margin-bottom: 24px; }
+    .page-staff:after {
+      clear: both;
+      display: table;
+      content: ' '; }
+
+  .page-staff-pic {
+    float: left; }
+
+  .page-staff-bio {
+    overflow: hidden;
+    padding-left: 18px; }
+    .page-staff-bio p {
+      margin: 0; } }
 @media (min-width: 992px) {
+  .page-title {
+    margin-top: 30px; }
+
   .page {
-    margin-top: 30px;
     margin-bottom: 60px; }
 
   .page-table-of-contents li {

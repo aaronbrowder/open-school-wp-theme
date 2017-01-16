@@ -1,7 +1,11 @@
-<div class="page">
-    
-   <?php
-   
+<?php 
+
+/*
+Template Name: Indexed
+*/
+
+page_template(function() {
+
    $content = get_the_content();
    $content = apply_filters('the_content', $content);
    
@@ -24,17 +28,16 @@
    $contents_list_items = implode('', $contents_list_items_array);
    
    ?>
-    
-   <h1 class="page-title">
-      <span class="text-light"><?php echo get_page_title_prefix(); ?></span>
-      <span class="text-light-green"><?php the_title(); ?></span>
-   </h1>
-   
-   <div class="page-table-of-contents">
-      <h3>Contents</h3>
-      <ul><?php echo $contents_list_items; ?></ul>
+
+   <div class="page">
+      
+      <div class="page-table-of-contents">
+         <h3>Contents</h3>
+         <ul><?php echo $contents_list_items; ?></ul>
+      </div>
+      
+      <?php echo $content; ?>
+      
    </div>
    
-   <?php echo $content; ?>
-    
-</div>
+<?php });

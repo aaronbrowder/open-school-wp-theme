@@ -207,7 +207,7 @@ function school_meta_add_menu() {
 
 function school_meta_page() { ?>
    <div class="wrap">
-      <h1>Edit Footer</h1>
+      <h1>School Meta Information</h1>
       <form method="post" action="options.php">
          <?php
             settings_fields('school-meta');
@@ -380,6 +380,23 @@ function get_page_title_prefix() {
 function contact_form_generate_response($type, $message){
    if ($type == 'success') return "<div class='contact-us-success'>{$message}</div>";
    else return "<div class='contact-us-error'>{$message}</div>";
+}
+
+function page_template($content_function) {
+   get_header(); ?>
+   <div class="container">
+      <?php if (have_posts()) {
+         while (have_posts()) {
+            the_post(); ?>
+            <h1 class="page-title">
+               <span class="text-light"><?php echo get_page_title_prefix(); ?></span>
+               <span class="text-light-green"><?php the_title(); ?></span>
+            </h1>
+            <?php $content_function();
+         }
+      } ?>
+   </div>
+   <?php get_footer();
 }
 
 function render_php($path)

@@ -2,11 +2,11 @@
 .page {
    margin-top: 20px;
    margin-bottom: 20px;
+   max-width: 700px;
 }
 
-.page-title {
-   margin-bottom: 20px;
-   font-size: 40px;
+.page-wide {
+   max-width: none;
 }
 
 .page-table-of-contents {
@@ -26,15 +26,35 @@
    }
 }
 
+.page-staff-bio p {
+   margin-top: 4px;
+}
+
 @include min-tablet {
    .page {
       margin-bottom: 40px;
    }
+   .page-staff {
+      @include clear-after;
+      margin-bottom: 24px;
+   }
+   .page-staff-pic {
+      float: left;
+   }
+   .page-staff-bio {
+      overflow: hidden;
+      padding-left: 18px;
+      p {
+         margin: 0;
+      }
+   }
 }
 
 @include min-desktop {
-   .page {
+   .page-title {
       margin-top: 30px;
+   }
+   .page {
       margin-bottom: 60px;
    }
    .page-table-of-contents {
