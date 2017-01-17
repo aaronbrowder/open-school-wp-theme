@@ -26,6 +26,10 @@ $icon-base-path: '/wp-content/themes/theopenschool/css/fonts/icon';
   content: "\f09a";
 }
 
+.icon-facebook-square:before {
+  content: "\f082";
+}
+
 .icon-pinterest:before {
   content: "\f0d2";
 }
@@ -44,4 +48,8 @@ $icon-base-path: '/wp-content/themes/theopenschool/css/fonts/icon';
 
 .icon-bars:before {
   content: "\f0c9";
+}
+
+.icon-envelope:before {
+  content: "\f0e0";
 }

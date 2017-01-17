@@ -1,4 +1,4 @@
-<div>
+<div class="blog-excerpt-container">
     
    <h2>
       <a href="<?php the_permalink(); ?>">
@@ -7,7 +7,8 @@
    </h2>
     
    <p>
-      <?php 
+      <?php
+      the_custom_author();
       the_date();
       //see_comments();
       ?>

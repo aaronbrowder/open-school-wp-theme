@@ -1,8 +1,8 @@
 {
   "metadata": {
     "name": "Untitled Project 1",
-    "lastOpened": 1483327519377,
-    "created": 1483327513835
+    "lastOpened": 1484620693971,
+    "created": 1484620688664
   },
   "iconSets": [
     {
@@ -628,7 +628,10 @@
         {
           "name": "facebook-square",
           "id": 123,
-          "order": 0
+          "order": 12,
+          "prevSize": 28,
+          "code": 61570,
+          "tempChar": ""
         },
         {
           "name": "camera-retro",
@@ -741,7 +744,7 @@
           "order": 6,
           "prevSize": 28,
           "code": 61593,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "facebook, facebook-f",
@@ -749,7 +752,7 @@
           "order": 7,
           "prevSize": 28,
           "code": 61594,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "github",
@@ -912,7 +915,7 @@
           "order": 10,
           "prevSize": 28,
           "code": 61641,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "list-ul",
@@ -955,7 +958,7 @@
           "order": 5,
           "prevSize": 28,
           "code": 61650,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "pinterest-square",
@@ -1020,7 +1023,10 @@
         {
           "name": "envelope",
           "id": 199,
-          "order": 0
+          "order": 13,
+          "prevSize": 28,
+          "code": 61664,
+          "tempChar": ""
         },
         {
           "name": "linkedin",
@@ -1643,7 +1649,7 @@
           "order": 2,
           "prevSize": 28,
           "code": 61799,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "xing",
@@ -1676,7 +1682,7 @@
           "order": 8,
           "prevSize": 28,
           "code": 61805,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "flickr",

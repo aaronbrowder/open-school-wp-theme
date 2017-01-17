@@ -356,6 +356,13 @@ function see_comments() {
    <?php }
 }
 
+function the_custom_author() {
+   $author = get_post_meta(get_the_ID(), 'Custom Author', true);
+   if (!empty($author)) { ?>
+      by <?php echo $author; ?><br/>
+   <?php }
+}
+
 function get_page_title_prefix() {
    global $wp_query;
    $queried_object_id = $wp_query->queried_object_id;
@@ -371,7 +378,9 @@ function get_page_title_prefix() {
       $current_sub_menu_item = current($current_sub_menu_items);
       $parent_id = $current_sub_menu_item->menu_item_parent;
       $parent = current(array_filter($menu_items, function($o) use ($parent_id) { return $o->ID == $parent_id; }));
-      $title_prefix = $parent->title . ' &middot; ';
+      if ($parent->title != get_the_title()) {
+         $title_prefix = $parent->title . ' &middot; ';  
+      }
    }
    
    return $title_prefix;
