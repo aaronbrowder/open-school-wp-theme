@@ -11,6 +11,7 @@ page_template(function() {
    
    $contents_list_items_array = array();
    $sections = explode('<h2>', $content);
+   $intro = array_shift($sections);
    
    foreach ($sections as &$section) {
       if (empty($section)) continue;
@@ -30,6 +31,8 @@ page_template(function() {
    ?>
 
    <div class="page">
+      
+      <?php echo $intro; ?>
       
       <div class="page-table-of-contents">
          <h3>Contents</h3>

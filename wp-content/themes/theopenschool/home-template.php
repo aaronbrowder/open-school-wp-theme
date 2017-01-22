@@ -23,6 +23,18 @@ function announcement($id) {
    <?php }
 }
 
+function testimonial($number) {
+   $testimonial = get_option('testimonial' . $number);
+   $attribution = get_option('testimonial' . $number . '-attribution');
+   if ($testimonial) { ?>
+      <div class="home-testimonial">
+         <div class="icon icon-quote-left home-testimonial-quote"></div>
+         <?php echo $testimonial; ?>
+         <p>&mdash; <?php echo $attribution; ?></p>
+      </div>
+   <?php }
+}
+
 function subbanner($image_attachment_id, $caption) { ?>
    <div class="home-subbanner">
       <?php echo wp_get_attachment_image(get_option($image_attachment_id), 'medium'); ?>
@@ -34,13 +46,36 @@ function subbanner($image_attachment_id, $caption) { ?>
 
 <div class="home">
    
-   <div class="home-title home-narrow-container">
-      <img class="home-logo-desktop" src="<?php echo wp_get_attachment_url(get_option('title-image-attachment-id')); ?>" alt="The Open School">
-      <img class="home-logo-mobile" src="<?php echo wp_get_attachment_url(get_option('mobile-title-image-attachment-id')); ?>" alt="The Open School">
-      <h2><?php echo get_option('title-tagline-header'); ?></h2>
-      <p><?php echo get_option('title-tagline-text'); ?></p>
+   <div class="home-banner">
+      <?php echo wp_get_attachment_image(get_option('banner-attachment-id'), 'full'); ?>
    </div>
    
+   <div class="container">
+      <div class="home-title">
+         <div class="home-logo">
+            <?php echo wp_get_attachment_image(get_option('title-image-attachment-id'), 'full'); ?>
+         </div>
+         <div class="home-tagline">
+            <p>
+               <span class="icon icon-check-square-o"></span>
+               The Open School is the only school in Orange County where <em class="style1">kids are truly in charge.</em>
+            </p>
+            <p/>
+            <span class="icon icon-check-square-o"></span>
+               We have <em class="style2">no teachers, no curriculum, no tests, and no homework.</em>
+            </p>
+            <p>
+               <span class="icon icon-check-square-o"></span>
+               Instead, we have the <em class="style3">freedom to be ourselves.</em>
+            </p>
+         </div>
+         <div class="home-note">
+            Enrollment is open for the 2017/2018 school year. Learn about our <a href="/admissions">admission process &raquo;</a>
+         </div>
+      </div>
+      
+   </div>
+
    <?php
    if (get_option('announcement1')) { ?>
       <div class="home-announcements">
@@ -58,9 +93,10 @@ function subbanner($image_attachment_id, $caption) { ?>
          <?php embed_video(get_option('video-url')); ?>
       </div>
       <div class="home-side-item">
-         <?php echo wp_get_attachment_image(get_option('subbanner0-image-attachment-id'), 'medium'); ?>
-         <div class="caption"><?php echo get_option('subbanner0-caption'); ?></div>
-         <div class="clear"></div>
+         <?php 
+         testimonial(1);
+         testimonial(2);
+         ?>
       </div>
    </div>
    

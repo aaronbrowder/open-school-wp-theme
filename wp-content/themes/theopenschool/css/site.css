@@ -189,6 +189,10 @@ blockquote {
   border-bottom: 1px solid #bbb;
   margin: 0;
   padding: 12px 16px; }
+  blockquote p:first-child {
+    margin-top: 0; }
+  blockquote p:last-child {
+    margin-bottom: 0; }
 
 iframe {
   max-width: 100%; }
@@ -443,24 +447,53 @@ h2[id]:before {
 .home a {
   display: inline-block; }
 
-.home-narrow-container {
-  margin: auto;
-  width: 660px;
-  max-width: calc(100% - 20px);
-  padding: 0 10px; }
+.home-banner {
+  background: #000; }
+  .home-banner img {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto; }
 
-.home-title {
-  margin-top: 15px;
-  text-align: center; }
-  .home-title img {
-    width: 100%; }
-  .home-title p {
-    color: #222;
-    font-size: 15px;
-    text-align: justify; }
+.home-logo {
+  display: block;
+  margin: 50px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  width: calc(100% - 100px); }
 
 .home-logo-desktop {
   display: none; }
+
+.home-tagline {
+  margin: 20px auto;
+  margin-left: 70px;
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: bold;
+  font-size: 19px; }
+  .home-tagline p {
+    margin: 8px 0; }
+  .home-tagline .icon {
+    margin-right: 4px;
+    vertical-align: middle;
+    font-size: 21px; }
+  .home-tagline em {
+    font-style: normal; }
+    .home-tagline em.style1 {
+      color: #007A02; }
+    .home-tagline em.style2 {
+      color: #00597A; }
+    .home-tagline em.style3 {
+      color: #400089; }
+
+.home-note {
+  padding: 20px;
+  margin-bottom: 25px;
+  background: url(/wp-content/themes/theopenschool/images/notebook-paper.png), #f6f6f6;
+  border-bottom: 1px solid #aaa;
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: bold;
+  font-size: 18px; }
 
 .home-announcements {
   margin-top: 30px;
@@ -501,6 +534,26 @@ h2[id]:before {
     width: 100%;
     height: auto; }
 
+.home-testimonial {
+  position: relative;
+  margin-left: 0px;
+  margin-bottom: 15px;
+  padding: 10px;
+  padding-left: 34px;
+  padding-bottom: 0;
+  background: #DCF7D7;
+  border-bottom: 1px solid #B2D3AB; }
+  .home-testimonial p {
+    margin: 0.7em 0; }
+
+.home-testimonial-quote {
+  position: absolute;
+  left: -9px;
+  top: 20px;
+  color: #A0DD8B;
+  text-shadow: 1px 1px 1px #3D6033;
+  font-size: 2em !important; }
+
 .home-subbanner {
   margin-bottom: 30px; }
   .home-subbanner img {
@@ -512,15 +565,7 @@ h2[id]:before {
   .home-subbanner h4 {
     margin-top: 10px; }
 
-@media (min-width: 400px) {
-  .home-title h2 {
-    font-size: 22px; } }
 @media (min-width: 500px) {
-  .home-title {
-    margin-top: 30px; }
-    .home-title h2 {
-      font-size: 30px; }
-
   .home-logo-mobile {
     display: none; }
 
@@ -544,14 +589,6 @@ h2[id]:before {
     width: 29.3%;
     padding: 0 1.8%; } }
 @media (min-width: 768px) {
-  .home-title {
-    margin-top: 50px; }
-    .home-title h2 {
-      margin-top: 40px;
-      font-size: 32px; }
-    .home-title p {
-      font-size: 17px; }
-
   .home-announcements {
     margin-top: 40px;
     margin-bottom: 50px; }
@@ -633,6 +670,12 @@ h2[id]:before {
 
 .icon-envelope:before {
   content: "\f0e0"; }
+
+.icon-quote-left:before {
+  content: "\f10d"; }
+
+.icon-check-square-o:before {
+  content: "\f046"; }
 
 .page {
   margin-top: 20px;

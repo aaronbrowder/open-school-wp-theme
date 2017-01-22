@@ -1,65 +1,174 @@
 .home a {
   display: inline-block; }
 
-.home-title {
+.home-narrow-container {
   margin: auto;
-  max-width: 660px;
-  margin-top: 50px;
-  text-align: center; }
-  .home-title h2 {
-    margin-top: 40px;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 32px; }
-  .home-title p {
-    color: #222;
-    font-size: 18px;
-    text-align: justify; }
+  width: 600px;
+  max-width: calc(100% - 20px);
+  padding: 0 10px; }
 
-.home-video {
-  float: left; }
-  .home-video iframe {
-    width: 660px !important;
-    height: 371px !important; }
+.home-title {
+  display: block;
+  margin: 50px;
+  margin-top: 25px;
+  margin-bottom: 0;
+  width: calc(100% - 100px);
+  font-size: 1.2em;
+  vertical-align: middle;
+  text-align: center; }
+
+.home-tagline {
+  margin-top: 20px; }
+  .home-tagline em {
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.25em; }
+    .home-tagline em.style1 {
+      color: #007A02; }
+
+.home-logo-desktop {
+  display: none; }
+
+.home-banner {
+  background: #000; }
+  .home-banner img {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto; }
 
 .home-announcements {
-  margin-top: 20px;
-  margin-bottom: 80px; }
+  margin-top: 30px;
+  margin-bottom: 40px; }
+
+.home-announcement-banner {
+  margin: 10px 0;
+  padding: 2px 0;
+  background: #DCF7D7;
+  border-bottom: 1px solid #B2D3AB; }
 
 .home-announcement {
   display: table;
   width: 100%;
-  margin: 8px 0;
   border-spacing: 12px 0;
-  background: #d4ffd1; }
+  margin-left: -12px; }
 
 .home-announcement-icon {
   display: table-cell;
-  font-size: 40px;
+  font-size: 36px;
   color: #79e371;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: 1px; }
 
 .home-announcement-content {
   display: table-cell;
-  font-size: 16px;
+  color: #000;
   vertical-align: middle; }
 
-.home-subbanners-wrapper {
-  margin-bottom: 60px;
-  margin-top: 30px; }
-
-.home-subbanners {
-  margin-left: -1.6%;
-  margin-right: -3.2%; }
+.home-side-item {
+  margin-top: 20px;
+  margin-bottom: 30px; }
+  .home-side-item:after {
+    clear: both;
+    display: table;
+    content: ' '; }
+  .home-side-item img {
+    width: 100%;
+    height: auto; }
 
 .home-subbanner {
-  float: left;
-  text-align: center;
-  width: 29.3%;
-  padding: 0 1.8%; }
+  margin-bottom: 30px; }
   .home-subbanner img {
-    width: 100%; }
-  .home-subbanner .caption {
-    margin-top: 15px;
-    text-align: left; }
+    width: 100%;
+    height: auto; }
+  .home-subbanner h1,
+  .home-subbanner h2,
+  .home-subbanner h3,
+  .home-subbanner h4 {
+    margin-top: 10px; }
+
+@media (min-width: 400px) {
+  .home-title h2 {
+    font-size: 22px; } }
+@media (min-width: 500px) {
+  .home-title {
+    margin-top: 30px; }
+    .home-title h2 {
+      font-size: 30px; }
+
+  .home-logo-mobile {
+    display: none; }
+
+  .home-logo-desktop {
+    display: block; } }
+@media (min-width: 600px) {
+  .home-side-item img {
+    float: left;
+    width: 50%; }
+  .home-side-item .caption {
+    overflow: hidden;
+    padding-left: 20px;
+    width: 30%; }
+
+  .home-subbanners {
+    margin-left: -1.6%;
+    margin-right: -3.2%; }
+
+  .home-subbanner {
+    float: left;
+    width: 29.3%;
+    padding: 0 1.8%; } }
+@media (min-width: 768px) {
+  .home-title {
+    margin-top: 50px; }
+    .home-title h2 {
+      margin-top: 40px;
+      font-size: 32px; }
+    .home-title p {
+      font-size: 17px; }
+
+  .home-announcements {
+    margin-top: 40px;
+    margin-bottom: 50px; }
+
+  .home-announcement {
+    border-spacing: 16px 0;
+    margin-left: -16px; }
+
+  .home-announcement-icon {
+    font-size: 40px; }
+
+  .home-announcement-content {
+    font-size: 16px; }
+
+  .home-video {
+    float: left; }
+    .home-video iframe {
+      width: 470px !important;
+      height: 267px !important; }
+
+  .home-side-item {
+    margin: 0;
+    overflow: hidden;
+    padding-left: 30px; }
+    .home-side-item img {
+      float: none;
+      width: 100%; }
+    .home-side-item .caption {
+      overflow: auto;
+      padding: 0;
+      width: auto; }
+
+  .home-subbanners-wrapper {
+    margin: 30px 0; } }
+@media (min-width: 900px) {
+  .home-video iframe {
+    width: 540px !important;
+    height: 307px !important; } }
+@media (min-width: 992px) {
+  .home-video iframe {
+    width: 653px !important;
+    height: 371px !important; } }
 
 /*# sourceMappingURL=_home.css.map */
