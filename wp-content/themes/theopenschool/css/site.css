@@ -457,26 +457,23 @@ h2[id]:before {
 
 .home-logo {
   display: block;
-  margin: 50px;
-  margin-top: 25px;
-  margin-bottom: 0;
-  width: calc(100% - 100px); }
+  margin-top: 10px;
+  width: 100%; }
 
 .home-logo-desktop {
   display: none; }
 
 .home-tagline {
-  margin: 20px auto;
-  margin-left: 70px;
+  margin: 20px 0;
   font-family: "Cabin Sketch", sans-serif;
   font-weight: bold;
   font-size: 19px; }
   .home-tagline p {
-    margin: 8px 0; }
+    margin: 14px 0; }
   .home-tagline .icon {
-    margin-right: 4px;
+    margin-right: 5px;
     vertical-align: middle;
-    font-size: 21px; }
+    font-size: 1.1em; }
   .home-tagline em {
     font-style: normal; }
     .home-tagline em.style1 {
@@ -486,42 +483,14 @@ h2[id]:before {
     .home-tagline em.style3 {
       color: #400089; }
 
-.home-note {
-  padding: 20px;
-  margin-bottom: 25px;
+.home-announcement {
+  padding: 16px 20px;
+  margin-bottom: 20px;
   background: url(/wp-content/themes/theopenschool/images/notebook-paper.png), #f6f6f6;
   border-bottom: 1px solid #aaa;
   font-family: "Cabin Sketch", sans-serif;
   font-weight: bold;
   font-size: 18px; }
-
-.home-announcements {
-  margin-top: 30px;
-  margin-bottom: 40px; }
-
-.home-announcement-banner {
-  margin: 10px 0;
-  padding: 2px 0;
-  background: #DCF7D7;
-  border-bottom: 1px solid #B2D3AB; }
-
-.home-announcement {
-  display: table;
-  width: 100%;
-  border-spacing: 12px 0;
-  margin-left: -12px; }
-
-.home-announcement-icon {
-  display: table-cell;
-  font-size: 36px;
-  color: #79e371;
-  vertical-align: middle;
-  width: 1px; }
-
-.home-announcement-content {
-  display: table-cell;
-  color: #000;
-  vertical-align: middle; }
 
 .home-side-item {
   margin-top: 20px;
@@ -536,7 +505,7 @@ h2[id]:before {
 
 .home-testimonial {
   position: relative;
-  margin-left: 0px;
+  margin-left: 10px;
   margin-bottom: 15px;
   padding: 10px;
   padding-left: 34px;
@@ -565,13 +534,24 @@ h2[id]:before {
   .home-subbanner h4 {
     margin-top: 10px; }
 
+@media (min-width: 400px) {
+  .home-tagline {
+    margin-left: 10px; } }
 @media (min-width: 500px) {
+  .home-logo {
+    margin-top: 15px; }
+
   .home-logo-mobile {
     display: none; }
 
   .home-logo-desktop {
     display: block; } }
 @media (min-width: 600px) {
+  .home-tagline {
+    font-size: 17.5px; }
+    .home-tagline p {
+      margin: 9px 0; }
+
   .home-side-item img {
     float: left;
     width: 50%; }
@@ -589,19 +569,15 @@ h2[id]:before {
     width: 29.3%;
     padding: 0 1.8%; } }
 @media (min-width: 768px) {
-  .home-announcements {
-    margin-top: 40px;
-    margin-bottom: 50px; }
+  .home-logo {
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px); }
 
-  .home-announcement {
-    border-spacing: 16px 0;
-    margin-left: -16px; }
-
-  .home-announcement-icon {
-    font-size: 40px; }
-
-  .home-announcement-content {
-    font-size: 16px; }
+  .home-tagline {
+    margin-left: 20px;
+    font-size: 18.5px; }
 
   .home-video {
     float: left; }
@@ -612,7 +588,7 @@ h2[id]:before {
   .home-side-item {
     margin: 0;
     overflow: hidden;
-    padding-left: 30px; }
+    padding-left: 24px; }
     .home-side-item img {
       float: none;
       width: 100%; }
@@ -621,16 +597,38 @@ h2[id]:before {
       padding: 0;
       width: auto; }
 
+  .home-testimonial-2 {
+    display: none; }
+
   .home-subbanners-wrapper {
     margin: 30px 0; } }
 @media (min-width: 900px) {
+  .home-tagline {
+    margin-left: 40px;
+    font-size: 20px; }
+
   .home-video iframe {
     width: 540px !important;
-    height: 307px !important; } }
+    height: 307px !important; }
+
+  .home-testimonial-2 {
+    display: block; } }
 @media (min-width: 992px) {
+  .home-logo {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: calc(100% - 100px); }
+
+  .home-tagline {
+    margin-left: 70px;
+    font-size: 22px; }
+
   .home-video iframe {
     width: 653px !important;
-    height: 371px !important; } }
+    height: 371px !important; }
+
+  .home-side-item {
+    padding-left: 30px; } }
 @font-face {
   font-family: 'icon';
   src: url("/wp-content/themes/theopenschool/css/fonts/icon/icon.eot");
@@ -696,7 +694,7 @@ h2[id]:before {
     margin-top: 0;
     padding-left: 20px; }
   .page-table-of-contents li {
-    line-height: 1.8; }
+    margin: 8px 0; }
 
 .page-staff-bio p {
   margin-top: 4px; }
@@ -728,7 +726,7 @@ h2[id]:before {
     margin-bottom: 60px; }
 
   .page-table-of-contents li {
-    line-height: 1.4; } }
+    margin: 3px 0; } }
 .alignleft {
   display: inline;
   float: left;

@@ -249,6 +249,14 @@ function map_callback() { ?>
   <input type="text" name="map" size="50" value="<?php echo htmlentities(get_option('map')); ?>" />
 <?php }
 
+function base_tuition_callback() { ?>
+  <input type="text" name="base-tuition" size="10" value="<?php echo get_option('base-tuition'); ?>" />
+<?php }
+
+function current_year_callback() { ?>
+  <input type="text" name="current-year" size="10" value="<?php echo get_option('current-year'); ?>" />
+<?php }
+
 add_action('admin_init', 'school_meta_page_setup');
 function school_meta_page_setup() {
    add_settings_section('content', 'Content', null, 'school-meta');
@@ -263,6 +271,8 @@ function school_meta_page_setup() {
    add_settings_field('email', 'Email', 'email_callback', 'school-meta', 'content');
    add_settings_field('phone', 'Phone', 'phone_callback', 'school-meta', 'content');
    add_settings_field('map', 'Map Embed Code', 'map_callback', 'school-meta', 'content');
+   add_settings_field('base-tuition', 'Base Tuition', 'base_tuition_callback', 'school-meta', 'content');
+   add_settings_field('current-year', 'Current School Year Start Year', 'current_year_callback', 'school-meta', 'content');
 
    register_setting('school-meta', 'facebook');
    register_setting('school-meta', 'twitter');
@@ -274,6 +284,8 @@ function school_meta_page_setup() {
    register_setting('school-meta', 'email');
    register_setting('school-meta', 'phone');
    register_setting('school-meta', 'map');
+   register_setting('school-meta', 'base-tuition');
+   register_setting('school-meta', 'current-year');
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -314,6 +326,33 @@ function map_shortcode_callback() {
 add_shortcode('contactform', 'contactform_shortcode_callback');
 function contactform_shortcode_callback() {
 	return render_php('contact-form.php');
+}
+
+// [base-tuition]
+add_shortcode('base-tuition', 'base_tuition_shortcode_callback');
+function base_tuition_shortcode_callback() {
+	return get_option('base-tuition');
+}
+
+// [next-year-start-year]
+add_shortcode('next-year-start-year', 'next_year_start_year_shortcode_callback');
+function next_year_start_year_shortcode_callback() {
+	$current_year = intval(get_option('current-year'));
+	return $current_year + 1;
+}
+
+// [current-year-span]
+add_shortcode('current-year-span', 'current_year_span_shortcode_callback');
+function current_year_span_shortcode_callback() {
+	$current_year = intval(get_option('current-year'));
+	return $current_year . '-' . ($current_year + 1);
+}
+
+// [next-year-span]
+add_shortcode('next-year-span', 'next_year_span_shortcode_callback');
+function next_year_span_shortcode_callback() {
+	$current_year = intval(get_option('current-year'));
+	return ($current_year + 1) . '-' . ($current_year + 2);
 }
 
 //////////////////////////////////////////////////////////////////////

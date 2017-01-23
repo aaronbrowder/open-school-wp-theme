@@ -8,17 +8,8 @@ get_header();
 function announcement($id) { 
    $announcement = get_option($id);
    if ($announcement) { ?>
-      <div class="home-announcement-banner">
-         <div class="home-narrow-container">
-            <div class="home-announcement">
-               <div class="home-announcement-icon">
-                  <span class="icon icon-exclamation-circle"></span>
-               </div>
-               <div class="home-announcement-content">
-                  <?php echo $announcement; ?>
-               </div>
-            </div>
-         </div>
+      <div class="home-announcement">
+         <?php echo $announcement; ?>
       </div>
    <?php }
 }
@@ -27,7 +18,7 @@ function testimonial($number) {
    $testimonial = get_option('testimonial' . $number);
    $attribution = get_option('testimonial' . $number . '-attribution');
    if ($testimonial) { ?>
-      <div class="home-testimonial">
+      <div class="home-testimonial home-testimonial-<?php echo $number; ?>">
          <div class="icon icon-quote-left home-testimonial-quote"></div>
          <?php echo $testimonial; ?>
          <p>&mdash; <?php echo $attribution; ?></p>
@@ -51,43 +42,35 @@ function subbanner($image_attachment_id, $caption) { ?>
    </div>
    
    <div class="container">
-      <div class="home-title">
-         <div class="home-logo">
+      <div class="home-logo">
+         <div class="home-logo-desktop">
             <?php echo wp_get_attachment_image(get_option('title-image-attachment-id'), 'full'); ?>
          </div>
-         <div class="home-tagline">
-            <p>
-               <span class="icon icon-check-square-o"></span>
-               The Open School is the only school in Orange County where <em class="style1">kids are truly in charge.</em>
-            </p>
-            <p/>
-            <span class="icon icon-check-square-o"></span>
-               We have <em class="style2">no teachers, no curriculum, no tests, and no homework.</em>
-            </p>
-            <p>
-               <span class="icon icon-check-square-o"></span>
-               Instead, we have the <em class="style3">freedom to be ourselves.</em>
-            </p>
-         </div>
-         <div class="home-note">
-            Enrollment is open for the 2017/2018 school year. Learn about our <a href="/admissions">admission process &raquo;</a>
+         <div class="home-logo-mobile">
+            <?php echo wp_get_attachment_image(get_option('mobile-title-image-attachment-id'), 'full'); ?>
          </div>
       </div>
-      
+      <div class="home-tagline">
+         <p>
+            <span class="icon icon-check-square-o"></span>
+            The Open School is the only school in Orange County where <em class="style1">kids are truly in charge.</em>
+         </p>
+         <p/>
+         <span class="icon icon-check-square-o"></span>
+            We have <em class="style2">no teachers, no curriculum, no tests, and no homework.</em>
+         </p>
+         <p>
+            <span class="icon icon-check-square-o"></span>
+            Instead, we have the <em class="style3">freedom to be ourselves.</em>
+         </p>
+      </div>
+      <?php
+      announcement('announcement1');
+      announcement('announcement2');
+      announcement('announcement3');
+      ?>
    </div>
 
-   <?php
-   if (get_option('announcement1')) { ?>
-      <div class="home-announcements">
-         <?php
-         announcement('announcement1');
-         announcement('announcement2');
-         announcement('announcement3');
-         announcement('announcement4');
-         ?>
-      </div>
-   <?php } ?>
-   
    <div class="container">
       <div class="home-video">
          <?php embed_video(get_option('video-url')); ?>
