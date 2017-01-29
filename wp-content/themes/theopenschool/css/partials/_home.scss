@@ -17,16 +17,17 @@
 
 .home-logo {
    display: block;
-   margin-top: 10px;
+   margin-top: 20px;
    width: 100%;
 }
 
-.home-logo-desktop {
+.home-banner-desktop, .home-logo-desktop {
    display: none;
 }
 
 .home-tagline {
-   margin: 20px 0;
+   margin-top: 20px;
+   margin-bottom: 40px;
    font-family: $stylized-font-family;
    font-weight: bold;
    font-size: 19px;
@@ -162,6 +163,12 @@
       margin-left: 10px;
       margin-right: 10px;
       width: calc(100% - 20px);
+   }
+   .home-banner-mobile {
+      display: none;
+   }
+   .home-banner-desktop {
+      display: block;
    }
    .home-tagline {
       margin-left: 20px;

@@ -179,7 +179,7 @@ h4 {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: #009102; }
+  color: #288529; }
   a:hover {
     color: #000;
     text-decoration: none; }
@@ -264,13 +264,13 @@ h2[id]:before {
   box-shadow: 0 0 2px 1px #fff; }
 
 .main-masthead {
-  background: url(/wp-content/themes/theopenschool/images/green-dark.png), #2D562A;
+  background: #444;
   z-index: 100002; }
   .main-masthead .header-menu {
     float: right; }
 
 .sub-masthead {
-  background: url(/wp-content/themes/theopenschool/images/green-light.png), #4D744A;
+  background: #5D755B;
   box-shadow: 0 0 1px 1px #fff;
   z-index: 100001; }
   .sub-masthead nav {
@@ -296,7 +296,7 @@ h2[id]:before {
   padding: 0;
   margin: 0 -10px;
   width: calc(100% + 20px);
-  background: #444; }
+  background: #333; }
   .main-masthead-wrapper nav .header-menu.visible,
   .sub-masthead-wrapper nav .header-menu.visible {
     display: block; }
@@ -388,7 +388,7 @@ h2[id]:before {
     border-left: 5px solid transparent; }
   .main-masthead-wrapper nav .header-current-menu-item.has-children:after,
   .sub-masthead-wrapper nav .header-current-menu-item.has-children:after {
-    border-bottom-color: #658764; }
+    border-bottom-color: #5D755B; }
   .main-masthead-wrapper nav .header-context-menu,
   .sub-masthead-wrapper nav .header-context-menu {
     display: none;
@@ -457,14 +457,15 @@ h2[id]:before {
 
 .home-logo {
   display: block;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%; }
 
-.home-logo-desktop {
+.home-banner-desktop, .home-logo-desktop {
   display: none; }
 
 .home-tagline {
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 40px;
   font-family: "Cabin Sketch", sans-serif;
   font-weight: bold;
   font-size: 19px; }
@@ -574,6 +575,12 @@ h2[id]:before {
     margin-left: 10px;
     margin-right: 10px;
     width: calc(100% - 20px); }
+
+  .home-banner-mobile {
+    display: none; }
+
+  .home-banner-desktop {
+    display: block; }
 
   .home-tagline {
     margin-left: 20px;

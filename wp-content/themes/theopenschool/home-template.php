@@ -38,7 +38,12 @@ function subbanner($image_attachment_id, $caption) { ?>
 <div class="home">
    
    <div class="home-banner">
-      <?php echo wp_get_attachment_image(get_option('banner-attachment-id'), 'full'); ?>
+      <div class="home-banner-desktop">
+         <?php echo wp_get_attachment_image(get_option('banner-attachment-id'), 'full'); ?>
+      </div>
+      <div class="home-banner-mobile">
+         <?php echo wp_get_attachment_image(get_option('mobile-banner-attachment-id'), 'full'); ?>
+      </div>
    </div>
    
    <div class="container">
@@ -51,18 +56,21 @@ function subbanner($image_attachment_id, $caption) { ?>
          </div>
       </div>
       <div class="home-tagline">
-         <p>
-            <span class="icon icon-check-square-o"></span>
-            The Open School is the only school in Orange County where <em class="style1">kids are truly in charge.</em>
-         </p>
-         <p/>
-         <span class="icon icon-check-square-o"></span>
-            We have <em class="style2">no teachers, no curriculum, no tests, and no homework.</em>
-         </p>
-         <p>
-            <span class="icon icon-check-square-o"></span>
-            Instead, we have the <em class="style3">freedom to be ourselves.</em>
-         </p>
+         The Open School is the only school in Orange County where <em class="style1">kids are truly in charge.</em>
+         We have <em class="style2">no teachers, no curriculum, no tests, and no homework.</em>
+         Instead, we have the <em class="style3">freedom to be ourselves.</em>
+         <!--<p>-->
+         <!--   <span class="icon icon-check-square-o"></span>-->
+         <!--   The Open School is the only school in Orange County where <em class="style1">kids are truly in charge.</em>-->
+         <!--</p>-->
+         <!--<p/>-->
+         <!--<span class="icon icon-check-square-o"></span>-->
+         <!--   We have <em class="style2">no teachers, no curriculum, no tests, and no homework.</em>-->
+         <!--</p>-->
+         <!--<p>-->
+         <!--   <span class="icon icon-check-square-o"></span>-->
+         <!--   Instead, we have the <em class="style3">freedom to be ourselves.</em>-->
+         <!--</p>-->
       </div>
       <?php
       announcement('announcement1');

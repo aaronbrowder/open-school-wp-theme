@@ -77,6 +77,10 @@ function banner_attachment_callback() {
    image_attachment_callback('banner-attachment-id');
 }
 
+function mobile_banner_attachment_callback() { 
+   image_attachment_callback('mobile-banner-attachment-id');
+}
+
 function video_url_callback() { ?>
    <input type="text" size="50" name="video-url" value="<?php echo get_option('video-url'); ?>"/>
 <?php }
@@ -151,6 +155,7 @@ function edit_home_page_page_setup() {
    add_settings_field('title-image-attachment-id', 'Title Image', 'title_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('mobile-title-image-attachment-id', 'Title Image (Mobile)', 'mobile_title_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('banner-attachment-id', 'Banner', 'banner_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('mobile-banner-attachment-id', 'Banner (Mobile)', 'mobile_banner_attachment_callback', 'edit-home-page', 'content');
    
    add_settings_field('video-url', 'Video URL', 'video_url_callback', 'edit-home-page', 'content');
    add_settings_field('announcement1', 'Announcement 1', 'announcement1_callback', 'edit-home-page', 'content');
@@ -173,6 +178,7 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'title-image-attachment-id');
    register_setting('edit-home-page', 'mobile-title-image-attachment-id');
    register_setting('edit-home-page', 'banner-attachment-id');
+   register_setting('edit-home-page', 'mobile-banner-attachment-id');
    register_setting('edit-home-page', 'video-url');
    register_setting('edit-home-page', 'announcement1');
    register_setting('edit-home-page', 'announcement2');
