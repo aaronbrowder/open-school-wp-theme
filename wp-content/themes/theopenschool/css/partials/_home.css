@@ -1,35 +1,6 @@
 .home a {
   display: inline-block; }
 
-.home-narrow-container {
-  margin: auto;
-  width: 600px;
-  max-width: calc(100% - 20px);
-  padding: 0 10px; }
-
-.home-title {
-  display: block;
-  margin: 50px;
-  margin-top: 25px;
-  margin-bottom: 0;
-  width: calc(100% - 100px);
-  font-size: 1.2em;
-  vertical-align: middle;
-  text-align: center; }
-
-.home-tagline {
-  margin-top: 20px; }
-  .home-tagline em {
-    font-family: "Cabin Sketch", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 1.25em; }
-    .home-tagline em.style1 {
-      color: #007A02; }
-
-.home-logo-desktop {
-  display: none; }
-
 .home-banner {
   background: #000; }
   .home-banner img {
@@ -38,33 +9,34 @@
     max-width: 1400px;
     margin: auto; }
 
-.home-announcements {
-  margin-top: 30px;
-  margin-bottom: 40px; }
+.home-logo {
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 0;
+  width: 96%;
+  max-width: 800px; }
 
-.home-announcement-banner {
-  margin: 10px 0;
-  padding: 2px 0;
-  background: #DCF7D7;
-  border-bottom: 1px solid #B2D3AB; }
+.home-banner-desktop,
+.home-logo-desktop {
+  display: none; }
+
+.home-tagline {
+  width: 96%;
+  max-width: 600px;
+  margin: 30px auto;
+  margin-bottom: 50px;
+  font-size: 17px; }
+  .home-tagline h2 {
+    font-size: 28px; }
 
 .home-announcement {
-  display: table;
-  width: 100%;
-  border-spacing: 12px 0;
-  margin-left: -12px; }
-
-.home-announcement-icon {
-  display: table-cell;
-  font-size: 36px;
-  color: #79e371;
-  vertical-align: middle;
-  width: 1px; }
-
-.home-announcement-content {
-  display: table-cell;
-  color: #000;
-  vertical-align: middle; }
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  background: url(/wp-content/themes/theopenschool/images/notebook-paper.png), #f6f6f6;
+  border-bottom: 1px solid #aaa;
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: bold;
+  font-size: 18px; }
 
 .home-side-item {
   margin-top: 20px;
@@ -77,25 +49,55 @@
     width: 100%;
     height: auto; }
 
-.home-subbanner {
-  margin-bottom: 30px; }
-  .home-subbanner img {
+.home-testimonial {
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  padding-left: 34px;
+  padding-bottom: 0;
+  background: #DCF7D7;
+  border-bottom: 1px solid #B2D3AB; }
+  .home-testimonial p {
+    margin: 0.7em 0; }
+
+.home-testimonial-quote {
+  position: absolute;
+  left: -9px;
+  top: 20px;
+  color: #A0DD8B;
+  text-shadow: 1px 1px 1px #3D6033;
+  font-size: 2em !important; }
+
+.home-subbanners {
+  margin-top: 90px; }
+
+.home-subbanner:after {
+  clear: both;
+  display: table;
+  content: ' '; }
+.home-subbanner .home-subbanner-image {
+  float: left;
+  max-width: 60%;
+  background: #fff;
+  padding: 6px; }
+  .home-subbanner .home-subbanner-image img {
     width: 100%;
     height: auto; }
-  .home-subbanner h1,
-  .home-subbanner h2,
-  .home-subbanner h3,
-  .home-subbanner h4 {
-    margin-top: 10px; }
+.home-subbanner .home-subbanner-caption {
+  overflow: hidden;
+  padding: 90px 0; }
 
-@media (min-width: 400px) {
-  .home-title h2 {
-    font-size: 22px; } }
+.home-subbanner-with-background .home-subbanner-caption {
+  background: #288529;
+  color: #fff;
+  border-bottom: 1px solid #ccc; }
+  .home-subbanner-with-background .home-subbanner-caption h2 {
+    color: #fff; }
+
 @media (min-width: 500px) {
-  .home-title {
+  .home-logo {
     margin-top: 30px; }
-    .home-title h2 {
-      font-size: 30px; }
 
   .home-logo-mobile {
     display: none; }
@@ -103,44 +105,28 @@
   .home-logo-desktop {
     display: block; } }
 @media (min-width: 600px) {
+  .home-tagline {
+    font-size: 19px; }
+
   .home-side-item img {
     float: left;
     width: 50%; }
   .home-side-item .caption {
     overflow: hidden;
     padding-left: 20px;
-    width: 30%; }
-
-  .home-subbanners {
-    margin-left: -1.6%;
-    margin-right: -3.2%; }
-
-  .home-subbanner {
-    float: left;
-    width: 29.3%;
-    padding: 0 1.8%; } }
+    width: 30%; } }
 @media (min-width: 768px) {
-  .home-title {
-    margin-top: 50px; }
-    .home-title h2 {
-      margin-top: 40px;
-      font-size: 32px; }
-    .home-title p {
-      font-size: 17px; }
+  .home-logo {
+    margin-top: 40px; }
 
-  .home-announcements {
-    margin-top: 40px;
-    margin-bottom: 50px; }
+  .home-banner-mobile {
+    display: none; }
 
-  .home-announcement {
-    border-spacing: 16px 0;
-    margin-left: -16px; }
+  .home-banner-desktop {
+    display: block; }
 
-  .home-announcement-icon {
-    font-size: 40px; }
-
-  .home-announcement-content {
-    font-size: 16px; }
+  .home-tagline p {
+    text-align: justify; }
 
   .home-video {
     float: left; }
@@ -151,7 +137,7 @@
   .home-side-item {
     margin: 0;
     overflow: hidden;
-    padding-left: 30px; }
+    padding-left: 24px; }
     .home-side-item img {
       float: none;
       width: 100%; }
@@ -160,12 +146,15 @@
       padding: 0;
       width: auto; }
 
-  .home-subbanners-wrapper {
-    margin: 30px 0; } }
+  .home-testimonial-2 {
+    display: none; } }
 @media (min-width: 900px) {
   .home-video iframe {
     width: 540px !important;
-    height: 307px !important; } }
+    height: 307px !important; }
+
+  .home-testimonial-2 {
+    display: block; } }
 @media (min-width: 992px) {
   .home-video iframe {
     width: 653px !important;

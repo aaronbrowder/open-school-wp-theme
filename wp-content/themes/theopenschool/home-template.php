@@ -26,10 +26,19 @@ function testimonial($number) {
    <?php }
 }
 
-function subbanner($image_attachment_id, $caption) { ?>
-   <div class="home-subbanner">
-      <?php echo wp_get_attachment_image(get_option($image_attachment_id), 'medium'); ?>
-      <div class="caption"><?php echo get_option($caption); ?></div>
+function subbanner($number) { 
+   $image_attachment = get_option("subbanner{$number}-image-attachment-id");
+   $caption = get_option("subbanner{$number}-caption");
+   ?>
+   <div class="container">
+      <div class="home-subbanner">
+         <div class="home-subbanner-image">
+            <?php echo wp_get_attachment_image($image_attachment, 'large'); ?>
+         </div>
+         <div class="home-subbanner-caption home-subbanner-caption-<?php echo $number; ?>">
+            <?php echo $caption; ?>
+         </div>
+      </div>
    </div>
 <?php }
 
@@ -56,51 +65,44 @@ function subbanner($image_attachment_id, $caption) { ?>
          </div>
       </div>
       <div class="home-tagline">
-         The Open School is the only school in Orange County where <em class="style1">kids are truly in charge.</em>
-         We have <em class="style2">no teachers, no curriculum, no tests, and no homework.</em>
-         Instead, we have the <em class="style3">freedom to be ourselves.</em>
-         <!--<p>-->
-         <!--   <span class="icon icon-check-square-o"></span>-->
-         <!--   The Open School is the only school in Orange County where <em class="style1">kids are truly in charge.</em>-->
-         <!--</p>-->
-         <!--<p/>-->
-         <!--<span class="icon icon-check-square-o"></span>-->
-         <!--   We have <em class="style2">no teachers, no curriculum, no tests, and no homework.</em>-->
-         <!--</p>-->
-         <!--<p>-->
-         <!--   <span class="icon icon-check-square-o"></span>-->
-         <!--   Instead, we have the <em class="style3">freedom to be ourselves.</em>-->
-         <!--</p>-->
+         <h2>Orange County's first and only democratic free school</h2>
+         <p>
+            The Open School is the only school in Orange County where kids are truly in charge.
+            We have no teachers, no curriculum, no tests, and no homework.
+            Instead, we have the freedom to be ourselves.
+         </p>
+         <hr/>
+         <p>
+            Enrollment is open for the 2017-2018 school year.
+            Check out our <a href="/admissions">admissions page</a>
+            or <a href="/contact">contact us</a> to arrange a visit.
+         </p>
       </div>
       <?php
-      announcement('announcement1');
-      announcement('announcement2');
-      announcement('announcement3');
+      // announcement('announcement1');
+      // announcement('announcement2');
+      // announcement('announcement3');
       ?>
    </div>
 
    <div class="container">
-      <div class="home-video">
-         <?php embed_video(get_option('video-url')); ?>
-      </div>
+      <!--<div class="home-video">-->
+      <!--   <?php embed_video(get_option('video-url')); ?>-->
+      <!--</div>-->
       <div class="home-side-item">
          <?php 
-         testimonial(1);
-         testimonial(2);
+         //testimonial(1);
+         // testimonial(2);
          ?>
       </div>
    </div>
    
-   <div class="home-subbanners-wrapper">
-       <div class="container">
-           <div class="home-subbanners">
-              <?php
-              subbanner('subbanner1-image-attachment-id', 'subbanner1-caption');
-              subbanner('subbanner2-image-attachment-id', 'subbanner2-caption');
-              subbanner('subbanner3-image-attachment-id', 'subbanner3-caption');
-              ?>
-          </div>
-       </div>
+   <div class="home-subbanners">
+     <?php
+     subbanner(1, true);
+     subbanner(2, false);
+     subbanner(3, true);
+     ?>
    </div>
 </div>
 

@@ -17,108 +17,100 @@
 
 .home-logo {
    display: block;
-   margin-top: 20px;
-   width: 100%;
+   margin: 20px auto;
+   margin-bottom: 0;
+   width: 96%;
+   max-width: 800px;
 }
 
-.home-banner-desktop, .home-logo-desktop {
+.home-banner-desktop,
+.home-logo-desktop {
    display: none;
 }
 
 .home-tagline {
+   width: 96%;
+   max-width: 600px;
+   margin: 20px auto;
+   font-size: 15.5px;
+   h2 {
+      font-size: 25px;
+   }
+}
+
+// .home-announcement {
+//    padding: 16px 20px;
+//    margin-bottom: 20px;
+//    background: $note-background;
+//    border-bottom: 1px solid #aaa;
+//    font-family: $stylized-font-family;
+//    font-weight: bold;
+//    font-size: 18px;
+// }
+// .home-side-item {
+//    @include clear-after;
+//    margin-top: 20px;
+//    margin-bottom: 30px;
+// }
+// .home-testimonial {
+//    position: relative;
+//    margin-left: 10px;
+//    margin-bottom: 15px;
+//    padding: 10px;
+//    padding-left: 34px;
+//    padding-bottom: 0;
+//    background: $light-light-green;
+//    border-bottom: 1px solid #B2D3AB;
+//    p {
+//       margin: 0.7em 0;
+//    }
+// }
+// .home-testimonial-quote {
+//    position: absolute;
+//    left: -9px;
+//    top: 20px;
+//    color: #A0DD8B;
+//    text-shadow: 1px 1px 1px #3D6033;
+//    font-size: 2em !important;
+// }
+.home-subbanners {
    margin-top: 20px;
    margin-bottom: 40px;
-   font-family: $stylized-font-family;
-   font-weight: bold;
-   font-size: 19px;
-   p {
-      margin: 14px 0;
-   }
-   .icon {
-      margin-right: 5px;
-      vertical-align: middle;
-      font-size: 1.1em;
-   }
-   em {
-      font-style: normal;
-      &.style1 {
-         color: $dark-green;
-      }
-      &.style2 {
-         color: #00597A;
-      }
-      &.style3 {
-         color: #400089;
-      }
-   }
-}
-
-.home-announcement {
-   padding: 16px 20px;
-   margin-bottom: 20px;
-   background: $note-background;
-   border-bottom: 1px solid #aaa;
-   font-family: $stylized-font-family;
-   font-weight: bold;
-   font-size: 18px;
-}
-
-.home-side-item {
-   @include clear-after;
-   margin-top: 20px;
-   margin-bottom: 30px;
-   img {
-      width: 100%;
-      height: auto;
-   }
-}
-
-.home-testimonial {
-   position: relative;
-   margin-left: 10px;
-   margin-bottom: 15px;
-   padding: 10px;
-   padding-left: 34px;
-   padding-bottom: 0;
-   background: $light-light-green;
-   border-bottom: 1px solid #B2D3AB;
-   p {
-      margin: 0.7em 0;
-   }
-}
-
-.home-testimonial-quote {
-   position: absolute;
-   left: -9px;
-   top: 20px;
-   color: #A0DD8B;
-   text-shadow: 1px 1px 1px #3D6033;
-   font-size: 2em !important;
 }
 
 .home-subbanner {
-   margin-bottom: 30px;
+   margin: 10px 0;
+   position: relative;
+}
+
+.home-subbanner-image {
    img {
       width: 100%;
       height: auto;
    }
-   h1,
+}
+
+.home-subbanner-caption {
+   font-size: 15px;
    h2,
-   h3,
-   h4 {
+   h3 {
       margin-top: 10px;
+      font-size: 25px;
    }
 }
 
 @media (min-width: 400px) {
    .home-tagline {
-      margin-left: 10px;
+      font-size: 17px;
+      h2 {
+         font-size: 28px;
+      }
    }
 }
 
 @media (min-width: 500px) {
    .home-logo {
-      margin-top: 15px;
+      margin-top: 30px;
    }
    .home-logo-mobile {
       display: none;
@@ -130,39 +122,14 @@
 
 @media (min-width: 600px) {
    .home-tagline {
-      font-size: 17.5px;
-      p {
-         margin: 9px 0;
-      }
-   }
-   .home-side-item {
-      img {
-         float: left;
-         width: 50%;
-      }
-      .caption {
-         overflow: hidden;
-         padding-left: 20px;
-         width: 30%;
-      }
-   }
-   .home-subbanners {
-      margin-left: -1.6%;
-      margin-right: -3.2%;
-   }
-   .home-subbanner {
-      float: left;
-      width: 29.3%;
-      padding: 0 1.8%;
+      font-size: 19px;
+      margin: 40px auto;
    }
 }
 
 @include min-tablet {
    .home-logo {
-      margin-top: 25px;
-      margin-left: 10px;
-      margin-right: 10px;
-      width: calc(100% - 20px);
+      margin-top: 40px;
    }
    .home-banner-mobile {
       display: none;
@@ -171,67 +138,63 @@
       display: block;
    }
    .home-tagline {
-      margin-left: 20px;
-      font-size: 18.5px;
-   }
-   .home-video {
-      float: left;
-      iframe {
-         width: 470px !important;
-         height: 267px !important;
+      p {
+         text-align: justify;
       }
    }
-   .home-side-item {
-      margin: 0;
-      overflow: hidden;
-      padding-left: 24px;
-      img {
-         float: none;
-         width: 100%;
+   // .home-side-item {
+   //    margin: 0;
+   //    overflow: hidden;
+   //    padding-left: 24px;
+   // }
+   // .home-testimonial-2 {
+   //    display: none;
+   // }
+   .home-subbanner-caption {
+      background: #fff;
+      position: absolute;
+      width: 40%;
+      padding: 15px;
+      box-shadow: -2px 3px 4px #222;
+      &.home-subbanner-caption-1 {
+         top: 25px;
+         left: 25px;
+         width: 40%;
       }
-      .caption {
-         overflow: auto;
-         padding: 0;
-         width: auto;
+      &.home-subbanner-caption-2 {
+         top: 25px;
+         left: 25px;
       }
-   }
-   .home-testimonial-2 {
-      display: none;
-   }
-   .home-subbanners-wrapper {
-      margin: 30px 0;
+      &.home-subbanner-caption-3 {
+         top: 45px;
+         right: 25px;
+         width: calc(600px - 20%);
+      }
+      h2,
+      h3 {
+         margin-top: 0;
+         font-family: $stylized-font-family;
+         text-transform: lowercase;
+      }
    }
 }
 
 @media (min-width: 900px) {
-   .home-tagline {
-      margin-left: 40px;
-      font-size: 20px;
+   // .home-testimonial-2 {
+   //    display: block;
+   // }
+   .home-subbanners {
+      margin-top: 30px;
+      margin-bottom: 60px;
    }
-   .home-video iframe {
-      width: 540px !important;
-      height: 307px !important;
-   }
-   .home-testimonial-2 {
-      display: block;
-   }
-}
-
-@include min-desktop {
-   .home-logo {
-      margin-left: 50px;
-      margin-right: 50px;
-      width: calc(100% - 100px);
-   }
-   .home-tagline {
-      margin-left: 70px;
-      font-size: 22px;
-   }
-   .home-video iframe {
-      width: 653px !important;
-      height: 371px !important;
-   }
-   .home-side-item {
-      padding-left: 30px;
+   .home-subbanner-caption {
+      font-size: 16px;
+      &.home-subbanner-caption-3 {
+         top: 60px;
+      }
+      h2,
+      h3 {
+         font-size: 30px;
+      }
    }
 }

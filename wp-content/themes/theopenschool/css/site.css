@@ -179,7 +179,7 @@ h4 {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: #288529; }
+  color: #009102; }
   a:hover {
     color: #000;
     text-decoration: none; }
@@ -264,13 +264,13 @@ h2[id]:before {
   box-shadow: 0 0 2px 1px #fff; }
 
 .main-masthead {
-  background: #444;
+  background: #222;
   z-index: 100002; }
   .main-masthead .header-menu {
     float: right; }
 
 .sub-masthead {
-  background: #5D755B;
+  background: #4D744A;
   box-shadow: 0 0 1px 1px #fff;
   z-index: 100001; }
   .sub-masthead nav {
@@ -296,7 +296,7 @@ h2[id]:before {
   padding: 0;
   margin: 0 -10px;
   width: calc(100% + 20px);
-  background: #333; }
+  background: #444; }
   .main-masthead-wrapper nav .header-menu.visible,
   .sub-masthead-wrapper nav .header-menu.visible {
     display: block; }
@@ -388,7 +388,7 @@ h2[id]:before {
     border-left: 5px solid transparent; }
   .main-masthead-wrapper nav .header-current-menu-item.has-children:after,
   .sub-masthead-wrapper nav .header-current-menu-item.has-children:after {
-    border-bottom-color: #5D755B; }
+    border-bottom-color: #4D744A; }
   .main-masthead-wrapper nav .header-context-menu,
   .sub-masthead-wrapper nav .header-context-menu {
     display: none;
@@ -457,90 +457,50 @@ h2[id]:before {
 
 .home-logo {
   display: block;
-  margin-top: 20px;
-  width: 100%; }
+  margin: 20px auto;
+  margin-bottom: 0;
+  width: 96%;
+  max-width: 800px; }
 
-.home-banner-desktop, .home-logo-desktop {
+.home-banner-desktop,
+.home-logo-desktop {
   display: none; }
 
 .home-tagline {
+  width: 96%;
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 15.5px; }
+  .home-tagline h2 {
+    font-size: 25px; }
+
+.home-subbanners {
   margin-top: 20px;
-  margin-bottom: 40px;
-  font-family: "Cabin Sketch", sans-serif;
-  font-weight: bold;
-  font-size: 19px; }
-  .home-tagline p {
-    margin: 14px 0; }
-  .home-tagline .icon {
-    margin-right: 5px;
-    vertical-align: middle;
-    font-size: 1.1em; }
-  .home-tagline em {
-    font-style: normal; }
-    .home-tagline em.style1 {
-      color: #007A02; }
-    .home-tagline em.style2 {
-      color: #00597A; }
-    .home-tagline em.style3 {
-      color: #400089; }
-
-.home-announcement {
-  padding: 16px 20px;
-  margin-bottom: 20px;
-  background: url(/wp-content/themes/theopenschool/images/notebook-paper.png), #f6f6f6;
-  border-bottom: 1px solid #aaa;
-  font-family: "Cabin Sketch", sans-serif;
-  font-weight: bold;
-  font-size: 18px; }
-
-.home-side-item {
-  margin-top: 20px;
-  margin-bottom: 30px; }
-  .home-side-item:after {
-    clear: both;
-    display: table;
-    content: ' '; }
-  .home-side-item img {
-    width: 100%;
-    height: auto; }
-
-.home-testimonial {
-  position: relative;
-  margin-left: 10px;
-  margin-bottom: 15px;
-  padding: 10px;
-  padding-left: 34px;
-  padding-bottom: 0;
-  background: #DCF7D7;
-  border-bottom: 1px solid #B2D3AB; }
-  .home-testimonial p {
-    margin: 0.7em 0; }
-
-.home-testimonial-quote {
-  position: absolute;
-  left: -9px;
-  top: 20px;
-  color: #A0DD8B;
-  text-shadow: 1px 1px 1px #3D6033;
-  font-size: 2em !important; }
+  margin-bottom: 40px; }
 
 .home-subbanner {
-  margin-bottom: 30px; }
-  .home-subbanner img {
-    width: 100%;
-    height: auto; }
-  .home-subbanner h1,
-  .home-subbanner h2,
-  .home-subbanner h3,
-  .home-subbanner h4 {
-    margin-top: 10px; }
+  margin: 10px 0;
+  position: relative; }
+
+.home-subbanner-image img {
+  width: 100%;
+  height: auto; }
+
+.home-subbanner-caption {
+  font-size: 15px; }
+  .home-subbanner-caption h2,
+  .home-subbanner-caption h3 {
+    margin-top: 10px;
+    font-size: 25px; }
 
 @media (min-width: 400px) {
   .home-tagline {
-    margin-left: 10px; } }
+    font-size: 17px; }
+    .home-tagline h2 {
+      font-size: 28px; } }
 @media (min-width: 500px) {
   .home-logo {
-    margin-top: 15px; }
+    margin-top: 30px; }
 
   .home-logo-mobile {
     display: none; }
@@ -549,32 +509,11 @@ h2[id]:before {
     display: block; } }
 @media (min-width: 600px) {
   .home-tagline {
-    font-size: 17.5px; }
-    .home-tagline p {
-      margin: 9px 0; }
-
-  .home-side-item img {
-    float: left;
-    width: 50%; }
-  .home-side-item .caption {
-    overflow: hidden;
-    padding-left: 20px;
-    width: 30%; }
-
-  .home-subbanners {
-    margin-left: -1.6%;
-    margin-right: -3.2%; }
-
-  .home-subbanner {
-    float: left;
-    width: 29.3%;
-    padding: 0 1.8%; } }
+    font-size: 19px;
+    margin: 40px auto; } }
 @media (min-width: 768px) {
   .home-logo {
-    margin-top: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: calc(100% - 20px); }
+    margin-top: 40px; }
 
   .home-banner-mobile {
     display: none; }
@@ -582,60 +521,43 @@ h2[id]:before {
   .home-banner-desktop {
     display: block; }
 
-  .home-tagline {
-    margin-left: 20px;
-    font-size: 18.5px; }
+  .home-tagline p {
+    text-align: justify; }
 
-  .home-video {
-    float: left; }
-    .home-video iframe {
-      width: 470px !important;
-      height: 267px !important; }
-
-  .home-side-item {
-    margin: 0;
-    overflow: hidden;
-    padding-left: 24px; }
-    .home-side-item img {
-      float: none;
-      width: 100%; }
-    .home-side-item .caption {
-      overflow: auto;
-      padding: 0;
-      width: auto; }
-
-  .home-testimonial-2 {
-    display: none; }
-
-  .home-subbanners-wrapper {
-    margin: 30px 0; } }
+  .home-subbanner-caption {
+    background: #fff;
+    position: absolute;
+    width: 40%;
+    padding: 15px;
+    box-shadow: -2px 3px 4px #222; }
+    .home-subbanner-caption.home-subbanner-caption-1 {
+      top: 25px;
+      left: 25px;
+      width: 40%; }
+    .home-subbanner-caption.home-subbanner-caption-2 {
+      top: 25px;
+      left: 25px; }
+    .home-subbanner-caption.home-subbanner-caption-3 {
+      top: 45px;
+      right: 25px;
+      width: calc(600px - 20%); }
+    .home-subbanner-caption h2,
+    .home-subbanner-caption h3 {
+      margin-top: 0;
+      font-family: "Cabin Sketch", sans-serif;
+      text-transform: lowercase; } }
 @media (min-width: 900px) {
-  .home-tagline {
-    margin-left: 40px;
-    font-size: 20px; }
+  .home-subbanners {
+    margin-top: 30px;
+    margin-bottom: 60px; }
 
-  .home-video iframe {
-    width: 540px !important;
-    height: 307px !important; }
-
-  .home-testimonial-2 {
-    display: block; } }
-@media (min-width: 992px) {
-  .home-logo {
-    margin-left: 50px;
-    margin-right: 50px;
-    width: calc(100% - 100px); }
-
-  .home-tagline {
-    margin-left: 70px;
-    font-size: 22px; }
-
-  .home-video iframe {
-    width: 653px !important;
-    height: 371px !important; }
-
-  .home-side-item {
-    padding-left: 30px; } }
+  .home-subbanner-caption {
+    font-size: 16px; }
+    .home-subbanner-caption.home-subbanner-caption-3 {
+      top: 60px; }
+    .home-subbanner-caption h2,
+    .home-subbanner-caption h3 {
+      font-size: 30px; } }
 @font-face {
   font-family: 'icon';
   src: url("/wp-content/themes/theopenschool/css/fonts/icon/icon.eot");
