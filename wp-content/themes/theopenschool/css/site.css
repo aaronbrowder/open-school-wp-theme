@@ -127,6 +127,29 @@
       color: #8FEA8A;
       text-decoration: none; }
 
+.footer-subscribe {
+  text-align: left;
+  margin-top: 30px; }
+  .footer-subscribe label {
+    display: block; }
+  .footer-subscribe input.email {
+    margin: 6px 0;
+    padding: 6px; }
+  .footer-subscribe button {
+    padding: 0 9px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+    background: #555;
+    color: #eee;
+    border: none;
+    line-height: 0.7;
+    margin-top: -3px;
+    padding-bottom: 4px;
+    vertical-align: middle;
+    cursor: pointer; }
+    .footer-subscribe button:hover {
+      background: #666; }
+
 @media (min-width: 550px) {
   .footer-social {
     float: right; }
@@ -638,6 +661,9 @@ h2[id]:before {
   margin-top: 20px;
   margin-bottom: 20px;
   max-width: 700px; }
+  .page img {
+    width: 100% !important;
+    height: auto !important; }
 
 .page-wide {
   max-width: none; }

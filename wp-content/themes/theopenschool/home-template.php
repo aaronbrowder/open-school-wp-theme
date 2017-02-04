@@ -5,27 +5,6 @@ Template Name: Home
 
 get_header(); 
 
-function announcement($id) { 
-   $announcement = get_option($id);
-   if ($announcement) { ?>
-      <div class="home-announcement">
-         <?php echo $announcement; ?>
-      </div>
-   <?php }
-}
-
-function testimonial($number) {
-   $testimonial = get_option('testimonial' . $number);
-   $attribution = get_option('testimonial' . $number . '-attribution');
-   if ($testimonial) { ?>
-      <div class="home-testimonial home-testimonial-<?php echo $number; ?>">
-         <div class="icon icon-quote-left home-testimonial-quote"></div>
-         <?php echo $testimonial; ?>
-         <p>&mdash; <?php echo $attribution; ?></p>
-      </div>
-   <?php }
-}
-
 function subbanner($number) { 
    $image_attachment = get_option("subbanner{$number}-image-attachment-id");
    $caption = get_option("subbanner{$number}-caption");
