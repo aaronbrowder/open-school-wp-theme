@@ -1,6 +1,27 @@
 .blog-excerpt-container {
   margin-top: 35px; }
 
+.blog-footer:after {
+  clear: both;
+  display: table;
+  content: ' '; }
+
+.blog-donate-button {
+  background: #009102;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 7px 40px;
+  margin-top: 3px;
+  border-radius: 5px;
+  font-size: 17px; }
+  .blog-donate-button:hover, .blog-donate-button:focus {
+    background: #007A02; }
+
 .blog-share-facebook {
   font-size: 32px;
   color: #3b5996; }
@@ -44,6 +65,13 @@
 .comment-author cite {
   font-style: normal; }
 
+@media (min-width: 375px) {
+  .blog-share {
+    float: left; }
+
+  .blog-donate {
+    overflow: hidden;
+    padding-left: 70px; } }
 .contact-us-table {
   border-spacing: 10px;
   margin-left: -10px;
@@ -68,15 +96,15 @@
 .contact-us-send {
   background: #009102;
   color: #fff;
-  padding: 12px 60px;
-  border-radius: 8px;
   border: none;
   outline: none;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 12px 60px;
+  border-radius: 8px;
+  font-size: 18px; }
   .contact-us-send:hover, .contact-us-send:focus {
     background: #007A02; }
 
@@ -143,8 +171,8 @@
     color: #eee;
     border: none;
     line-height: 0.7;
-    margin-top: -3px;
-    padding-bottom: 4px;
+    margin-top: -2px;
+    padding-bottom: 3px;
     vertical-align: middle;
     cursor: pointer; }
     .footer-subscribe button:hover {

@@ -36,3 +36,18 @@ $note-background: url(/wp-content/themes/theopenschool/images/notebook-paper.png
       content: ' ';
    }
 }
+
+@mixin button-primary {
+   background: $green;
+   color: #fff;
+   border: none;
+   outline: none;
+   font-family: $header-font-family;
+   font-weight: bold;
+   text-transform: uppercase;
+   cursor: pointer;
+   &:hover,
+   &:focus {
+      background: $dark-green;
+   }
+}

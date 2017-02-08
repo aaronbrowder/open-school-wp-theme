@@ -26,21 +26,10 @@
 }
 
 .contact-us-send {
-   background: $green;
-   color: #fff;
+   @include button-primary;
    padding: 12px 60px;
    border-radius: 8px;
-   border: none;
-   outline: none;
-   font-family: $header-font-family;
    font-size: 18px;
-   font-weight: bold;
-   text-transform: uppercase;
-   cursor: pointer;
-   &:hover,
-   &:focus {
-      background: $dark-green;
-   }
 }
 
 .contact-us-success,

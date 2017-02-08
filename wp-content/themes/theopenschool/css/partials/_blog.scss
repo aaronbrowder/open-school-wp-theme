@@ -1,7 +1,18 @@
 @import '_core.scss';
-
 .blog-excerpt-container {
    margin-top: 35px;
+}
+
+.blog-footer {
+   @include clear-after;
+}
+
+.blog-donate-button {
+   @include button-primary;
+   padding: 7px 40px;
+   margin-top: 3px;
+   border-radius: 5px;
+   font-size: 17px;
 }
 
 .blog-share-facebook {
@@ -57,4 +68,14 @@
 
 .comment-author cite {
    font-style: normal;
+}
+
+@media (min-width: 375px) {
+   .blog-share {
+      float: left;
+   }
+   .blog-donate {
+      overflow: hidden;
+      padding-left: 70px;
+   }
 }
