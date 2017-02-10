@@ -38,6 +38,7 @@ $note-background: url(/wp-content/themes/theopenschool/images/notebook-paper.png
 }
 
 @mixin button-primary {
+   display: inline-block;
    background: $green;
    color: #fff;
    border: none;
@@ -46,8 +47,13 @@ $note-background: url(/wp-content/themes/theopenschool/images/notebook-paper.png
    font-weight: bold;
    text-transform: uppercase;
    cursor: pointer;
+   text-align: center;
+   padding: 12px 60px;
+   border-radius: 8px;
+   font-size: 18px;
    &:hover,
    &:focus {
       background: $dark-green;
+      color: #fff;
    }
 }

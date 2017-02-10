@@ -7,12 +7,22 @@
    @include clear-after;
 }
 
-.blog-donate-button {
+.blog-button {
    @include button-primary;
-   padding: 7px 40px;
+   padding: 7px;
+   text-align: center;
    margin-top: 3px;
    border-radius: 5px;
    font-size: 17px;
+   width: 96px;
+}
+
+.blog-donate-button {
+   width: 135px;
+   background: #0072d6;
+   &:hover {
+      background: #0065bd;
+   }
 }
 
 .blog-share-facebook {
@@ -70,12 +80,19 @@
    font-style: normal;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 425px) {
    .blog-share {
       float: left;
    }
-   .blog-donate {
+   .blog-buttons {
       overflow: hidden;
-      padding-left: 70px;
+      text-align: right;
+   }
+   .blog-apply {
+      display: inline-block;
+      padding-right: 30px;
+   }
+   .blog-donate {
+      display: inline-block;
    }
 }

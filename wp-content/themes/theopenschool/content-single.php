@@ -35,13 +35,22 @@
       </a>
    </div>
    
-   <div class="blog-donate">
-      <h4>Support our school</h4>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-         <input name="cmd" type="hidden" value="_s-xclick" />
-         <input name="hosted_button_id" type="hidden" value="6UHSFSZE64B4C" />
-         <button type="submit" name="submit" class="blog-donate-button">Donate</button>
-      </form>
+   <div class="blog-buttons">
+      
+      <div class="blog-apply">
+         <h4>Join our school</h4>
+         <a href="/admissions" class="blog-button">Apply Now</a>
+      </div>
+      
+      <div class="blog-donate">
+         <h4>Support our school</h4>
+         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input name="cmd" type="hidden" value="_s-xclick" />
+            <input name="hosted_button_id" type="hidden" value="6UHSFSZE64B4C" />
+            <button type="submit" name="submit" class="blog-button blog-donate-button">Donate</button>
+         </form>
+      </div>
+      
    </div>
       
 </div>

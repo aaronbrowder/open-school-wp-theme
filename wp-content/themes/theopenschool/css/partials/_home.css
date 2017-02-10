@@ -23,78 +23,67 @@
 .home-tagline {
   width: 96%;
   max-width: 600px;
-  margin: 30px auto;
-  margin-bottom: 50px;
-  font-size: 17px; }
+  margin: 20px auto;
+  font-size: 15.5px; }
   .home-tagline h2 {
-    font-size: 28px; }
+    font-size: 25px; }
 
-.home-announcement {
-  padding: 16px 20px;
-  margin-bottom: 20px;
-  background: url(/wp-content/themes/theopenschool/images/notebook-paper.png), #f6f6f6;
-  border-bottom: 1px solid #aaa;
-  font-family: "Cabin Sketch", sans-serif;
+.home-apply {
+  margin-bottom: 40px;
+  padding: 40px 0;
+  background: #DCF7D7;
+  font-size: 15px; }
+
+.home-apply-button {
+  display: inline-block;
+  background: #009102;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
-  font-size: 18px; }
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  padding: 12px 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 5px; }
+  .home-apply-button:hover, .home-apply-button:focus {
+    background: #007A02;
+    color: #fff; }
 
-.home-side-item {
+.home-tagline-desktop {
+  display: none; }
+
+.home-subbanners {
   margin-top: 20px;
-  margin-bottom: 30px; }
-  .home-side-item:after {
+  margin-bottom: 40px; }
+
+.home-subbanner {
+  margin: 10px 0;
+  position: relative; }
+  .home-subbanner:after {
     clear: both;
     display: table;
     content: ' '; }
-  .home-side-item img {
-    width: 100%;
-    height: auto; }
 
-.home-testimonial {
-  position: relative;
-  margin-left: 10px;
-  margin-bottom: 15px;
-  padding: 10px;
-  padding-left: 34px;
-  padding-bottom: 0;
-  background: #DCF7D7;
-  border-bottom: 1px solid #B2D3AB; }
-  .home-testimonial p {
-    margin: 0.7em 0; }
+.home-subbanner-image img {
+  width: 100%;
+  height: auto; }
 
-.home-testimonial-quote {
-  position: absolute;
-  left: -9px;
-  top: 20px;
-  color: #A0DD8B;
-  text-shadow: 1px 1px 1px #3D6033;
-  font-size: 2em !important; }
+.home-subbanner-caption {
+  font-size: 15px; }
+  .home-subbanner-caption h2,
+  .home-subbanner-caption h3 {
+    margin-top: 10px;
+    font-size: 25px; }
 
-.home-subbanners {
-  margin-top: 90px; }
-
-.home-subbanner:after {
-  clear: both;
-  display: table;
-  content: ' '; }
-.home-subbanner .home-subbanner-image {
-  float: left;
-  max-width: 60%;
-  background: #fff;
-  padding: 6px; }
-  .home-subbanner .home-subbanner-image img {
-    width: 100%;
-    height: auto; }
-.home-subbanner .home-subbanner-caption {
-  overflow: hidden;
-  padding: 90px 0; }
-
-.home-subbanner-with-background .home-subbanner-caption {
-  background: #288529;
-  color: #fff;
-  border-bottom: 1px solid #ccc; }
-  .home-subbanner-with-background .home-subbanner-caption h2 {
-    color: #fff; }
-
+@media (min-width: 400px) {
+  .home-tagline {
+    font-size: 17px; }
+    .home-tagline h2 {
+      font-size: 28px; } }
 @media (min-width: 500px) {
   .home-logo {
     margin-top: 30px; }
@@ -106,15 +95,8 @@
     display: block; } }
 @media (min-width: 600px) {
   .home-tagline {
-    font-size: 19px; }
-
-  .home-side-item img {
-    float: left;
-    width: 50%; }
-  .home-side-item .caption {
-    overflow: hidden;
-    padding-left: 20px;
-    width: 30%; } }
+    font-size: 19px;
+    margin: 40px auto; } }
 @media (min-width: 768px) {
   .home-logo {
     margin-top: 40px; }
@@ -128,36 +110,62 @@
   .home-tagline p {
     text-align: justify; }
 
-  .home-video {
+  .home-tagline-mobile {
+    display: none; }
+
+  .home-tagline-desktop {
+    display: block; }
+
+  .home-subbanner-image.home-subbanner-image-2 {
+    width: 60%;
     float: left; }
-    .home-video iframe {
-      width: 470px !important;
-      height: 267px !important; }
 
-  .home-side-item {
-    margin: 0;
+  .home-subbanner-caption h2,
+  .home-subbanner-caption h3 {
+    font-family: "Cabin Sketch", sans-serif;
+    text-transform: lowercase; }
+
+  .home-subbanner-caption-1,
+  .home-subbanner-caption-3 {
+    background: #fff;
+    position: absolute;
+    width: 40%;
+    padding: 15px;
+    box-shadow: -2px 3px 4px #222; }
+    .home-subbanner-caption-1 h2,
+    .home-subbanner-caption-1 h3,
+    .home-subbanner-caption-3 h2,
+    .home-subbanner-caption-3 h3 {
+      margin-top: 0; }
+
+  .home-subbanner-caption-1 {
+    top: 25px;
+    left: 25px;
+    width: 40%; }
+
+  .home-subbanner-caption-2 {
+    position: auto;
     overflow: hidden;
-    padding-left: 24px; }
-    .home-side-item img {
-      float: none;
-      width: 100%; }
-    .home-side-item .caption {
-      overflow: auto;
-      padding: 0;
-      width: auto; }
+    padding: 0 30px;
+    padding-top: 15px; }
 
-  .home-testimonial-2 {
-    display: none; } }
+  .home-subbanner-caption-3 {
+    top: 45px;
+    right: 25px;
+    width: calc(600px - 20%); } }
 @media (min-width: 900px) {
-  .home-video iframe {
-    width: 540px !important;
-    height: 307px !important; }
+  .home-subbanners {
+    margin-top: 30px;
+    margin-bottom: 60px; }
 
-  .home-testimonial-2 {
-    display: block; } }
-@media (min-width: 992px) {
-  .home-video iframe {
-    width: 653px !important;
-    height: 371px !important; } }
+  .home-subbanner-caption {
+    font-size: 16px; }
+    .home-subbanner-caption.home-subbanner-caption-2 {
+      padding-top: 30px; }
+    .home-subbanner-caption.home-subbanner-caption-3 {
+      top: 60px; }
+    .home-subbanner-caption h2,
+    .home-subbanner-caption h3 {
+      font-size: 30px; } }
 
 /*# sourceMappingURL=_home.css.map */

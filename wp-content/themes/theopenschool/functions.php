@@ -93,14 +93,6 @@ function school_intro_line1_callback() { ?>
    <textarea rows="5" cols="70" name="school-intro-line1"><?php echo get_option('school-intro-line1'); ?></textarea>
 <?php }
 
-function school_intro_line2_callback() { ?>
-   <textarea rows="5" cols="70" name="school-intro-line2"><?php echo get_option('school-intro-line2'); ?></textarea>
-<?php }
-
-function video_url_callback() { ?>
-   <input type="text" size="50" name="video-url" value="<?php echo get_option('video-url'); ?>"/>
-<?php }
-
 function subbanner_caption_callback($option_id) { ?>
    <textarea rows="7" cols="70" name="<?php echo $option_id; ?>"><?php echo get_option($option_id); ?></textarea>
 <?php }
@@ -144,9 +136,6 @@ function edit_home_page_page_setup() {
    add_settings_field('tagline', 'Tagline', 'tagline_callback', 'edit-home-page', 'content');
    add_settings_field('mobile-tagline', 'Tagline (Mobile)', 'mobile_tagline_callback', 'edit-home-page', 'content');
    add_settings_field('school-intro-line1', 'School Intro, Line 1', 'school_intro_line1_callback', 'edit-home-page', 'content');
-   add_settings_field('school-intro-line2', 'School Intro, Line 2', 'school_intro_line2_callback', 'edit-home-page', 'content');
-   
-   add_settings_field('video-url', 'Video URL', 'video_url_callback', 'edit-home-page', 'content');
    
    add_settings_field('subbanner1-image-attachment-id', 'Sub-Banner 1', 'subbanner1_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-caption', 'Caption 1', 'subbanner1_caption_callback', 'edit-home-page', 'content');
@@ -160,11 +149,9 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'mobile-title-image-attachment-id');
    register_setting('edit-home-page', 'banner-attachment-id');
    register_setting('edit-home-page', 'mobile-banner-attachment-id');
-   register_setting('edit-home-page', 'video-url');
    register_setting('edit-home-page', 'tagline');
    register_setting('edit-home-page', 'mobile-tagline');
    register_setting('edit-home-page', 'school-intro-line1');
-   register_setting('edit-home-page', 'school-intro-line2');
    register_setting('edit-home-page', 'subbanner1-image-attachment-id');
    register_setting('edit-home-page', 'subbanner2-image-attachment-id');
    register_setting('edit-home-page', 'subbanner3-image-attachment-id');
