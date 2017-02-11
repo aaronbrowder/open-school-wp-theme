@@ -95,3 +95,45 @@
 [02-Jan-2017 01:26:34 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
 [02-Jan-2017 01:26:34 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
 [02-Jan-2017 01:26:34 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[11-Feb-2017 19:38:32 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000' at line 1 for query CREATE TABLE  (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     timeslot varchar(20) DEFAULT '' NOT NULL,
+     adult_count tinyint NOT NULL,
+     child_count tinyint NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_event-signup/event-signup.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, event_signup_install, dbDelta
+[11-Feb-2017 19:56:56 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000' at line 1 for query CREATE TABLE  (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     timeslot varchar(20) DEFAULT '' NOT NULL,
+     adult_count tinyint NOT NULL,
+     child_count tinyint NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_event-signup/event-signup.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, event_signup_install, dbDelta
+[11-Feb-2017 19:59:07 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000' at line 1 for query CREATE TABLE  (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     timeslot varchar(20) DEFAULT '' NOT NULL,
+     adult_count tinyint NOT NULL,
+     child_count tinyint NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_event-signup/event-signup.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, event_signup_install, dbDelta
+[11-Feb-2017 20:32:53 UTC] PHP Parse error:  syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' in /home/ubuntu/workspace/wp-content/plugins/event-signup/event-signup.php on line 82
+[11-Feb-2017 20:32:53 UTC] PHP Stack trace:
+[11-Feb-2017 20:32:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[11-Feb-2017 20:32:53 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[11-Feb-2017 20:32:53 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[11-Feb-2017 20:32:53 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:93

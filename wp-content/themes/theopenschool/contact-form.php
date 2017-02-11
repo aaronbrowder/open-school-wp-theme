@@ -9,15 +9,15 @@ if ($_POST['submitted']) {
    
    $missing_content = 'Please supply all information.';
    $email_invalid   = 'Email address is invalid.';
-   $message_unsent  = 'Message was not sent. Try Again.';
+   $message_unsent  = 'Message was not sent. Try again.';
    $message_sent    = 'Thanks! Your message has been sent.';
    
    $name = $_POST['message_name'];
    $email = $_POST['message_email'];
    $message = $_POST['message_text'];
    
-   $to = get_option('admin_email');
-   $subject = $name . ' sent a message from ' . get_bloginfo('name');
+   $to = get_option('email');
+   $subject = $name . ' sent a message from The Open School\'s website';
    $headers = 'From: ' . $email . "\r\n" . 'Reply-To: ' . $email;
 
    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

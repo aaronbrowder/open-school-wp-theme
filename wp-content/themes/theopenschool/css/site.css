@@ -74,9 +74,12 @@
     padding: 0 12px;
     width: 1px;
     white-space: nowrap; }
-  .contact-us-table input {
+  .contact-us-table input[type=text],
+  .contact-us-table input[type=email] {
     width: 100%;
     max-width: 360px; }
+  .contact-us-table input[type=number] {
+    width: 75px; }
   .contact-us-table textarea {
     width: 100%; }
   .contact-us-table input,

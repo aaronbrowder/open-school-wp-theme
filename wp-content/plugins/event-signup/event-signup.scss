@@ -1,0 +1,18 @@
+.results-table {
+   border-collapse: collapse;
+   border: 1px solid #ccc;
+   border-top: none;
+   margin-bottom: 20px;
+   th, td {
+      padding: 6px 10px;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+   }
+   th {
+      text-align: left;
+      font-weight: normal;
+      color: #fff;
+      background: #444;
+      border-color: #777;
+   }
+}

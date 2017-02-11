@@ -11,9 +11,14 @@
       width: 1px;
       white-space: nowrap;
    }
-   input {
+   input[type=text],
+   input[type=email]
+   {
       width: 100%;
       max-width: 360px;
+   }
+   input[type=number] {
+      width: 75px;
    }
    textarea {
       width: 100%;
