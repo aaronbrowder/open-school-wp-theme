@@ -1,5 +1,6 @@
 .home-banner {
-  background: #000; }
+  background: #000;
+  position: relative; }
   .home-banner img {
     display: block;
     width: 100%;
@@ -12,6 +13,16 @@
   margin-bottom: 0;
   width: 96%;
   max-width: 800px; }
+
+.home-test {
+  position: absolute;
+  color: #fff;
+  font-family: "Cabin Sketch", sans-serif;
+  text-shadow: 2px 2px 1px #000;
+  font-size: 28px;
+  bottom: 30px;
+  left: 290px;
+  width: 540px; }
 
 .home-banner-desktop,
 .home-logo-desktop {
@@ -29,9 +40,15 @@
   display: none; }
 
 .home-middle {
-  margin-top: 40px; }
+  margin-top: 30px; }
+
+.home-middle-texts {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  max-width: 570px; }
 
 .home-apply {
+  max-width: 230px;
   padding: 20px 30px;
   background: #DCF7D7;
   border-bottom: 1px solid #8bad84;
@@ -127,10 +144,30 @@
 
   .home-logo-desktop {
     display: block; } }
+@media (min-width: 540px) {
+  .home-middle-texts:after {
+    clear: both;
+    display: table;
+    content: ' '; }
+
+  .home-calls-to-action {
+    float: left;
+    padding-right: 30px;
+    width: 290px; }
+
+  .home-testimonial {
+    display: block;
+    overflow: hidden; }
+
+  .home-testimonial-attribution {
+    margin-top: 10px; } }
 @media (min-width: 600px) {
   .home-tagline {
     font-size: 19px;
-    margin: 40px auto; } }
+    margin: 40px auto; }
+
+  .home-middle-texts {
+    margin-bottom: 40px; } }
 @media (min-width: 768px) {
   .home-logo {
     margin-top: 40px; }
@@ -150,22 +187,8 @@
   .home-tagline-desktop {
     display: block; }
 
-  .home-middle-texts:after {
-    clear: both;
-    display: table;
-    content: ' '; }
-
-  .home-calls-to-action {
-    float: left;
-    width: 290px; }
-
-  .home-testimonial {
-    display: block;
-    overflow: hidden; }
-
-  .home-testimonial-attribution {
-    text-align: right;
-    margin-top: 10px; }
+  .home-middle {
+    margin-top: 40px; }
 
   .home-subbanner-image.home-subbanner-image-2 {
     width: 60%;
@@ -214,7 +237,8 @@
       font-size: 30px; } }
 @media (min-width: 992px) {
   .home-middle {
-    margin-top: 70px; }
+    margin-top: 70px;
+    margin-bottom: 20px; }
     .home-middle:after {
       clear: both;
       display: table;
@@ -222,10 +246,20 @@
 
   .home-middle-texts {
     float: left;
-    padding-right: 20px;
+    padding-right: 30px;
+    margin-bottom: 0;
     width: 290px; }
+
+  .home-calls-to-action {
+    padding: 0;
+    float: none; }
 
   .home-testimonial {
     margin-top: 20px; } }
+@media (min-width: 1020px) {
+  .home-testimonial {
+    background: #DCF7D7;
+    border-bottom: 1px solid #8bad84;
+    padding: 10px 15px; } }
 
 /*# sourceMappingURL=_home.css.map */

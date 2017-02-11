@@ -510,7 +510,8 @@ h2[id]:before {
     padding-left: 10px;
     padding-right: 10px; } }
 .home-banner {
-  background: #000; }
+  background: #000;
+  position: relative; }
   .home-banner img {
     display: block;
     width: 100%;
