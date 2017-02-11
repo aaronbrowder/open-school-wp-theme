@@ -293,10 +293,10 @@ function map_shortcode_callback() {
 	return get_option('map');
 }
 
-// [contactform]
-add_shortcode('contactform', 'contactform_shortcode_callback');
-function contactform_shortcode_callback() {
-	return render_php('contact-form.php');
+// [contact-form]
+add_shortcode('contact-form', 'contact_form_shortcode_callback');
+function contact_form_shortcode_callback($atts = [], $content = null) {
+	return render_php('contact-form.php', $content);
 }
 
 // [base-tuition]
@@ -409,13 +409,22 @@ function page_template($content_function) {
    <?php get_footer();
 }
 
-function render_php($path)
+function donate_button() { ?>
+   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input name="cmd" type="hidden" value="_s-xclick" />
+      <input name="hosted_button_id" type="hidden" value="6UHSFSZE64B4C" />
+      <button type="submit" name="submit" class="small-button donate-button">Donate</button>
+   </form>
+<?php }
+
+function render_php($path, $content)
 {
-    ob_start();
-    include($path);
-    $var=ob_get_contents(); 
-    ob_end_clean();
-    return $var;
+   $GLOBALS['content'] = $content;
+   ob_start();
+   include($path);
+   $var = ob_get_contents(); 
+   ob_end_clean();
+   return $var;
 }
 
 function embed_video($video_url) {

@@ -2,6 +2,9 @@
 
 $response = '';
 
+$default_message = $GLOBALS['content'];
+$textarea_rows = $default_message ? 5 : 8;
+
 if ($_POST['submitted']) {
    
    $missing_content = 'Please supply all information.';
@@ -14,8 +17,8 @@ if ($_POST['submitted']) {
    $message = $_POST['message_text'];
    
    $to = get_option('admin_email');
-   $subject = 'Someone sent a message from ' . get_bloginfo('name');
-   $headers = 'From: ' . $email . "\r\n" . 'Reply-To: ' . $email . "\r\n";
+   $subject = $name . ' sent a message from ' . get_bloginfo('name');
+   $headers = 'From: ' . $email . "\r\n" . 'Reply-To: ' . $email;
 
    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $response = contact_form_generate_response('error', $email_invalid);
@@ -47,7 +50,7 @@ echo $response;
          </tr>
          <tr>
             <th>Message</th>
-            <td><textarea name="message_text" rows="10" required></textarea></td>
+            <td><textarea name="message_text" rows="<?php echo $textarea_rows; ?>" required><?php echo $default_message; ?></textarea></td>
          </tr>
       </tbody>
    </table>

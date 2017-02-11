@@ -1,4 +1,5 @@
 @import '_core.scss';
+$call-to-action-width: 290px;
 .home-banner {
    background: #000;
    img {
@@ -37,17 +38,17 @@
 }
 
 .home-middle {
-   @include clear-after;
-   margin-top: 70px;
+   margin-top: 30px;
 }
 
-.home-calls-to-action {
-   float: left;
-   padding-right: 20px;
-   width: 290px;
+.home-middle-texts {
+   margin: 0 auto;
+   margin-bottom: 25px;
+   max-width: 570px;
 }
 
 .home-apply {
+   max-width: 230px;
    padding: 20px 30px;
    background: $light-light-green;
    border-bottom: 1px solid #8bad84;
@@ -90,12 +91,7 @@
 }
 
 .home-testimonial {
-   margin-top: 20px;
-}
-
-.home-testimonial-attribution {
-   text-align: right;
-   margin-top: 10px;
+   display: none;
 }
 
 .home-middle-image {
@@ -128,6 +124,8 @@
    h3 {
       margin-top: 10px;
       font-size: 25px;
+      font-family: $stylized-font-family;
+      text-transform: lowercase;
    }
 }
 
@@ -152,10 +150,31 @@
    }
 }
 
+@media (min-width: 540px) {
+   .home-middle-texts {
+      @include clear-after;
+   }
+   .home-calls-to-action {
+      float: left;
+      padding-right: 30px;
+      width: $call-to-action-width;
+   }
+   .home-testimonial {
+      display: block;
+      overflow: hidden;
+   }
+   .home-testimonial-attribution {
+      margin-top: 10px;
+   }
+}
+
 @media (min-width: 600px) {
    .home-tagline {
       font-size: 19px;
       margin: 40px auto;
+   }
+   .home-middle-texts {
+      margin-bottom: 40px;
    }
 }
 
@@ -180,17 +199,13 @@
    .home-tagline-desktop {
       display: block;
    }
+   .home-middle {
+      margin-top: 40px;
+   }
    .home-subbanner-image {
       &.home-subbanner-image-2 {
          width: 60%;
          float: left;
-      }
-   }
-   .home-subbanner-caption {
-      h2,
-      h3 {
-         font-family: $stylized-font-family;
-         text-transform: lowercase;
       }
    }
    .home-subbanner-caption-1,
@@ -239,5 +254,34 @@
       h3 {
          font-size: 30px;
       }
+   }
+}
+
+@include min-desktop {
+   .home-middle {
+      @include clear-after;
+      margin-top: 70px;
+      margin-bottom: 20px;
+   }
+   .home-middle-texts {
+      float: left;
+      padding-right: 30px;
+      margin-bottom: 0;
+      width: $call-to-action-width;
+   }
+   .home-calls-to-action {
+      padding: 0;
+      float: none;
+   }
+   .home-testimonial {
+      margin-top: 20px;
+   }
+}
+
+@media (min-width: 1020px) {
+   .home-testimonial {
+      background: $light-light-green;
+      border-bottom: 1px solid #8bad84;
+      padding: 10px 15px;
    }
 }

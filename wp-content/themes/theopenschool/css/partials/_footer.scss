@@ -68,9 +68,20 @@
 //    }
 // }
 
+.footer-donate {
+   text-align: left;
+   margin-top: 30px;
+   h4 {
+      color: #ccc;
+   }
+}
+
 @media (min-width: 550px) {
    .footer-social {
       float: right;
+   }
+   .footer-donate {
+      text-align: right;
    }
    .footer-contact {
       overflow: hidden;

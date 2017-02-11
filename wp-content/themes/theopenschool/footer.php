@@ -27,6 +27,10 @@
                <!--      <button id="mc-embedded-subscribe" class="button" name="subscribe" type="submit">&raquo;</button>-->
                <!--   </form>-->
                <!--</div>-->
+               <div class="footer-donate">
+                  <h4>Support our school</h4>
+                  <?php donate_button(); ?>
+               </div>
             </div>
             <div class="footer-contact">
                <h4>The Open School</h4>

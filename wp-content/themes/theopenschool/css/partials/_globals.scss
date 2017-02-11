@@ -76,6 +76,25 @@ iframe {
    padding: 0 10px;
 }
 
+.small-button {
+   @include button-primary;
+   padding: 7px;
+   text-align: center;
+   margin-top: 3px;
+   border-radius: 5px;
+   font-size: 17px;
+   width: 96px;
+}
+
+.donate-button {
+   width: 135px;
+   background: #0072d6;
+   &:hover,
+   &:focus {
+      background: #0065bd;
+   }
+}
+
 h2[id]:before {
    display: block;
    content: " ";
