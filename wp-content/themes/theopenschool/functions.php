@@ -81,6 +81,10 @@ function mobile_banner_attachment_callback() {
    image_attachment_callback('mobile-banner-attachment-id');
 }
 
+function promoted_event_image_attachment_callback() { 
+   image_attachment_callback('promoted-event-image-attachment-id');
+}
+
 function tagline_callback() { ?>
    <textarea rows="1" cols="70" name="tagline"><?php echo get_option('tagline'); ?></textarea>
 <?php }
@@ -132,6 +136,7 @@ function edit_home_page_page_setup() {
    add_settings_field('mobile-title-image-attachment-id', 'Title Image (Mobile)', 'mobile_title_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('banner-attachment-id', 'Banner', 'banner_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('mobile-banner-attachment-id', 'Banner (Mobile)', 'mobile_banner_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-attachment-id', 'Promoted Event Image', 'promoted_event_image_attachment_callback', 'edit-home-page', 'content');
    
    add_settings_field('tagline', 'Tagline', 'tagline_callback', 'edit-home-page', 'content');
    add_settings_field('mobile-tagline', 'Tagline (Mobile)', 'mobile_tagline_callback', 'edit-home-page', 'content');
@@ -149,6 +154,7 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'mobile-title-image-attachment-id');
    register_setting('edit-home-page', 'banner-attachment-id');
    register_setting('edit-home-page', 'mobile-banner-attachment-id');
+   register_setting('edit-home-page', 'promoted-event-image-attachment-id');
    register_setting('edit-home-page', 'tagline');
    register_setting('edit-home-page', 'mobile-tagline');
    register_setting('edit-home-page', 'school-intro-line1');

@@ -6,8 +6,8 @@ Template Name: Home
 get_header(); 
 
 function subbanner($number) { 
-   $image_attachment = get_option("subbanner{$number}-image-attachment-id");
-   $caption = get_option("subbanner{$number}-caption");
+   $image_attachment = get_option("subbanner$number-image-attachment-id");
+   $caption = get_option("subbanner$number-caption");
    ?>
    <div class="home-subbanner">
       <div class="home-subbanner-image home-subbanner-image-<?php echo $number; ?>">
@@ -86,6 +86,9 @@ function subbanner($number) {
    
    <div class="home-subbanners">
       <div class="container">
+         <a class="home-promoted-event" href="/event-walkthrough">
+            <?php echo wp_get_attachment_image(get_option('promoted-event-image-attachment-id'), 'full'); ?>
+         </a>
          <?php
          subbanner(2, false);
          subbanner(3, true);
