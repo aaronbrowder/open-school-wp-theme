@@ -10,6 +10,10 @@
   font-size: 32px;
   color: #3b5996; }
 
+.blog-share-twitter {
+  font-size: 32px;
+  color: #54aae8; }
+
 .blog-share-email {
   font-size: 32px;
   display: inline;
@@ -49,7 +53,7 @@
 .comment-author cite {
   font-style: normal; }
 
-@media (min-width: 425px) {
+@media (min-width: 475px) {
   .blog-share {
     float: left; }
 
@@ -275,6 +279,10 @@ iframe {
   background: #0072d6; }
   .donate-button:hover, .donate-button:focus {
     background: #0065bd; }
+
+.image-block {
+  background: #ebebeb;
+  text-align: center; }
 
 h2[id]:before {
   display: block;
@@ -605,7 +613,24 @@ h2[id]:before {
 .home-middle-image {
   overflow: hidden; }
 
-.home-promoted-event {
+.home-silent-auction-promo {
+  display: block;
+  margin-bottom: 25px;
+  color: #eee;
+  background: #222;
+  padding: 10px 15px;
+  font-size: 17px; }
+  .home-silent-auction-promo h4 {
+    margin: 5px 0;
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 20px;
+    color: #eee; }
+  .home-silent-auction-promo a {
+    color: #8FEA8A; }
+    .home-silent-auction-promo a:hover {
+      color: #fff; }
+
+.home-walkthrough-promo {
   display: block;
   margin-bottom: 20px; }
 
@@ -797,6 +822,9 @@ h2[id]:before {
 .icon-instagram:before {
   content: "\f16d"; }
 
+.icon-feed:before {
+  content: "\f09e"; }
+
 .icon-exclamation-circle:before {
   content: "\f06a"; }
 
@@ -859,6 +887,15 @@ h2[id]:before {
     .page-staff-bio p {
       margin: 0; } }
 @media (min-width: 992px) {
+  .page .image-block.left {
+    width: 50%;
+    float: left;
+    margin-right: 15px; }
+  .page .image-block.right {
+    width: 50%;
+    float: right;
+    margin-left: 15px; }
+
   .page-title {
     margin-top: 30px; }
 

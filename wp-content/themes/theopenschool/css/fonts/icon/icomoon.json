@@ -1,8 +1,8 @@
 {
   "metadata": {
     "name": "Untitled Project",
-    "lastOpened": 1485119649179,
-    "created": 1485119647038
+    "lastOpened": 1489037516826,
+    "created": 1489037513952
   },
   "iconSets": [
     {
@@ -360,7 +360,10 @@
         {
           "name": "check-square-o",
           "id": 70,
-          "order": 15
+          "order": 15,
+          "prevSize": 28,
+          "code": 61510,
+          "tempChar": ""
         },
         {
           "name": "arrows",
@@ -518,7 +521,7 @@
           "order": 9,
           "prevSize": 28,
           "code": 61546,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "gift",
@@ -631,7 +634,7 @@
           "order": 12,
           "prevSize": 28,
           "code": 61570,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "camera-retro",
@@ -744,7 +747,7 @@
           "order": 6,
           "prevSize": 28,
           "code": 61593,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "facebook, facebook-f",
@@ -752,7 +755,7 @@
           "order": 7,
           "prevSize": 28,
           "code": 61594,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "github",
@@ -772,7 +775,10 @@
         {
           "name": "feed, rss",
           "id": 150,
-          "order": 0
+          "order": 16,
+          "prevSize": 28,
+          "code": 61598,
+          "tempChar": ""
         },
         {
           "name": "hdd-o",
@@ -915,7 +921,7 @@
           "order": 10,
           "prevSize": 28,
           "code": 61641,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "list-ul",
@@ -958,7 +964,7 @@
           "order": 5,
           "prevSize": 28,
           "code": 61650,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "pinterest-square",
@@ -1026,7 +1032,7 @@
           "order": 13,
           "prevSize": 28,
           "code": 61664,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "linkedin",
@@ -1244,7 +1250,7 @@
           "order": 14,
           "prevSize": 28,
           "code": 61709,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "quote-right",
@@ -1652,7 +1658,7 @@
           "order": 2,
           "prevSize": 28,
           "code": 61799,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "xing",
@@ -1685,7 +1691,7 @@
           "order": 8,
           "prevSize": 28,
           "code": 61805,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "flickr",

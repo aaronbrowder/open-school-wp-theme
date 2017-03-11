@@ -42,6 +42,10 @@ $icon-base-path: '/wp-content/themes/theopenschool/css/fonts/icon';
   content: "\f16d";
 }
 
+.icon-feed:before {
+  content: "\f09e";
+}
+
 .icon-exclamation-circle:before {
   content: "\f06a";
 }

@@ -12,6 +12,11 @@
    color: #3b5996;
 }
 
+.blog-share-twitter {
+   font-size: 32px;
+   color: #54aae8;
+}
+
 .blog-share-email {
    font-size: 32px;
    display: inline;
@@ -62,7 +67,7 @@
    font-style: normal;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 475px) {
    .blog-share {
       float: left;
    }

@@ -14,16 +14,6 @@
   width: 96%;
   max-width: 800px; }
 
-.home-test {
-  position: absolute;
-  color: #fff;
-  font-family: "Cabin Sketch", sans-serif;
-  text-shadow: 2px 2px 1px #000;
-  font-size: 28px;
-  bottom: 30px;
-  left: 290px;
-  width: 540px; }
-
 .home-banner-desktop,
 .home-logo-desktop {
   display: none; }
@@ -103,6 +93,21 @@
 
 .home-middle-image {
   overflow: hidden; }
+
+.home-silent-auction-promo {
+  display: block;
+  margin-bottom: 20px;
+  color: #333;
+  border: 1px solid #bbb;
+  background: #f6f6f6;
+  padding: 10px; }
+  .home-silent-auction-promo h4 {
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 22px; }
+
+.home-walkthrough-promo {
+  display: block;
+  margin-bottom: 20px; }
 
 .home-subbanners {
   margin-bottom: 40px; }

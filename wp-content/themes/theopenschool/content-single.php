@@ -28,6 +28,11 @@
          target="_blank">
         <span class="icon icon-facebook-square"></span>
       </a>
+      <a class="blog-share-twitter" 
+         href="https://twitter.com/share?text=Yes%20hello"
+         target="_blank">
+        <span class="icon icon-twitter"></span>
+      </a>
       <a class="blog-share-email"
          href="mailto:?subject=<?php echo $title; ?>&body=<?php echo $email_body; ?>"
          target="_blank">

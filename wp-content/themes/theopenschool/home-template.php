@@ -86,9 +86,14 @@ function subbanner($number) {
    
    <div class="home-subbanners">
       <div class="container">
-         <a class="home-promoted-event" href="/event-walkthrough">
+         <a class="home-walkthrough-promo" href="/event-walkthrough">
             <?php echo wp_get_attachment_image(get_option('promoted-event-image-attachment-id'), 'full'); ?>
          </a>
+         <div class="home-silent-auction-promo">
+            <h4>The Open School Silent Auction Fundraiser & Murder Mystery Night</h4>
+            May 5th, 7:00 PM &middot;
+            <a href="https://www.openschoolauction.com/">Click here for more information</a>
+         </div>
          <?php
          subbanner(2, false);
          subbanner(3, true);

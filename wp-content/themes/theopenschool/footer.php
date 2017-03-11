@@ -17,16 +17,9 @@
                <a href="<?php echo get_option('youtube') ?>" target="_blank" class="social-link">
                   <span class="icon icon-youtube"></span>
                </a>
-               <!--<div class="footer-subscribe" id="mc_embed_signup">-->
-               <!--   <form id="mc-embedded-subscribe-form" class="validate" action="http://openschooloc.us5.list-manage2.com/subscribe/post?u=a49271ebde5f88b50cced6c93&amp;id=4b41a39b87" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">-->
-               <!--      <label for="mce-EMAIL">Subscribe to our mailing list</label>-->
-               <!--      <div style="position: absolute; left: -5000px;">-->
-               <!--         <input name="b_a49271ebde5f88b50cced6c93_4b41a39b87" type="text" value="" />-->
-               <!--      </div>-->
-               <!--      <input id="mce-EMAIL" class="email" name="EMAIL" required="" type="email" value="" placeholder="email address" />-->
-               <!--      <button id="mc-embedded-subscribe" class="button" name="subscribe" type="submit">&raquo;</button>-->
-               <!--   </form>-->
-               <!--</div>-->
+               <a href="<?php bloginfo('rss2_url'); ?>" class="social-link">
+                  <span class="icon icon-feed"></span>
+               </a>
                <div class="footer-donate">
                   <h4>Support our school</h4>
                   <?php donate_button(); ?>
@@ -46,7 +39,6 @@
             </div>
          </div>
       </footer>
-   
       <?php wp_footer(); ?>
    </body>
 </html>
