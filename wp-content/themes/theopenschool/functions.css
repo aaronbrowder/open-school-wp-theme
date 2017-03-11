@@ -1,40 +1,40 @@
 /*
 Error: Inconsistent indentation: 1 tab was used for indentation, but the rest of the document was indented using 3 spaces.
-        on line 8 of /home/ubuntu/workspace/wp-content/themes/mytheme/functions.php
+        on line 8 of /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php
 
 3: //////////////////////////////////////////////////////////////////////
 4: // Add scripts and stylesheets
-5: add_action('wp_enqueue_scripts', 'mytheme_scripts');
-6: function mytheme_scripts() {
-7:    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6');
-8: 	wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');
-9: 	wp_enqueue_style('icons', get_template_directory_uri() . '/css/icons.css');
-10: 	wp_enqueue_script('context-menu', get_template_directory_uri() . '/js/context-menu.js');
-11: }
-12: 
-13: add_action('admin_enqueue_scripts', 'admin_scripts');
+5: add_action('wp_enqueue_scripts', 'theopenschool_scripts');
+6: function theopenschool_scripts() {
+7:    wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');
+8: 	wp_enqueue_script('context-menu', get_template_directory_uri() . '/js/context-menu.js');
+9: 	wp_enqueue_script('hamburger-menu', get_template_directory_uri() . '/js/hamburger-menu.js');
+10: }
+11: 
+12: add_action('admin_enqueue_scripts', 'admin_scripts');
+13: function admin_scripts() {
 
 Backtrace:
-/home/ubuntu/workspace/wp-content/themes/mytheme/functions.php:8
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:486:in `block in tabulate'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:444:in `each'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:444:in `each_with_index'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:444:in `tabulate'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:409:in `_to_tree'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:8
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:486:in `block in tabulate'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:444:in `each'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:444:in `each_with_index'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:444:in `tabulate'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:409:in `_to_tree'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
 /mnt/shared/sbin/scss:13:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Inconsistent indentation: 1 tab was used for indentation, but the rest of the document was indented using 3 spaces.\A         on line 8 of /home/ubuntu/workspace/wp-content/themes/mytheme/functions.php\A \A 3: //////////////////////////////////////////////////////////////////////\A 4: // Add scripts and stylesheets\A 5: add_action('wp_enqueue_scripts', 'mytheme_scripts');\A 6: function mytheme_scripts() {\A 7:    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6');\A 8: 	wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');\A 9: 	wp_enqueue_style('icons', get_template_directory_uri() . '/css/icons.css');\A 10: 	wp_enqueue_script('context-menu', get_template_directory_uri() . '/js/context-menu.js');\A 11: }\A 12: \A 13: add_action('admin_enqueue_scripts', 'admin_scripts');"; }
+  content: "Error: Inconsistent indentation: 1 tab was used for indentation, but the rest of the document was indented using 3 spaces.\A         on line 8 of /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php\A \A 3: //////////////////////////////////////////////////////////////////////\A 4: // Add scripts and stylesheets\A 5: add_action('wp_enqueue_scripts', 'theopenschool_scripts');\A 6: function theopenschool_scripts() {\A 7:    wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');\A 8: 	wp_enqueue_script('context-menu', get_template_directory_uri() . '/js/context-menu.js');\A 9: 	wp_enqueue_script('hamburger-menu', get_template_directory_uri() . '/js/hamburger-menu.js');\A 10: }\A 11: \A 12: add_action('admin_enqueue_scripts', 'admin_scripts');\A 13: function admin_scripts() {"; }

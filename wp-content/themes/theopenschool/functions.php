@@ -266,7 +266,7 @@ function school_meta_page_setup() {
 }
 
 //////////////////////////////////////////////////////////////////////
-// Menu
+// Wordpress configuration
 add_action( 'after_setup_theme', 'register_main_menu' );
 function register_main_menu() {
   register_nav_menu('main-menu', __('Main Menu', 'theme-slug'));
@@ -368,6 +368,16 @@ function the_custom_author() {
    if (!empty($author)) { ?>
       by <?php echo $author; ?><br/>
    <?php }
+}
+
+function the_custom_description() {
+   $description = get_post_meta(get_the_ID(), 'Custom Description', true);
+   if (!empty($description)) {
+       echo $description;
+   }
+   else {
+      the_excerpt();
+   }
 }
 
 function get_page_title_prefix() {
