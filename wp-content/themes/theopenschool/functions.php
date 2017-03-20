@@ -7,6 +7,7 @@ function theopenschool_scripts() {
    wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');
 	wp_enqueue_script('context-menu', get_template_directory_uri() . '/js/context-menu.js');
 	wp_enqueue_script('hamburger-menu', get_template_directory_uri() . '/js/hamburger-menu.js');
+	wp_enqueue_script('font_awesome', 'https://use.fontawesome.com/6e05896b8d.js');
 }
 
 add_action('admin_enqueue_scripts', 'admin_scripts');

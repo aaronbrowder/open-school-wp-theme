@@ -42,7 +42,7 @@
                   </a>
                   
                   <div id="hamburger" class="header-hamburger">
-                     <span class="icon icon-bars"></span>
+                     <i class="fa fa-bars"></i>
                   </div>
                   
                   <ul id="main-menu" class="header-menu">

@@ -3,22 +3,22 @@
          <div class="container">
             <div class="footer-social">
                <a href="<?php echo get_option('facebook') ?>" target="_blank" class="social-link">
-                  <span class="icon icon-facebook"></span>
+                  <i class="fa fa-facebook"></i>
                </a>
                <a href="<?php echo get_option('twitter') ?>" target="_blank" class="social-link">
-                  <span class="icon icon-twitter"></span>
+                  <i class="fa fa-twitter"></i>
                </a>
                <a href="<?php echo get_option('pinterest') ?>" target="_blank" class="social-link">
-                  <span class="icon icon-pinterest"></span>
+                  <i class="fa fa-pinterest"></i>
                </a>
                <a href="<?php echo get_option('instagram') ?>" target="_blank" class="social-link">
-                  <span class="icon icon-instagram"></span>
+                  <i class="fa fa-instagram"></i>
                </a>
                <a href="<?php echo get_option('youtube') ?>" target="_blank" class="social-link">
-                  <span class="icon icon-youtube"></span>
+                  <i class="fa fa-youtube"></i>
                </a>
                <a href="<?php bloginfo('rss2_url'); ?>" class="social-link">
-                  <span class="icon icon-feed"></span>
+                  <i class="fa fa-feed"></i>
                </a>
                <div class="footer-donate">
                   <h4>Support our school</h4>

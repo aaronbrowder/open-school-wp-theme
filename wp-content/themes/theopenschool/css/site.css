@@ -630,10 +630,6 @@ h2[id]:before {
     .home-silent-auction-promo a:hover {
       color: #fff; }
 
-.home-walkthrough-promo {
-  display: block;
-  margin-bottom: 20px; }
-
 .home-subbanners {
   margin-bottom: 40px; }
 
@@ -791,55 +787,6 @@ h2[id]:before {
     background: #DCF7D7;
     border-bottom: 1px solid #8bad84;
     padding: 10px 15px; } }
-@font-face {
-  font-family: 'icon';
-  src: url("/wp-content/themes/theopenschool/css/fonts/icon/icon.eot");
-  src: url("/wp-content/themes/theopenschool/css/fonts/icon/icon.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/theopenschool/css/fonts/icon/icon.woff") format("woff"), url("/wp-content/themes/theopenschool/css/fonts/icon/icon.ttf") format("truetype"), url("/wp-content/themes/theopenschool/css/fonts/icon/icon.svg#roboto_condensedbold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-.icon {
-  display: inline-block;
-  font: normal normal normal 14px/1 'icon';
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased; }
-
-.icon-twitter:before {
-  content: "\f099"; }
-
-.icon-facebook:before {
-  content: "\f09a"; }
-
-.icon-facebook-square:before {
-  content: "\f082"; }
-
-.icon-pinterest:before {
-  content: "\f0d2"; }
-
-.icon-youtube:before {
-  content: "\f167"; }
-
-.icon-instagram:before {
-  content: "\f16d"; }
-
-.icon-feed:before {
-  content: "\f09e"; }
-
-.icon-exclamation-circle:before {
-  content: "\f06a"; }
-
-.icon-bars:before {
-  content: "\f0c9"; }
-
-.icon-envelope:before {
-  content: "\f0e0"; }
-
-.icon-quote-left:before {
-  content: "\f10d"; }
-
-.icon-check-square-o:before {
-  content: "\f046"; }
-
 .page {
   margin-top: 20px;
   margin-bottom: 20px;
