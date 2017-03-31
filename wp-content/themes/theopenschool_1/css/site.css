@@ -613,22 +613,19 @@ h2[id]:before {
 .home-middle-image {
   overflow: hidden; }
 
+.home-silent-auction-promo,
+.home-silent-auction-promo-mobile {
+  margin-bottom: 25px; }
+  .home-silent-auction-promo img,
+  .home-silent-auction-promo-mobile img {
+    width: 100%;
+    height: auto; }
+
 .home-silent-auction-promo {
-  display: block;
-  margin-bottom: 25px;
-  color: #eee;
-  background: #222;
-  padding: 10px 15px;
-  font-size: 17px; }
-  .home-silent-auction-promo h4 {
-    margin: 5px 0;
-    font-family: "Cabin Sketch", sans-serif;
-    font-size: 20px;
-    color: #eee; }
-  .home-silent-auction-promo a {
-    color: #8FEA8A; }
-    .home-silent-auction-promo a:hover {
-      color: #fff; }
+  display: none; }
+
+.home-silent-auction-promo-mobile {
+  display: block; }
 
 .home-subbanners {
   margin-bottom: 40px; }
@@ -747,7 +744,13 @@ h2[id]:before {
   .home-subbanner-caption-3 {
     top: 45px;
     right: 25px;
-    width: calc(600px - 20%); } }
+    width: calc(600px - 20%); }
+
+  .home-silent-auction-promo {
+    display: block; }
+
+  .home-silent-auction-promo-mobile {
+    display: none; } }
 @media (min-width: 900px) {
   .home-subbanners {
     margin-bottom: 60px; }
@@ -794,6 +797,8 @@ h2[id]:before {
   .page img {
     width: 100% !important;
     height: auto !important; }
+  .page .container-for-small-images img {
+    width: auto !important; }
 
 .page-wide {
   max-width: none; }

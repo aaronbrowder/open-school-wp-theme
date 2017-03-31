@@ -94,20 +94,17 @@
 .home-middle-image {
   overflow: hidden; }
 
-.home-silent-auction-promo {
-  display: block;
-  margin-bottom: 20px;
-  color: #333;
-  border: 1px solid #bbb;
-  background: #f6f6f6;
-  padding: 10px; }
-  .home-silent-auction-promo h4 {
-    font-family: "Cabin Sketch", sans-serif;
-    font-size: 22px; }
+.home-silent-auction-promo, .home-silent-auction-promo-mobile {
+  margin-bottom: 25px; }
+  .home-silent-auction-promo img, .home-silent-auction-promo-mobile img {
+    width: 100%;
+    height: auto; }
 
-.home-walkthrough-promo {
-  display: block;
-  margin-bottom: 20px; }
+.home-silent-auction-promo {
+  display: none; }
+
+.home-silent-auction-promo-mobile {
+  display: block; }
 
 .home-subbanners {
   margin-bottom: 40px; }
@@ -226,7 +223,13 @@
   .home-subbanner-caption-3 {
     top: 45px;
     right: 25px;
-    width: calc(600px - 20%); } }
+    width: calc(600px - 20%); }
+
+  .home-silent-auction-promo {
+    display: none; }
+
+  .home-silent-auction-promo-mobile {
+    display: block; } }
 @media (min-width: 900px) {
   .home-subbanners {
     margin-bottom: 60px; }

@@ -7,6 +7,8 @@ $textarea_rows = $default_message ? 5 : 8;
 
 if ($_POST['submitted']) {
    
+   $to = get_option('email');
+   
    $missing_content = 'Please supply all information.';
    $email_invalid   = 'Email address is invalid.';
    $message_unsent  = 'Message was not sent. Try again.';
@@ -16,7 +18,6 @@ if ($_POST['submitted']) {
    $email = $_POST['message_email'];
    $message = $_POST['message_text'];
    
-   $to = get_option('email');
    $subject = $name . ' sent a message from The Open School\'s website';
    $headers = 'From: ' . $email . "\r\n" . 'Reply-To: ' . $email;
 
@@ -27,7 +28,7 @@ if ($_POST['submitted']) {
       $response = contact_form_generate_response('error', $missing_content);
    }
    else {
-      $response = wp_mail($to, $subject, strip_tags($message), $headers)
+      $response = mail($to, $subject, strip_tags($message), $headers)
          ? contact_form_generate_response('success', $message_sent)
          : contact_form_generate_response('error', $message_unsent);
    }

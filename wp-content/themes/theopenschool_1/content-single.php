@@ -29,7 +29,7 @@
         <i class="fa fa-facebook-square"></i>
       </a>
       <a class="blog-share-twitter" 
-         href="https://twitter.com/share?text=Yes%20hello"
+         href="https://twitter.com/share"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>

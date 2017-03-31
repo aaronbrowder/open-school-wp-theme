@@ -99,25 +99,21 @@ $call-to-action-width: 290px;
    overflow: hidden;
 }
 
-.home-silent-auction-promo {
-   display: block;
+.home-silent-auction-promo,
+.home-silent-auction-promo-mobile {
    margin-bottom: 25px;
-   color: #eee;
-   background: #222;
-   padding: 10px 15px;
-   font-size: 17px;
-   h4 {
-      margin: 5px 0;
-      font-family: $stylized-font-family;
-      font-size: 20px;
-      color: #eee;
+   img {
+      width: 100%;
+      height: auto;
    }
-   a {
-      color: $light-green;
-      &:hover {
-         color: #fff;
-      }
-   }
+}
+
+.home-silent-auction-promo {
+   display: none;
+}
+
+.home-silent-auction-promo-mobile {
+   display: block;
 }
 
 .home-subbanners {
@@ -257,6 +253,12 @@ $call-to-action-width: 290px;
       top: 45px;
       right: 25px;
       width: calc(600px - 20%);
+   }
+   .home-silent-auction-promo {
+      display: block;
+   }
+   .home-silent-auction-promo-mobile {
+      display: none;
    }
 }
 
