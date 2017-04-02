@@ -7,7 +7,7 @@ $textarea_rows = $default_message ? 5 : 8;
 
 if ($_POST['submitted']) {
    
-   $to = get_option('email');
+   $school_email = get_option('email');
    
    $missing_content = 'Please supply all information.';
    $email_invalid   = 'Email address is invalid.';
@@ -19,7 +19,7 @@ if ($_POST['submitted']) {
    $message = $_POST['message_text'];
    
    $subject = $name . ' sent a message from The Open School\'s website';
-   $headers = 'From: ' . $email . "\r\n" . 'Reply-To: ' . $email;
+   $headers = 'From: ' . $name . ' <' . $school_email . ">\r\n" . 'Reply-To: ' . $email;
 
    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $response = contact_form_generate_response('error', $email_invalid);
@@ -28,7 +28,7 @@ if ($_POST['submitted']) {
       $response = contact_form_generate_response('error', $missing_content);
    }
    else {
-      $response = mail($to, $subject, strip_tags($message), $headers)
+      $response = mail($school_email, $subject, strip_tags($message), $headers)
          ? contact_form_generate_response('success', $message_sent)
          : contact_form_generate_response('error', $message_unsent);
    }
