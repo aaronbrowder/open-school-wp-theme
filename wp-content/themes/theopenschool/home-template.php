@@ -85,12 +85,14 @@ function subbanner($number) {
    
    <div class="home-subbanners">
       <div class="container">
-         <a class="home-silent-auction-promo" href="/silent-auction-2017">
-            <?php echo wp_get_attachment_image(get_option('promoted-event-image-attachment-id'), 'large'); ?>
-         </a>
-         <a class="home-silent-auction-promo-mobile" href="/silent-auction-2017">
-            <?php echo wp_get_attachment_image(get_option('mobile-promoted-event-image-attachment-id'), 'large'); ?>
-         </a>
+         <div class="home-promos">
+            <a class="home-walkthrough-promo" href="/event-walkthrough">
+               <?php echo wp_get_attachment_image(get_option('promoted-event-2-image-attachment-id'), 'large'); ?>
+            </a>
+            <a class="home-silent-auction-promo" href="/silent-auction-2017">
+               <?php echo wp_get_attachment_image(get_option('promoted-event-image-attachment-id'), 'large'); ?>
+            </a>
+         </div>
          <?php
          subbanner(2, false);
          subbanner(3, true);

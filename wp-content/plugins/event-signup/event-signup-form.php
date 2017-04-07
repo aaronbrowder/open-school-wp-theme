@@ -12,11 +12,17 @@ if ($_POST['submitted']) {
    $timeslot_invalid = 'Time slot is invalid.';
    $no_adults        = 'You must be bringing at least one adult.';
    
-   $accepted_timeslots = array('6 PM', '6:30 PM', '7 PM');
+   //$accepted_timeslots = array('6 PM', '6:30 PM', '7 PM');
+   
+   $total_for_first_timeslot = $wpdb->get_results(
+      "SELECT SUM(adult_count) AS total FROM $table_name GROUP BY timeslot having timeslot = '6 PM'"
+      )[0]->total;
+      
+   $timeslot = $total_for_first_timeslot < 8 ? '6 PM' : '6:45 PM';
    
    $name = $_POST['message_name'];
    $email = $_POST['message_email'];
-   $timeslot = $_POST['timeslot'];
+   //$timeslot = $_POST['timeslot'];
    $adult_count = intval($_POST['adult_count']);
    $child_count = intval($_POST['child_count']);
    
@@ -26,9 +32,9 @@ if ($_POST['submitted']) {
    else if (empty($name) || empty($timeslot)) {
       $response = contact_form_generate_response('error', $missing_content);
    }
-   else if (!in_array($timeslot, $accepted_timeslots)) {
-      $response = contact_form_generate_response('error', $timeslot_invalid);
-   }
+   // else if (!in_array($timeslot, $accepted_timeslots)) {
+   //    $response = contact_form_generate_response('error', $timeslot_invalid);
+   // }
    else if (empty($adult_count)) {
       $response = contact_form_generate_response('error', $no_adults);
    }
@@ -59,11 +65,12 @@ if ($_POST['submitted']) {
             <p>Hi $name,</p>
             <p>
                This is to confirm that you've signed up to visit The Open School
-               on Thursday, March 16, at $timeslot. We look forward to meeting $who!
+               on Tuesday, May 2nd. Please arrive at $timeslot, when your tour will
+               begin. We look forward to meeting $who!
             </p>
             <p>
                We're located at $address (<a href=\"http://openschooloc.com/location\">map</a>).
-               Enter through the gate on Rancho Santiago, and park when you see the Open School
+               Enter through the gate on Rancho Santiago, and park near the Open School
                van. Walk past the playground toward the courtyard and look for the balloons.
                Your Open School host will meet you there.
             </p>
@@ -98,14 +105,14 @@ echo $response;
    </table>
    <table class="contact-us-table">
       <tbody>
-         <tr>
-            <th>Which time slot<br/>would you like?</th>
-            <td>
-               <label><input type="radio" name="timeslot" value="6 PM" required/> 6-7 PM</label><br/>
-               <label><input type="radio" name="timeslot" value="6:30 PM" required/> 6:30-7:30 PM</label><br/>
-               <label><input type="radio" name="timeslot" value="7 PM" required/> 7-8 PM</label>
-            </td>
-         </tr>
+         <!--<tr>-->
+         <!--   <th>Which time slot<br/>would you like?</th>-->
+         <!--   <td>-->
+         <!--      <label><input type="radio" name="timeslot" value="6 PM" required/> 6-7 PM</label><br/>-->
+         <!--      <label><input type="radio" name="timeslot" value="6:30 PM" required/> 6:30-7:30 PM</label><br/>-->
+         <!--      <label><input type="radio" name="timeslot" value="7 PM" required/> 7-8 PM</label>-->
+         <!--   </td>-->
+         <!--</tr>-->
          <tr>
             <th>How many adults?</th>
             <td><input type="number" name="adult_count" value="<?php echo $adult_count ?>" required/></td>
