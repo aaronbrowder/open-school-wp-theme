@@ -1,6 +1,15 @@
 .blog-excerpt-container {
   margin-top: 35px; }
 
+blockquote.blog-sharable {
+  background: none;
+  border: none;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1.8em; }
+
 .blog-footer:after {
   clear: both;
   display: table;
@@ -18,6 +27,9 @@
   font-size: 32px;
   display: inline;
   color: #888; }
+
+.blog-apply {
+  display: inline-block; }
 
 .blog-paginator {
   padding-top: 30px; }
@@ -59,14 +71,7 @@
 
   .blog-buttons {
     overflow: hidden;
-    text-align: right; }
-
-  .blog-apply {
-    display: inline-block;
-    padding-right: 30px; }
-
-  .blog-donate {
-    display: inline-block; } }
+    text-align: right; } }
 .contact-us-table {
   border-spacing: 10px;
   margin-left: -10px;
@@ -157,9 +162,12 @@
       color: #8FEA8A;
       text-decoration: none; }
 
-.footer-donate {
+.footer-other-promotions {
   text-align: left;
   margin-top: 30px; }
+
+.footer-donate {
+  display: inline-block; }
   .footer-donate h4 {
     color: #ccc; }
 
@@ -167,7 +175,7 @@
   .footer-social {
     float: right; }
 
-  .footer-donate {
+  .footer-other-promotions {
     text-align: right; }
 
   .footer-contact {
@@ -279,6 +287,10 @@ iframe {
   background: #0072d6; }
   .donate-button:hover, .donate-button:focus {
     background: #0065bd; }
+
+.fb-like {
+  vertical-align: bottom;
+  margin-right: 30px; }
 
 .image-block {
   background: #ebebeb;
@@ -620,15 +632,6 @@ h2[id]:before {
     display: table;
     content: ' '; }
 
-.home-walkthrough-promo {
-  margin-bottom: 8px; }
-
-.home-walkthrough-promo, .home-silent-auction-promo {
-  display: block; }
-  .home-walkthrough-promo img, .home-silent-auction-promo img {
-    width: 100%;
-    height: auto; }
-
 .home-subbanners {
   margin-bottom: 40px; }
 
@@ -695,17 +698,7 @@ h2[id]:before {
     margin-bottom: 40px; }
 
   .home-promos {
-    margin-bottom: 25px; }
-
-  .home-walkthrough-promo {
-    width: 49%;
-    margin-right: 1.8%;
-    margin-bottom: 0;
-    float: left; }
-
-  .home-silent-auction-promo {
-    width: 49%;
-    float: left; } }
+    margin-bottom: 25px; } }
 @media (min-width: 768px) {
   .home-logo {
     margin-top: 40px; }

@@ -40,9 +40,13 @@
    }
 }
 
-.footer-donate {
+.footer-other-promotions {
    text-align: left;
    margin-top: 30px;
+}
+
+.footer-donate {
+   display: inline-block;
    h4 {
       color: #ccc;
    }
@@ -52,7 +56,7 @@
    .footer-social {
       float: right;
    }
-   .footer-donate {
+   .footer-other-promotions {
       text-align: right;
    }
    .footer-contact {

@@ -20,9 +20,12 @@
                <a href="<?php bloginfo('rss2_url'); ?>" class="social-link">
                   <i class="fa fa-feed"></i>
                </a>
-               <div class="footer-donate">
-                  <h4>Support our school</h4>
-                  <?php donate_button(); ?>
+               <div class="footer-other-promotions">
+                  <?php fb_like_box(); ?>
+                  <div class="footer-donate">
+                     <h4>Support our school</h4>
+                     <?php donate_button(); ?>
+                  </div>
                </div>
             </div>
             <div class="footer-contact">

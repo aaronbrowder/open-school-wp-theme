@@ -104,17 +104,17 @@ $call-to-action-width: 290px;
    margin-bottom: 8px;
 }
 
-.home-walkthrough-promo {
-   margin-bottom: 8px;
-}
+// .home-walkthrough-promo {
+//    margin-bottom: 8px;
+// }
 
-.home-walkthrough-promo, .home-silent-auction-promo {
-   display: block;
-   img {
-      width: 100%;
-      height: auto;
-   }
-}
+// .home-walkthrough-promo, .home-silent-auction-promo {
+//    display: block;
+//    img {
+//       width: 100%;
+//       height: auto;
+//    }
+// }
 
 .home-subbanners {
    margin-bottom: 40px;
@@ -197,16 +197,16 @@ $call-to-action-width: 290px;
    .home-promos {
       margin-bottom: 25px;
    }
-   .home-walkthrough-promo {
-      width: 49%;
-      margin-right: 1.8%;
-      margin-bottom: 0;
-      float: left;
-   }
-   .home-silent-auction-promo {
-      width: 49%;
-      float: left;
-   }
+   // .home-walkthrough-promo {
+   //    width: 49%;
+   //    margin-right: 1.8%;
+   //    margin-bottom: 0;
+   //    float: left;
+   // }
+   // .home-silent-auction-promo {
+   //    width: 49%;
+   //    float: left;
+   // }
 }
 
 @include min-tablet {

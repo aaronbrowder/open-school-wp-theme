@@ -3,6 +3,16 @@
    margin-top: 35px;
 }
 
+blockquote.blog-sharable {
+   background: none;
+   border: none;
+   border-top: 1px solid #bbb;
+   border-bottom: 1px solid #bbb;
+   padding-left: 0;
+   padding-right: 0;
+   font-size: 1.8em;
+}
+
 .blog-footer {
    @include clear-after;
 }
@@ -21,6 +31,10 @@
    font-size: 32px;
    display: inline;
    color: #888;
+}
+
+.blog-apply {
+   display: inline-block;
 }
 
 .blog-paginator {
@@ -74,12 +88,5 @@
    .blog-buttons {
       overflow: hidden;
       text-align: right;
-   }
-   .blog-apply {
-      display: inline-block;
-      padding-right: 30px;
-   }
-   .blog-donate {
-      display: inline-block;
    }
 }

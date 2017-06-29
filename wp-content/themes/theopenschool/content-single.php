@@ -41,17 +41,11 @@
    </div>
    
    <div class="blog-buttons">
-      
+      <?php fb_like_box(); ?>
       <div class="blog-apply">
          <h4>Join our school</h4>
          <a href="/admissions" class="small-button">Apply Now</a>
       </div>
-      
-      <div class="blog-donate">
-         <h4>Support our school</h4>
-         <?php donate_button(); ?>
-      </div>
-      
    </div>
       
 </div>

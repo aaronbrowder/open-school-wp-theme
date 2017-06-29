@@ -339,6 +339,12 @@ function next_year_span_shortcode_callback() {
 	return ($current_year + 1) . '-' . ($current_year + 2);
 }
 
+// [sharable]content[/sharable]
+add_shortcode('sharable', 'sharable_shortcode_callback');
+function sharable_shortcode_callback($atts = [], $content = null) {
+	return '<blockquote class="blog-sharable">' . $content . '</blockquote>';
+}
+
 //////////////////////////////////////////////////////////////////////
 // Helpers
 function get_menu_items() {
@@ -438,6 +444,11 @@ function donate_button() { ?>
       <input name="hosted_button_id" type="hidden" value="6UHSFSZE64B4C" />
       <button type="submit" name="submit" class="small-button donate-button">Donate</button>
    </form>
+<?php }
+
+// https://developers.facebook.com/docs/plugins/like-button
+function fb_like_box() { ?>
+   <div class="fb-like" data-href="https://www.facebook.com/TheOpenSchool/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
 <?php }
 
 function render_php($path, $content)
