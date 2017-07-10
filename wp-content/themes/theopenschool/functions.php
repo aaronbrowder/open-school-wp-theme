@@ -447,9 +447,13 @@ function donate_button() { ?>
 <?php }
 
 // https://developers.facebook.com/docs/plugins/like-button
-function fb_like_box() { ?>
-   <div class="fb-like" data-href="https://www.facebook.com/TheOpenSchool/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
-<?php }
+function fb_like_box($full) {
+   if ($full) { ?>
+      <div class="fb-page" data-href="https://www.facebook.com/TheOpenSchool/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/TheOpenSchool/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TheOpenSchool/">The Open School</a></blockquote></div>
+   <?php } else { ?>
+      <div class="fb-like" data-href="https://www.facebook.com/TheOpenSchool/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+   <?php }
+}
 
 function render_php($path, $content)
 {

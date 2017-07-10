@@ -21,7 +21,7 @@
                   <i class="fa fa-feed"></i>
                </a>
                <div class="footer-other-promotions">
-                  <?php fb_like_box(); ?>
+                  <?php fb_like_box(false); ?>
                   <div class="footer-donate">
                      <h4>Support our school</h4>
                      <?php donate_button(); ?>

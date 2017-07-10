@@ -6,15 +6,32 @@
 blockquote.blog-sharable {
    background: none;
    border: none;
-   border-top: 1px solid #bbb;
-   border-bottom: 1px solid #bbb;
-   padding-left: 0;
-   padding-right: 0;
-   font-size: 1.8em;
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   padding: 12px 0;
+   margin: 24px 0;
+   font-size: 1.5em;
+   font-weight: bold;
 }
 
 .blog-footer {
    @include clear-after;
+}
+
+.blog-share {
+   float: left;
+}
+
+.blog-buttons {
+   overflow: hidden;
+   text-align: right;
+   .fb-like {
+      display: none;
+   }
+}
+
+.blog-fb-like-full {
+   padding-top: 25px;
 }
 
 .blog-share-facebook {
@@ -82,11 +99,10 @@ blockquote.blog-sharable {
 }
 
 @media (min-width: 475px) {
-   .blog-share {
-      float: left;
+   .blog-buttons .fb-like {
+      display: inline-block;
    }
-   .blog-buttons {
-      overflow: hidden;
-      text-align: right;
+   .blog-fb-like-full {
+      display: none;
    }
 }
