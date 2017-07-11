@@ -137,3 +137,93 @@
 [11-Feb-2017 20:32:53 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
 [11-Feb-2017 20:32:53 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
 [11-Feb-2017 20:32:53 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:93
+[11-Jul-2017 20:32:12 UTC] Installing table: tnmtd848_contact_log
+[11-Jul-2017 20:32:12 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8' at line 6 for query CREATE TABLE tnmtd848_contact_log (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     message varchar(MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_install, dbDelta
+[11-Jul-2017 20:33:14 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 for query DROP TABLE IF EXISTS ; made by do_action('wp_ajax_delete-plugin'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, wp_ajax_delete_plugin, delete_plugins, uninstall_plugin, do_action('uninstall_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_uninstall
+[11-Jul-2017 20:33:37 UTC] Installing table: tnmtd848_contact_log
+[11-Jul-2017 20:33:37 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8' at line 6 for query CREATE TABLE tnmtd848_contact_log (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     message varchar(MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_install, dbDelta
+[11-Jul-2017 20:36:27 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 for query DROP TABLE IF EXISTS ; made by do_action('wp_ajax_delete-plugin'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, wp_ajax_delete_plugin, delete_plugins, uninstall_plugin, do_action('uninstall_event-signup/event-signup.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, event_signup_uninstall
+[11-Jul-2017 20:36:34 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 for query DROP TABLE IF EXISTS ; made by do_action('wp_ajax_delete-plugin'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, wp_ajax_delete_plugin, delete_plugins, uninstall_plugin, do_action('uninstall_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_uninstall
+[11-Jul-2017 20:37:12 UTC] Installing table: tnmtd848_event_signup
+[11-Jul-2017 20:37:23 UTC] Installing table: tnmtd848_contact_log
+[11-Jul-2017 20:37:23 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8' at line 6 for query CREATE TABLE tnmtd848_contact_log (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     message varchar(MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_install, dbDelta
+[11-Jul-2017 20:44:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 0, 100' at line 1 for query drop table tnmtd848_event_signup LIMIT 0, 100; made by require_once('wp-admin/admin.php'), do_action('tools_page_databasebrowser'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, DatabaseBrowser->adminPage, DatabaseBrowser->runQuery
+[11-Jul-2017 20:45:03 UTC] Installing table: tnmtd848_event_signup
+[11-Jul-2017 20:45:23 UTC] Installing table: tnmtd848_contact_log
+[11-Jul-2017 20:45:23 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8' at line 6 for query CREATE TABLE tnmtd848_contact_log (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     message varchar(MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_install, dbDelta
+[11-Jul-2017 20:46:29 UTC] Installing table: tnmtd848_event_signup
+[11-Jul-2017 20:50:05 UTC] Installing table: tnmtd848_contact_log
+[11-Jul-2017 20:50:05 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8' at line 6 for query CREATE TABLE tnmtd848_contact_log (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     message varchar(MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_install, dbDelta
+[11-Jul-2017 20:52:36 UTC] Installing table: tnmtd848_event_signup_2
+[11-Jul-2017 21:01:43 UTC] PHP Fatal error:  Cannot redeclare event_signup_scripts() (previously declared in /home/ubuntu/workspace/wp-content/plugins/event-signup/event-signup.php:18) in /home/ubuntu/workspace/wp-content/plugins/event-signup.1/event-signup.php on line 18
+[11-Jul-2017 21:01:43 UTC] PHP Stack trace:
+[11-Jul-2017 21:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/plugins.php:0
+[11-Jul-2017 21:01:43 UTC] PHP   2. activate_plugin() /home/ubuntu/workspace/wp-admin/plugins.php:42
+[11-Jul-2017 21:01:44 UTC] PHP Fatal error:  Cannot redeclare event_signup_scripts() (previously declared in /home/ubuntu/workspace/wp-content/plugins/event-signup/event-signup.php:18) in /home/ubuntu/workspace/wp-content/plugins/event-signup.1/event-signup.php on line 18
+[11-Jul-2017 21:01:44 UTC] PHP Stack trace:
+[11-Jul-2017 21:01:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/plugins.php:0
+[11-Jul-2017 21:01:44 UTC] PHP   2. plugin_sandbox_scrape() /home/ubuntu/workspace/wp-admin/plugins.php:164
+[11-Jul-2017 21:01:44 UTC] PHP Fatal error:  Cannot redeclare event_signup_scripts() (previously declared in /home/ubuntu/workspace/wp-content/plugins/event-signup/event-signup.php:18) in /home/ubuntu/workspace/wp-content/plugins/event-signup.1/event-signup.php on line 18
+[11-Jul-2017 21:01:44 UTC] PHP Stack trace:
+[11-Jul-2017 21:01:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/plugins.php:0
+[11-Jul-2017 21:01:44 UTC] PHP   2. plugin_sandbox_scrape() /home/ubuntu/workspace/wp-admin/plugins.php:164
+[11-Jul-2017 21:02:45 UTC] Installing table: tnmtd848_event_signup
+[11-Jul-2017 21:03:37 UTC] Installing table: tnmtd848_event_signup
+[11-Jul-2017 21:06:43 UTC] Installing table: tnmtd848_contact_log
+[11-Jul-2017 21:06:43 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8' at line 6 for query CREATE TABLE tnmtd848_contact_log (
+     id mediumint(9) NOT NULL AUTO_INCREMENT,
+     time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+     name tinytext NOT NULL,
+     email tinytext NOT NULL,
+     message varchar(MAX) DEFAULT '' NOT NULL,
+     PRIMARY KEY  (id)
+   ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_install, dbDelta
+[11-Jul-2017 21:10:34 UTC] Installing table: tnmtd848_contact_log
+[11-Jul-2017 21:26:13 UTC] Installing table: tnmtd848_contact_log

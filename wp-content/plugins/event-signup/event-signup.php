@@ -48,6 +48,7 @@ function event_signup_install() {
 
 function event_signup_uninstall() {
    global $wpdb;
+   global $table_name;
    $sql = "DROP TABLE IF EXISTS $table_name;";
    $wpdb->query($sql);
    delete_option("event_signup_db_version");

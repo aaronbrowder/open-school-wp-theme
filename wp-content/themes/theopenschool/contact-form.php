@@ -28,6 +28,7 @@ if ($_POST['submitted']) {
       $response = contact_form_generate_response('error', $missing_content);
    }
    else {
+      log_contact($name, $email, $message);
       $response = mail($school_email, $subject, strip_tags($message), $headers)
          ? contact_form_generate_response('success', $message_sent)
          : contact_form_generate_response('error', $message_unsent);
