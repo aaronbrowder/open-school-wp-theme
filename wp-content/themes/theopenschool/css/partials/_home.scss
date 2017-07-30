@@ -3,316 +3,330 @@ $call-to-action-width: 290px;
 .home-banner {
    background: #000;
    position: relative;
-   img {
+   margin-bottom: 10px;
+   max-width: 1400px;
+   >img {
       display: block;
       width: 100%;
-      max-width: 1400px;
       margin: auto;
    }
 }
 
-.home-logo {
-   display: block;
-   margin: 20px auto;
-   margin-bottom: 0;
-   width: 96%;
-   max-width: 800px;
-}
-
-.home-banner-desktop,
-.home-logo-desktop {
-   display: none;
-}
-
-.home-tagline {
-   width: 96%;
-   max-width: 600px;
-   margin: 20px auto;
-   font-size: 15.5px;
-   h2 {
-      font-size: 25px;
+.home-banner-note,
+.home-banner-note-text {
+   position: absolute;
+   width: 250px;
+   left: 200px;
+   top: 213px;
+   @media (min-width: 650px) {
+      left: 240px;
+      top: 250px;
+   }
+   @media (min-width: 700px) {
+      width: 280px;
+      left: 250px;
+      top: 260px;
+   }
+   @media (min-width: 750px) {
+      left: 280px;
+      top: 290px;
+   }
+   @media (min-width: 800px) {
+      left: 310px;
+      top: 320px;
+   }
+   @media (min-width: 850px) {
+      left: 340px;
+      top: 345px;
+   }
+   @media (min-width: 900px) {
+      width: 335px;
+   }
+   @media (min-width: 950px) {
+      left: 370px;
+      top: 375px;
+   }
+   @media (min-width: 1000px) {
+      left: 420px;
+      top: 420px;
+   }
+   @media (min-width: 1100px) {
+      left: 470px;
+      top: 460px;
+   }
+   @media (min-width: 1200px) {
+      left: 530px;
+      top: 520px;
    }
 }
 
-.home-tagline-desktop {
-   display: none;
+.home-banner-note-text {
+   padding-left: 30px;
+   padding-top: 75px;
+   width: 205px;
+   font-family: "Pangolin";
+   font-size: 12px;
+   @media (min-width: 700px) {
+      font-size: 13px;
+      padding-left: 34px;
+      padding-top: 84px;
+      width: 230px;
+   }
+   @media (min-width: 900px) {
+      font-size: 16px;
+      padding-left: 40px;
+      padding-top: 100px;
+      width: 275px;
+   }
 }
 
-.home-middle {
-   margin-top: 30px;
+.home-main-banner-note,
+.home-main-banner-note-text {
+   left: 200px;
+   top: 213px;
+   @media (min-width: 650px) {
+      left: 240px;
+      top: 250px;
+   }
+   @media (min-width: 700px) {
+      left: 250px;
+      top: 260px;
+   }
+   @media (min-width: 750px) {
+      left: 280px;
+      top: 290px;
+   }
+   @media (min-width: 800px) {
+      left: 310px;
+      top: 320px;
+   }
+   @media (min-width: 850px) {
+      left: 340px;
+      top: 345px;
+   }
+   @media (min-width: 950px) {
+      left: 370px;
+      top: 375px;
+   }
+   @media (min-width: 1000px) {
+      left: 420px;
+      top: 420px;
+   }
+   @media (min-width: 1100px) {
+      left: 470px;
+      top: 460px;
+   }
+   @media (min-width: 1200px) {
+      left: 530px;
+      top: 520px;
+   }
 }
 
-.home-middle-texts {
-   margin: 0 auto;
+.home-subbanner1-note,
+.home-subbanner1-note-text {
+   left: 20px;
+   top: 20px;
+   @media (min-width: 750px) {
+      left: 40px;
+      top: 30px;
+   }
+   @media (min-width: 900px) {
+      left: 50px;
+      top: 50px;
+   }
+}
+
+.home-subbanner1-note {
+   @include min-desktop {
+      width: 280px;
+   }
+   @media (min-width: 1100px) {
+      width: 335px;
+   }
+}
+
+.home-subbanner1-note-text {
+   @include min-desktop {
+      font-size: 13px;
+      padding-left: 34px;
+      padding-top: 84px;
+      width: 230px;
+   }
+   @media (min-width: 1100px) {
+      font-size: 16px;
+      padding-left: 40px;
+      padding-top: 100px;
+      width: 275px;
+   }
+}
+
+.home-subbanner2-note,
+.home-subbanner2-note-text {
+   left: 280px;
+   top: 15px;
+   @media (min-width: 750px) {
+      left: 340px;
+      top: 15px;
+   }
+   @media (min-width: 800px) {
+      left: 390px;
+      top: 25px;
+   }
+   @media (min-width: 900px) {
+      left: 435px;
+      top: 20px;
+   }
+   @media (min-width: 1000px) {
+      left: 470px;
+      top: 45px;
+   }
+   @media (min-width: 1100px) {
+      left: 550px;
+      top: 55px;
+   }
+   @media (min-width: 1200px) {
+      left: 680px;
+      top: 70px;
+   }
+}
+
+.home-subbanner3-note,
+.home-subbanner3-note-text {
+   left: 115px;
+   top: 25px;
+   @media (min-width: 650px) {
+      left: 130px;
+      top: 40px;
+   }
+   @media (min-width: 750px) {
+      left: 180px;
+      top: 50px;
+   }
+   @media (min-width: 850px) {
+      left: 200px;
+      top: 60px;
+   }
+   @media (min-width: 950px) {
+      left: 230px;
+      top: 80px;
+   }
+   @media (min-width: 1100px) {
+      left: 270px;
+      top: 120px;
+   }
+}
+
+.home-subbanner2-note-text,
+.home-subbanner3-note-text {
+   padding-top: 52px;
+   font-size: 11.5px;
+   @media (min-width: 700px) {
+      font-size: 12.5px;
+      padding-top: 62px;
+   }
+   @media (min-width: 900px) {
+      font-size: 15px;
+      padding-top: 74px;
+   }
+}
+
+.home-cta-bar {
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+
+.home-apply-box {
+   margin-top: 10px;
    margin-bottom: 25px;
-   max-width: 570px;
 }
 
-.home-apply {
-   max-width: 230px;
-   padding: 20px 30px;
-   background: $light-light-green;
-   border-bottom: 1px solid #8bad84;
-   font-size: 16.5px;
+.home-apply-box-text {
+   overflow: hidden;
+   font-family: "Pangolin";
+   font-size: 18px;
+}
+
+// this preloads the button1 image
+body::after {
+   position: absolute;
+   width: 0;
+   height: 0;
+   overflow: hidden;
+   z-index: -1;
+   content: url("../images/button1.png");
 }
 
 .home-apply-button {
-   @include button-primary;
+   float: right;
    display: block;
-   margin-top: 10px;
-   padding: 12px;
+   width: 171px;
+   height: 88px;
+   margin-left: 16px;
+   background-image: url("../images/button0.png");
+   &:hover {
+      background-image: url("../images/button1.png");
+   }
+   // float: left;
+   // margin-right: 20px;
+   // background: $green;
+   // color: #fff;
+   // padding: 19px 30px;
+   // border-radius: 6px;
+   // font-size: 25px;
+   // font-family: "Cabin Sketch";
+   // text-transform: uppercase;
 }
 
 .home-subscribe {
    font-size: 17px;
-   padding-top: 20px;
-   label {
-      display: block;
-   }
-   input.email {
-      margin: 6px 0;
-      padding: 6px;
-      font-size: 0.9em;
-   }
-   button {
-      padding: 0 12px;
-      font-family: $header-font-family;
-      font-size: 40px;
-      background: #555;
-      color: #fff;
-      border: none;
-      line-height: 0.78;
-      padding-bottom: 5px;
-      vertical-align: middle;
-      cursor: pointer;
-      &:hover {
-         background: #222;
-      }
-   }
+   margin-bottom: 10px;
 }
 
-.home-testimonial {
-   display: none;
+.home-subscribe label {
+   display: block;
+   font-family: "Pangolin";
+   font-size: 18px;
 }
 
-.home-middle-image {
-   overflow: hidden;
+.home-subscribe input.email {
+   margin: 6px 0;
+   padding: 6px;
+   font-size: 0.9em;
 }
 
-.home-promos {
-   @include clear-after;
-   margin-bottom: 8px;
+.home-subscribe button {
+   padding: 0 12px;
+   font-family: "Roboto Condensed", sans-serif;
+   font-size: 40px;
+   background: #555;
+   color: #fff;
+   border: none;
+   line-height: 0.78;
+   padding-bottom: 5px;
+   vertical-align: middle;
+   cursor: pointer;
 }
 
-// .home-walkthrough-promo {
-//    margin-bottom: 8px;
-// }
-
-// .home-walkthrough-promo, .home-silent-auction-promo {
-//    display: block;
-//    img {
-//       width: 100%;
-//       height: auto;
-//    }
-// }
-
-.home-subbanners {
-   margin-bottom: 40px;
+.home-subscribe button:hover {
+   background: #222;
 }
 
-.home-subbanner {
-   @include clear-after;
-   margin-bottom: 20px;
-   position: relative;
-   a {
-      display: inline-block;
-   }
-}
-
-.home-subbanner-image {
-   img {
-      width: 100%;
-      height: auto;
-   }
-}
-
-.home-subbanner-caption {
-   font-size: 15px;
-   h2,
-   h3 {
-      margin-top: 10px;
-      font-size: 25px;
-      font-family: $stylized-font-family;
-      text-transform: lowercase;
-   }
-}
-
-@media (min-width: 400px) {
-   .home-tagline {
-      font-size: 17px;
-      h2 {
-         font-size: 28px;
-      }
-   }
-}
-
-@media (min-width: 500px) {
-   .home-logo {
-      margin-top: 30px;
-   }
-   .home-logo-mobile {
-      display: none;
-   }
-   .home-logo-desktop {
-      display: block;
-   }
-}
-
-@media (min-width: 540px) {
-   .home-middle-texts {
-      @include clear-after;
-   }
-   .home-calls-to-action {
-      float: left;
-      padding-right: 30px;
-      width: $call-to-action-width;
-   }
-   .home-testimonial {
-      display: block;
-      overflow: hidden;
-   }
-   .home-testimonial-attribution {
-      margin-top: 10px;
-   }
-}
-
-@media (min-width: 600px) {
-   .home-tagline {
-      font-size: 19px;
-      margin: 40px auto;
-   }
-   .home-middle-texts {
-      margin-bottom: 40px;
-   }
-   .home-promos {
-      margin-bottom: 25px;
-   }
-   // .home-walkthrough-promo {
-   //    width: 49%;
-   //    margin-right: 1.8%;
-   //    margin-bottom: 0;
-   //    float: left;
-   // }
-   // .home-silent-auction-promo {
-   //    width: 49%;
-   //    float: left;
-   // }
-}
-
-@include min-tablet {
-   .home-logo {
-      margin-top: 40px;
-   }
-   .home-banner-mobile {
-      display: none;
-   }
-   .home-banner-desktop {
-      display: block;
-   }
-   .home-tagline {
-      p {
-         text-align: justify;
-      }
-   }
-   .home-tagline-mobile {
-      display: none;
-   }
-   .home-tagline-desktop {
-      display: block;
-   }
-   .home-middle {
-      margin-top: 40px;
-   }
-   .home-subbanner-image {
-      &.home-subbanner-image-2 {
-         width: 60%;
-         float: left;
-      }
-   }
-   .home-subbanner-caption-1,
-   .home-subbanner-caption-3 {
-      background: #fff;
-      position: absolute;
-      width: 40%;
-      padding: 15px;
-      box-shadow: -2px 3px 4px #222;
-      h2,
-      h3 {
-         margin-top: 0;
-      }
-   }
-   .home-subbanner-caption-1 {
-      top: 20px;
-      left: 20px;
-      width: 42%;
-   }
-   .home-subbanner-caption-2 {
-      position: auto;
-      overflow: hidden;
-      padding: 0 30px;
-      padding-top: 15px;
-   }
-   .home-subbanner-caption-3 {
-      top: 45px;
-      right: 25px;
-      width: calc(600px - 20%);
-   }
-}
-
-@media (min-width: 900px) {
-   .home-subbanners {
-      margin-bottom: 60px;
-   }
-   .home-subbanner-caption {
-      font-size: 16px;
-      &.home-subbanner-caption-2 {
-         padding-top: 30px;
-      }
-      &.home-subbanner-caption-3 {
-         top: 60px;
-      }
-      h2,
-      h3 {
-         font-size: 30px;
-      }
-   }
+.home-facebook {
+   //overflow: hidden;
 }
 
 @include min-desktop {
-   .home-middle {
-      @include clear-after;
-      margin-top: 70px;
-      margin-bottom: 20px;
+   .home-cta-bar {
+      float: right;
+      margin: 0;
+      margin-left: 20px;
+      margin-right: 10px;
+      width: 300px;
    }
-   .home-middle-texts {
-      float: left;
-      padding-right: 30px;
-      margin-bottom: 0;
-      width: $call-to-action-width;
+   .home-subscribe input.email {
+      width: 230px;
    }
-   .home-calls-to-action {
-      padding: 0;
-      float: none;
-   }
-   .home-testimonial {
-      margin-top: 20px;
-   }
-}
-
-@media (min-width: 1020px) {
-   .home-testimonial {
-      background: $light-light-green;
-      border-bottom: 1px solid #8bad84;
-      padding: 10px 15px;
+   .home-panel {
+      overflow: hidden;
    }
 }

@@ -26,9 +26,11 @@ function mytheme_google_fonts() {
 	wp_register_style('RobotoCondensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed');
 	wp_register_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans');
 	wp_register_style('CabinSketch', 'https://fonts.googleapis.com/css?family=Cabin+Sketch');
+	wp_register_style('Pangolin', 'https://fonts.googleapis.com/css?family=Pangolin');
 	wp_enqueue_style( 'RobotoCondensed');
 	wp_enqueue_style( 'OpenSans');
 	wp_enqueue_style( 'CabinSketch');
+	wp_enqueue_style( 'Pangolin');
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -118,6 +120,22 @@ function subbanner3_image_attachment_callback() {
    image_attachment_callback('subbanner3-image-attachment-id');
 }
 
+function banner_note_image_attachment_callback() { 
+   image_attachment_callback('banner-note-image-attachment-id');
+}
+
+function subbanner1_note_image_attachment_callback() { 
+   image_attachment_callback('subbanner1-note-image-attachment-id');
+}
+
+function subbanner2_note_image_attachment_callback() { 
+   image_attachment_callback('subbanner2-note-image-attachment-id');
+}
+
+function subbanner3_note_image_attachment_callback() { 
+   image_attachment_callback('subbanner3-note-image-attachment-id');
+}
+
 function subbanner1_caption_callback() {
    subbanner_caption_callback('subbanner1-caption');
 }
@@ -148,11 +166,15 @@ function edit_home_page_page_setup() {
    add_settings_field('mobile-tagline', 'Tagline (Mobile)', 'mobile_tagline_callback', 'edit-home-page', 'content');
    add_settings_field('school-intro-line1', 'School Intro, Line 1', 'school_intro_line1_callback', 'edit-home-page', 'content');
    
+   add_settings_field('banner-note-image-attachment-id', 'Banner Note', 'banner_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-image-attachment-id', 'Sub-Banner 1', 'subbanner1_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('subbanner1-note-image-attachment-id', 'Sub-Banner Note 1', 'subbanner1_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-caption', 'Caption 1', 'subbanner1_caption_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner2-image-attachment-id', 'Sub-Banner 2', 'subbanner2_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('subbanner2-note-image-attachment-id', 'Sub-Banner Note 2', 'subbanner2_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner2-caption', 'Caption 2', 'subbanner2_caption_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner3-image-attachment-id', 'Sub-Banner 3', 'subbanner3_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('subbanner3-note-image-attachment-id', 'Sub-Banner Note 3', 'subbanner3_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner3-caption', 'Caption 3', 'subbanner3_caption_callback', 'edit-home-page', 'content');
    
    register_setting('edit-home-page', 'header-logo-image-attachment-id');
@@ -168,6 +190,10 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'subbanner1-image-attachment-id');
    register_setting('edit-home-page', 'subbanner2-image-attachment-id');
    register_setting('edit-home-page', 'subbanner3-image-attachment-id');
+   register_setting('edit-home-page', 'banner-note-image-attachment-id');
+   register_setting('edit-home-page', 'subbanner1-note-image-attachment-id');
+   register_setting('edit-home-page', 'subbanner2-note-image-attachment-id');
+   register_setting('edit-home-page', 'subbanner3-note-image-attachment-id');
    register_setting('edit-home-page', 'subbanner1-caption');
    register_setting('edit-home-page', 'subbanner2-caption');
    register_setting('edit-home-page', 'subbanner3-caption');
