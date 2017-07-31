@@ -1,10 +1,14 @@
 @import '_core.scss';
-$call-to-action-width: 290px;
+.home-container {
+   @include clear-after;
+   max-width: 1400px;
+   margin: auto;
+}
+
 .home-banner {
    background: #000;
    position: relative;
    margin-bottom: 10px;
-   max-width: 1400px;
    >img {
       display: block;
       width: 100%;
@@ -136,30 +140,6 @@ $call-to-action-width: 290px;
    }
 }
 
-.home-subbanner1-note {
-   @include min-desktop {
-      width: 280px;
-   }
-   @media (min-width: 1100px) {
-      width: 335px;
-   }
-}
-
-.home-subbanner1-note-text {
-   @include min-desktop {
-      font-size: 13px;
-      padding-left: 34px;
-      padding-top: 84px;
-      width: 230px;
-   }
-   @media (min-width: 1100px) {
-      font-size: 16px;
-      padding-left: 40px;
-      padding-top: 100px;
-      width: 275px;
-   }
-}
-
 .home-subbanner2-note,
 .home-subbanner2-note-text {
    left: 280px;
@@ -176,17 +156,25 @@ $call-to-action-width: 290px;
       left: 435px;
       top: 20px;
    }
-   @media (min-width: 1000px) {
-      left: 470px;
-      top: 45px;
+   @include min-desktop {
+      left: 320px;
+      top: 20px;
    }
    @media (min-width: 1100px) {
-      left: 550px;
-      top: 55px;
+      left: 370px;
+      top: 20px;
    }
    @media (min-width: 1200px) {
-      left: 680px;
-      top: 70px;
+      left: 420px;
+      top: 30px;
+   }
+   @media (min-width: 1300px) {
+      left: 480px;
+      top: 45px;
+   }
+   @media (min-width: 1400px) {
+      left: 550px;
+      top: 55px;
    }
 }
 
@@ -230,14 +218,77 @@ $call-to-action-width: 290px;
    }
 }
 
+.home-subbanner1-note,
+.home-subbanner2-note {
+   @include min-desktop {
+      width: 280px;
+   }
+   @media (min-width: 1100px) {
+      width: 335px;
+   }
+}
+
+.home-subbanner1-note-text,
+.home-subbanner2-note-text {
+   @include min-desktop {
+      padding-left: 34px;
+      width: 230px;
+   }
+   @media (min-width: 1100px) {
+      padding-left: 40px;
+      width: 275px;
+   }
+}
+
+.home-subbanner1-note-text {
+   @include min-desktop {
+      font-size: 13px;
+      padding-top: 84px;
+   }
+   @media (min-width: 1100px) {
+      font-size: 16px;
+      padding-top: 100px;
+   }
+}
+
+.home-subbanner2-note-text {
+   @include min-desktop {
+      font-size: 12.5px;
+      padding-top: 62px;
+   }
+   @media (min-width: 1100px) {
+      font-size: 15px;
+      padding-top: 74px;
+   }
+}
+
 .home-cta-bar {
+   @include clear-after;
    margin-top: 20px;
-   margin-bottom: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
+   @include min-desktop {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 30px;
+   }
 }
 
 .home-apply-box {
    margin-top: 10px;
-   margin-bottom: 25px;
+   margin-bottom: 20px;
+   overflow: hidden;
+   width: 300px;
+   @media (min-width: 700px) {
+      margin-left: 30px;
+   }
+   @media (min-width: 900px) {
+      margin-left: 0;
+   }
+   @include min-desktop {
+      overflow: auto;
+      width: auto;
+   }
 }
 
 .home-apply-box-text {
@@ -266,20 +317,23 @@ body::after {
    &:hover {
       background-image: url("../images/button1.png");
    }
-   // float: left;
-   // margin-right: 20px;
-   // background: $green;
-   // color: #fff;
-   // padding: 19px 30px;
-   // border-radius: 6px;
-   // font-size: 25px;
-   // font-family: "Cabin Sketch";
-   // text-transform: uppercase;
 }
 
 .home-subscribe {
+   float: right;
    font-size: 17px;
-   margin-bottom: 10px;
+   margin-top: 10px;
+   margin-bottom: 15px;
+   @media (min-width: 650px) {
+      margin-right: 30px;
+   }
+   @media (min-width: 900px) {
+      margin-right: 0;
+   }
+   @include min-desktop {
+      float: none;
+      margin-right: 0;
+   }
 }
 
 .home-subscribe label {
@@ -311,11 +365,181 @@ body::after {
    background: #222;
 }
 
-.home-facebook {
-   //overflow: hidden;
+.home-facebook-small {
+   display: none;
+   @media (min-width: 900px) {
+      display: block;
+      float: right;
+      width: 280px;
+      margin-right: 20px;
+      margin-top: 8px;
+   }
+   @media (min-width: 950px) {
+      margin-right: 45px;
+   }
+   @include min-desktop {
+      display: none;
+      float: none;
+   }
+}
+
+.home-facebook-full {
+   display: none;
+   @include min-desktop {
+      display: block;
+      overflow: hidden;
+      max-height: 225px;
+   }
+   @media (min-width: 1030px) {
+      max-height: 250px;
+   }
+   @media (min-width: 1050px) {
+      max-height: 268px;
+   }
+   @media (min-width: 1100px) {
+      max-height: 300px;
+   }
+   @media (min-width: 1150px) {
+      max-height: 336px;
+   }
+   @media (min-width: 1200px) {
+      max-height: 370px;
+   }
+   @media (min-width: 1250px) {
+      max-height: 400px;
+   }
+   @media (min-width: 1300px) {
+      max-height: 434px;
+   }
+   @media (min-width: 1350px) {
+      max-height: 464px;
+   }
+   @media (min-width: 1400px) {
+      max-height: none;
+   }
+}
+
+.home-testimonial-bar {
+   @include clear-after;
+   margin-left: 30px;
+   margin-bottom: 25px;
+   margin-top: 30px;
+   @include min-desktop {
+      margin-right: 20px;
+      margin-left: 10px;
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+   @media (min-width: 1410px) {
+      margin-left: 0;
+   }
+}
+
+.home-testimonial-quote-mark {
+   float: left;
+   font-family: serif;
+   font-size: 130px;
+   color: #ccc;
+   text-align: center;
+   margin-top: -10px;
+   margin-bottom: -80px;
+   margin-right: 40px;
+   @media (min-width: 680px) {
+      font-size: 150px;
+      margin-top: 30px;
+      margin-right: -20px;
+      margin-bottom: 0;
+   }
+   @media (min-width: 710px) {
+      margin-right: -30px;
+   }
+   @media (min-width: 830px) {
+      margin-right: -30px;
+   }
+   @include min-desktop {
+      float: none;
+      font-size: 100px;
+      margin-top: -10px;
+      margin-bottom: -65px;
+      margin-right: 0;
+   }
+}
+
+.home-testimonial {
+   overflow: hidden;
+   margin-left: 50px;
+   margin-right: 30px;
+   @media (min-width: 680px) {
+      float: left;
+      overflow: auto;
+      font-size: 14px;
+      margin-right: 0;
+   }
+   @media (min-width: 710px) {
+      margin-left: 70px;
+      font-size: inherit;
+   }
+   @media (min-width: 830px) {
+      margin-left: 70px;
+      font-size: inherit;
+   }
+   @include min-desktop {
+      float: none;
+      margin-left: 0;
+      margin-top: 20px;
+   }
+}
+
+.home-testimonial-1 {
+   @media (min-width: 680px) {
+      width: 200px;
+   }
+   @media (min-width: 830px) {
+      width: 250px;
+   }
+   @include min-desktop {
+      width: auto;
+   }
+}
+
+.home-testimonial-2 {
+   display: none;
+   @media (min-width: 680px) {
+      display: block;
+      width: 280px;
+   }
+   @media (min-width: 830px) {
+      width: 350px;
+   }
+   @include min-desktop {
+      width: auto;
+   }
+}
+
+.home-testimonial-3 {
+   display: none;
+   @media (min-width: 1200px) {
+      display: block;
+   }
+}
+
+.home-testimonial-4 {
+   display: none;
+   @media (min-width: 1400px) {
+      display: block;
+   }
+}
+
+.home-testimonial-attribution {
+   text-align: right;
+   margin-top: 10px;
 }
 
 @include min-desktop {
+   .home-panel {
+      @include clear-after;
+      overflow: hidden;
+   }
    .home-cta-bar {
       float: right;
       margin: 0;
@@ -326,7 +550,8 @@ body::after {
    .home-subscribe input.email {
       width: 230px;
    }
-   .home-panel {
-      overflow: hidden;
+   .home-testimonial-bar {
+      float: left;
+      width: 300px;
    }
 }

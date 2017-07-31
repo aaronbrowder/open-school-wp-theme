@@ -41,7 +41,7 @@
    </div>
    
    <div class="blog-buttons">
-      <?php fb_like_box(false); ?>
+      <?php fb_like_box(); ?>
       <div class="blog-apply">
          <h4>Join our school</h4>
          <a href="/admissions" class="small-button">Apply Now</a>
@@ -49,7 +49,7 @@
    </div>
    
    <div class="blog-fb-like-full">
-      <?php fb_like_box(true); ?>
+      <?php fb_page_plugin_large(); ?>
    </div>
       
 </div>
