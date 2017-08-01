@@ -2,7 +2,7 @@
 /*
 Plugin Name: Event Signup
 Description: Allows users to sign up for Open School events
-Version: 1.0
+Version: 1.2
 Author: Aaron Browder
 */
 
@@ -54,15 +54,25 @@ function event_signup_uninstall() {
    delete_option("event_signup_db_version");
 }
 
-// [event-signup-form]
-add_shortcode('event-signup-form', 'event_signup_form_shortcode_callback');
-function event_signup_form_shortcode_callback() {
-   $GLOBALS['content'] = $content;
+function render_event_php($path)
+{
    ob_start();
-   include('event-signup-form.php');
+   include($path);
    $var = ob_get_contents(); 
    ob_end_clean();
    return $var;
+}
+
+// [event-signup-form]
+add_shortcode('event-signup-form', 'event_signup_form_shortcode_callback');
+function event_signup_form_shortcode_callback() {
+   return render_event_php('event-signup-form.php');
+}
+
+// [event-confirmation]
+add_shortcode('event-confirmation', 'event_confirmation_shortcode_callback');
+function event_confirmation_shortcode_callback() {
+   return render_event_php('event-confirmation.php');
 }
 
 // [event-signup-results]

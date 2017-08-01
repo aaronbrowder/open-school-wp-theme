@@ -65,6 +65,7 @@
 }
 
 .home-banner-note-text {
+   transform: rotate(-2.1deg);
    padding-left: 30px;
    padding-top: 75px;
    width: 205px;
@@ -241,6 +242,7 @@
 }
 
 .home-subbanner1-note-text {
+   transform: rotate(2deg);
    @include min-desktop {
       font-size: 13px;
       padding-top: 84px;
@@ -252,6 +254,7 @@
 }
 
 .home-subbanner2-note-text {
+   transform: rotate(-2.2deg);
    @include min-desktop {
       font-size: 12.5px;
       padding-top: 62px;
@@ -260,6 +263,10 @@
       font-size: 15px;
       padding-top: 74px;
    }
+}
+
+.home-subbanner3-note-text {
+   transform: rotate(1.8deg);
 }
 
 .home-cta-bar {
