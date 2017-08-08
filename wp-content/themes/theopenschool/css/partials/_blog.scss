@@ -1,6 +1,10 @@
 @import '_core.scss';
 .blog-excerpt-container {
    margin-top: 35px;
+   
+   .entry-subtitle {
+      display: none;
+   }
 }
 
 blockquote.blog-sharable {

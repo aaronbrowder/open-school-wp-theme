@@ -1,5 +1,7 @@
 .blog-excerpt-container {
   margin-top: 35px; }
+  .blog-excerpt-container .entry-subtitle {
+    display: none; }
 
 blockquote.blog-sharable {
   background: none;
@@ -561,10 +563,24 @@ h2[id]:before {
   background: #000;
   position: relative;
   margin-bottom: 10px; }
-  .home-banner > img {
-    display: block;
-    width: 100%;
-    margin: auto; }
+
+.home-banner-image {
+  width: 100%;
+  margin: auto;
+  padding-top: 66.66%;
+  background-size: 100%; }
+
+.home-banner-note-mobile-header {
+  font-family: "Pangolin";
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3px; }
+  @media (min-width: 340px) {
+    .home-banner-note-mobile-header {
+      font-size: 17px; } }
+  @media (min-width: 575px) {
+    .home-banner-note-mobile-header {
+      display: none; } }
 
 .home-banner-note {
   display: none; }
@@ -893,7 +909,7 @@ h2[id]:before {
   @media (min-width: 700px) {
     .home-apply-box {
       margin-left: 30px; } }
-  @media (min-width: 900px) {
+  @media (min-width: 920px) {
     .home-apply-box {
       margin-left: 0; } }
   @media (min-width: 992px) {
@@ -934,7 +950,7 @@ body::after {
   @media (min-width: 650px) {
     .home-subscribe {
       margin-right: 30px; } }
-  @media (min-width: 900px) {
+  @media (min-width: 920px) {
     .home-subscribe {
       margin-right: 0; } }
   @media (min-width: 992px) {
@@ -969,7 +985,7 @@ body::after {
 
 .home-facebook-small {
   display: none; }
-  @media (min-width: 900px) {
+  @media (min-width: 920px) {
     .home-facebook-small {
       display: block;
       float: right;
@@ -1141,6 +1157,14 @@ body::after {
 
 .home-footer-testimonial {
   margin-bottom: 15px; }
+
+.home-promoted-event {
+  background: #000;
+  margin-bottom: 10px; }
+  .home-promoted-event img {
+    width: 100%;
+    max-width: 768px;
+    margin: auto; }
 
 @media (min-width: 992px) {
   .home-panel {

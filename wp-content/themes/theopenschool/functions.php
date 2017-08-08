@@ -70,10 +70,6 @@ function banner_attachment_callback() {
    image_attachment_callback('banner-attachment-id');
 }
 
-function mobile_banner_attachment_callback() { 
-   image_attachment_callback('mobile-banner-attachment-id');
-}
-
 function promoted_event_image_attachment_callback() { 
    image_attachment_callback('promoted-event-image-attachment-id');
 }
@@ -91,7 +87,7 @@ function subbanner_caption_callback($option_id) { ?>
 <?php }
 
 function testimonial_callback($option_id) { ?>
-   <textarea rows="5" cols="70" name="<?php echo $option_id; ?>"><?php echo get_option($option_id); ?></textarea>
+   <textarea rows="7" cols="70" name="<?php echo $option_id; ?>"><?php echo get_option($option_id); ?></textarea>
 <?php }
 
 function testimonial_attribution_callback($option_id) { ?>
@@ -108,18 +104,6 @@ function subbanner2_image_attachment_callback() {
 
 function subbanner3_image_attachment_callback() { 
    image_attachment_callback('subbanner3-image-attachment-id');
-}
-
-function subbanner1_mobile_image_attachment_callback() { 
-   image_attachment_callback('subbanner1-mobile-image-attachment-id');
-}
-
-function subbanner2_mobile_image_attachment_callback() { 
-   image_attachment_callback('subbanner2-mobile-image-attachment-id');
-}
-
-function subbanner3_mobile_image_attachment_callback() { 
-   image_attachment_callback('subbanner3-mobile-image-attachment-id');
 }
 
 function banner_note_image_attachment_callback() { 
@@ -190,21 +174,17 @@ function edit_home_page_page_setup() {
    add_settings_field('header-logo-image-attachment-id', 'Header Logo Image', 'header_logo_image_attachment_callback', 'edit-home-page', 'content');
 
    add_settings_field('banner-attachment-id', 'Banner', 'banner_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('mobile-banner-attachment-id', 'Banner (Mobile)', 'mobile_banner_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('promoted-event-attachment-id', 'Promoted Event Image', 'promoted_event_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('promoted-event-2-attachment-id', 'Promoted Event 2 Image', 'promoted_event_2_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-image-attachment-id', 'Promoted Event Image', 'promoted_event_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-2-image-attachment-id', 'Promoted Event 2 Image', 'promoted_event_2_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('school-intro-line1', 'School Intro', 'school_intro_callback', 'edit-home-page', 'content');
    add_settings_field('banner-note-image-attachment-id', 'Banner Note', 'banner_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-image-attachment-id', 'Sub-Banner 1', 'subbanner1_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('subbanner1-mobile-image-attachment-id', 'Sub-Banner 1 (Mobile)', 'subbanner1_mobile_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-note-image-attachment-id', 'Sub-Banner Note 1', 'subbanner1_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-caption', 'Caption 1', 'subbanner1_caption_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner2-image-attachment-id', 'Sub-Banner 2', 'subbanner2_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('subbanner2-mobile-image-attachment-id', 'Sub-Banner 2 (Mobile)', 'subbanner1_mobile_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner2-note-image-attachment-id', 'Sub-Banner Note 2', 'subbanner2_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner2-caption', 'Caption 2', 'subbanner2_caption_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner3-image-attachment-id', 'Sub-Banner 3', 'subbanner3_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('subbanner3-mobile-image-attachment-id', 'Sub-Banner 3 (Mobile)', 'subbanner1_mobile_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner3-note-image-attachment-id', 'Sub-Banner Note 3', 'subbanner3_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner3-caption', 'Caption 3', 'subbanner3_caption_callback', 'edit-home-page', 'content');
    add_settings_field('testimonial1', 'Testimonial 1', 'testimonial1_callback', 'edit-home-page', 'content');
@@ -218,16 +198,12 @@ function edit_home_page_page_setup() {
    
    register_setting('edit-home-page', 'header-logo-image-attachment-id');
    register_setting('edit-home-page', 'banner-attachment-id');
-   register_setting('edit-home-page', 'mobile-banner-attachment-id');
    register_setting('edit-home-page', 'promoted-event-image-attachment-id');
    register_setting('edit-home-page', 'promoted-event-2-image-attachment-id');
    register_setting('edit-home-page', 'school-intro-line1');
    register_setting('edit-home-page', 'subbanner1-image-attachment-id');
    register_setting('edit-home-page', 'subbanner2-image-attachment-id');
    register_setting('edit-home-page', 'subbanner3-image-attachment-id');
-   register_setting('edit-home-page', 'subbanner1-mobile-image-attachment-id');
-   register_setting('edit-home-page', 'subbanner2-mobile-image-attachment-id');
-   register_setting('edit-home-page', 'subbanner3-mobile-image-attachment-id');
    register_setting('edit-home-page', 'banner-note-image-attachment-id');
    register_setting('edit-home-page', 'subbanner1-note-image-attachment-id');
    register_setting('edit-home-page', 'subbanner2-note-image-attachment-id');
