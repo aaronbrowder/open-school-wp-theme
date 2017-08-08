@@ -13,14 +13,30 @@ function subbanner($number) {
    $note_text_class = "home-banner-note-text home-subbanner$number-note-text";
    ?>
    <div class="home-banner">
-   <?php echo wp_get_attachment_image($image_attachment, 'full'); ?>
-   <div class="<?php echo $note_class ?>">
-      <?php echo wp_get_attachment_image($note_image_attachment, 'full'); ?>
+      <?php echo wp_get_attachment_image($image_attachment, 'full'); ?>
+      <div class="<?php echo $note_class ?>">
+         <?php echo wp_get_attachment_image($note_image_attachment, 'full'); ?>
+      </div>
+      <div class="<?php echo $note_text_class ?>">
+         <?php echo $caption; ?>
+      </div>
    </div>
-   <div class="<?php echo $note_text_class ?>">
-      <?php echo $caption; ?>
+<?php }
+
+function testimonial($number) { ?>
+   <div class="home-testimonial home-testimonial-<?php echo $number; ?>">
+      <?php echo get_option("testimonial$number"); ?>
+      <div class="home-testimonial-attribution">
+         ~ <?php echo get_option("testimonial$number-attribution"); ?>
+      </div>
    </div>
-</div>
+<?php }
+
+function footer_testimonial($number) { ?>
+   <div class="home-footer-testimonial">
+      "<?php echo get_option("testimonial$number"); ?>"
+      ~ <?php echo get_option("testimonial$number-attribution"); ?>
+   </div>
 <?php }
 
 ?>
@@ -68,29 +84,12 @@ function subbanner($number) {
    
    <div class="home-testimonial-bar">
       <div class="home-testimonial-quote-mark">“</div>
-      <div class="home-testimonial home-testimonial-1">
-         I've seen so much growth in my kids in all the important things in life, what really matters.
-         They are loving being able to make their own decisions, and they are more well-behaved at home
-         and do their chores without being told. They are all just happy and feel proud of themselves.
-         <div class="home-testimonial-attribution">~ Tania</div>
-      </div>
-      <div class="home-testimonial home-testimonial-2">
-         When we were looking at education options, one of our biggest fears was that she would have to
-         change who she was to “make it” in a standard school or would be one of those kids who is constantly
-         in trouble for talking too much. I remember searching and searching for a school until we found out
-         about The Open School and democratic education, and then breathing that sigh of relief, “This is the place.”
-         <div class="home-testimonial-attribution">~ Ingrid</div>
-      </div>
-      <div class="home-testimonial home-testimonial-3">
-         My kids are learning so much about life and how things work in the real world.
-         They are learning what they are passionate about and how to make anything they want to learn possible.
-         <div class="home-testimonial-attribution">~ Heidi</div>
-      </div>
-      <div class="home-testimonial home-testimonial-4">
-         The experience has been strange and wonderful. This year, [my son] is making decisions for himself.
-         I see him involved in school and learning how to balance great freedom with deeper responsibility.
-         <div class="home-testimonial-attribution">~ Scott</div>
-      </div>
+      <?php
+      testimonial(1);
+      testimonial(2);
+      testimonial(3);
+      testimonial(4);
+      ?>
    </div>
    
    <div class="home-panel">
@@ -98,6 +97,16 @@ function subbanner($number) {
    </div>
    
    <?php subbanner(3); ?>
+   
+   <div class="home-footer-testimonials">
+      <h2>What are parents saying about The Open School?</h2>
+      <?php
+      footer_testimonial(1);
+      footer_testimonial(2);
+      footer_testimonial(3);
+      footer_testimonial(4);
+      ?>
+   </div>
 
 </div>
 
