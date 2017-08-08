@@ -227,3 +227,33 @@
    ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci made by activate_plugin, do_action('activate_contact-log/contact-log.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, contact_log_install, dbDelta
 [11-Jul-2017 21:10:34 UTC] Installing table: tnmtd848_contact_log
 [11-Jul-2017 21:26:13 UTC] Installing table: tnmtd848_contact_log
+[08-Aug-2017 19:24:19 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'PageTemplater' does not have a method 'add_new_template' in /home/ubuntu/workspace/wp-includes/class-wp-hook.php on line 300
+[08-Aug-2017 19:24:19 UTC] PHP Stack trace:
+[08-Aug-2017 19:24:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/edit.php:0
+[08-Aug-2017 19:24:19 UTC] PHP   2. WP_Posts_List_Table->inline_edit() /home/ubuntu/workspace/wp-admin/edit.php:363
+[08-Aug-2017 19:24:19 UTC] PHP   3. get_page_templates() /home/ubuntu/workspace/wp-admin/includes/class-wp-posts-list-table.php:1546
+[08-Aug-2017 19:24:19 UTC] PHP   4. WP_Theme->get_page_templates() /home/ubuntu/workspace/wp-admin/includes/theme.php:112
+[08-Aug-2017 19:24:19 UTC] PHP   5. apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-theme.php:1104
+[08-Aug-2017 19:24:19 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[08-Aug-2017 19:24:19 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:300}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:300
+[08-Aug-2017 19:24:19 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'PageTemplater' does not have a method 'add_new_template' in /home/ubuntu/workspace/wp-includes/class-wp-hook.php on line 300
+[08-Aug-2017 19:24:19 UTC] PHP Stack trace:
+[08-Aug-2017 19:24:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/edit.php:0
+[08-Aug-2017 19:24:19 UTC] PHP   2. WP_Posts_List_Table->inline_edit() /home/ubuntu/workspace/wp-admin/edit.php:363
+[08-Aug-2017 19:24:19 UTC] PHP   3. get_page_templates() /home/ubuntu/workspace/wp-admin/includes/class-wp-posts-list-table.php:1546
+[08-Aug-2017 19:24:19 UTC] PHP   4. WP_Theme->get_page_templates() /home/ubuntu/workspace/wp-admin/includes/theme.php:112
+[08-Aug-2017 19:24:19 UTC] PHP   5. apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-theme.php:1104
+[08-Aug-2017 19:24:19 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[08-Aug-2017 19:24:19 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:300}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:300
+[08-Aug-2017 19:24:24 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'PageTemplater' does not have a method 'add_new_template' in /home/ubuntu/workspace/wp-includes/class-wp-hook.php on line 300
+[08-Aug-2017 19:24:24 UTC] PHP Stack trace:
+[08-Aug-2017 19:24:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[08-Aug-2017 19:24:24 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[08-Aug-2017 19:24:24 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:696
+[08-Aug-2017 19:24:24 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[08-Aug-2017 19:24:24 UTC] PHP   5. page_attributes_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[08-Aug-2017 19:24:24 UTC] PHP   6. get_page_templates() /home/ubuntu/workspace/wp-admin/includes/meta-boxes.php:830
+[08-Aug-2017 19:24:24 UTC] PHP   7. WP_Theme->get_page_templates() /home/ubuntu/workspace/wp-admin/includes/theme.php:112
+[08-Aug-2017 19:24:24 UTC] PHP   8. apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-theme.php:1104
+[08-Aug-2017 19:24:24 UTC] PHP   9. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[08-Aug-2017 19:24:24 UTC] PHP  10. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:300}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:300

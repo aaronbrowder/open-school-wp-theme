@@ -1,4 +1,4 @@
-<form action="/event-confirmation" method="post">
+<form action="/event-confirmation-2" method="post">
    <table class="contact-us-table">
       <tbody>
          <tr>

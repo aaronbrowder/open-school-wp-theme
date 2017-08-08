@@ -1,5 +1,8 @@
 <?php
 
+page_template(function() {
+?><div class="page"><?php
+
 global $wpdb;
 global $table_name;
 
@@ -44,3 +47,5 @@ $totals = $wpdb->get_results("SELECT timeslot, SUM(adult_count) AS total_adults,
       </tr>
    <?php } ?>
 </table>
+
+</div><?php });
