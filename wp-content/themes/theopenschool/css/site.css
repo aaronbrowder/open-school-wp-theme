@@ -570,18 +570,6 @@ h2[id]:before {
   padding-top: 66.66%;
   background-size: 100%; }
 
-.home-banner-note-mobile-header {
-  font-family: "Pangolin";
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 3px; }
-  @media (min-width: 340px) {
-    .home-banner-note-mobile-header {
-      font-size: 17px; } }
-  @media (min-width: 575px) {
-    .home-banner-note-mobile-header {
-      display: none; } }
-
 .home-banner-note {
   display: none; }
 
@@ -590,6 +578,7 @@ h2[id]:before {
   .home-banner-note-text {
     display: block;
     position: absolute;
+    transform: rotate(-2deg);
     width: 250px;
     left: 200px;
     top: 213px; } }
@@ -651,25 +640,43 @@ h2[id]:before {
   @media (min-width: 575px) {
     .home-banner-note-text {
       background: none;
-      transform: rotate(-2.1deg);
       padding: 0;
-      padding-left: 30px;
-      padding-top: 75px;
+      padding-left: 32px;
+      padding-top: 36px;
       width: 205px;
       font-family: "Pangolin";
       font-size: 12px; } }
   @media (min-width: 700px) {
     .home-banner-note-text {
       font-size: 13px;
-      padding-left: 34px;
-      padding-top: 84px;
+      padding-left: 36px;
+      padding-top: 44px;
       width: 230px; } }
   @media (min-width: 900px) {
     .home-banner-note-text {
       font-size: 16px;
-      padding-left: 40px;
-      padding-top: 100px;
+      padding-left: 42px;
+      padding-top: 52px;
       width: 275px; } }
+
+.home-banner-note-header {
+  font-family: "Pangolin";
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3px; }
+  @media (min-width: 340px) {
+    .home-banner-note-header {
+      font-size: 17px; } }
+  @media (min-width: 575px) {
+    .home-banner-note-header {
+      font-size: 16px; } }
+  @media (min-width: 700px) {
+    .home-banner-note-header {
+      font-size: 17px;
+      margin-bottom: 6px; } }
+  @media (min-width: 900px) {
+    .home-banner-note-header {
+      font-size: 19px; } }
 
 .home-main-banner-note-text {
   padding-bottom: 15px;
@@ -733,6 +740,7 @@ h2[id]:before {
 @media (min-width: 575px) {
   .home-subbanner1-note,
   .home-subbanner1-note-text {
+    transform: rotate(2deg);
     left: 20px;
     top: 20px; } }
 @media (min-width: 750px) {
@@ -749,6 +757,7 @@ h2[id]:before {
 @media (min-width: 575px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
+    transform: rotate(-2deg);
     left: 280px;
     top: 15px; } }
 @media (min-width: 750px) {
@@ -795,6 +804,7 @@ h2[id]:before {
 @media (min-width: 575px) {
   .home-subbanner3-note,
   .home-subbanner3-note-text {
+    transform: rotate(2deg);
     left: 115px;
     top: 25px; } }
 @media (min-width: 650px) {
@@ -824,20 +834,27 @@ h2[id]:before {
     top: 120px; } }
 
 @media (min-width: 575px) {
+  .home-subbanner1-note-text,
   .home-subbanner2-note-text,
   .home-subbanner3-note-text {
-    padding-top: 52px;
+    padding-top: 32px;
     font-size: 11.5px; } }
 @media (min-width: 700px) {
+  .home-subbanner1-note-text,
   .home-subbanner2-note-text,
   .home-subbanner3-note-text {
     font-size: 12.5px;
-    padding-top: 62px; } }
+    padding-top: 38px; }
+    .home-subbanner1-note-text .home-banner-note-header,
+    .home-subbanner2-note-text .home-banner-note-header,
+    .home-subbanner3-note-text .home-banner-note-header {
+      margin-bottom: 2px; } }
 @media (min-width: 900px) {
+  .home-subbanner1-note-text,
   .home-subbanner2-note-text,
   .home-subbanner3-note-text {
     font-size: 15px;
-    padding-top: 74px; } }
+    padding-top: 48px; } }
 
 @media (min-width: 992px) {
   .home-subbanner1-note,
@@ -859,33 +876,23 @@ h2[id]:before {
     padding-left: 40px;
     width: 275px; } }
 
-@media (min-width: 575px) {
-  .home-subbanner1-note-text {
-    transform: rotate(2deg); } }
 @media (min-width: 992px) {
   .home-subbanner1-note-text {
     font-size: 13px;
-    padding-top: 84px; } }
+    padding-top: 40px; } }
 @media (min-width: 1100px) {
   .home-subbanner1-note-text {
     font-size: 16px;
-    padding-top: 100px; } }
+    padding-top: 46px; } }
 
-@media (min-width: 575px) {
-  .home-subbanner2-note-text {
-    transform: rotate(-2.2deg); } }
 @media (min-width: 992px) {
   .home-subbanner2-note-text {
     font-size: 12.5px;
-    padding-top: 62px; } }
+    padding-top: 40px; } }
 @media (min-width: 1100px) {
   .home-subbanner2-note-text {
     font-size: 15px;
-    padding-top: 74px; } }
-
-@media (min-width: 575px) {
-  .home-subbanner3-note-text {
-    transform: rotate(1.8deg); } }
+    padding-top: 50px; } }
 
 .home-cta-bar {
   margin-top: 20px;
@@ -983,6 +990,9 @@ body::after {
 .home-subscribe button:hover {
   background: #222; }
 
+.home-hiring {
+  margin-bottom: 13px; }
+
 .home-facebook-small {
   display: none; }
   @media (min-width: 920px) {
@@ -1006,34 +1016,34 @@ body::after {
     .home-facebook-full {
       display: block;
       overflow: hidden;
-      max-height: 225px; } }
-  @media (min-width: 1030px) {
+      max-height: 167px; } }
+  @media (min-width: 1024px) {
     .home-facebook-full {
-      max-height: 250px; } }
+      max-height: 190px; } }
   @media (min-width: 1050px) {
     .home-facebook-full {
-      max-height: 268px; } }
+      max-height: 210px; } }
   @media (min-width: 1100px) {
     .home-facebook-full {
-      max-height: 300px; } }
+      max-height: 242px; } }
   @media (min-width: 1150px) {
     .home-facebook-full {
-      max-height: 336px; } }
+      max-height: 278px; } }
   @media (min-width: 1200px) {
     .home-facebook-full {
-      max-height: 370px; } }
+      max-height: 312px; } }
   @media (min-width: 1250px) {
     .home-facebook-full {
-      max-height: 400px; } }
+      max-height: 342px; } }
   @media (min-width: 1300px) {
     .home-facebook-full {
-      max-height: 434px; } }
+      max-height: 376px; } }
   @media (min-width: 1350px) {
     .home-facebook-full {
-      max-height: 464px; } }
+      max-height: 406px; } }
   @media (min-width: 1400px) {
     .home-facebook-full {
-      max-height: none; } }
+      max-height: 442px; } }
 
 .home-testimonial-bar {
   display: none; }
@@ -1108,7 +1118,8 @@ body::after {
     .home-testimonial {
       float: none;
       margin-left: 0;
-      margin-top: 20px; } }
+      margin-top: 20px;
+      font-size: 13.5px; } }
 
 @media (min-width: 680px) {
   .home-testimonial-1 {
@@ -1159,9 +1170,11 @@ body::after {
   margin-bottom: 15px; }
 
 .home-promoted-event {
+  display: block;
   background: #000;
   margin-bottom: 10px; }
   .home-promoted-event img {
+    display: block;
     width: 100%;
     max-width: 768px;
     margin: auto; }
@@ -1196,6 +1209,10 @@ body::after {
     height: auto !important; }
   .page .container-for-small-images img {
     width: auto !important; }
+  .page ul {
+    padding-left: 25px; }
+  .page li {
+    margin-bottom: 5px; }
 
 .page-wide {
   max-width: none; }

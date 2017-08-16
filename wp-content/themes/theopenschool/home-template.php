@@ -6,7 +6,7 @@ Template Name: Home
 get_header(); 
 
 function subbanner($number, $header) { 
-   $note_image_attachment = get_option("subbanner$number-note-image-attachment-id");
+   $note_image_attachment = get_option("banner-note-image-attachment-id");
    $caption = get_option("subbanner$number-caption");
    $note_class = "home-banner-note home-subbanner$number-note";
    $note_text_class = "home-banner-note-text home-subbanner$number-note-text";
@@ -17,7 +17,7 @@ function subbanner($number, $header) {
          <?php echo wp_get_attachment_image($note_image_attachment, 'full'); ?>
       </div>
       <div class="<?php echo $note_text_class ?>">
-         <div class="home-banner-note-mobile-header"><?php echo $header; ?></div>
+         <div class="home-banner-note-header"><?php echo $header; ?></div>
          <?php echo $caption; ?>
       </div>
    </div>
@@ -68,7 +68,7 @@ function get_banner_src($id) {
          <?php echo wp_get_attachment_image(get_option('banner-note-image-attachment-id'), 'full'); ?>
       </div>
       <div class="home-banner-note-text home-main-banner-note-text">
-         <div class="home-banner-note-mobile-header">Independence. Responsibility. Compassion.</div>
+         <div class="home-banner-note-header">Independence. Responsibility. Compassion.</div>
          <?php echo get_option('school-intro-line1'); ?>
       </div>
    </div>
@@ -93,6 +93,9 @@ function get_banner_src($id) {
             Enrollment is open for the 2017-2018 school year!
          </div>
       </div>
+      <blockquote class="home-hiring">
+         We're hiring! <a href="/wp/jobs">Find out more &raquo;</a>
+      </blockquote>
       <div class="home-facebook-full">
          <?php fb_page_plugin_with_feed(490); ?>
       </div>
@@ -102,9 +105,9 @@ function get_banner_src($id) {
       <?php subbanner(1, "Freedom"); ?>
    </div>
    
-   <!--<div class="home-promoted-event">-->
-      <?php /*echo wp_get_attachment_image(get_option('promoted-event-image-attachment-id'), 'full');*/ ?>
-   <!--</div>-->
+   <a class="home-promoted-event" href="/wp/event-walkthrough">
+      <?php echo wp_get_attachment_image(get_option('promoted-event-image-attachment-id'), 'full'); ?>
+   </a>
    
    <div class="home-testimonial-bar">
       <div class="home-testimonial-quote-mark">“</div>

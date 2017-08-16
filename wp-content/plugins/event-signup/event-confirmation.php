@@ -66,7 +66,7 @@ if ($_POST['submitted']) {
             <p>Hi $name,</p>
             <p>
                This is to confirm that you've signed up to visit The Open School
-               on Tuesday, August 22nd. Please arrive at $timeslot, when your tour will
+               on Wednesday, August 30th. Please arrive at $timeslot, when your tour will
                begin. We look forward to meeting $who!
             </p>
             <p>
