@@ -7,6 +7,13 @@ $textarea_rows = $default_message ? 5 : 8;
 
 if ($_POST['submitted']) {
    
+   ?>
+   <script>
+      /* global fbq */
+      fbq('track', 'Lead', { value: 250, currency: 'USD' });
+   </script>
+   <?php
+   
    $school_email = get_option('email');
    
    $missing_content = 'Please supply all information.';

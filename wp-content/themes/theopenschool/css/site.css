@@ -1063,7 +1063,7 @@ body::after {
       max-height: 406px; } }
   @media (min-width: 1400px) {
     .home-facebook-full {
-      max-height: 442px; } }
+      max-height: none; } }
 
 .home-testimonial-bar {
   display: none; }

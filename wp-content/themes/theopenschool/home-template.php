@@ -107,7 +107,7 @@ function get_banner_base64_src($id) {
          We're hiring! <a href="/wp/jobs">Find out more &raquo;</a>
       </blockquote>
       <div class="home-facebook-full">
-         <?php fb_page_plugin_with_feed(490); ?>
+         <?php fb_page_plugin_with_feed(442); ?>
       </div>
    </div>
    

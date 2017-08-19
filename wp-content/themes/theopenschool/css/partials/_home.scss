@@ -514,7 +514,7 @@ body::after {
       max-height: 406px;
    }
    @media (min-width: 1400px) {
-      max-height: 442px;
+      max-height: none;
    }
 }
 
