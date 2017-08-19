@@ -564,11 +564,24 @@ h2[id]:before {
   position: relative;
   margin-bottom: 10px; }
 
+.home-banner-loader {
+  display: none; }
+
+@keyframes blur_in {
+  from {
+    filter: blur(7px); }
+  to {
+    filter: blur(0); } }
 .home-banner-image {
   width: 100%;
   margin: auto;
   padding-top: 66.66%;
   background-size: 100%; }
+  .home-banner-image.loading {
+    filter: blur(7px); }
+  .home-banner-image.loaded {
+    animation-name: blur_in;
+    animation-duration: 0.4s; }
 
 .home-banner-note {
   display: none; }
@@ -661,6 +674,7 @@ h2[id]:before {
 
 .home-banner-note-header {
   font-family: "Pangolin";
+  text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 3px; }
@@ -926,8 +940,7 @@ h2[id]:before {
 
 .home-apply-box-text {
   overflow: hidden;
-  font-family: "Pangolin";
-  font-size: 18px; }
+  font-size: 16px; }
 
 body::after {
   position: absolute;
@@ -967,8 +980,7 @@ body::after {
 
 .home-subscribe label {
   display: block;
-  font-family: "Pangolin";
-  font-size: 18px; }
+  font-size: 16px; }
 
 .home-subscribe input.email {
   margin: 6px 0;

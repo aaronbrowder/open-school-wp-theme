@@ -6,13 +6,16 @@ Template Name: Home
 get_header(); 
 
 function subbanner($number, $header) { 
+   $banner_image_src = get_banner_src("subbanner$number-image-attachment-id");
    $note_image_attachment = get_option("banner-note-image-attachment-id");
    $caption = get_option("subbanner$number-caption");
    $note_class = "home-banner-note home-subbanner$number-note";
    $note_text_class = "home-banner-note-text home-subbanner$number-note-text";
    ?>
    <div class="home-banner">
-      <div class="home-banner-image home-subbanner<?php echo $number; ?>-image"></div>
+      <div class="home-banner-image home-subbanner<?php echo $number; ?>-image loading">
+         <img class="home-banner-loader" src="<?php echo $banner_image_src; ?>">
+      </div>
       <div class="<?php echo $note_class ?>">
          <?php echo wp_get_attachment_image($note_image_attachment, 'full'); ?>
       </div>
@@ -58,12 +61,26 @@ function get_banner_src($id) {
    .home-subbanner3-image {
       background-image: url('<?php echo get_banner_src("subbanner3-image-attachment-id"); ?>');
    }
+   .home-main-banner-image.loading {
+      background-image: url('<?php echo get_banner_src("banner-tiny-image-attachment-id"); ?>');
+   }
+   .home-subbanner1-image.loading {
+      background-image: url('<?php echo get_banner_src("subbanner1-tiny-image-attachment-id"); ?>');
+   }
+   .home-subbanner2-image.loading {
+      background-image: url('<?php echo get_banner_src("subbanner2-tiny-image-attachment-id"); ?>');
+   }
+   .home-subbanner3-image.loading {
+      background-image: url('<?php echo get_banner_src("subbanner3-tiny-image-attachment-id"); ?>');
+   }
 </style>
 
 <div class="home-container">
       
    <div class="home-banner">
-      <div class="home-banner-image home-main-banner-image"></div>
+      <div class="home-banner-image home-main-banner-image loading">
+         <img class="home-banner-loader" src="<?php echo get_banner_src("banner-attachment-id"); ?>">
+      </div>
       <div class="home-banner-note home-main-banner-note">
          <?php echo wp_get_attachment_image(get_option('banner-note-image-attachment-id'), 'full'); ?>
       </div>
