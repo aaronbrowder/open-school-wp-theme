@@ -73,8 +73,8 @@ function promoted_event_image_attachment_callback() {
    image_attachment_callback('promoted-event-image-attachment-id');
 }
 
-function promoted_event_2_image_attachment_callback() { 
-   image_attachment_callback('promoted-event-2-image-attachment-id');
+function promoted_event_tiny_image_attachment_callback() { 
+   image_attachment_callback('promoted-event-tiny-image-attachment-id');
 }
 
 function school_intro_callback() { ?>
@@ -179,7 +179,7 @@ function edit_home_page_page_setup() {
    add_settings_field('banner-attachment-id', 'Banner', 'banner_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('banner-tiny-image-attachment-id', 'Banner Tiny', 'banner_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('promoted-event-image-attachment-id', 'Promoted Event Image', 'promoted_event_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('promoted-event-2-image-attachment-id', 'Promoted Event 2 Image', 'promoted_event_2_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-tiny-image-attachment-id', 'Promoted Event Tiny Image', 'promoted_event_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('school-intro-line1', 'School Intro', 'school_intro_callback', 'edit-home-page', 'content');
    add_settings_field('banner-note-image-attachment-id', 'Banner Note', 'banner_note_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-image-attachment-id', 'Sub-Banner 1', 'subbanner1_image_attachment_callback', 'edit-home-page', 'content');
@@ -203,7 +203,7 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'header-logo-image-attachment-id');
    register_setting('edit-home-page', 'banner-attachment-id');
    register_setting('edit-home-page', 'promoted-event-image-attachment-id');
-   register_setting('edit-home-page', 'promoted-event-2-image-attachment-id');
+   register_setting('edit-home-page', 'promoted-event-tiny-image-attachment-id');
    register_setting('edit-home-page', 'school-intro-line1');
    register_setting('edit-home-page', 'subbanner1-image-attachment-id');
    register_setting('edit-home-page', 'subbanner2-image-attachment-id');

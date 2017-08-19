@@ -6,15 +6,22 @@ Template Name: Home
 get_header(); 
 
 function subbanner($number, $header) { 
-   $banner_image_src = get_banner_src("subbanner$number-image-attachment-id");
+   banner(
+      "subbanner$number", 
+      "subbanner$number-image-attachment-id",
+      "subbanner$number-tiny-image-attachment-id",
+      $header,
+      get_option("subbanner$number-caption"));
+}
+
+function banner($class_part, $image_id, $placeholder_image_id, $header, $caption) { 
    $note_image_attachment = get_option("banner-note-image-attachment-id");
-   $caption = get_option("subbanner$number-caption");
-   $note_class = "home-banner-note home-subbanner$number-note";
-   $note_text_class = "home-banner-note-text home-subbanner$number-note-text";
+   $note_class = "home-banner-note home-$class_part-note";
+   $note_text_class = "home-banner-note-text home-$class_part-note-text";
    ?>
    <div class="home-banner">
-      <div class="home-banner-image home-subbanner<?php echo $number; ?>-image loading">
-         <img class="home-banner-loader" src="<?php echo $banner_image_src; ?>">
+      <div class="home-banner-image home-<?php echo $class_part; ?>-image">
+         <?php imageLoader($image_id, $placeholder_image_id); ?>
       </div>
       <div class="<?php echo $note_class ?>">
          <?php echo wp_get_attachment_image($note_image_attachment, 'full'); ?>
@@ -24,6 +31,17 @@ function subbanner($number, $header) {
          <?php echo $caption; ?>
       </div>
    </div>
+<?php }
+
+function promotion($image_id, $placeholder_image_id, $href) { ?>
+   <a class="home-promoted-event" href="<?php echo $href; ?>">
+      <?php imageLoader($image_id, $placeholder_image_id); ?>
+   </a>
+<?php }
+
+function imageLoader($image_id, $placeholder_image_id) { ?>
+   <img class="home-banner-placeholder" src="<?php echo get_banner_src($placeholder_image_id); ?>">
+   <img class="home-banner-loader" data-src="<?php echo get_banner_src($image_id); ?>">
 <?php }
 
 function testimonial($number) { ?>
@@ -46,54 +64,29 @@ function get_banner_src($id) {
    return wp_get_attachment_image_src(get_option($id), "full")[0];
 }
 
-?>
+function get_banner_base64_src($id) {
+   $image_file = get_banner_src($id);
+   $image_data = base64_encode(file_get_contents($image_file));
+   return "data: " . mime_content_type($image_file) . ";base64," . $image_data;
+}
 
-<style>
-   .home-main-banner-image {
-      background-image: url('<?php echo get_banner_src("banner-attachment-id"); ?>');
-   }
-   .home-subbanner1-image {
-      background-image: url('<?php echo get_banner_src("subbanner1-image-attachment-id"); ?>');
-   }
-   .home-subbanner2-image {
-      background-image: url('<?php echo get_banner_src("subbanner2-image-attachment-id"); ?>');
-   }
-   .home-subbanner3-image {
-      background-image: url('<?php echo get_banner_src("subbanner3-image-attachment-id"); ?>');
-   }
-   .home-main-banner-image.loading {
-      background-image: url('<?php echo get_banner_src("banner-tiny-image-attachment-id"); ?>');
-   }
-   .home-subbanner1-image.loading {
-      background-image: url('<?php echo get_banner_src("subbanner1-tiny-image-attachment-id"); ?>');
-   }
-   .home-subbanner2-image.loading {
-      background-image: url('<?php echo get_banner_src("subbanner2-tiny-image-attachment-id"); ?>');
-   }
-   .home-subbanner3-image.loading {
-      background-image: url('<?php echo get_banner_src("subbanner3-tiny-image-attachment-id"); ?>');
-   }
-</style>
+?>
 
 <div class="home-container">
       
-   <div class="home-banner">
-      <div class="home-banner-image home-main-banner-image loading">
-         <img class="home-banner-loader" src="<?php echo get_banner_src("banner-attachment-id"); ?>">
-      </div>
-      <div class="home-banner-note home-main-banner-note">
-         <?php echo wp_get_attachment_image(get_option('banner-note-image-attachment-id'), 'full'); ?>
-      </div>
-      <div class="home-banner-note-text home-main-banner-note-text">
-         <div class="home-banner-note-header">Independence. Responsibility. Compassion.</div>
-         <?php echo get_option('school-intro-line1'); ?>
-      </div>
-   </div>
+   <?php
+   banner(
+      "main-banner",
+      "banner-attachment-id",
+      "banner-tiny-image-attachment-id",
+      "Independence. Responsibility. Compassion.",
+      get_option("school-intro-line1"));
+   ?>
    
    <div class="home-cta-bar">
       <div class="home-subscribe" id="mc_embed_signup">
          <form id="mc-embedded-subscribe-form" class="validate" action="http://openschooloc.us5.list-manage2.com/subscribe/post?u=a49271ebde5f88b50cced6c93&amp;id=4b41a39b87" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-            <label for="mce-EMAIL">Subscribe to our mailing list</label>
+            <label for="mce-EMAIL">Subscribe to our mailing list:</label>
             <div style="position: absolute; left: -5000px;">
                <input name="b_a49271ebde5f88b50cced6c93_4b41a39b87" type="text" value="" />
             </div>
@@ -123,7 +116,7 @@ function get_banner_src($id) {
    </div>
    
    <a class="home-promoted-event" href="/wp/event-walkthrough">
-      <?php echo wp_get_attachment_image(get_option('promoted-event-image-attachment-id'), 'full'); ?>
+      <?php imageLoader("promoted-event-image-attachment-id", "promoted-event-tiny-image-attachment-id"); ?>
    </a>
    
    <div class="home-testimonial-bar">

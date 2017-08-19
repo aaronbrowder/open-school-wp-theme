@@ -3,16 +3,26 @@ document.addEventListener('DOMContentLoaded', hamburgerMenu, false);
 document.addEventListener('DOMContentLoaded', bannerLoader, false);
 
 function bannerLoader() {
+   
    var loaders = document.getElementsByClassName('home-banner-loader');
-   loaders[0].onload = function() { doneLoading(loaders[0]); };
-   loaders[1].onload = function() { doneLoading(loaders[1]); };
-   loaders[2].onload = function() { doneLoading(loaders[2]); };
-   loaders[3].onload = function() { doneLoading(loaders[3]); };
-   if (loaders.length > 4) { loaders[4].onload = function() { doneLoading(loaders[4]); }; }
-   if (loaders.length > 5) { loaders[5].onload = function() { doneLoading(loaders[5]); }; }
-   function doneLoading(loader) {
-      loader.parentElement.classList.remove('loading');
-      loader.parentElement.classList.add('loaded');
+   
+   setUpLoader(0);
+   setUpLoader(1);
+   setUpLoader(2);
+   setUpLoader(3);
+   setUpLoader(4);
+   setUpLoader(5);
+   
+   function setUpLoader(index) {
+      if (loaders.length > index) {
+         var loader = loaders[index];
+         loader.onload = function() { 
+            loader.classList.add('loaded');
+            loader.parentElement.querySelector('.home-banner-placeholder').style.display = 'none';
+         };
+         // must set src after registering onload, or else onload won't fire if the image is cached
+         loader.setAttribute('src', loader.getAttribute('data-src'));
+      }
    }
 }
 
