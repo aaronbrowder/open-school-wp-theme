@@ -12,7 +12,6 @@ if ($_POST['submitted']) {
 
    $missing_content  = 'Please supply all information.';
    $email_invalid    = 'Email address is invalid.';
-   $no_adults        = 'You must be bringing at least one adult.';
    
    $total_for_first_timeslot = $wpdb->get_results(
       "SELECT SUM(adult_count) AS total FROM $table_name GROUP BY timeslot having timeslot = '6 PM'"
@@ -22,13 +21,12 @@ if ($_POST['submitted']) {
       "SELECT SUM(adult_count) AS total FROM $table_name GROUP BY timeslot having timeslot = '6:45 PM'"
       )[0]->total;
       
-   $timeslot = $total_for_first_timeslot < 9 || $total_for_first_timeslot < $total_for_second_timeslot
+   // setting the max for the first timeslot to 1000 effectively means there is no second timeslot
+   $timeslot = $total_for_first_timeslot < 1000 || $total_for_first_timeslot < $total_for_second_timeslot
       ? '6 PM' : '6:45 PM';
    
    $name = $_POST['message_name'];
    $email = $_POST['message_email'];
-   $adult_count = intval($_POST['adult_count']);
-   $child_count = intval($_POST['child_count']);
    
    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $error = contact_form_generate_response('error', $email_invalid);
@@ -36,17 +34,12 @@ if ($_POST['submitted']) {
    else if (empty($name)) {
       $error = contact_form_generate_response('error', $missing_content);
    }
-   else if (empty($adult_count)) {
-      $error = contact_form_generate_response('error', $no_adults);
-   }
    else {
       $wpdb->insert($table_name, array(
          'time' => date('Y-m-d H:i:s'),
          'name' => $name,
          'email' => $email,
-         'timeslot' => $timeslot,
-         'adult_count' => $adult_count,
-         'child_count' => $child_count
+         'timeslot' => $timeslot
       ));
       
       $school_email = get_option('email');
@@ -58,7 +51,7 @@ if ($_POST['submitted']) {
       $headers[] = "Reply-to: $school_email";
       
       $subject = 'The Open School Walkthrough';
-      $who = $child_count > 0 ? ($child_count > 1 ? 'you and your kids' : 'you and your child') : 'you';
+
       $message = "
          <html>
          <head></head>
@@ -66,8 +59,7 @@ if ($_POST['submitted']) {
             <p>Hi $name,</p>
             <p>
                This is to confirm that you've signed up to visit The Open School
-               on Wednesday, August 30th. Please arrive at $timeslot, when your tour will
-               begin. We look forward to meeting $who!
+               on Thursday, September 28th, at 6:00 PM. We look forward to meeting you!
             </p>
             <p>
                We're located at $address (<a href=\"http://openschooloc.com/location\">map</a>).
