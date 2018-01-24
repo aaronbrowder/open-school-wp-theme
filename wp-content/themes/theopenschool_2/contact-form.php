@@ -23,7 +23,12 @@ if ($_POST['submitted']) {
    
    $name = $_POST['message_name'];
    $email = $_POST['message_email'];
+   $phone = $_POST['message_phone'];
    $message = $_POST['message_text'];
+   
+   if ($phone) {
+      $message = $message . ' (My phone number is ' . $phone . ')';
+   }
    
    $subject = $name . ' sent a message from The Open School\'s website';
    $headers = 'From: ' . $name . ' <' . $school_email . ">\r\n" . 'Reply-To: ' . $email;
@@ -50,12 +55,16 @@ echo $response;
    <table class="contact-us-table">
       <tbody>
          <tr>
-            <th>Your Name</th>
+            <th>Name</th>
             <td><input type="text" name="message_name" required/></td>
          </tr>
          <tr>
-            <th>Your Email</th>
+            <th>Email</th>
             <td><input type="email" name="message_email" required/></td>
+         </tr>
+         <tr>
+            <th>Phone</th>
+            <td><input type="text" class="contact-us-phone" name="message_phone"/></td>
          </tr>
          <tr>
             <th>Message</th>

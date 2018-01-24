@@ -100,12 +100,12 @@ function get_banner_base64_src($id) {
       <div class="home-apply-box">
          <a href="/wp/admissions" class="home-apply-button"></a>
          <div class="home-apply-box-text">
-            Enrollment is open for the 2017-2018 school year!
+            <?php echo get_option("enrollment-message"); ?>
          </div>
       </div>
-      <blockquote class="home-hiring">
-         We're hiring! <a href="/wp/jobs">Find out more &raquo;</a>
-      </blockquote>
+      <!--<blockquote class="home-hiring">-->
+      <!--   We're hiring! <a href="/wp/jobs">Find out more &raquo;</a>-->
+      <!--</blockquote>-->
       <div class="home-facebook-full">
          <?php fb_page_plugin_with_feed(442); ?>
       </div>
@@ -115,9 +115,15 @@ function get_banner_base64_src($id) {
       <?php subbanner(1, "Freedom"); ?>
    </div>
    
-   <a class="home-promoted-event" href="/wp/event-walkthrough">
-      <?php imageLoader("promoted-event-image-attachment-id", "promoted-event-tiny-image-attachment-id"); ?>
-   </a>
+   <!--<div class="home-promoted-events">-->
+      <!--<a class="home-promoted-event" href="/wp/event">-->
+         <!--<?php /*imageLoader("promoted-event-image-attachment-id", "promoted-event-tiny-image-attachment-id");*/ ?>-->
+      <!--</a>-->
+      <!--<div class="home-promoted-event-separator"></div>-->
+      <!--<a class="home-promoted-event" href="/scooter-a-thon/">-->
+      <!--   <?php /*imageLoader("promoted-event-2-image-attachment-id", "promoted-event-2-tiny-image-attachment-id");*/ ?>-->
+      <!--</a>-->
+   <!--</div>-->
    
    <div class="home-testimonial-bar">
       <div class="home-testimonial-quote-mark">“</div>

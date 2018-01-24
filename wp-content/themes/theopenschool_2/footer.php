@@ -8,9 +8,6 @@
                <a href="<?php echo get_option('twitter') ?>" target="_blank" class="social-link">
                   <i class="fa fa-twitter"></i>
                </a>
-               <a href="<?php echo get_option('pinterest') ?>" target="_blank" class="social-link">
-                  <i class="fa fa-pinterest"></i>
-               </a>
                <a href="<?php echo get_option('instagram') ?>" target="_blank" class="social-link">
                   <i class="fa fa-instagram"></i>
                </a>

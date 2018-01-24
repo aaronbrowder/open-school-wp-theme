@@ -227,40 +227,42 @@
 .home-subbanner2-note-text {
    @media (min-width: 575px) {
       transform: rotate(-2deg);
-      left: 280px;
-      top: 15px;
+      left: 20px;
+      top: 200px;
+   }
+   @media (min-width: 650px) {
+      left: 30px;
+      top: 255px;
    }
    @media (min-width: 750px) {
-      left: 340px;
-      top: 15px;
+      top: 305px;
    }
    @media (min-width: 800px) {
-      left: 390px;
-      top: 25px;
+      left: 40px;
+      top: 335px;
    }
    @media (min-width: 900px) {
-      left: 435px;
-      top: 20px;
+      top: 360px;
    }
    @include min-desktop {
-      left: 320px;
-      top: 20px;
+      left: 30px;
+      top: 245px;
    }
    @media (min-width: 1100px) {
-      left: 370px;
-      top: 20px;
+      left: 45px;
+      top: 275px;
    }
    @media (min-width: 1200px) {
-      left: 420px;
-      top: 30px;
+      left: 60px;
+      top: 335px;
    }
    @media (min-width: 1300px) {
-      left: 480px;
-      top: 45px;
+      left: 70px;
+      top: 360px;
    }
    @media (min-width: 1400px) {
-      left: 550px;
-      top: 55px;
+      left: 80px;
+      top: 380px;
    }
 }
 
@@ -487,31 +489,31 @@ body::after {
    @include min-desktop {
       display: block;
       overflow: hidden;
-      max-height: 167px;
+      max-height: 228px;
    }
    @media (min-width: 1024px) {
-      max-height: 190px;
+      max-height: 251px;
    }
    @media (min-width: 1050px) {
-      max-height: 210px;
+      max-height: 271px;
    }
    @media (min-width: 1100px) {
-      max-height: 242px;
+      max-height: 303px;
    }
    @media (min-width: 1150px) {
-      max-height: 278px;
+      max-height: 339px;
    }
    @media (min-width: 1200px) {
-      max-height: 312px;
+      max-height: 373px;
    }
    @media (min-width: 1250px) {
-      max-height: 342px;
+      max-height: 403px;
    }
    @media (min-width: 1300px) {
-      max-height: 376px;
+      max-height: 437px;
    }
    @media (min-width: 1350px) {
-      max-height: 406px;
+      max-height: 467px;
    }
    @media (min-width: 1400px) {
       max-height: none;
@@ -651,15 +653,26 @@ body::after {
    margin-bottom: 15px;
 }
 
-.home-promoted-event {
-   display: block;
+.home-promoted-events {
    background: #000;
    margin-bottom: 10px;
+}
+
+.home-promoted-event, .home-promoted-event-separator {
+   max-width: 768px;
+   margin: auto;
+}
+
+.home-promoted-event {
+   display: block;
    img {
       width: 100%;
-      max-width: 768px;
-      margin: auto;
    }
+}
+
+.home-promoted-event-separator {
+   background: #fff;
+   padding-bottom: 10px;
 }
 
 @include min-desktop {

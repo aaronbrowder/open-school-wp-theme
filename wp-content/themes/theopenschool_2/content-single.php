@@ -44,7 +44,7 @@
       <?php fb_like_box(); ?>
       <div class="blog-apply">
          <h4>Join our school</h4>
-         <a href="/admissions" class="small-button">Apply Now</a>
+         <a href="/wp/admissions" class="small-button">Apply Now</a>
       </div>
    </div>
    

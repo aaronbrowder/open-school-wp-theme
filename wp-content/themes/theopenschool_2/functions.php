@@ -77,6 +77,14 @@ function promoted_event_tiny_image_attachment_callback() {
    image_attachment_callback('promoted-event-tiny-image-attachment-id');
 }
 
+function promoted_event_2_image_attachment_callback() { 
+   image_attachment_callback('promoted-event-2-image-attachment-id');
+}
+
+function promoted_event_2_tiny_image_attachment_callback() { 
+   image_attachment_callback('promoted-event-2-tiny-image-attachment-id');
+}
+
 function school_intro_callback() { ?>
    <textarea rows="5" cols="70" name="school-intro-line1"><?php echo get_option('school-intro-line1'); ?></textarea>
 <?php }
@@ -169,6 +177,10 @@ function testimonial4_attribution_callback() {
    testimonial_attribution_callback('testimonial4-attribution');
 }
 
+function enrollment_message_callback() { ?>
+   <textarea rows="1" cols="70" name="enrollment-message"><?php echo get_option('enrollment-message'); ?></textarea>
+<? }
+
 add_action('admin_init', 'edit_home_page_page_setup');
 function edit_home_page_page_setup() {
    wp_enqueue_media();
@@ -180,8 +192,11 @@ function edit_home_page_page_setup() {
    add_settings_field('banner-tiny-image-attachment-id', 'Banner Tiny', 'banner_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('promoted-event-image-attachment-id', 'Promoted Event Image', 'promoted_event_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('promoted-event-tiny-image-attachment-id', 'Promoted Event Tiny Image', 'promoted_event_tiny_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-2-image-attachment-id', 'Promoted Event 2 Image', 'promoted_event_2_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-2-tiny-image-attachment-id', 'Promoted Event 2 Tiny Image', 'promoted_event_2_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('school-intro-line1', 'School Intro', 'school_intro_callback', 'edit-home-page', 'content');
    add_settings_field('banner-note-image-attachment-id', 'Banner Note', 'banner_note_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('enrollment-message', 'Enrollment Message', 'enrollment_message_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-image-attachment-id', 'Sub-Banner 1', 'subbanner1_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-tiny-image-attachment-id', 'Sub-Banner 1 Tiny', 'subbanner1_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('subbanner1-caption', 'Caption 1', 'subbanner1_caption_callback', 'edit-home-page', 'content');
@@ -204,11 +219,14 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'banner-attachment-id');
    register_setting('edit-home-page', 'promoted-event-image-attachment-id');
    register_setting('edit-home-page', 'promoted-event-tiny-image-attachment-id');
+   register_setting('edit-home-page', 'promoted-event-2-image-attachment-id');
+   register_setting('edit-home-page', 'promoted-event-2-tiny-image-attachment-id');
    register_setting('edit-home-page', 'school-intro-line1');
    register_setting('edit-home-page', 'subbanner1-image-attachment-id');
    register_setting('edit-home-page', 'subbanner2-image-attachment-id');
    register_setting('edit-home-page', 'subbanner3-image-attachment-id');
    register_setting('edit-home-page', 'banner-tiny-image-attachment-id');
+   register_setting('edit-home-page', 'enrollment-message');
    register_setting('edit-home-page', 'subbanner1-tiny-image-attachment-id');
    register_setting('edit-home-page', 'subbanner2-tiny-image-attachment-id');
    register_setting('edit-home-page', 'subbanner3-tiny-image-attachment-id');

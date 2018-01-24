@@ -66,6 +66,15 @@ blockquote.blog-sharable {
           background: #eee;
           color: #000; }
 
+.wp-caption {
+  width: auto !important;
+  margin-top: 1em;
+  background: #ebebeb; }
+  .wp-caption > p {
+    margin: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #bbb; }
+
 .comments-area {
   border-top: 1px solid #aaa;
   margin-top: 30px;
@@ -106,8 +115,9 @@ blockquote.blog-sharable {
   .contact-us-table input[type=email] {
     width: 100%;
     max-width: 360px; }
-  .contact-us-table input[type=number] {
-    width: 75px; }
+    .contact-us-table input[type=text].contact-us-phone,
+    .contact-us-table input[type=email].contact-us-phone {
+      max-width: 180px; }
   .contact-us-table textarea {
     width: 100%; }
   .contact-us-table input,
@@ -780,48 +790,51 @@ h2[id]:before {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
     transform: rotate(-2deg);
-    left: 280px;
-    top: 15px; } }
+    left: 20px;
+    top: 200px; } }
+@media (min-width: 650px) {
+  .home-subbanner2-note,
+  .home-subbanner2-note-text {
+    left: 30px;
+    top: 255px; } }
 @media (min-width: 750px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
-    left: 340px;
-    top: 15px; } }
+    top: 305px; } }
 @media (min-width: 800px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
-    left: 390px;
-    top: 25px; } }
+    left: 40px;
+    top: 335px; } }
 @media (min-width: 900px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
-    left: 435px;
-    top: 20px; } }
+    top: 360px; } }
 @media (min-width: 992px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
-    left: 320px;
-    top: 20px; } }
+    left: 30px;
+    top: 245px; } }
 @media (min-width: 1100px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
-    left: 370px;
-    top: 20px; } }
+    left: 45px;
+    top: 275px; } }
 @media (min-width: 1200px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
-    left: 420px;
-    top: 30px; } }
+    left: 60px;
+    top: 335px; } }
 @media (min-width: 1300px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
-    left: 480px;
-    top: 45px; } }
+    left: 70px;
+    top: 360px; } }
 @media (min-width: 1400px) {
   .home-subbanner2-note,
   .home-subbanner2-note-text {
-    left: 550px;
-    top: 55px; } }
+    left: 80px;
+    top: 380px; } }
 
 @media (min-width: 575px) {
   .home-subbanner3-note,
@@ -1036,31 +1049,31 @@ body::after {
     .home-facebook-full {
       display: block;
       overflow: hidden;
-      max-height: 167px; } }
+      max-height: 228px; } }
   @media (min-width: 1024px) {
     .home-facebook-full {
-      max-height: 190px; } }
+      max-height: 251px; } }
   @media (min-width: 1050px) {
     .home-facebook-full {
-      max-height: 210px; } }
+      max-height: 271px; } }
   @media (min-width: 1100px) {
     .home-facebook-full {
-      max-height: 242px; } }
+      max-height: 303px; } }
   @media (min-width: 1150px) {
     .home-facebook-full {
-      max-height: 278px; } }
+      max-height: 339px; } }
   @media (min-width: 1200px) {
     .home-facebook-full {
-      max-height: 312px; } }
+      max-height: 373px; } }
   @media (min-width: 1250px) {
     .home-facebook-full {
-      max-height: 342px; } }
+      max-height: 403px; } }
   @media (min-width: 1300px) {
     .home-facebook-full {
-      max-height: 376px; } }
+      max-height: 437px; } }
   @media (min-width: 1350px) {
     .home-facebook-full {
-      max-height: 406px; } }
+      max-height: 467px; } }
   @media (min-width: 1400px) {
     .home-facebook-full {
       max-height: none; } }
@@ -1189,14 +1202,22 @@ body::after {
 .home-footer-testimonial {
   margin-bottom: 15px; }
 
-.home-promoted-event {
-  display: block;
+.home-promoted-events {
   background: #000;
   margin-bottom: 10px; }
+
+.home-promoted-event, .home-promoted-event-separator {
+  max-width: 768px;
+  margin: auto; }
+
+.home-promoted-event {
+  display: block; }
   .home-promoted-event img {
-    width: 100%;
-    max-width: 768px;
-    margin: auto; }
+    width: 100%; }
+
+.home-promoted-event-separator {
+  background: #fff;
+  padding-bottom: 10px; }
 
 @media (min-width: 992px) {
   .home-panel {
