@@ -11,6 +11,9 @@ if ($_POST['submitted']) {
    <script>
       /* global fbq */
       fbq('track', 'Lead', { value: 250, currency: 'USD' });
+      /* Event snippet for Contact conversion page */
+      /* global gtag */
+      gtag('event', 'conversion', {'send_to': 'AW-846232865/irPTCOn2g3wQofrBkwM'});
    </script>
    <?php
    

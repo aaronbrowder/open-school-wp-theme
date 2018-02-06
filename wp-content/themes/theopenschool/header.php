@@ -30,6 +30,15 @@
       /></noscript>
       <!-- DO NOT MODIFY -->
       <!-- End Facebook Pixel Code -->
+      
+      <!-- Global site tag (gtag.js) - Google AdWords: 846232865 -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-846232865"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-846232865');
+      </script>
     
       <?php wp_head(); ?>
    </head>
