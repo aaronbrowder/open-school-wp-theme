@@ -158,7 +158,7 @@ blockquote.blog-sharable {
   border-bottom: 1px solid #e88989;
   color: #780000; }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .contact-us-table {
     font-size: 14.5px; } }
 .footer {
@@ -214,7 +214,7 @@ blockquote.blog-sharable {
     .footer-contact h3,
     .footer-contact h4 {
       margin-top: 10px; } }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .footer {
     padding-top: 60px;
     padding-bottom: 45px; } }
@@ -335,7 +335,7 @@ h2[id]:before {
   margin-top: -49px;
   height: 49px; }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   body {
     font-size: 15px; }
 
@@ -452,7 +452,7 @@ h2[id]:before {
     display: block;
     width: 100%; }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .sub-masthead-wrapper {
     display: block; }
 
@@ -546,7 +546,7 @@ h2[id]:before {
     .main-masthead-wrapper nav .nav-divider.no-sub-header,
     .sub-masthead-wrapper nav .nav-divider.no-sub-header {
       display: block; } }
-@media (min-width: 830px) {
+@media (min-width: 860px) {
   .main-masthead nav .header-menu-item a {
     padding-left: 7px;
     padding-right: 7px; } }
@@ -666,10 +666,11 @@ h2[id]:before {
       background: none;
       padding: 0;
       padding-left: 32px;
-      padding-top: 36px;
+      padding-top: 39px;
       width: 205px;
       font-family: "Pangolin";
-      font-size: 12px; } }
+      font-size: 12px;
+      line-height: 1.2em; } }
   @media (min-width: 700px) {
     .home-banner-note-text {
       font-size: 13px;
@@ -681,23 +682,24 @@ h2[id]:before {
       font-size: 16px;
       padding-left: 42px;
       padding-top: 52px;
-      width: 275px; } }
+      width: 275px;
+      line-height: 1.3em; } }
 
 .home-banner-note-header {
   font-family: "Pangolin";
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   margin-bottom: 3px; }
   @media (min-width: 340px) {
     .home-banner-note-header {
-      font-size: 17px; } }
+      font-size: 16px; } }
   @media (min-width: 575px) {
     .home-banner-note-header {
-      font-size: 16px; } }
+      font-size: 15px; } }
   @media (min-width: 700px) {
     .home-banner-note-header {
-      font-size: 17px;
+      font-size: 16px;
       margin-bottom: 6px; } }
   @media (min-width: 900px) {
     .home-banner-note-header {
@@ -721,53 +723,53 @@ h2[id]:before {
 @media (min-width: 575px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 200px;
-    top: 213px; } }
+    left: 54%;
+    top: 48%; } }
 @media (min-width: 650px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 240px;
-    top: 250px; } }
+    left: 55%;
+    top: 49%; } }
 @media (min-width: 700px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 250px;
-    top: 260px; } }
+    left: 56%;
+    top: 49%; } }
 @media (min-width: 750px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 280px;
-    top: 290px; } }
+    left: 57%;
+    top: 50%; } }
 @media (min-width: 800px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 310px;
-    top: 320px; } }
+    left: 57%;
+    top: 50%; } }
 @media (min-width: 850px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 340px;
-    top: 345px; } }
+    left: 57%;
+    top: 50%; } }
 @media (min-width: 950px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 370px;
-    top: 375px; } }
+    left: 58%;
+    top: 51%; } }
 @media (min-width: 1000px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 420px;
-    top: 420px; } }
+    left: 59%;
+    top: 52%; } }
 @media (min-width: 1100px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 470px;
-    top: 460px; } }
+    left: 61%;
+    top: 53%; } }
 @media (min-width: 1200px) {
   .home-main-banner-note,
   .home-main-banner-note-text {
-    left: 530px;
-    top: 520px; } }
+    left: 63%;
+    top: 54%; } }
 
 @media (min-width: 575px) {
   .home-subbanner1-note,
@@ -840,46 +842,46 @@ h2[id]:before {
   .home-subbanner3-note,
   .home-subbanner3-note-text {
     transform: rotate(2deg);
-    left: 115px;
-    top: 25px; } }
+    left: 2%;
+    top: 53%; } }
 @media (min-width: 650px) {
   .home-subbanner3-note,
   .home-subbanner3-note-text {
-    left: 130px;
-    top: 40px; } }
+    left: 2%;
+    top: 56%; } }
 @media (min-width: 750px) {
   .home-subbanner3-note,
   .home-subbanner3-note-text {
-    left: 180px;
-    top: 50px; } }
+    left: 3.5%;
+    top: 59%; } }
 @media (min-width: 850px) {
   .home-subbanner3-note,
   .home-subbanner3-note-text {
-    left: 200px;
-    top: 60px; } }
+    left: 4%;
+    top: 60%; } }
 @media (min-width: 950px) {
   .home-subbanner3-note,
   .home-subbanner3-note-text {
-    left: 230px;
-    top: 80px; } }
+    left: 4%;
+    top: 60%; } }
 @media (min-width: 1100px) {
   .home-subbanner3-note,
   .home-subbanner3-note-text {
-    left: 270px;
-    top: 120px; } }
+    left: 4%;
+    top: 65%; } }
 
 @media (min-width: 575px) {
   .home-subbanner1-note-text,
   .home-subbanner2-note-text,
   .home-subbanner3-note-text {
-    padding-top: 32px;
+    padding-top: 37px;
     font-size: 11.5px; } }
 @media (min-width: 700px) {
   .home-subbanner1-note-text,
   .home-subbanner2-note-text,
   .home-subbanner3-note-text {
     font-size: 12.5px;
-    padding-top: 38px; }
+    padding-top: 41px; }
     .home-subbanner1-note-text .home-banner-note-header,
     .home-subbanner2-note-text .home-banner-note-header,
     .home-subbanner3-note-text .home-banner-note-header {
@@ -1206,8 +1208,9 @@ body::after {
   background: #000;
   margin-bottom: 10px; }
 
-.home-promoted-event, .home-promoted-event-separator {
-  max-width: 768px;
+.home-promoted-event,
+.home-promoted-event-separator {
+  max-width: 800px;
   margin: auto; }
 
 .home-promoted-event {
@@ -1273,7 +1276,7 @@ body::after {
 .page-staff-bio p {
   margin-top: 4px; }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .page {
     margin-bottom: 40px; }
 

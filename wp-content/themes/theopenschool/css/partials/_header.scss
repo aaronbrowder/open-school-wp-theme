@@ -122,7 +122,7 @@
    }
 }
 
-@include min-tablet {
+@media (min-width: 800px) {
    .sub-masthead-wrapper {
       display: block;
    }
@@ -203,7 +203,7 @@
    }
 }
 
-@media (min-width: 830px) {
+@media (min-width: 860px) {
    .main-masthead nav .header-menu-item a {
       padding-left: 7px;
       padding-right: 7px;

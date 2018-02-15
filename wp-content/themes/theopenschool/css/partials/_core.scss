@@ -11,7 +11,7 @@ $header-background-dark: #222;
 $header-background-light: #4D744A;
 
 @mixin min-tablet {
-   @media (min-width: 768px) {
+   @media (min-width: 800px) {
       @content;
    }
 }

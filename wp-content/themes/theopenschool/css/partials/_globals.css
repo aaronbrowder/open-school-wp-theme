@@ -70,7 +70,7 @@ h2[id]:before {
   margin-top: -49px;
   height: 49px; }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   body {
     font-size: 15px; }
 
