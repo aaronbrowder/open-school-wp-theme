@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', contextMenu, false);
 document.addEventListener('DOMContentLoaded', hamburgerMenu, false);
+document.addEventListener('DOMContentLoaded', searchSetup, false);
 document.addEventListener('DOMContentLoaded', bannerLoader, false);
 
 function bannerLoader() {
@@ -26,6 +27,26 @@ function bannerLoader() {
    }
 }
 
+function searchSetup() {
+   
+   var isActivated = false;
+   
+   var searchActivatorId = 'search-activator';
+   var searchAreaId = 'search-area';
+   var searchInputId = 's';
+   
+   var searchActivator = document.getElementById(searchActivatorId);
+   var searchArea = document.getElementById(searchAreaId);
+   var searchInput = document.getElementById(searchInputId);
+   
+   searchActivator.addEventListener('click', function(event) {
+      isActivated = !isActivated;
+      searchArea.classList.toggle('visible');
+      searchInput.focus();
+      event.preventDefault();
+   });
+}
+
 function hamburgerMenu() {
 
    var isMenuExpanded = false;
@@ -40,7 +61,6 @@ function hamburgerMenu() {
 
    function collapseMenu() {
       isMenuExpanded = false;
-      hamburger.classList.remove('expanded');
       mainMenu.classList.remove('visible');
       for (var i = 0; i < menuItems.length; i++) {
          var menuItem = menuItems[i];
@@ -72,7 +92,6 @@ function hamburgerMenu() {
 
    hamburger.addEventListener('click', function(event) {
       isMenuExpanded = !isMenuExpanded;
-      hamburger.classList.toggle('expanded');
       mainMenu.classList.toggle('visible');
       event.preventDefault();
    });

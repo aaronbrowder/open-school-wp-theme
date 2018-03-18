@@ -1,172 +1,55 @@
-.main-masthead-wrapper,
-.sub-masthead-wrapper {
-  height: 39px; }
+/*
+Error: Invalid CSS after "...adding-left: 13": expected ";", was "!px;"
+        on line 78 of /home/ubuntu/workspace/wp-content/themes/theopenschool/css/partials/_header.scss
 
-.sub-masthead-wrapper {
-  display: none; }
+73:       padding-right: 4px;
+74:       &.expanded {}
+75:    }
+76:    .header-hamburger {
+77:       font-size: 22px;
+78:       padding-left: 13!px;
+79:    }
+80:    .header-search {
+81:       font-size: 19px;
+82:    }
+83:    .header-menu {
 
-.main-masthead,
-.sub-masthead {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: bold;
-  position: fixed;
-  width: 100%; }
-
-.nav-divider {
-  position: fixed;
-  width: 100%;
-  z-index: 100000;
-  box-shadow: 0 0 2px 1px #fff; }
-
-.main-masthead {
-  background: url(/wp-content/themes/mytheme/images/green-dark.png), #2D562A;
-  z-index: 100002; }
-  .main-masthead .header-menu {
-    float: right; }
-
-.sub-masthead {
-  background: url(/wp-content/themes/mytheme/images/green-light.png), #4D744A;
-  box-shadow: 0 0 1px 1px #fff;
-  z-index: 100001; }
-  .sub-masthead nav {
-    margin-left: -5px; }
-    .sub-masthead nav .header-menu-item a {
-      padding: 8px 11px; }
-
-.main-masthead-wrapper nav .header-logo,
-.sub-masthead-wrapper nav .header-logo {
-  display: inline-block;
-  margin-top: 5px; }
-.main-masthead-wrapper nav .header-hamburger,
-.sub-masthead-wrapper nav .header-hamburger {
-  float: right;
-  color: #fff;
-  padding-top: 8px;
-  padding-right: 4px;
-  font-size: 22px; }
-  .main-masthead-wrapper nav .header-hamburger.expanded .header-menu,
-  .sub-masthead-wrapper nav .header-hamburger.expanded .header-menu {
-    display: block; }
-.main-masthead-wrapper nav .header-menu,
-.sub-masthead-wrapper nav .header-menu {
-  display: none;
-  padding: 0;
-  margin: 0 -10px;
-  width: calc(100% + 20px);
-  background: #444; }
-.main-masthead-wrapper nav .header-menu-item,
-.sub-masthead-wrapper nav .header-menu-item {
-  border-top: 1px solid #2d2d2d; }
-  .main-masthead-wrapper nav .header-menu-item.expanded .header-context-menu,
-  .sub-masthead-wrapper nav .header-menu-item.expanded .header-context-menu {
-    display: block; }
-  .main-masthead-wrapper nav .header-menu-item a,
-  .sub-masthead-wrapper nav .header-menu-item a {
-    padding: 7px 12px;
-    color: #ddd;
-    text-shadow: 1px 1px 1px #000;
-    display: inline-block;
-    font-size: 105%;
-    text-transform: uppercase; }
-    .main-masthead-wrapper nav .header-menu-item a:hover, .main-masthead-wrapper nav .header-menu-item a:focus,
-    .sub-masthead-wrapper nav .header-menu-item a:hover,
-    .sub-masthead-wrapper nav .header-menu-item a:focus {
-      color: #8FEA8A;
-      text-decoration: none; }
-.main-masthead-wrapper nav .header-context-menu,
-.sub-masthead-wrapper nav .header-context-menu {
-  display: none; }
-
-@media (min-width: 800px) {
-  .sub-masthead-wrapper {
-    display: block; }
-
-  .main-masthead nav .header-menu-item a {
-    padding: 10px 7px; }
-
-  .main-masthead-wrapper nav .header-menu,
-  .sub-masthead-wrapper nav .header-menu {
-    display: block;
-    margin: 0;
-    width: auto;
-    background: none; }
-  .main-masthead-wrapper nav .header-menu-item,
-  .sub-masthead-wrapper nav .header-menu-item {
-    position: relative;
-    display: inline-block;
-    border: none; }
-    .main-masthead-wrapper nav .header-menu-item.has-children:hover:after,
-    .sub-masthead-wrapper nav .header-menu-item.has-children:hover:after {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 0;
-      margin-left: -5px;
-      vertical-align: middle;
-      content: " ";
-      border-right: 5px solid transparent;
-      border-bottom: 5px solid #fff;
-      border-left: 5px solid transparent; }
-    .main-masthead-wrapper nav .header-menu-item a,
-    .sub-masthead-wrapper nav .header-menu-item a {
-      color: #fff; }
-  .main-masthead-wrapper nav .header-current-menu-item:after,
-  .sub-masthead-wrapper nav .header-current-menu-item:after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    margin-left: -5px;
-    vertical-align: middle;
-    content: " ";
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #fff;
-    border-left: 5px solid transparent; }
-  .main-masthead-wrapper nav .header-current-menu-item.has-children:after,
-  .sub-masthead-wrapper nav .header-current-menu-item.has-children:after {
-    border-bottom-color: #658764; }
-  .main-masthead-wrapper nav .header-context-menu,
-  .sub-masthead-wrapper nav .header-context-menu {
-    display: none;
-    position: absolute;
-    min-width: 100%;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #fff; }
-    .main-masthead-wrapper nav .header-context-menu.visible,
-    .sub-masthead-wrapper nav .header-context-menu.visible {
-      display: block; }
-  .main-masthead-wrapper nav .header-context-menu-item,
-  .sub-masthead-wrapper nav .header-context-menu-item {
-    background: #fff;
-    border: 1px solid #fff;
-    border-bottom: none;
-    display: block;
-    text-align: left;
-    white-space: nowrap;
-    border-bottom: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
-    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35); }
-    .main-masthead-wrapper nav .header-context-menu-item a,
-    .sub-masthead-wrapper nav .header-context-menu-item a {
-      display: inline-block;
-      width: 100%;
-      color: #444;
-      text-shadow: none;
-      padding: 7px 10px; }
-      .main-masthead-wrapper nav .header-context-menu-item a:hover,
-      .sub-masthead-wrapper nav .header-context-menu-item a:hover {
-        color: #009102; }
-  .main-masthead-wrapper nav .header-hamburger,
-  .sub-masthead-wrapper nav .header-hamburger {
-    display: none; } }
-@media (min-width: 992px) {
-  .sub-masthead nav .header-menu-item a {
-    padding: 8px 15px; }
-
-  .main-masthead nav .header-menu-item a {
-    padding: 10px; } }
-
-/*# sourceMappingURL=_header.css.map */
+Backtrace:
+/home/ubuntu/workspace/wp-content/themes/theopenschool/css/partials/_header.scss:78
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:786:in `block in try_declaration'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1183:in `rethrow'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:791:in `try_declaration'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+/mnt/shared/sbin/scss:13:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...adding-left: 13\": expected \";\", was \"!px;\"\A         on line 78 of /home/ubuntu/workspace/wp-content/themes/theopenschool/css/partials/_header.scss\A \A 73:       padding-right: 4px;\A 74:       &.expanded {}\A 75:    }\A 76:    .header-hamburger {\A 77:       font-size: 22px;\A 78:       padding-left: 13!px;\A 79:    }\A 80:    .header-search {\A 81:       font-size: 19px;\A 82:    }\A 83:    .header-menu {"; }

@@ -80,6 +80,10 @@
                      <i class="fa fa-bars"></i>
                   </div>
                   
+                  <div id="search-activator" class="header-search-activator">
+                     <i class="fa fa-search"></i>
+                  </div>
+                  
                   <ul id="main-menu" class="header-menu">
                      <?php foreach ($top_menu_items as $item):
                         
@@ -123,6 +127,13 @@
                            
                      <?php endforeach; ?>
                   </ul>
+                  
+                  <div id="search-area" class="header-search-area">
+            			<div class="search-form">
+                        <?php get_search_form(); ?>
+                     </div>
+                  </div>
+                  
                </nav>
             </div>
          </div>

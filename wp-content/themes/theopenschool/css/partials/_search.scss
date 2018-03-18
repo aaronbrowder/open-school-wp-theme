@@ -1,0 +1,19 @@
+@import '_core.scss';
+.search-result {
+   margin-top: 25px;
+   h2 {
+      margin: 5px 0;
+      font-size: 25px;
+   }
+   p {
+      margin: 5px 0;
+   }
+}
+
+.search-form .screen-reader-text {
+   display: none;
+}
+
+.search-no-results {
+   margin-top: 20px;
+}
