@@ -22,11 +22,11 @@ function admin_scripts() {
 // Add Google Fonts
 add_action('wp_print_styles', 'mytheme_google_fonts');
 function mytheme_google_fonts() {
-	wp_register_style('RobotoCondensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed');
 	wp_register_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans');
+	wp_register_style('OpenSansCondensedBold', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
 	wp_register_style('Pangolin', 'https://fonts.googleapis.com/css?family=Pangolin');
-	wp_enqueue_style( 'RobotoCondensed');
 	wp_enqueue_style( 'OpenSans');
+	wp_enqueue_style( 'OpenSansCondensedBold');
 	wp_enqueue_style( 'Pangolin');
 }
 

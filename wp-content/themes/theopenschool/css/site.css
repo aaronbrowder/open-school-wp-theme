@@ -132,7 +132,7 @@ blockquote.blog-sharable {
   color: #fff;
   border: none;
   outline: none;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -235,7 +235,7 @@ h3,
 h4 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
   color: #333;
   line-height: 1.1; }
@@ -293,7 +293,7 @@ iframe {
   color: #fff;
   border: none;
   outline: none;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -369,7 +369,7 @@ h2[id]:before {
 
 .main-masthead,
 .sub-masthead {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
   position: fixed;
   width: 100%; }
@@ -439,7 +439,7 @@ h2[id]:before {
     text-shadow: 1px 1px 1px #000;
     display: block;
     width: 100%;
-    font-size: 105%;
+    font-size: 110%;
     text-transform: uppercase; }
     .main-masthead-wrapper nav .header-menu-item a:hover, .main-masthead-wrapper nav .header-menu-item a:focus,
     .sub-masthead-wrapper nav .header-menu-item a:hover,
@@ -1035,7 +1035,7 @@ body::after {
 
 .home-subscribe button {
   padding: 0 12px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 40px;
   background: #555;
   color: #fff;
@@ -1343,9 +1343,14 @@ body::after {
     font-size: 25px; }
   .search-result p {
     margin: 5px 0; }
+  .search-result .entry-subtitle {
+    display: none; }
 
 .search-form .screen-reader-text {
   display: none; }
+  @media (min-width: 835px) {
+    .search-form .screen-reader-text {
+      display: inline; } }
 
 .search-no-results {
   margin-top: 20px; }
