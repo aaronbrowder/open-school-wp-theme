@@ -69,6 +69,10 @@ function banner_attachment_callback() {
    image_attachment_callback('banner-attachment-id');
 }
 
+function show_promoted_event_callback() { ?>
+  <input type="checkbox" name="show-promoted-event" value="1" <?php checked(1 == get_option('show-promoted-event')); ?> />
+<?php }
+
 function promoted_event_image_attachment_callback() { 
    image_attachment_callback('promoted-event-image-attachment-id');
 }
@@ -76,6 +80,10 @@ function promoted_event_image_attachment_callback() {
 function promoted_event_tiny_image_attachment_callback() { 
    image_attachment_callback('promoted-event-tiny-image-attachment-id');
 }
+
+function promoted_event_url_callback() { ?>
+  <input type="text" name="promoted-event-url" size="70" value="<?php echo get_option('promoted-event-url'); ?>" />
+<?php }
 
 function promoted_event_2_image_attachment_callback() { 
    image_attachment_callback('promoted-event-2-image-attachment-id');
@@ -190,8 +198,10 @@ function edit_home_page_page_setup() {
 
    add_settings_field('banner-attachment-id', 'Banner', 'banner_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('banner-tiny-image-attachment-id', 'Banner Tiny', 'banner_tiny_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('show-promoted-event', 'Show Promoted Event', 'show_promoted_event_callback', 'edit-home-page', 'content');
    add_settings_field('promoted-event-image-attachment-id', 'Promoted Event Image', 'promoted_event_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('promoted-event-tiny-image-attachment-id', 'Promoted Event Tiny Image', 'promoted_event_tiny_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-url', 'Promoted Event URL', 'promoted_event_url_callback', 'edit-home-page', 'content');
    add_settings_field('promoted-event-2-image-attachment-id', 'Promoted Event 2 Image', 'promoted_event_2_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('promoted-event-2-tiny-image-attachment-id', 'Promoted Event 2 Tiny Image', 'promoted_event_2_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('school-intro-line1', 'School Intro', 'school_intro_callback', 'edit-home-page', 'content');
@@ -217,8 +227,10 @@ function edit_home_page_page_setup() {
    
    register_setting('edit-home-page', 'header-logo-image-attachment-id');
    register_setting('edit-home-page', 'banner-attachment-id');
+   register_setting('edit-home-page', 'show-promoted-event');
    register_setting('edit-home-page', 'promoted-event-image-attachment-id');
    register_setting('edit-home-page', 'promoted-event-tiny-image-attachment-id');
+   register_setting('edit-home-page', 'promoted-event-url');
    register_setting('edit-home-page', 'promoted-event-2-image-attachment-id');
    register_setting('edit-home-page', 'promoted-event-2-tiny-image-attachment-id');
    register_setting('edit-home-page', 'school-intro-line1');
@@ -380,7 +392,13 @@ function map_shortcode_callback() {
 // [contact-form]
 add_shortcode('contact-form', 'contact_form_shortcode_callback');
 function contact_form_shortcode_callback($atts = [], $content = null) {
-	return render_php('contact-form.php', $content);
+   $atts = shortcode_atts(array(
+     'button-text' => 'Send', 
+     'show-phone' => 'true',
+     'show-message' => 'true'
+     ),
+     $atts);
+	return render_php('contact-form.php', $atts, $content);
 }
 
 // [base-tuition]
@@ -533,8 +551,9 @@ function fb_page_plugin_with_feed($height) { ?>
    <div class="fb-page" data-href="https://www.facebook.com/TheOpenSchool/" data-tabs="timeline" data-height="<?php echo $height; ?>" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/TheOpenSchool/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TheOpenSchool/">The Open School</a></blockquote></div>
 <?php }
 
-function render_php($path, $content)
+function render_php($path, $atts, $content)
 {
+   $GLOBALS['atts'] = $atts;
    $GLOBALS['content'] = $content;
    ob_start();
    include($path);

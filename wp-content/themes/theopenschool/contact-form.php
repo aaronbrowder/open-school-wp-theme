@@ -2,7 +2,9 @@
 
 $response = '';
 
+$atts = $GLOBALS['atts'];
 $default_message = $GLOBALS['content'];
+
 $textarea_rows = $default_message ? 5 : 8;
 
 if ($_POST['submitted']) {
@@ -29,6 +31,11 @@ if ($_POST['submitted']) {
    $email = $_POST['message_email'];
    $phone = $_POST['message_phone'];
    $message = $_POST['message_text'];
+   
+   if (!empty($default_message) && empty($message)) {
+      // this is necessary in case the message box is hidden
+      $message = $default_message;
+   }
    
    if ($phone) {
       $message = $message . ' (My phone number is ' . $phone . ')';
@@ -66,16 +73,20 @@ echo $response;
             <th>Email</th>
             <td><input type="email" name="message_email" required/></td>
          </tr>
-         <tr>
-            <th>Phone</th>
-            <td><input type="text" class="contact-us-phone" name="message_phone"/></td>
-         </tr>
-         <tr>
-            <th>Message</th>
-            <td><textarea name="message_text" rows="<?php echo $textarea_rows; ?>" required><?php echo $default_message; ?></textarea></td>
-         </tr>
+         <?php if ($atts['show-phone'] == 'true') { ?>
+            <tr>
+               <th>Phone</th>
+               <td><input type="text" class="contact-us-phone" name="message_phone"/></td>
+            </tr>
+         <?php } ?>
+         <?php if ($atts['show-message'] == 'true') { ?>
+            <tr>
+               <th>Message</th>
+               <td><textarea name="message_text" rows="<?php echo $textarea_rows; ?>" required><?php echo $default_message; ?></textarea></td>
+            </tr>
+         <?php } ?>
       </tbody>
    </table>
    <input type="hidden" name="submitted" value="1">
-   <button type="submit" class="contact-us-send">Send</button>
+   <button type="submit" class="contact-us-send"><?php echo $atts['button-text'] ?></button>
 </form>

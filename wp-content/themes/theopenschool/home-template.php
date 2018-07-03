@@ -116,9 +116,11 @@ function get_banner_base64_src($id) {
    </div>
    
    <div class="home-promoted-events">
-      <a class="home-promoted-event" href="https://www.eventbrite.com/e/the-open-school-annual-gala-superhero-murder-mystery-tickets-42658115572">
-         <?php imageLoader("promoted-event-image-attachment-id", "promoted-event-tiny-image-attachment-id"); ?>
-      </a>
+      <?php if (get_option('show-promoted-event')) { ?>
+         <a class="home-promoted-event" href="<?php echo get_option('promoted-event-url'); ?>">
+            <?php imageLoader("promoted-event-image-attachment-id", "promoted-event-tiny-image-attachment-id"); ?>
+         </a>
+      <?php } ?>
       <!--<div class="home-promoted-event-separator"></div>-->
       <!--<a class="home-promoted-event" href="/scooter-a-thon/">-->
       <!--   <?php /*imageLoader("promoted-event-2-image-attachment-id", "promoted-event-2-tiny-image-attachment-id");*/ ?>-->
