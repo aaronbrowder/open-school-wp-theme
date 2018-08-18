@@ -12,12 +12,13 @@
       white-space: nowrap;
    }
    input[type=text],
-   input[type=email]
-   {
+   input[type=email] {
       width: 100%;
       max-width: 360px;
-      &.contact-us-phone {
-         max-width: 180px;
+      @media (min-width: 400px) {
+         &.contact-us-short {
+            max-width: 150px;
+         }
       }
    }
    textarea {
@@ -43,7 +44,7 @@
 .contact-us-success {
    background: $light-light-green;
    border-bottom: 1px solid #8bad84;
-   color: $faded-green;
+   color: #005b00;
 }
 
 .contact-us-error {

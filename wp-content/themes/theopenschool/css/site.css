@@ -115,9 +115,10 @@ blockquote.blog-sharable {
   .contact-us-table input[type=email] {
     width: 100%;
     max-width: 360px; }
-    .contact-us-table input[type=text].contact-us-phone,
-    .contact-us-table input[type=email].contact-us-phone {
-      max-width: 180px; }
+    @media (min-width: 400px) {
+      .contact-us-table input[type=text].contact-us-short,
+      .contact-us-table input[type=email].contact-us-short {
+        max-width: 150px; } }
   .contact-us-table textarea {
     width: 100%; }
   .contact-us-table input,
@@ -151,7 +152,7 @@ blockquote.blog-sharable {
 .contact-us-success {
   background: #DCF7D7;
   border-bottom: 1px solid #8bad84;
-  color: #288529; }
+  color: #005b00; }
 
 .contact-us-error {
   background: #ffd2d1;

@@ -395,6 +395,7 @@ function contact_form_shortcode_callback($atts = [], $content = null) {
    $atts = shortcode_atts(array(
      'button-text' => 'Send', 
      'show-phone' => 'true',
+     'show-address' => 'false',
      'show-message' => 'true'
      ),
      $atts);
