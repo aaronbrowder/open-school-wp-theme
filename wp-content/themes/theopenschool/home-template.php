@@ -75,10 +75,10 @@ function get_banner_src($id) {
                <a href="/under-5-friday">Under 5 Friday <span class="home-link-arrow">&raquo;</span></a>
                Let your little ones try out The<br>Open School for 2 hours a week.
             </div>
-            <div class="home-event">
-               <a href="/">Super Fun Event <span class="home-link-arrow">&raquo;</span></a>
-               This event will knock your<br>socks off. Better be there!
-            </div>
+            <!--<div class="home-event">-->
+            <!--   <a href="/">Super Fun Event <span class="home-link-arrow">&raquo;</span></a>-->
+            <!--   This event will knock your<br>socks off. Better be there!-->
+            <!--</div>-->
          </div>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">
