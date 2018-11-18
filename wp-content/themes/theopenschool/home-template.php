@@ -56,7 +56,7 @@ function get_banner_src($id) {
          <div class="home-apply-and-subscribe">
             <div class="home-apply-block">
                Enrollment is open
-               <a href="/admissions">Apply Now <span class="home-link-arrow">&raquo;</span></a>
+               <a href="/wp/admissions">Apply Now <span class="home-link-arrow">&raquo;</span></a>
             </div>
             <div class="home-subscribe" id="mc_embed_signup">
                <form id="mc-embedded-subscribe-form" class="validate" action="http://openschooloc.us5.list-manage2.com/subscribe/post?u=a49271ebde5f88b50cced6c93&amp;id=4b41a39b87" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
@@ -72,7 +72,7 @@ function get_banner_src($id) {
          <div class="home-events-block">
             <h2>Upcoming Events</h2>
             <div class="home-event">
-               <a href="/under-5-friday">Under 5 Friday <span class="home-link-arrow">&raquo;</span></a>
+               <a href="/wp/under-5-friday">Under 5 Friday <span class="home-link-arrow">&raquo;</span></a>
                Let your little ones try out The<br>Open School for 2 hours a week.
             </div>
             <!--<div class="home-event">-->
