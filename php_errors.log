@@ -515,3 +515,125 @@
 [24-Jan-2018 18:36:02 UTC] PHP 254. enrollment_message_callback() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:181
 [24-Jan-2018 18:36:02 UTC] PHP 255. enrollment_message_callback() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:181
 [24-Jan-2018 18:36:02 UTC] PHP 256. enrollment_message_callback() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:181
+[18-Nov-2018 01:01:11 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php on line 461
+[18-Nov-2018 01:01:11 UTC] PHP Stack trace:
+[18-Nov-2018 01:01:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 01:01:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[18-Nov-2018 01:01:11 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[18-Nov-2018 01:01:11 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:93
+[18-Nov-2018 04:32:28 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'greenscreen_2_image_attachment_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1388
+[18-Nov-2018 04:32:28 UTC] PHP Stack trace:
+[18-Nov-2018 04:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 04:32:28 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[18-Nov-2018 04:32:28 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2018 04:32:28 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[18-Nov-2018 04:32:28 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:51
+[18-Nov-2018 04:32:28 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1347
+[18-Nov-2018 04:32:28 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1388}() /home/ubuntu/workspace/wp-admin/includes/template.php:1388
+[18-Nov-2018 04:32:28 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'greenscreen_2_tiny_image_attachment_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1388
+[18-Nov-2018 04:32:28 UTC] PHP Stack trace:
+[18-Nov-2018 04:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 04:32:28 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[18-Nov-2018 04:32:28 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2018 04:32:28 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[18-Nov-2018 04:32:28 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:51
+[18-Nov-2018 04:32:28 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1347
+[18-Nov-2018 04:32:28 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1388}() /home/ubuntu/workspace/wp-admin/includes/template.php:1388
+[18-Nov-2018 04:32:28 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'greenscreen_3_image_attachment_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1388
+[18-Nov-2018 04:32:28 UTC] PHP Stack trace:
+[18-Nov-2018 04:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 04:32:28 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[18-Nov-2018 04:32:28 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2018 04:32:28 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[18-Nov-2018 04:32:28 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:51
+[18-Nov-2018 04:32:28 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1347
+[18-Nov-2018 04:32:28 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1388}() /home/ubuntu/workspace/wp-admin/includes/template.php:1388
+[18-Nov-2018 04:32:28 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'greenscreen_3_tiny_image_attachment_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1388
+[18-Nov-2018 04:32:28 UTC] PHP Stack trace:
+[18-Nov-2018 04:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 04:32:28 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[18-Nov-2018 04:32:28 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2018 04:32:28 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[18-Nov-2018 04:32:28 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:51
+[18-Nov-2018 04:32:28 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1347
+[18-Nov-2018 04:32:28 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1388}() /home/ubuntu/workspace/wp-admin/includes/template.php:1388
+[18-Nov-2018 04:32:28 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'greenscreen_4_image_attachment_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1388
+[18-Nov-2018 04:32:28 UTC] PHP Stack trace:
+[18-Nov-2018 04:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 04:32:28 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[18-Nov-2018 04:32:28 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2018 04:32:28 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[18-Nov-2018 04:32:28 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:51
+[18-Nov-2018 04:32:28 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1347
+[18-Nov-2018 04:32:28 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1388}() /home/ubuntu/workspace/wp-admin/includes/template.php:1388
+[18-Nov-2018 04:32:28 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'greenscreen_4_tiny_image_attachment_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1388
+[18-Nov-2018 04:32:28 UTC] PHP Stack trace:
+[18-Nov-2018 04:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 04:32:28 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[18-Nov-2018 04:32:28 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2018 04:32:28 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[18-Nov-2018 04:32:28 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:51
+[18-Nov-2018 04:32:28 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1347
+[18-Nov-2018 04:32:28 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1388}() /home/ubuntu/workspace/wp-admin/includes/template.php:1388
+[18-Nov-2018 04:32:28 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'greenscreen_5_image_attachment_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1388
+[18-Nov-2018 04:32:28 UTC] PHP Stack trace:
+[18-Nov-2018 04:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 04:32:28 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[18-Nov-2018 04:32:28 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2018 04:32:28 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[18-Nov-2018 04:32:28 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:51
+[18-Nov-2018 04:32:28 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1347
+[18-Nov-2018 04:32:28 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1388}() /home/ubuntu/workspace/wp-admin/includes/template.php:1388
+[18-Nov-2018 04:32:28 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'greenscreen_5_tiny_image_attachment_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1388
+[18-Nov-2018 04:32:28 UTC] PHP Stack trace:
+[18-Nov-2018 04:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[18-Nov-2018 04:32:28 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[18-Nov-2018 04:32:28 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[18-Nov-2018 04:32:28 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[18-Nov-2018 04:32:28 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[18-Nov-2018 04:32:28 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:51
+[18-Nov-2018 04:32:28 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1347
+[18-Nov-2018 04:32:28 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1388}() /home/ubuntu/workspace/wp-admin/includes/template.php:1388
+[18-Nov-2018 18:34:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php on line 524
+[18-Nov-2018 18:34:39 UTC] PHP Stack trace:
+[18-Nov-2018 18:34:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/index.php:0
+[18-Nov-2018 18:34:39 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/index.php:10
+[18-Nov-2018 18:34:39 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[18-Nov-2018 18:34:39 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[18-Nov-2018 18:34:39 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:93
+[18-Nov-2018 18:35:04 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php on line 519
+[18-Nov-2018 18:35:04 UTC] PHP Stack trace:
+[18-Nov-2018 18:35:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/index.php:0
+[18-Nov-2018 18:35:04 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/index.php:10
+[18-Nov-2018 18:35:04 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[18-Nov-2018 18:35:04 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[18-Nov-2018 18:35:04 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:93
+[18-Nov-2018 18:35:55 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php on line 523
+[18-Nov-2018 18:35:55 UTC] PHP Stack trace:
+[18-Nov-2018 18:35:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/index.php:0
+[18-Nov-2018 18:35:55 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/index.php:10
+[18-Nov-2018 18:35:55 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[18-Nov-2018 18:35:55 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[18-Nov-2018 18:35:55 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:93
+[18-Nov-2018 18:36:02 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php on line 524
+[18-Nov-2018 18:36:02 UTC] PHP Stack trace:
+[18-Nov-2018 18:36:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/index.php:0
+[18-Nov-2018 18:36:02 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/index.php:10
+[18-Nov-2018 18:36:02 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
+[18-Nov-2018 18:36:02 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[18-Nov-2018 18:36:02 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:93

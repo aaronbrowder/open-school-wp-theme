@@ -1,0 +1,697 @@
+@import '_core.scss';
+
+/////////////////////////////////////////
+// New Design
+/////////////////////////////////////////
+// Greenscreen 1
+/////////////////////////////////////////
+.home-greenscreen {
+   padding-top: 40px;
+}
+
+.home-greenscreen-1 {
+   background: #198025;
+   text-align: center;
+}
+
+.home-logo {
+   width: 150px;
+   margin: auto;
+   img {
+      width: 100%;
+   }
+}
+
+.home-title {
+   font-family: "Pompiere";
+   text-transform: uppercase;
+   font-weight: normal;
+   color: #fff;
+   font-size: 2.6em;
+   margin-bottom: 5px;
+}
+
+.home-title-caption {
+   font-family: "Delius";
+   color: #fff;
+   margin: auto;
+   width: 250px;
+   font-size: 1.05em;
+}
+
+.home-greenscreen-image {
+   width: 90%;
+   margin: auto;
+   margin-top: 45px;
+   img {
+      width: 100%;
+   }
+   .home-greenscreen-2 & {
+      width: 60%;
+   }
+   .home-greenscreen-3 & {
+      width: 85%;
+   }
+   .home-greenscreen-4 & {
+      width: 70%;
+   }
+   .home-greenscreen-5 & {
+      width: 75%;
+   }
+}
+
+.home-greenscreen-text {
+   margin: auto;
+   color: #fff;
+}
+
+.home-greenscreen-testimonial {
+   max-width: 300px;
+   font-family: "Delius";
+   margin: 0 40px;
+}
+
+@media (min-width: 380px) {
+   .home-greenscreen-testimonial {
+      margin: auto;
+      margin-top: 20px;
+      font-size: 1.1em;
+   }  
+}
+
+@media (min-width: 500px) {
+   .home-greenscreen-image {
+      width: 70%;
+      .home-greenscreen-2 & {
+         width: 50%;
+      }
+      .home-greenscreen-3 & {
+         width: 65%;
+      }
+      .home-greenscreen-4 & {
+         width: 60%;
+      }
+      .home-greenscreen-5 & {
+         width: 63%;
+      }
+   }
+   .home-greenscreen-testimonial {
+      margin-top: 30px;
+      max-width: 360px;
+      font-size: 1.2em;
+   }
+}
+
+@media (min-width: 600px) {
+   .home-logo {
+      float: left;
+      margin-right: 25px;
+      margin-left: 18%;
+   }
+
+   .home-title {
+      text-align: left;
+      padding-top: 10px;
+   }
+
+   .home-title-caption {
+      overflow: hidden;
+      text-align: left;
+      margin: 0;
+   }
+}
+
+@media (min-width: 700px) {
+   .home-logo {
+      margin-left: 22%;
+   }
+
+   .home-greenscreen-image {
+      width: 60%;
+      .home-greenscreen-2 & {
+         width: 40%;
+      }
+      .home-greenscreen-3 & {
+         width: 60%;
+      }
+      .home-greenscreen-4 & {
+         width: 50%;
+      }
+      .home-greenscreen-5 & {
+         width: 54%;
+      }
+   }
+}
+
+@include min-tablet {
+   .home-logo {
+      width: 120px;
+      float: none;
+      margin: auto;
+   }
+
+   .home-title {
+      font-size: 2.2em;
+      text-align: center;
+      padding-top: 0;
+   }
+
+   .home-title-caption {
+      font-size: 0.95em;
+      width: 240px;
+      text-align: center;
+      margin: auto;
+   }
+   
+   .home-greenscreen-testimonial {
+      font-size: 1em;
+      max-width: 300px;
+   }
+
+   .home-greenscreen-image {
+      width: 50%;
+      margin-top: 0;
+      .home-greenscreen-2 & {
+         width: 28%;
+      }
+      .home-greenscreen-3 & {
+         width: 45%;
+      }
+      .home-greenscreen-4 & {
+         width: 35%;
+      }
+      .home-greenscreen-5 & {
+         width: 38%;
+      }
+   }
+
+   .home-greenscreen-image-left {
+      margin-left: 5%;
+      .home-greenscreen-2 & {
+         margin-left: 13%;
+      }
+      .home-greenscreen-3 & {
+         margin-left: 8%;
+      }
+      .home-greenscreen-4 & {
+         margin-left: 10%;
+      }
+      .home-greenscreen-5 & {
+         margin-left: 9%;
+      }
+   }
+
+   .home-greenscreen-image-right {
+      margin-right: 5%;
+      .home-greenscreen-2 & {
+         margin-right: 13%;
+      }
+      .home-greenscreen-3 & {
+         margin-right: 8%;
+      }
+      .home-greenscreen-4 & {
+         margin-right: 10%;
+      }
+      .home-greenscreen-5 & {
+         margin-right: 9%;
+      }
+   }
+
+   .home-greenscreen-1,
+   .home-greenscreen-3 {
+      .home-greenscreen-text {
+         margin-top: -15px;
+      }
+   }
+
+   .home-greenscreen-text-right {
+      float: right;
+      margin-right: 10%;
+   }
+
+   .home-greenscreen-text-left {
+      float: left;
+      margin-left: 10%;
+   }
+}
+
+@media (min-width: 850px) {
+   .home-greenscreen-1,
+   .home-greenscreen-3 {
+      .home-greenscreen-text {
+         margin-top: 0;
+      }
+   }
+   .home-greenscreen-testimonial {
+      margin-top: 50px;
+   }
+   .home-greenscreen-testimonial {
+      margin-top: 50px;
+   }
+}
+
+@media (min-width: 900px) {
+   .home-greenscreen-testimonial {
+      font-size: 1.1em;
+   }
+}
+
+@media (min-width: 950px) {
+   .home-title-caption {
+      width: 270px;
+      font-size: 1.05em;
+   }
+   .home-greenscreen-1,
+   .home-greenscreen-3 {
+      .home-greenscreen-text {
+         margin-top: 5px;
+      }
+   }
+   .home-greenscreen-text-right {
+      margin-right: 13%;
+   }
+   .home-greenscreen-text-left {
+      margin-left: 13%;
+   }
+}
+
+@include min-desktop {
+   .home-logo {
+      width: 150px;
+   }
+   .home-greenscreen-testimonial {
+      font-size: 1.2em;
+      max-width: 360px;
+   }
+}
+
+@media (min-width: 1100px) {
+   .home-title {
+      font-size: 2.6em;
+   }
+   .home-greenscreen-1,
+   .home-greenscreen-3 {
+      .home-greenscreen-text {
+         margin-top: 20px;
+      }
+   }
+}
+
+@include min-large-desktop {
+   .home-logo {
+      width: 180px;
+   }
+   .home-greenscreen-testimonial {
+      margin-top: 70px;
+   }
+   .home-greenscreen-text-right {
+      margin-right: 15%;
+   }
+   .home-greenscreen-text-left {
+      margin-left: 15%;
+   }
+   .home-greenscreen-image {
+      .home-greenscreen-2 & {
+         width: 22%;
+      }
+      .home-greenscreen-4 & {
+         width: 30%;
+      }
+   }
+   .home-greenscreen-image-left {
+      .home-greenscreen-2 & {
+         margin-left: 20%;
+      }
+      .home-greenscreen-4 & {
+         margin-left: 15%;
+      }
+   }
+   .home-greenscreen-image-right {
+      .home-greenscreen-2 & {
+         margin-right: 20%;
+      }
+      .home-greenscreen-4 & {
+         margin-right: 15%;
+      }
+   }
+}
+
+@media (min-width: 1300px) {
+   .home-logo {
+      width: 200px;
+   }
+   .home-title {
+      font-size: 3em;
+   }
+   .home-title-caption {
+      width: 330px;
+   }
+   .home-greenscreen-1,
+   .home-greenscreen-3 {
+      .home-greenscreen-text {
+         margin-top: 45px;
+      }
+   }
+}
+
+/////////////////////////////////////////
+// Links Section
+/////////////////////////////////////////
+.home-greenscreen-3 {
+   background: #007ac1;
+   padding-top: 56px;
+   
+   .home-greenscreen-text {
+      width: 236px;
+      white-space: nowrap;
+   }
+}
+
+.home-link-arrow {
+   font-size: 1.7em;
+   font-family: "Pompiere";
+}
+
+.home-apply-block,
+.home-subscribe label,
+.home-events-block h2 {
+   color: #fff;
+   font-family: "Pompiere";
+   text-transform: uppercase;
+   font-size: 22px;
+}
+
+.home-apply-block {
+   a {
+      color: #fff;
+      display: block;
+      font-size: 1.31em;
+      margin-top: -0.8em;
+      font-family: "Open Sans Condensed";
+   }
+}
+
+.home-subscribe {
+   margin-top: 20px;
+   label {
+      margin-bottom: -11px;
+   }
+   input {
+      border: 3px solid #fff;
+      width: 192px;
+   }
+   button {
+      background: none;
+      color: #fff;
+      padding: 0;
+      padding-bottom: 16px;
+      padding-left: 6px;
+      font-size: 4em;
+      font-family: "Pompiere";
+      font-weight: bold;
+      border: none;
+      line-height: 0.78;
+      vertical-align: middle;
+      cursor: pointer;
+   }
+}
+
+.home-events-block {
+   h2 {
+      font-weight: normal;
+      font-size: 2.3em;
+   }
+}
+
+.home-event {
+   color: #fff;
+   margin-bottom: 15px;
+   font-family: "Delius";
+   a {
+      color: #fff;
+      display: block;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: "Open Sans Condensed";
+      font-size: 1.3em;
+      margin-top: -0.5em;
+      margin-bottom: -0.2em;
+   }
+}
+
+@media (min-width: 600px) {
+   .home-greenscreen-3 .home-greenscreen-text {
+      margin-left: 8%;
+   }
+   .home-apply-and-subscribe {
+      float: left;
+      margin-right: 30%;
+      padding-bottom: 30px;
+   }
+}
+
+@media (min-width: 650px) {
+   .home-apply-and-subscribe {
+      margin-right: 50%;
+   }
+}
+
+@media (min-width: 750px) {
+   .home-greenscreen-3 .home-greenscreen-text {
+      margin-left: 12%;
+   }
+}
+
+@include min-tablet {
+   .home-greenscreen-3 {
+      padding-top: 40px;
+      .home-greenscreen-text {
+         margin-left: 10%;
+      }
+   }
+   .home-apply-and-subscribe {
+      float: none;
+      margin: 0;
+      padding: 0;
+   }
+   .home-apply-block,
+   .home-subscribe label,
+   .home-events-block h2 {
+      font-size: 18px;
+   }
+   .home-subscribe {
+      margin-top: 10px;
+   }
+   .home-events-block h2 {
+      margin-top: 10px;
+      font-size: 1.9em;
+   }
+   .home-event {
+      margin-bottom: 10px;
+      font-size: 0.9em;
+      a {
+         margin-top: -0.6em;
+         margin-bottom: -0.3em;
+      }
+   }
+}
+
+@include min-desktop {
+   .home-greenscreen-3 {
+      padding-top: 40px;
+   }
+   .home-subscribe {
+      margin-top: 20px;
+   }
+   .home-subscribe input {
+      width: 226px;
+   }
+   .home-events-block h2 {
+      margin-top: 20px;
+   }
+   .home-event {
+      margin-bottom: 15px;
+      font-size: 1em;
+      a {
+         margin-top: -0.5em;
+         margin-bottom: -0.2em;
+      }
+   }
+}
+
+@media (min-width: 1100px) {
+   .home-apply-block,
+   .home-subscribe label,
+   .home-events-block h2 {
+      font-size: 22px;
+   }
+   .home-events-block h2 {
+      font-size: 2.3em;
+   }
+   .home-event {
+      font-size: 1em;
+   }
+}
+
+@include min-large-desktop {
+   .home-greenscreen-3 {
+      padding-top: 40px;
+      .home-greenscreen-text {
+         margin-left: 15%;
+      }
+   }
+   .home-subscribe {
+      margin-top: 28px;
+   }
+   .home-events-block {
+      margin-top: 36px;
+   }
+}
+
+@media (min-width: 1260px) {
+   .home-subscribe {
+      margin-top: 40px;
+   }
+   .home-events-block {
+      margin-top: 45px;
+   }
+}
+
+/////////////////////////////////////////
+// Other Greenscreens
+/////////////////////////////////////////
+.home-greenscreen-2 {
+   background: #c43c59;
+   .home-greenscreen-image {
+      padding-top: 10px;
+   }
+   h2 {
+      color: #fff;
+      font-family: "Pompiere";
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 3.2em;
+      padding-left: 30px;
+   }
+}
+
+.home-greenscreen-4 {
+   background: #b501b2;
+   .home-greenscreen-image {
+      padding-top: 10px;
+   }
+}
+
+.home-greenscreen-5 {
+   background: #bc6700;
+   .home-greenscreen-image {
+      padding-bottom: 100px;
+   }
+}
+
+/////////////////////////////////////////
+// New Banners
+/////////////////////////////////////////
+.home-new-banner-container {
+   background: #000;
+   margin: 12px 0;
+   overflow: hidden;
+}
+
+.home-new-banner {
+   max-width: 1000px;
+   margin: auto;
+   img {
+      width: 100%;
+   }
+}
+
+.home-new-banner-1 {
+   width: 160%;
+   margin-left: -21%;
+}
+
+.home-new-banner-3 {
+   width: 145%;
+   margin-left: -13.5%;
+}
+
+.home-new-banner-2 {
+   width: 134%;
+   margin-left: -13.5%;
+}
+
+@media (min-width: 550px) {
+   .home-new-banner-1 {
+      width: 130%;
+      margin-left: -12%;
+   }
+   .home-new-banner-2 {
+      width: 120%;
+      margin-left: -10%;
+   }
+   .home-new-banner-3 {
+      width: 130%;
+      margin-left: -6%;
+   }
+}
+
+@media (min-width: 700px) {
+   .home-new-banner-1,
+   .home-new-banner-2,
+   .home-new-banner-3 {
+      width: 100%;
+      margin-left: auto;
+   }
+}
+
+/////////////////////////////////////////
+// Old Design
+.home-container {
+   @include clear-after;
+   max-width: 1400px;
+   margin: auto;
+}
+
+.home-banner {
+   background: #000;
+   position: relative;
+   margin-bottom: 10px;
+}
+
+.home-banner-placeholder {
+   display: block;
+   filter: blur(7px);
+}
+
+@keyframes blur_up {
+   from {
+      filter: blur(7px);
+   }
+   to {
+      filter: blur(0);
+   }
+}
+
+.home-banner-loader {
+   display: none;
+
+   &.loaded {
+      display: block;
+      animation-name: blur_up;
+      animation-duration: 0.4s;
+   }
+}
+
+.home-subscribe,
+.blog-subscribe {
+   label {
+      display: block;
+   }
+   input.email {
+      margin: 6px 0;
+      padding: 6px;
+      font-size: 0.9em;
+   }
+}
+
