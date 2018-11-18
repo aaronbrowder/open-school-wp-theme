@@ -1,7 +1,5 @@
 <?php
 
-define( 'WP_DEBUG', true );
-
 //////////////////////////////////////////////////////////////////////
 // Add scripts and stylesheets
 add_action('wp_enqueue_scripts', 'theopenschool_scripts');
@@ -74,10 +72,6 @@ function logo_image_attachment_callback() {
    image_attachment_callback('logo-image-attachment-id');
 }
 
-function logo_tiny_image_attachment_callback() { 
-   image_attachment_callback('logo-tiny-image-attachment-id');
-}
-
 function greenscreen_1_image_attachment_callback() { 
    image_attachment_callback('greenscreen-1-image-attachment-id');
 }
@@ -142,9 +136,9 @@ function new_banner_3_tiny_image_attachment_callback() {
    image_attachment_callback('new-banner-3-tiny-image-attachment-id');
 }
 
-function enrollment_message_callback() { ?>
-   <textarea rows="1" cols="70" name="enrollment-message"><?php echo get_option('enrollment-message'); ?></textarea>
-<?php }
+function nonprofit_image_attachment_callback() { 
+   image_attachment_callback('nonprofit-image-attachment-id');
+}
 
 add_action('admin_init', 'edit_home_page_page_setup');
 function edit_home_page_page_setup() {
@@ -153,7 +147,6 @@ function edit_home_page_page_setup() {
    
    add_settings_field('header-logo-image-attachment-id', 'Header Logo Image', 'header_logo_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('logo-image-attachment-id', 'Logo', 'logo_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('logo-tiny-image-attachment-id', 'Logo Tiny', 'logo_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('greenscreen-1-image-attachment-id', 'Greenscreen 1', 'greenscreen_1_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('greenscreen-1-tiny-image-attachment-id', 'Greenscreen 1 Tiny', 'greenscreen_1_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('greenscreen-2-image-attachment-id', 'Greenscreen 2', 'greenscreen_2_image_attachment_callback', 'edit-home-page', 'content');
@@ -170,9 +163,10 @@ function edit_home_page_page_setup() {
    add_settings_field('new-banner-2-tiny-image-attachment-id', 'New Banner 2 Tiny', 'new_banner_2_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-3-image-attachment-id', 'New Banner 3', 'new_banner_3_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-3-tiny-image-attachment-id', 'New Banner 3 Tiny', 'new_banner_3_tiny_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('nonprofit-image-attachment-id', 'Nonprofit Badge', 'nonprofit_image_attachment_callback', 'edit-home-page', 'content');
 
+   register_setting('edit-home-page', 'header-logo-image-attachment-id');
    register_setting('edit-home-page', 'logo-image-attachment-id');
-   register_setting('edit-home-page', 'logo-tiny-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-1-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-1-tiny-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-2-image-attachment-id');
@@ -189,6 +183,7 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'new-banner-2-tiny-image-attachment-id');
    register_setting('edit-home-page', 'new-banner-3-image-attachment-id');
    register_setting('edit-home-page', 'new-banner-3-tiny-image-attachment-id');
+   register_setting('edit-home-page', 'nonprofit-image-attachment-id');
 }
 
 //////////////////////////////////////////////////////////////////////

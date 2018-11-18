@@ -9,7 +9,7 @@
    padding-top: 40px;
 }
 
-.home-greenscreen-1 {
+.home-greenscreen-1, .home-learn-more {
    background: #198025;
    text-align: center;
 }
@@ -576,14 +576,14 @@
 }
 
 .home-greenscreen-4 {
-   background: #b501b2;
+   background: #a625b2;
    .home-greenscreen-image {
       padding-top: 10px;
    }
 }
 
 .home-greenscreen-5 {
-   background: #bc6700;
+   background: #d86500;
    .home-greenscreen-image {
       padding-bottom: 100px;
    }
@@ -653,12 +653,6 @@
    margin: auto;
 }
 
-.home-banner {
-   background: #000;
-   position: relative;
-   margin-bottom: 10px;
-}
-
 .home-banner-placeholder {
    display: block;
    filter: blur(7px);
@@ -695,3 +689,31 @@
    }
 }
 
+.home-learn-more {
+   padding: 70px 0;
+   line-height: 0.87;
+   a {
+      color: #fff;
+      font-family: "Delius";
+      font-size: 1.18em;
+      font-weight: normal;
+   }
+}
+
+.home-nonprofit-badge {
+   img {
+      width: 100%;
+   }
+}
+
+@media (min-width: 500px) {
+   .home-nonprofit-badge {
+      display: none;
+   }
+}
+
+@media (min-width: 835px) {
+   .home-learn-more {
+      display: none;
+   }
+}

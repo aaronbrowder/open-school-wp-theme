@@ -5,13 +5,21 @@ Template Name: Home
 
 get_header(); 
 
-function imageLoader($image_id, $placeholder_image_id) { ?>
-   <img class="home-banner-placeholder" src="<?php echo get_banner_src($placeholder_image_id); ?>">
-   <img class="home-banner-loader" data-src="<?php echo get_banner_src($image_id); ?>">
-<?php }
+function image_loader($alt, $image_id, $placeholder_image_id = null) { 
+   if (empty($placeholder_image_id)) { ?>
+      <img alt="<?php echo $alt; ?>" src="<?php echo get_image_src($image_id); ?>">
+   <?php }
+   else { ?>
+      <img class="home-banner-placeholder" alt="<?php echo $alt; ?>" src="<?php echo get_image_src($placeholder_image_id); ?>">
+      <img class="home-banner-loader" alt="<?php echo $alt; ?>"
+         data-src-small="<?php echo get_image_src($image_id, "medium"); ?>"
+         data-src-medium="<?php echo get_image_src($image_id, "medium_large"); ?>"
+         data-src-large="<?php echo get_image_src($image_id, "full"); ?>">
+   <?php }
+}
 
-function get_banner_src($id) {
-   return wp_get_attachment_image_src(get_option($id), "full")[0];
+function get_image_src($id, $size = "full") {
+   return wp_get_attachment_image_src(get_option($id), $size)[0];
 }
 
 ?>
@@ -21,7 +29,7 @@ function get_banner_src($id) {
    <div class="home-greenscreen home-greenscreen-1">
       <div class="home-greenscreen-text home-greenscreen-text-right">
          <div class="home-logo">
-            <img src="<?php echo wp_get_attachment_image_src(get_option("logo-image-attachment-id"), "full")[0]; ?>">
+            <?php image_loader("Open School leaf logo", "logo-image-attachment-id"); ?>
          </div>
          <h1 class="home-title">
             The Open School
@@ -31,7 +39,7 @@ function get_banner_src($id) {
          </p>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-left">
-         <?php imageLoader("greenscreen-1-image-attachment-id", "greenscreen-1-tiny-image-attachment-id"); ?>
+         <?php image_loader("Two girls laughing", "greenscreen-1-image-attachment-id", "greenscreen-1-tiny-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -41,13 +49,13 @@ function get_banner_src($id) {
          Students are responsible for their own learning. They learn by playing, conversing, and pursuing their passions. We don't judge them or try to fit them into a box. Students come to truly know themselves, and chart their own pathways through education and life.
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">
-         <?php imageLoader("greenscreen-2-image-attachment-id", "greenscreen-2-tiny-image-attachment-id"); ?>
+         <?php image_loader("A girl holding a stuffed elephant", "greenscreen-2-image-attachment-id", "greenscreen-2-tiny-image-attachment-id"); ?>
       </div>
    </div>
    
    <div class="home-new-banner-container">
       <div class="home-new-banner home-new-banner-1">
-         <?php imageLoader("new-banner-1-image-attachment-id", "new-banner-1-tiny-image-attachment-id"); ?>
+         <?php image_loader("Follow your passions", "new-banner-1-image-attachment-id", "new-banner-1-tiny-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -75,20 +83,16 @@ function get_banner_src($id) {
                <a href="/wp/under-5-friday">Under 5 Friday <span class="home-link-arrow">&raquo;</span></a>
                Let your little ones try out The<br>Open School for 2 hours a week.
             </div>
-            <!--<div class="home-event">-->
-            <!--   <a href="/">Super Fun Event <span class="home-link-arrow">&raquo;</span></a>-->
-            <!--   This event will knock your<br>socks off. Better be there!-->
-            <!--</div>-->
          </div>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">
-         <?php imageLoader("greenscreen-3-image-attachment-id", "greenscreen-3-tiny-image-attachment-id"); ?>
+         <?php image_loader("Two boys laughing while playing a Nintendo Switch video game", "greenscreen-3-image-attachment-id", "greenscreen-3-tiny-image-attachment-id"); ?>
       </div>
    </div>
    
    <div class="home-new-banner-container">
       <div class="home-new-banner home-new-banner-2">
-         <?php imageLoader("new-banner-2-image-attachment-id", "new-banner-2-tiny-image-attachment-id"); ?>
+         <?php image_loader("Go outside", "new-banner-2-image-attachment-id", "new-banner-2-tiny-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -98,13 +102,13 @@ function get_banner_src($id) {
          <br><br><br>&nbsp; &nbsp; ~ Ingrid, Open School mom
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-left">
-         <?php imageLoader("greenscreen-4-image-attachment-id", "greenscreen-4-tiny-image-attachment-id"); ?>
+         <?php image_loader("A little girl showing off her drawing", "greenscreen-4-image-attachment-id", "greenscreen-4-tiny-image-attachment-id"); ?>
       </div>
    </div>
    
    <div class="home-new-banner-container">
       <div class="home-new-banner home-new-banner-3">
-         <?php imageLoader("new-banner-3-image-attachment-id", "new-banner-3-tiny-image-attachment-id"); ?>
+         <?php image_loader("Age mixing", "new-banner-3-image-attachment-id", "new-banner-3-tiny-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -114,8 +118,18 @@ function get_banner_src($id) {
          <br><br><br>&nbsp; &nbsp; ~ Heather, Open School mom
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">
-         <?php imageLoader("greenscreen-5-image-attachment-id", "greenscreen-5-tiny-image-attachment-id"); ?>
+         <?php image_loader("A boy doing a skateboard trick", "greenscreen-5-image-attachment-id", "greenscreen-5-tiny-image-attachment-id"); ?>
       </div>
+   </div>
+   
+   <div class="home-learn-more">
+      <a href="/wp/introduction">Learn more about<br>The Open School <span class="home-link-arrow">&raquo;</span></a>
+   </div>
+   
+   <div class="home-nonprofit-badge">
+      <a href="https://www.ocnonprofitcentral.org/profile/1162992/the-open-school/">
+         <?php image_loader("OC Nonprofit Central Badge", "nonprofit-image-attachment-id"); ?>
+      </a>
    </div>
    
 </div>
