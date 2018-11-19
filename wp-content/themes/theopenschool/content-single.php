@@ -47,17 +47,8 @@
       </div>
       <?php fb_like_box(); ?>
       <div class="blog-subscribe">
-         <h4>Get notified about new posts</h4>
-         <form class="es_shortcode_form" data-es_form_id="es_shortcode_form">
-            <input type="email" class="email" placeholder="email address" id="es_txt_email" name="es_txt_email" value="" maxlength="60" required="">
-            <button id="es_txt_button" class="button" name="subscribe" type="submit">&raquo;</button>
-            <div class="es_msg">
-               <span id="es_msg" class="blog-subscribe-confirmation"></span>
-            </div>
-            <input type="hidden" id="es_txt_name" name="es_txt_name" value="">
-            <input type="hidden" id="es_txt_group" name="es_txt_group" value="Blog">
-            <input type="hidden" name="es-subscribe" id="es-subscribe" value="d2ebde32ba">
-         </form>
+         <h4>Get notified about new posts by email</h4>
+         <?php es_subbox($namefield = "NO", $desc = "", $group = "Blog"); ?>
       </div>
    </div>
    

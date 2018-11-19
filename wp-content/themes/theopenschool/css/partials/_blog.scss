@@ -58,9 +58,76 @@ blockquote.blog-sharable {
 }
 
 .blog-subscribe {
-   visibility: hidden;
    clear: both;
-   //padding-top: 15px;
+   padding-top: 15px;
+   font-size: 17px;
+   
+   label {
+      display: none;
+   }
+   
+   .es_form_container {
+      margin-top: -7px;
+   }
+   
+   .es_textbox {
+      display: inline-block;
+   }
+   
+   input[type=email] {
+      margin: 6px 0;
+      padding: 6px;
+      font-size: 0.9em;
+   }
+
+   input[type=submit] {
+      padding: 0 12px;
+      font-family: $header-font-family;
+      font-size: 40px;
+      background: #555;
+      border: none;
+      line-height: 0.78;
+      padding-bottom: 5px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: transparent;
+      width: 40px;
+
+      &:hover {
+         background: #222;
+      }
+   }
+   
+   .es_button {
+      display: inline-block;
+      position: relative;
+      &:after {
+         content: "\00bb";
+         color: #fff;
+         font-family: "Open Sans Condensed";
+         font-weight: bold;
+         font-size: 36px;
+         pointer-events: none;
+         position: absolute;
+         top: 0;
+         left: 11px;
+      }
+   }
+}
+
+@media (min-width: 700px) {
+   .blog-subscribe {
+      clear: none;
+      float: right;
+      padding-top: 0;
+      margin-right: 36px;
+   }
+}
+
+@include min-desktop {
+   .blog-subscribe input[type=email] {
+      width: 230px;
+   }
 }
 
 .blog-subscribe-confirmation {
@@ -128,31 +195,6 @@ blockquote.blog-sharable {
    margin-top: 6px;
 }
 
-.blog-subscribe {
-   font-size: 17px;
-
-   label {
-      font-size: 16px;
-   }
-
-   button {
-      padding: 0 12px;
-      font-family: $header-font-family;
-      font-size: 40px;
-      background: #555;
-      color: #fff;
-      border: none;
-      line-height: 0.78;
-      padding-bottom: 5px;
-      vertical-align: middle;
-      cursor: pointer;
-
-      &:hover {
-         background: #222;
-      }
-   }
-}
-
 @media (min-width: 475px) {
    .blog-buttons .fb-like {
       float: right;
@@ -161,20 +203,5 @@ blockquote.blog-sharable {
    }
    .blog-fb-like-full {
       display: none;
-   }
-}
-
-@media (min-width: 700px) {
-   .blog-subscribe {
-      clear: none;
-      float: right;
-      padding-top: 0;
-      margin-right: 36px;
-   }
-}
-
-@include min-desktop {
-   .blog-subscribe input.email {
-      width: 230px;
    }
 }
