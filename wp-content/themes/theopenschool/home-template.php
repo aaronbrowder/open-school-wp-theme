@@ -7,7 +7,7 @@ get_header();
 
 function image_loader($alt, $image_id, $placeholder_image_id = null) { 
    if (empty($placeholder_image_id)) { ?>
-      <img alt="<?php echo $alt; ?>" src="<?php echo get_image_src_data($image_id); ?>">
+      <img class="home-banner-preloaded" alt="<?php echo $alt; ?>" src="<?php echo get_image_src_data($image_id); ?>">
    <?php }
    else { ?>
       <img class="home-banner-placeholder" alt="<?php echo $alt; ?>" src="<?php echo get_image_src_data($placeholder_image_id); ?>">

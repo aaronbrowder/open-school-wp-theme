@@ -673,8 +673,7 @@ h2[id]:before {
   margin: auto;
   margin-top: 45px; }
   .home-greenscreen-image img {
-    width: 100%;
-    display: block; }
+    width: 100%; }
   .home-greenscreen-2 .home-greenscreen-image {
     width: 60%; }
   .home-greenscreen-3 .home-greenscreen-image {
@@ -1114,6 +1113,9 @@ h2[id]:before {
     clear: both;
     display: table;
     content: ' '; }
+
+.home-banner-preloaded {
+  display: block; }
 
 .home-banner-placeholder {
   display: block;

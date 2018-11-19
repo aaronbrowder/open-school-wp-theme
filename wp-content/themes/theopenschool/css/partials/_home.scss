@@ -45,7 +45,6 @@
    margin-top: 45px;
    img {
       width: 100%;
-      display: block;
    }
    .home-greenscreen-2 & {
       width: 60%;
@@ -652,6 +651,10 @@
    @include clear-after;
    max-width: 1400px;
    margin: auto;
+}
+
+.home-banner-preloaded {
+   display: block;
 }
 
 .home-banner-placeholder {
