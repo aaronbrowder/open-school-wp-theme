@@ -17,8 +17,12 @@ function bannerLoader() {
          loader.classList.add('loaded');
          loader.parentElement.querySelector('.home-banner-placeholder').style.display = 'none';
       };
+      var src = loader.getAttribute('data-src-large');
+      if (screen.width >= 768) {
+         src = loader.getAttribute('data-src-full');
+      }
       // must set src after registering onload, or else onload won't fire if the image is cached
-      loader.setAttribute('src', loader.getAttribute('data-src'));
+      loader.setAttribute('src', src);
    }
 }
 

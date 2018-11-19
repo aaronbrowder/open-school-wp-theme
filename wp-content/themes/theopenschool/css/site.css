@@ -673,7 +673,8 @@ h2[id]:before {
   margin: auto;
   margin-top: 45px; }
   .home-greenscreen-image img {
-    width: 100%; }
+    width: 100%;
+    display: block; }
   .home-greenscreen-2 .home-greenscreen-image {
     width: 60%; }
   .home-greenscreen-3 .home-greenscreen-image {

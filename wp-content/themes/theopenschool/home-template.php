@@ -11,7 +11,9 @@ function image_loader($alt, $image_id, $placeholder_image_id = null) {
    <?php }
    else { ?>
       <img class="home-banner-placeholder" alt="<?php echo $alt; ?>" src="<?php echo get_image_src_data($placeholder_image_id); ?>">
-      <img class="home-banner-loader" alt="<?php echo $alt; ?>" data-src="<?php echo get_image_src($image_id); ?>">
+      <img class="home-banner-loader" alt="<?php echo $alt; ?>"
+         data-src-large="<?php echo get_image_src($image_id, "large"); ?>"
+         data-src-full="<?php echo get_image_src($image_id, "full"); ?>">
    <?php }
 }
 
@@ -45,7 +47,7 @@ function get_image_src_data($id, $size = "full")
          </p>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-left">
-         <?php image_loader("Two girls laughing", "greenscreen-1-image-attachment-id", "greenscreen-1-tiny-image-attachment-id"); ?>
+         <?php image_loader("Two girls laughing", "greenscreen-1-image-attachment-id"); ?>
       </div>
    </div>
    
