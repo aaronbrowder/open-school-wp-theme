@@ -11,10 +11,7 @@ function image_loader($alt, $image_id, $placeholder_image_id = null) {
    <?php }
    else { ?>
       <img class="home-banner-placeholder" alt="<?php echo $alt; ?>" src="<?php echo get_image_src($placeholder_image_id); ?>">
-      <img class="home-banner-loader" alt="<?php echo $alt; ?>"
-         data-src-small="<?php echo get_image_src($image_id, "medium"); ?>"
-         data-src-medium="<?php echo get_image_src($image_id, "medium_large"); ?>"
-         data-src-large="<?php echo get_image_src($image_id, "full"); ?>">
+      <img class="home-banner-loader" alt="<?php echo $alt; ?>" data-src="<?php echo get_image_src($image_id); ?>">
    <?php }
 }
 
