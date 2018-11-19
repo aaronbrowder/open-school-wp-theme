@@ -7,16 +7,25 @@ get_header();
 
 function image_loader($alt, $image_id, $placeholder_image_id = null) { 
    if (empty($placeholder_image_id)) { ?>
-      <img alt="<?php echo $alt; ?>" src="<?php echo get_image_src($image_id); ?>">
+      <img alt="<?php echo $alt; ?>" src="<?php echo get_image_src_data($image_id); ?>">
    <?php }
    else { ?>
-      <img class="home-banner-placeholder" alt="<?php echo $alt; ?>" src="<?php echo get_image_src($placeholder_image_id); ?>">
+      <img class="home-banner-placeholder" alt="<?php echo $alt; ?>" src="<?php echo get_image_src_data($placeholder_image_id); ?>">
       <img class="home-banner-loader" alt="<?php echo $alt; ?>" data-src="<?php echo get_image_src($image_id); ?>">
    <?php }
 }
 
 function get_image_src($id, $size = "full") {
    return wp_get_attachment_image_src(get_option($id), $size)[0];
+}
+
+function get_image_src_data($id, $size = "full")
+{
+   $src = wp_get_attachment_image_src(get_option($id), $size)[0];
+   $image = file_get_contents($src);
+   $finfo = finfo_open(FILEINFO_MIME_TYPE);
+   $data = base64_encode($image);
+   return 'data: ' . finfo_buffer($finfo, $image) . ';base64,' . $data;
 }
 
 ?>
