@@ -35,7 +35,7 @@
                   <?php echo get_option('email') ?>
                   <br/><?php echo get_option('phone') ?>
                </p>
-               <p><a href="/contact-us">Contact Us</a></p>
+               <p><a href="/wp/contact-us">Contact Us</a></p>
             </div>
          </div>
       </footer>
