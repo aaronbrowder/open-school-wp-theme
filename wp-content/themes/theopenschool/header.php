@@ -73,7 +73,7 @@
                <nav>
                   
                   <a class="header-logo" href="/">
-                     <img height="30" src="<?php echo wp_get_attachment_url(get_option('header-logo-image-attachment-id')); ?>" alt="The Open School"/>
+                     <img height="30" src="<?php echo wp_get_attachment_url(get_option('header-logo-image-attachment-id')); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>
                   </a>
                   
                   <div id="hamburger" class="header-hamburger">

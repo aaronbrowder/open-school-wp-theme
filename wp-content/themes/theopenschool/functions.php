@@ -11,6 +11,7 @@ function theopenschool_scripts() {
 
 add_action('admin_enqueue_scripts', 'admin_scripts');
 function admin_scripts() {
+   wp_enqueue_media();
 	wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.1.1.min.js');
 	wp_enqueue_script('media_selector', get_template_directory_uri() . '/js/media-selector.js', array('jquery'));
 	
@@ -33,161 +34,44 @@ function mytheme_google_fonts() {
 }
 
 //////////////////////////////////////////////////////////////////////
-// Edit home page
+// Header
 
-add_action('admin_menu', 'edit_home_page_add_menu');
-function edit_home_page_add_menu() {
-   add_menu_page('Edit_Home_Page', 'Home Page', 'manage_options', 'edit_home_page', 'edit_home_page_page', null, 4);
+add_action('admin_menu', 'edit_header_add_menu');
+function edit_header_add_menu() {
+   add_menu_page('Edit_Header', 'Header', 'manage_options', 'edit_header', 'edit_header_page', null, 4);
 }
 
-function edit_home_page_page() { ?>
+function edit_header_page() { ?>
    <div class="wrap">
-      <h1>Edit Home Page</h1>
+      <h1>Header</h1>
       <form method="post" action="options.php">
          <?php
-            settings_fields('edit-home-page');
-            do_settings_sections('edit-home-page');
+            settings_fields('edit-header');
+            do_settings_sections('edit-header');
             submit_button();
          ?>
       </form>
    </div>
 <?php }
 
-function image_attachment_callback($option_id) { 
-   $image_attachment_id = get_option($option_id);
-   ?>
-      <div class="image-preview-wrapper">
-   		<img class="image-preview" src="<?php echo wp_get_attachment_url($image_attachment_id); ?>" height="100"/>
-   	</div>
-   	<input class="upload-image-button button" type="button" value="<?php _e('Select Image'); ?>" />
-   	<input type="hidden" name="<?php echo $option_id; ?>" class="image-attachment-id" value="<?php echo $image_attachment_id; ?>">
-   <?php
-}
-
 function header_logo_image_attachment_callback() { 
-   image_attachment_callback('header-logo-image-attachment-id');
-}
+   $image_attachment_id = get_option('header-logo-image-attachment-id'); ?>
+   <div class="image-preview-wrapper">
+		<img class="image-preview" src="<?php echo wp_get_attachment_url($image_attachment_id); ?>" height="100"/>
+	</div>
+	<input class="upload-image-button button" type="button" value="<?php _e('Select Image'); ?>" />
+	<input type="hidden" name="<?php echo $option_id; ?>" class="image-attachment-id" value="<?php echo $image_attachment_id; ?>">
+<?php }
 
-function logo_image_attachment_callback() { 
-   image_attachment_callback('logo-image-attachment-id');
-}
-
-function greenscreen_1_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-1-image-attachment-id');
-}
-
-function greenscreen_1_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-1-tiny-image-attachment-id');
-}
-
-function greenscreen_2_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-2-image-attachment-id');
-}
-
-function greenscreen_2_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-2-tiny-image-attachment-id');
-}
-
-function greenscreen_3_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-3-image-attachment-id');
-}
-
-function greenscreen_3_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-3-tiny-image-attachment-id');
-}
-
-function greenscreen_4_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-4-image-attachment-id');
-}
-
-function greenscreen_4_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-4-tiny-image-attachment-id');
-}
-
-function greenscreen_5_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-5-image-attachment-id');
-}
-
-function greenscreen_5_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-5-tiny-image-attachment-id');
-}
-
-function new_banner_1_image_attachment_callback() { 
-   image_attachment_callback('new-banner-1-image-attachment-id');
-}
-
-function new_banner_1_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-1-tiny-image-attachment-id');
-}
-
-function new_banner_2_image_attachment_callback() { 
-   image_attachment_callback('new-banner-2-image-attachment-id');
-}
-
-function new_banner_2_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-2-tiny-image-attachment-id');
-}
-
-function new_banner_3_image_attachment_callback() { 
-   image_attachment_callback('new-banner-3-image-attachment-id');
-}
-
-function new_banner_3_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-3-tiny-image-attachment-id');
-}
-
-function nonprofit_image_attachment_callback() { 
-   image_attachment_callback('nonprofit-image-attachment-id');
-}
-
-add_action('admin_init', 'edit_home_page_page_setup');
-function edit_home_page_page_setup() {
-   wp_enqueue_media();
-   add_settings_section('content', 'Content', null, 'edit-home-page');
-   
-   add_settings_field('header-logo-image-attachment-id', 'Header Logo Image', 'header_logo_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('logo-image-attachment-id', 'Logo', 'logo_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-1-image-attachment-id', 'Greenscreen 1', 'greenscreen_1_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-1-tiny-image-attachment-id', 'Greenscreen 1 Tiny', 'greenscreen_1_tiny_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-2-image-attachment-id', 'Greenscreen 2', 'greenscreen_2_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-2-tiny-image-attachment-id', 'Greenscreen 2 Tiny', 'greenscreen_2_tiny_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-3-image-attachment-id', 'Greenscreen 3', 'greenscreen_3_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-3-tiny-image-attachment-id', 'Greenscreen 3 Tiny', 'greenscreen_3_tiny_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-4-image-attachment-id', 'Greenscreen 4', 'greenscreen_4_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-4-tiny-image-attachment-id', 'Greenscreen 4 Tiny', 'greenscreen_4_tiny_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-5-image-attachment-id', 'Greenscreen 5', 'greenscreen_5_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-5-tiny-image-attachment-id', 'Greenscreen 5 Tiny', 'greenscreen_5_tiny_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-1-image-attachment-id', 'New Banner 1', 'new_banner_1_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-1-tiny-image-attachment-id', 'New Banner 1 Tiny', 'new_banner_1_tiny_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-2-image-attachment-id', 'New Banner 2', 'new_banner_2_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-2-tiny-image-attachment-id', 'New Banner 2 Tiny', 'new_banner_2_tiny_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-3-image-attachment-id', 'New Banner 3', 'new_banner_3_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-3-tiny-image-attachment-id', 'New Banner 3 Tiny', 'new_banner_3_tiny_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('nonprofit-image-attachment-id', 'Nonprofit Badge', 'nonprofit_image_attachment_callback', 'edit-home-page', 'content');
-
-   register_setting('edit-home-page', 'header-logo-image-attachment-id');
-   register_setting('edit-home-page', 'logo-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-1-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-1-tiny-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-2-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-2-tiny-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-3-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-3-tiny-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-4-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-4-tiny-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-5-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-5-tiny-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-1-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-1-tiny-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-2-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-2-tiny-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-3-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-3-tiny-image-attachment-id');
-   register_setting('edit-home-page', 'nonprofit-image-attachment-id');
+add_action('admin_init', 'edit_header_page_setup');
+function edit_header_page_setup() {
+   add_settings_section('content', 'Content', null, 'edit-header');
+   add_settings_field('header-logo-image-attachment-id', 'Header Logo Image', 'header_logo_image_attachment_callback', 'edit-header', 'content');
+   register_setting('edit-header', 'header-logo-image-attachment-id');
 }
 
 //////////////////////////////////////////////////////////////////////
-// Edit footer
+// School Meta
 
 add_action('admin_menu', 'school_meta_add_menu');
 function school_meta_add_menu() {
@@ -227,6 +111,10 @@ function youtube_callback() { ?>
   <input type="text" name="youtube" size="70" value="<?php echo get_option('youtube'); ?>" />
 <?php }
 
+function paypal_hosted_button_id_callback() { ?>
+  <input type="text" name="paypal-hosted-button-id" size="70" value="<?php echo get_option('paypal-hosted-button-id'); ?>" />
+<?php }
+
 function address1_callback() { ?>
   <input type="text" name="address1" size="50" value="<?php echo get_option('address1'); ?>" />
 <?php }
@@ -264,6 +152,7 @@ function school_meta_page_setup() {
    add_settings_field('pinterest', 'Pinterest URL', 'pinterest_callback', 'school-meta', 'content');
    add_settings_field('instagram', 'Instagram URL', 'instagram_callback', 'school-meta', 'content');
    add_settings_field('youtube', 'YouTube URL', 'youtube_callback', 'school-meta', 'content');
+   add_settings_field('paypal-hosted-button-id', 'Paypal Hosted Button ID', 'paypal_hosted_button_id_callback', 'school-meta', 'content');
    add_settings_field('address1', 'Address Line 1', 'address1_callback', 'school-meta', 'content');
    add_settings_field('address2', 'Address Line 2', 'address2_callback', 'school-meta', 'content');
    add_settings_field('email', 'Email', 'email_callback', 'school-meta', 'content');
@@ -277,6 +166,7 @@ function school_meta_page_setup() {
    register_setting('school-meta', 'pinterest');
    register_setting('school-meta', 'instagram');
    register_setting('school-meta', 'youtube');
+   register_setting('school-meta', 'paypal-hosted-button-id');
    register_setting('school-meta', 'address1');
    register_setting('school-meta', 'address2');
    register_setting('school-meta', 'email');
@@ -458,30 +348,34 @@ function page_template($content_function) {
    <?php get_footer();
 }
 
-function donate_button() { ?>
-   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input name="cmd" type="hidden" value="_s-xclick" />
-      <input name="hosted_button_id" type="hidden" value="6UHSFSZE64B4C" />
-      <button type="submit" name="submit" class="small-button donate-button">Donate</button>
-   </form>
-<?php }
-
 // https://developers.facebook.com/docs/plugins/like-button
-function fb_like_box() { ?>
-    <div class="fb-like" data-href="https://www.facebook.com/TheOpenSchool/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
-<?php }
+function fb_like_box() { 
+   $fb_url = get_option('facebook');
+   if (!empty($fb_url)) { ?>
+      <div class="fb-like" data-href="<?php echo $fb_url; ?>" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+   <?php }
+}
 
-function fb_page_plugin_large() { ?>
-   <div class="fb-page" data-href="https://www.facebook.com/TheOpenSchool/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/TheOpenSchool/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TheOpenSchool/">The Open School</a></blockquote></div>
-<?php }
+function fb_page_plugin_large() {
+   $fb_url = get_option('facebook');
+   if (!empty($fb_url)) { ?>
+      <div class="fb-page" data-href="<?php echo $fb_url; ?>" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="<?php echo $fb_url; ?>" class="fb-xfbml-parse-ignore"><a href="<?php echo $fb_url; ?>">The Open School</a></blockquote></div>
+   <?php }
+}
 
-function fb_page_plugin_small() { ?>
-   <div class="fb-page" data-href="https://www.facebook.com/TheOpenSchool/" data-width="280" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/TheOpenSchool/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TheOpenSchool/">The Open School</a></blockquote></div>
-<?php }
+function fb_page_plugin_small() {
+   $fb_url = get_option('facebook');
+   if (!empty($fb_url)) { ?>
+      <div class="fb-page" data-href="<?php echo $fb_url; ?>" data-width="280" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="<?php echo $fb_url; ?>" class="fb-xfbml-parse-ignore"><a href="<?php echo $fb_url; ?>">The Open School</a></blockquote></div>
+   <?php }
+}
 
-function fb_page_plugin_with_feed($height) { ?>
-   <div class="fb-page" data-href="https://www.facebook.com/TheOpenSchool/" data-tabs="timeline" data-height="<?php echo $height; ?>" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/TheOpenSchool/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TheOpenSchool/">The Open School</a></blockquote></div>
-<?php }
+function fb_page_plugin_with_feed($height) {
+   $fb_url = get_option('facebook');
+   if (!empty($fb_url)) { ?>
+      <div class="fb-page" data-href="<?php echo $fb_url; ?>" data-tabs="timeline" data-height="<?php echo $height; ?>" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="<?php echo $fb_url; ?>" class="fb-xfbml-parse-ignore"><a href="<?php echo $fb_url; ?>">The Open School</a></blockquote></div>
+   <?php }
+}
 
 function render_php($path, $atts, $content)
 {
