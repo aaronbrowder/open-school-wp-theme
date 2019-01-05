@@ -160,7 +160,7 @@
          margin-left: 12px;
       }
    }
-   .header-2nd-context-menu {
+   .header-2nd-context-menu.expanded {
       background: #6a6a6a;
       .header-context-menu-item {
          border-color: #505050;
@@ -249,6 +249,7 @@
             @include sub-menu-item-with-arrow;
          }
          a {
+            margin: 0;
             display: inline-block;
             color: #444;
             text-shadow: none;
