@@ -268,6 +268,10 @@ function get_page_id($menu_item) {
    return get_post_meta($menu_item->ID, '_menu_item_object_id', true);
 }
 
+function get_menu_item_id($menu_item) {
+   return $menu_item->ID;
+}
+
 function page_number() {
    global $paged;
    if ($paged > 1) { ?>

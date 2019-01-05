@@ -61,11 +61,36 @@
    	$queried_object_id = (int) $wp_query->queried_object_id;
    	
       $menu_items = get_menu_items();
-      $top_menu_items = array_filter($menu_items, function($o) { return empty($o->menu_item_parent); });
-      $sub_menu_items = array_filter($menu_items, function($o) { return $o->menu_item_parent; });
       
-      $current_sub_menu_items;
-      ?>
+      $menu_dictionary = array();
+      $top_menu_items = array();
+      $sub1_menu_items = array();
+      $sub2_menu_items = array();
+      $current_sub1_menu_item_id;
+      $current_sub1_menu_items;
+      $current_sub2_menu_items;
+      
+      foreach ($menu_items as $item) {
+          $menu_dictionary[$item->ID] = $item;
+      }
+      
+      foreach ($menu_items as $item) {
+         // if the item has no parent, it's a top level item
+         if (empty($item->menu_item_parent)) {
+            $top_menu_items[] = $item;
+         }
+         else {
+            $parent = $menu_dictionary[$item->menu_item_parent];
+            // if the item's parent has no parent, it's a 1st level item
+            if (empty($parent->menu_item_parent)) {
+               $sub1_menu_items[] = $item;
+            }
+            // it's a second level item
+            else {
+               $sub2_menu_items[] = $item;
+            }
+         }
+      } ?>
 
       <div class="main-masthead-wrapper">
          <div class="main-masthead">
@@ -90,15 +115,23 @@
                         $id = get_page_id($item);
                         $page = get_page($id);
                         $link = get_page_link($id);
-                        $children = array_filter($sub_menu_items, function($o) use ($item) { return $o->menu_item_parent == $item->ID; });
-                        $children_ids = array_map('get_page_id', $children);
+                        $children = array_filter($sub1_menu_items, function($sub_item) use ($item) {
+                           return $sub_item->menu_item_parent == $item->ID;
+                        });
+                        $children_ids = array_map('get_menu_item_id', $children);
+                        $children_page_ids = array_map('get_page_id', $children);
+                        $all_level_2_children = array_filter($sub2_menu_items, function($sub_item) use ($children_ids) {
+                           return in_array($sub_item->menu_item_parent, $children_ids);
+                        });
+                        $all_level_2_children_page_ids = array_map('get_page_id', $all_level_2_children);
                         
                         $is_current = ($id == $queried_object_id) 
-                           || in_array($queried_object_id, $children_ids)
-                           || (endsWith($link, '/blog/') && is_single());
+                           || in_array($queried_object_id, $children_page_ids)
+                           || in_array($queried_object_id, $all_level_2_children_page_ids);
+                           // || (endsWith($link, '/blog/') && is_single());
                         
                         if ($is_current) {
-                           $current_sub_menu_items = $children;
+                           $current_sub1_menu_items = $children;
                         }
                         ?>
                         
@@ -114,11 +147,37 @@
                                  <?php foreach ($children as $child) {
                                     $child_id = get_page_id($child);
                                     $child_link = get_page_link($child_id);
+                                    $level_2_children = array_filter($sub2_menu_items, function($sub_item) use ($child) { 
+                                       return $sub_item->menu_item_parent == $child->ID;
+                                    });
+                                    $level_2_children_page_ids = array_map('get_page_id', $level_2_children);
+                                    $is_current = in_array($queried_object_id, $level_2_children_page_ids);
+                                    if ($is_current) {
+                                       $current_sub1_menu_item_id = $child_id;
+                                       $current_sub1_menu_items = $children;
+                                       $current_sub2_menu_items = $level_2_children;
+                                    }
                                     ?>
-                                    <li class="header-context-menu-item">
+                                    <li class="header-context-menu-item<?php
+                                       echo (!empty($level_2_children) ? ' has-children' : '');
+                                    ?>">
                                        <a href="<?php echo $child_link; ?>">
                                           <?php echo $child->title; ?>
                                        </a>
+                                       <?php if (!empty($level_2_children)) { ?>
+                                          <ul class="header-context-menu header-2nd-context-menu">
+                                             <?php foreach ($level_2_children as $level_2_child) {
+                                                $level_2_child_id = get_page_id($level_2_child);
+                                                $level_2_child_link = get_page_link($level_2_child_id);
+                                                ?>
+                                                <li class="header-context-menu-item">
+                                                   <a href="<?php echo $level_2_child_link; ?>">
+                                                      <?php echo $level_2_child->title; ?>
+                                                   </a>
+                                                </li>
+                                             <?php } ?>
+                                          </ul>
+                                       <?php } ?>
                                     </li>
                                  <?php } ?>
                               </ul>
@@ -139,31 +198,48 @@
          </div>
       </div>
       
-      <?php if (!empty($current_sub_menu_items)) { ?>
+      <?php function create_sub_menu_nav($items, $current_sub1_menu_item_id, $is_last, $is_second) { ?>
          <div class="sub-masthead-wrapper">
-            <div class="sub-masthead">
+            <div class="sub-masthead<?php echo ($is_last ? ' last' : ' not-last'); echo ($is_second ? ' second' : ''); ?>">
                <div class="container">
                   <nav>
                      <ul class="header-menu">
-                        <?php foreach ($current_sub_menu_items as $item):
+                        <?php foreach ($items as $item):
                            $id = get_page_id($item);
                            $link = get_page_link($id);
-                           $is_current = $id == $queried_object_id;
+                           global $wp_query;
+                           $is_current = $id == (int) $wp_query->queried_object_id || $id == $current_sub1_menu_item_id;
                            ?>
                            <li class="header-menu-item <?php echo ($is_current ? 'header-current-menu-item' : ''); ?>">
                               <a href="<?php echo $link; ?>">
                                  <?php echo $item->title; ?>
                               </a>
                            </li>
-                           
                         <?php endforeach; ?>
                      </ul>   
                   </nav>
                </div>
             </div>
          </div>
-      <?php } ?>
+      <?php }
       
-      <div class="nav-divider <?php empty($current_sub_menu_items) ? 'no-sub-header' : '' ?>"></div>
+      $has_sub1_menu_nav = !empty($current_sub1_menu_items);
+      $has_sub2_menu_nav = !empty($current_sub2_menu_items);
       
-      <div class="<?php echo empty($current_sub_menu_items) ? '' : 'has-double-header'; ?>">
+      if ($has_sub1_menu_nav) {
+         $is_last = !$has_sub2_menu_nav;
+         $is_second = false;
+         create_sub_menu_nav($current_sub1_menu_items, $current_sub1_menu_item_id, $is_last, $is_second);
+      }
+      
+      if ($has_sub2_menu_nav) {
+         $is_last = true;
+         $is_second = true;
+         create_sub_menu_nav($current_sub2_menu_items, null, $is_last, $is_second);
+      }
+      
+      ?>
+      
+      <div class="nav-divider <?php empty($current_sub1_menu_items) ? 'no-sub-header' : '' ?>"></div>
+      
+      <div class="<?php echo empty($current_sub1_menu_items) ? '' : 'has-double-header'; ?>">

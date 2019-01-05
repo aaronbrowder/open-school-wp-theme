@@ -418,7 +418,7 @@ h2[id]:before {
     max-width: 1000px; } }
 .main-masthead-wrapper,
 .sub-masthead-wrapper {
-  height: 39px; }
+  height: 43px; }
 
 .sub-masthead-wrapper {
   display: none; }
@@ -438,14 +438,18 @@ h2[id]:before {
 
 .main-masthead {
   background: #222;
-  z-index: 100002; }
+  z-index: 100003; }
   .main-masthead .header-menu {
     float: right; }
 
 .sub-masthead {
-  background: #4D744A;
-  box-shadow: 0 0 1px 1px #fff;
-  z-index: 100001; }
+  background: #466d43;
+  z-index: 100002; }
+  .sub-masthead.second {
+    background: #588755; }
+  .sub-masthead.last {
+    box-shadow: 0 0 1px 1px #fff;
+    z-index: 100001; }
   .sub-masthead nav {
     margin-left: -5px; }
     .sub-masthead nav .header-menu-item a {
@@ -461,7 +465,7 @@ h2[id]:before {
 .sub-masthead-wrapper nav .header-search-activator {
   float: right;
   color: #fff;
-  padding-top: 7px;
+  padding-top: 4px;
   padding-right: 4px;
   padding-left: 12px; }
 .main-masthead-wrapper nav .header-hamburger,
@@ -471,6 +475,7 @@ h2[id]:before {
 .sub-masthead-wrapper nav .header-search-activator {
   font-size: 19px;
   z-index: 1;
+  padding-top: 6px;
   position: relative; }
 .main-masthead-wrapper nav .header-menu,
 .sub-masthead-wrapper nav .header-menu {
@@ -482,12 +487,13 @@ h2[id]:before {
   .main-masthead-wrapper nav .header-menu.visible,
   .sub-masthead-wrapper nav .header-menu.visible {
     display: block; }
+.main-masthead-wrapper nav .header-menu-item.expanded > .header-context-menu, .main-masthead-wrapper nav .header-context-menu-item.expanded > .header-context-menu,
+.sub-masthead-wrapper nav .header-menu-item.expanded > .header-context-menu,
+.sub-masthead-wrapper nav .header-context-menu-item.expanded > .header-context-menu {
+  display: block; }
 .main-masthead-wrapper nav .header-menu-item,
 .sub-masthead-wrapper nav .header-menu-item {
   border-top: 1px solid #2d2d2d; }
-  .main-masthead-wrapper nav .header-menu-item.expanded .header-context-menu,
-  .sub-masthead-wrapper nav .header-menu-item.expanded .header-context-menu {
-    display: block; }
   .main-masthead-wrapper nav .header-menu-item a,
   .sub-masthead-wrapper nav .header-menu-item a {
     padding: 10px 12px;
@@ -510,12 +516,21 @@ h2[id]:before {
 .main-masthead-wrapper nav .header-context-menu-item,
 .sub-masthead-wrapper nav .header-context-menu-item {
   display: block;
-  border-top: 1px solid #444;
-  padding-left: 12px; }
+  border-top: 1px solid #444; }
   .main-masthead-wrapper nav .header-context-menu-item a,
   .sub-masthead-wrapper nav .header-context-menu-item a {
     display: block;
-    width: 100%; }
+    width: 100%;
+    margin-left: 12px; }
+.main-masthead-wrapper nav .header-2nd-context-menu,
+.sub-masthead-wrapper nav .header-2nd-context-menu {
+  background: #6a6a6a; }
+  .main-masthead-wrapper nav .header-2nd-context-menu .header-context-menu-item,
+  .sub-masthead-wrapper nav .header-2nd-context-menu .header-context-menu-item {
+    border-color: #505050; }
+    .main-masthead-wrapper nav .header-2nd-context-menu .header-context-menu-item a,
+    .sub-masthead-wrapper nav .header-2nd-context-menu .header-context-menu-item a {
+      margin-left: 24px; }
 
 .header-search-area {
   display: none;
@@ -578,9 +593,6 @@ h2[id]:before {
     border-right: 5px solid transparent;
     border-bottom: 5px solid #fff;
     border-left: 5px solid transparent; }
-  .main-masthead-wrapper nav .header-current-menu-item.has-children:after,
-  .sub-masthead-wrapper nav .header-current-menu-item.has-children:after {
-    border-bottom-color: #4D744A; }
   .main-masthead-wrapper nav .header-context-menu,
   .sub-masthead-wrapper nav .header-context-menu {
     display: none;
@@ -593,8 +605,16 @@ h2[id]:before {
     .main-masthead-wrapper nav .header-context-menu.visible,
     .sub-masthead-wrapper nav .header-context-menu.visible {
       display: block; }
+  .main-masthead-wrapper nav .header-2nd-context-menu,
+  .sub-masthead-wrapper nav .header-2nd-context-menu {
+    z-index: -1; }
+    .main-masthead-wrapper nav .header-2nd-context-menu .header-context-menu-item,
+    .sub-masthead-wrapper nav .header-2nd-context-menu .header-context-menu-item {
+      padding-left: 3px;
+      margin-left: -1px; }
   .main-masthead-wrapper nav .header-context-menu-item,
   .sub-masthead-wrapper nav .header-context-menu-item {
+    position: relative;
     background: #fff;
     text-align: left;
     white-space: nowrap;
@@ -603,6 +623,30 @@ h2[id]:before {
     border-bottom: 1px solid #d9d9d9;
     border-right: 1px solid #d9d9d9;
     box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.35); }
+    .main-masthead-wrapper nav .header-context-menu-item.has-children:hover:after,
+    .sub-masthead-wrapper nav .header-context-menu-item.has-children:hover:after {
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      width: 0;
+      height: 0;
+      margin-top: -6px;
+      content: " ";
+      border-top: 6px solid transparent;
+      border-left: 6px solid #fff;
+      border-bottom: 6px solid transparent; }
+    .main-masthead-wrapper nav .header-context-menu-item.has-children:hover:before,
+    .sub-masthead-wrapper nav .header-context-menu-item.has-children:hover:before {
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      width: 0;
+      height: 0;
+      margin-top: -8px;
+      content: " ";
+      border-top: 8px solid transparent;
+      border-left: 8px solid #ccc;
+      border-bottom: 8px solid transparent; }
     .main-masthead-wrapper nav .header-context-menu-item a,
     .sub-masthead-wrapper nav .header-context-menu-item a {
       display: inline-block;
@@ -624,7 +668,13 @@ h2[id]:before {
     display: none; }
     .main-masthead-wrapper nav .nav-divider.no-sub-header,
     .sub-masthead-wrapper nav .nav-divider.no-sub-header {
-      display: block; } }
+      display: block; }
+
+  .main-masthead-wrapper .header-current-menu-item.has-children:after {
+    border-bottom-color: #466d43; }
+
+  .sub-masthead-wrapper .not-last .header-current-menu-item:after {
+    border-bottom-color: #588755; } }
 @media (min-width: 895px) {
   .main-masthead nav .header-menu-item a {
     padding-left: 7px;

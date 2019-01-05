@@ -52,7 +52,7 @@ function hamburgerMenu() {
    
    var hamburgerId = 'hamburger';
    var mainMenuId = 'main-menu';
-   var menuItemClassName = 'header-menu-item';
+   var menuItemClassName = 'has-children';
 
    var hamburger = document.getElementById(hamburgerId);
    var mainMenu = document.getElementById(mainMenuId);
@@ -117,9 +117,17 @@ function hamburgerMenu() {
 function contextMenu() {
    
    var menuItems = document.getElementsByClassName('header-menu-item has-children');
+   var subMenuItems = document.getElementsByClassName('header-context-menu-item has-children');
+   
    for (var i = 0; i < menuItems.length; i++) {
       registerEvents(menuItems[i], function() {
          closeAllContextMenus(menuItems);
+      });
+   }
+   
+   for (var i = 0; i < subMenuItems.length; i++) {
+      registerEvents(subMenuItems[i], function() {
+         closeAllContextMenus(subMenuItems);
       });
    }
 
@@ -136,10 +144,15 @@ function contextMenu() {
       var contextMenu = getContextMenu(menuItem);
       if (contextMenu) {
          var isClosing = false;
+         var hasPositionedSecondLevel = false;
          menuItem.addEventListener('mouseover', function() {
             closeAllContextMenusCallback();
             isClosing = false;
             contextMenu.classList.add('visible');
+            if (!hasPositionedSecondLevel) {
+               hasPositionedSecondLevel = true;
+               positionSecondLevelContextMenus(contextMenu);
+            }
          });
          menuItem.addEventListener('mouseleave', function() {
             isClosing = true;
@@ -150,14 +163,27 @@ function contextMenu() {
             }, 50);
          });
          menuItem.addEventListener('click', function() {
-            closeAllContextMenusCallback();
+            closeAllContextMenus(menuItems);
+            closeAllContextMenus(subMenuItems);
          });
+      }
+   }
+   
+   function positionSecondLevelContextMenus(contextMenu) {
+      var items = contextMenu.children;
+      for (var i = 0; i < items.length; i++) {
+         var item = items[i];
+         var secondContextMenu = getContextMenu(item);
+         if (secondContextMenu) {
+            var positionInfo = item.getBoundingClientRect();
+            secondContextMenu.style.left = positionInfo.width + 'px';
+            secondContextMenu.style.top = '-1px';
+         }
       }
    }
 
    function getContextMenu(menuItem) {
-      var contextMenus = menuItem.getElementsByClassName('header-context-menu');
-      return contextMenus.length ? contextMenus[0] : null;
+      return menuItem.children && menuItem.children.length > 1 ? menuItem.children[1] : null;
    }
 
 }
