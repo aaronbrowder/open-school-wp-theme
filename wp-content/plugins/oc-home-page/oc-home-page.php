@@ -110,6 +110,38 @@ function nonprofit_image_attachment_callback() {
    image_attachment_callback('nonprofit-image-attachment-id');
 }
 
+function event1_title_callback() { ?>
+  <input type="text" name="event1-title" size="20" value="<?php echo get_option('event1-title'); ?>" />
+<?php }
+
+function event1_url_callback() { ?>
+  <input type="text" name="event1-url" size="50" value="<?php echo get_option('event1-url'); ?>" />
+<?php }
+
+function event1_line1_callback() { ?>
+  <input type="text" name="event1-line1" size="25" value="<?php echo get_option('event1-line1'); ?>" />
+<?php }
+
+function event1_line2_callback() { ?>
+  <input type="text" name="event1-line2" size="25" value="<?php echo get_option('event1-line2'); ?>" />
+<?php }
+
+function event2_title_callback() { ?>
+  <input type="text" name="event2-title" size="20" value="<?php echo get_option('event2-title'); ?>" />
+<?php }
+
+function event2_url_callback() { ?>
+  <input type="text" name="event2-url" size="50" value="<?php echo get_option('event2-url'); ?>" />
+<?php }
+
+function event2_line1_callback() { ?>
+  <input type="text" name="event2-line1" size="25" value="<?php echo get_option('event2-line1'); ?>" />
+<?php }
+
+function event2_line2_callback() { ?>
+  <input type="text" name="event2-line2" size="25" value="<?php echo get_option('event2-line2'); ?>" />
+<?php }
+
 add_action('admin_init', 'edit_home_page_page_setup');
 function edit_home_page_page_setup() {
    wp_enqueue_media();
@@ -133,6 +165,14 @@ function edit_home_page_page_setup() {
    add_settings_field('new-banner-3-image-attachment-id', 'New Banner 3', 'new_banner_3_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-3-tiny-image-attachment-id', 'New Banner 3 Tiny', 'new_banner_3_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('nonprofit-image-attachment-id', 'Nonprofit Badge', 'nonprofit_image_attachment_callback', 'edit-home-page', 'content');
+   add_settings_field('event1-title', 'Event 1 Title', 'event1_title_callback', 'edit-home-page', 'content');
+   add_settings_field('event1-url', 'Event 1 URL', 'event1_url_callback', 'edit-home-page', 'content');
+   add_settings_field('event1-line1', 'Event 1 Line 1', 'event1_line1_callback', 'edit-home-page', 'content');
+   add_settings_field('event1-line2', 'Event 1 Line 2', 'event1_line2_callback', 'edit-home-page', 'content');
+   add_settings_field('event2-title', 'Event 2 Title', 'event2_title_callback', 'edit-home-page', 'content');
+   add_settings_field('event2-url', 'Event 2 URL', 'event2_url_callback', 'edit-home-page', 'content');
+   add_settings_field('event2-line1', 'Event 2 Line 1', 'event2_line1_callback', 'edit-home-page', 'content');
+   add_settings_field('event2-line2', 'Event 2 Line 2', 'event2_line2_callback', 'edit-home-page', 'content');
 
    register_setting('edit-home-page', 'logo-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-1-image-attachment-id');
@@ -152,4 +192,12 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'new-banner-3-image-attachment-id');
    register_setting('edit-home-page', 'new-banner-3-tiny-image-attachment-id');
    register_setting('edit-home-page', 'nonprofit-image-attachment-id');
+   register_setting('edit-home-page', 'event1-title');
+   register_setting('edit-home-page', 'event1-url');
+   register_setting('edit-home-page', 'event1-line1');
+   register_setting('edit-home-page', 'event1-line2');
+   register_setting('edit-home-page', 'event2-title');
+   register_setting('edit-home-page', 'event2-url');
+   register_setting('edit-home-page', 'event2-line1');
+   register_setting('edit-home-page', 'event2-line2');
 }

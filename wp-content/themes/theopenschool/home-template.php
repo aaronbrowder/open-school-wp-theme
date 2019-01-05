@@ -30,6 +30,26 @@ function get_image_src_data($id, $size = "full")
    return 'data: ' . finfo_buffer($finfo, $image) . ';base64,' . $data;
 }
 
+function event($number) {
+   $title = get_option('event' . $number . '-title');
+   if (!empty($title)) {
+      $url = get_option('event' . $number . '-url');
+      $line1 = get_option('event' . $number . '-line1');
+      $line2 = get_option('event' . $number . '-line2');
+      ?>
+      <div class="home-event">
+         <a href="<?php echo $url; ?>">
+            <?php echo $title; ?>
+            <span class="home-link-arrow">&raquo;</span>
+         </a>
+         <?php echo $line1; ?><br>
+         <?php if (!empty($line2)) {
+            echo $line2;
+         } ?>
+      </div>
+   <?php }
+}
+
 ?>
 
 <div class="home-container">
@@ -87,10 +107,7 @@ function get_image_src_data($id, $size = "full")
          </div>
          <div class="home-events-block">
             <h2>Upcoming Events</h2>
-            <div class="home-event">
-               <a href="/wp/under-5-friday">Under 5 Friday (OC Campus) <span class="home-link-arrow">&raquo;</span></a>
-               Let your little ones try out The<br>Open School for 2 hours a week.
-            </div>
+            <?php event(1); event(2); ?>
          </div>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">

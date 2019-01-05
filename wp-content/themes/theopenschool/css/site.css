@@ -1010,11 +1010,11 @@ h2[id]:before {
 
   .home-apply-and-subscribe {
     float: left;
-    margin-right: 30%;
+    margin-right: 20%;
     padding-bottom: 30px; } }
 @media (min-width: 650px) {
   .home-apply-and-subscribe {
-    margin-right: 50%; } }
+    margin-right: 40%; } }
 @media (min-width: 750px) {
   .home-greenscreen-3 .home-greenscreen-text {
     margin-left: 12%; } }
