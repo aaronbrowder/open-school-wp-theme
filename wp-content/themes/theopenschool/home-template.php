@@ -88,7 +88,7 @@ function get_image_src_data($id, $size = "full")
          <div class="home-events-block">
             <h2>Upcoming Events</h2>
             <div class="home-event">
-               <a href="/wp/under-5-friday">Under 5 Friday <span class="home-link-arrow">&raquo;</span></a>
+               <a href="/wp/under-5-friday">Under 5 Friday (OC Campus) <span class="home-link-arrow">&raquo;</span></a>
                Let your little ones try out The<br>Open School for 2 hours a week.
             </div>
          </div>
