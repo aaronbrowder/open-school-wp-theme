@@ -6,7 +6,8 @@ $error = null;
 $success_response = null;
 
 if ($_POST['contact-submitted']) {
-   $recipient_address = get_option('email');
+   $school_email = get_option('email');
+   $recip = $school_email;
    
    $missing_content = 'Recipient, name, and message are required. Please try again.';
    $email_invalid   = 'The email address you provided is invalid. Please try again.';

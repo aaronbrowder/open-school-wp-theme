@@ -63,7 +63,7 @@ function event($number) {
             The Open School
          </h1>
          <p class="home-title-caption">
-            is Orange County's first and only democratic free school. Instead of curriculum and classes, we learn through life and democracy. Instead of teachers, we learn from everyone.
+            is Southern California's first and only democratic free school. Instead of curriculum and classes, we learn through life and democracy. Instead of teachers, we learn from everyone.
          </p>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-left">

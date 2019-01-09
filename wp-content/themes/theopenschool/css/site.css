@@ -322,8 +322,7 @@ a {
 blockquote {
   background: #ebebeb;
   border-bottom: 1px solid #bbb;
-  margin: 3px 0;
-  margin-bottom: 6px;
+  margin: 6px 0;
   padding: 12px 16px; }
   blockquote p:first-child {
     margin-top: 0; }
@@ -934,7 +933,7 @@ h2[id]:before {
     font-size: 3em; }
 
   .home-title-caption {
-    width: 330px; }
+    width: 360px; }
 
   .home-greenscreen-1 .home-greenscreen-text,
   .home-greenscreen-3 .home-greenscreen-text {
