@@ -135,13 +135,42 @@ function map_callback() { ?>
   <input type="text" name="map" size="50" value="<?php echo htmlentities(get_option('map')); ?>" />
 <?php }
 
-function base_tuition_callback() { ?>
-  <input type="text" name="base-tuition" size="10" value="<?php echo get_option('base-tuition'); ?>" />
+function contact_recipient_callback($num, $type) {
+   $name = "contact-recipient-$num-$type"; ?>
+   <input type="text" name="<?php echo $name; ?>" size="50" value="<?php echo get_option($name); ?>" />
 <?php }
 
-function current_year_callback() { ?>
-  <input type="text" name="current-year" size="10" value="<?php echo get_option('current-year'); ?>" />
-<?php }
+function contact_recipient_1_name_callback() {
+  contact_recipient_callback(1, 'name');
+}
+
+function contact_recipient_1_address_callback() {
+  contact_recipient_callback(1, 'address');
+}
+
+function contact_recipient_2_name_callback() {
+  contact_recipient_callback(2, 'name');
+}
+
+function contact_recipient_2_address_callback() {
+  contact_recipient_callback(2, 'address');
+}
+
+function contact_recipient_3_name_callback() {
+  contact_recipient_callback(3, 'name');
+}
+
+function contact_recipient_3_address_callback() {
+  contact_recipient_callback(3, 'address');
+}
+
+function contact_recipient_4_name_callback() {
+  contact_recipient_callback(4, 'name');
+}
+
+function contact_recipient_4_address_callback() {
+  contact_recipient_callback(4, 'address');
+}
 
 add_action('admin_init', 'school_meta_page_setup');
 function school_meta_page_setup() {
@@ -158,8 +187,14 @@ function school_meta_page_setup() {
    add_settings_field('email', 'Email', 'email_callback', 'school-meta', 'content');
    add_settings_field('phone', 'Phone', 'phone_callback', 'school-meta', 'content');
    add_settings_field('map', 'Map Embed Code', 'map_callback', 'school-meta', 'content');
-   add_settings_field('base-tuition', 'Base Tuition', 'base_tuition_callback', 'school-meta', 'content');
-   add_settings_field('current-year', 'Current School Year Start Year', 'current_year_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-1-name', 'Contact Recipient 1 Name', 'contact_recipient_1_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-1-address', 'Contact Recipient 1 Address', 'contact_recipient_1_address_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-2-name', 'Contact Recipient 2 Name', 'contact_recipient_2_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-2-address', 'Contact Recipient 2 Address', 'contact_recipient_2_address_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-3-name', 'Contact Recipient 3 Name', 'contact_recipient_3_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-3-address', 'Contact Recipient 3 Address', 'contact_recipient_3_address_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-4-name', 'Contact Recipient 4 Name', 'contact_recipient_4_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-4-address', 'Contact Recipient 4 Address', 'contact_recipient_4_address_callback', 'school-meta', 'content');
 
    register_setting('school-meta', 'facebook');
    register_setting('school-meta', 'twitter');
@@ -172,8 +207,14 @@ function school_meta_page_setup() {
    register_setting('school-meta', 'email');
    register_setting('school-meta', 'phone');
    register_setting('school-meta', 'map');
-   register_setting('school-meta', 'base-tuition');
-   register_setting('school-meta', 'current-year');
+   register_setting('school-meta', 'contact-recipient-1-name');
+   register_setting('school-meta', 'contact-recipient-1-address');
+   register_setting('school-meta', 'contact-recipient-2-name');
+   register_setting('school-meta', 'contact-recipient-2-address');
+   register_setting('school-meta', 'contact-recipient-3-name');
+   register_setting('school-meta', 'contact-recipient-3-address');
+   register_setting('school-meta', 'contact-recipient-4-name');
+   register_setting('school-meta', 'contact-recipient-4-address');
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -189,7 +230,7 @@ function register_main_menu() {
 // [phone]
 add_shortcode('phone', 'phone_shortcode_callback');
 function phone_shortcode_callback() {
-	return get_option('phone');
+	return '<span style="display:inline-block;">' . get_option('phone') . '</span>';
 }
 
 // [email]
@@ -217,7 +258,9 @@ function contact_form_shortcode_callback($atts = [], $content = null) {
      'button-text' => 'Send', 
      'show-phone' => 'true',
      'show-address' => 'false',
-     'show-message' => 'true'
+     'show-message' => 'true',
+     'recipient-label' => 'Send to',
+     'recipients' => '1,2,3,4'
      ),
      $atts);
 	return render_php('contact-form.php', $atts, $content);

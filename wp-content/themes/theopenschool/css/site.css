@@ -177,10 +177,13 @@ blockquote.blog-sharable {
   .contact-us-table textarea {
     width: 100%; }
   .contact-us-table input,
-  .contact-us-table textarea {
+  .contact-us-table textarea,
+  .contact-us-table select {
     padding: 8px;
     font-size: inherit;
     font-family: inherit; }
+  .contact-us-table select {
+    background: #fff; }
 
 .contact-us-send {
   display: inline-block;
@@ -320,6 +323,7 @@ blockquote {
   background: #ebebeb;
   border-bottom: 1px solid #bbb;
   margin: 3px 0;
+  margin-bottom: 6px;
   padding: 12px 16px; }
   blockquote p:first-child {
     margin-top: 0; }
@@ -550,8 +554,8 @@ h2[id]:before {
     margin: 0 -8px; }
 
   .main-masthead nav .header-menu-item a {
-    padding-left: 3.8px;
-    padding-right: 3.8px; }
+    padding-left: 8px;
+    padding-right: 8px; }
 
   .main-masthead-wrapper nav .header-menu,
   .sub-masthead-wrapper nav .header-menu {
@@ -676,10 +680,6 @@ h2[id]:before {
 
   .sub-masthead-wrapper .not-last .header-current-menu-item:after {
     border-bottom-color: #588755; } }
-@media (min-width: 895px) {
-  .main-masthead nav .header-menu-item a {
-    padding-left: 7px;
-    padding-right: 7px; } }
 @media (min-width: 992px) {
   .main-masthead nav {
     margin: 0; }

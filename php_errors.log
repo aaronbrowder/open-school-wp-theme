@@ -637,3 +637,23 @@
 [18-Nov-2018 18:36:02 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
 [18-Nov-2018 18:36:02 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
 [18-Nov-2018 18:36:02 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:93
+[09-Jan-2019 04:21:25 UTC] PHP Fatal error:  Cannot redeclare recipient_option() (previously declared in /home/ubuntu/workspace/wp-content/themes/theopenschool/contact-form.php:14) in /home/ubuntu/workspace/wp-content/themes/theopenschool/contact-form.php on line 14
+[09-Jan-2019 04:21:25 UTC] PHP Stack trace:
+[09-Jan-2019 04:21:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[09-Jan-2019 04:21:25 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:166
+[09-Jan-2019 04:21:25 UTC] PHP   3. array_reduce() /home/ubuntu/workspace/wp-admin/edit-form-blocks.php:80
+[09-Jan-2019 04:21:25 UTC] PHP   4. rest_preload_api_request() /home/ubuntu/workspace/wp-admin/edit-form-blocks.php:80
+[09-Jan-2019 04:21:25 UTC] PHP   5. rest_do_request() /home/ubuntu/workspace/wp-includes/rest-api.php:1367
+[09-Jan-2019 04:21:25 UTC] PHP   6. WP_REST_Server->dispatch() /home/ubuntu/workspace/wp-includes/rest-api.php:419
+[09-Jan-2019 04:21:25 UTC] PHP   7. call_user_func:{/home/ubuntu/workspace/wp-includes/rest-api/class-wp-rest-server.php:936}() /home/ubuntu/workspace/wp-includes/rest-api/class-wp-rest-server.php:936
+[09-Jan-2019 04:21:25 UTC] PHP   8. WP_REST_Posts_Controller->get_item() /home/ubuntu/workspace/wp-includes/rest-api/class-wp-rest-server.php:936
+[09-Jan-2019 04:21:25 UTC] PHP   9. WP_REST_Posts_Controller->prepare_item_for_response() /home/ubuntu/workspace/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:465
+[09-Jan-2019 04:21:25 UTC] PHP  10. apply_filters() /home/ubuntu/workspace/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:1520
+[09-Jan-2019 04:21:25 UTC] PHP  11. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[09-Jan-2019 04:21:25 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[09-Jan-2019 04:21:25 UTC] PHP  13. do_shortcode() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[09-Jan-2019 04:21:25 UTC] PHP  14. preg_replace_callback() /home/ubuntu/workspace/wp-includes/shortcodes.php:197
+[09-Jan-2019 04:21:25 UTC] PHP  15. do_shortcode_tag() /home/ubuntu/workspace/wp-includes/shortcodes.php:197
+[09-Jan-2019 04:21:25 UTC] PHP  16. call_user_func:{/home/ubuntu/workspace/wp-includes/shortcodes.php:319}() /home/ubuntu/workspace/wp-includes/shortcodes.php:319
+[09-Jan-2019 04:21:25 UTC] PHP  17. contact_form_shortcode_callback() /home/ubuntu/workspace/wp-includes/shortcodes.php:319
+[09-Jan-2019 04:21:25 UTC] PHP  18. render_php() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:265

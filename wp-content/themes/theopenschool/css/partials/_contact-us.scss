@@ -25,10 +25,14 @@
       width: 100%;
    }
    input,
-   textarea {
+   textarea,
+   select {
       padding: 8px;
       font-size: inherit;
       font-family: inherit;
+   }
+   select {
+      background: #fff;
    }
 }
 

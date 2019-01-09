@@ -6,13 +6,14 @@ $error = null;
 $success_response = null;
 
 if ($_POST['contact-submitted']) {
-   $school_email = get_option('email');
+   $recipient_address = get_option('email');
    
-   $missing_content = 'Name and message are required. Please try again.';
+   $missing_content = 'Recipient, name, and message are required. Please try again.';
    $email_invalid   = 'The email address you provided is invalid. Please try again.';
    $message_unsent  = 'Your message was not sent. Please try again.';
    $message_sent    = "Thank you! Your message has been sent. We'll get in touch with you shortly.";
    
+   $recipient = $_POST['message_recipient'];
    $name = $_POST['message_name'];
    $email = $_POST['message_email'];
    $phone = $_POST['message_phone'];
@@ -21,6 +22,10 @@ if ($_POST['contact-submitted']) {
    $state = $_POST['message_state'];
    $zip = $_POST['message_zip'];
    $message = $_POST['message_text'];
+   
+   if (!empty($recipient)) {
+      $recipient_address = get_option("contact-recipient-$recipient-address");
+   }
    
    $subject = $name . ' sent a message from The Open School\'s website';
 
@@ -53,12 +58,12 @@ if ($_POST['contact-submitted']) {
    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $error = $email_invalid;
    }
-   else if (empty($name) || empty($message)) {
+   else if (empty($recipient) || empty($name) || empty($message)) {
       $error = $missing_content;
    }
    else {
       log_contact($name, $email, $message);
-      if (mail($school_email, $subject, $message, implode("\r\n", $headers))) {
+      if (mail($recipient_address, $subject, $message, implode("\r\n", $headers))) {
          $success_response = $message_sent;
       } else {
          $error = $message_unsent;
