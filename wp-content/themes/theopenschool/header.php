@@ -90,14 +90,20 @@
                $sub2_menu_items[] = $item;
             }
          }
-      } ?>
+      }
+      
+      $is_spanish = get_locale() == "es_MX";
+      
+      $home_url = $is_spanish ? "/es" : "/";
+      
+      ?>
 
       <div class="main-masthead-wrapper">
          <div class="main-masthead">
             <div class="container">
                <nav>
                   
-                  <a class="header-logo" href="/">
+                  <a class="header-logo" href="<?php echo $home_url; ?>">
                      <img height="30" src="<?php echo wp_get_attachment_url(get_option('header-logo-image-attachment-id')); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>
                   </a>
                   
@@ -114,7 +120,7 @@
                         
                         $id = get_page_id($item);
                         $page = get_page($id);
-                        $link = get_page_link($id);
+                        $url = $item->url;
                         $children = array_filter($sub1_menu_items, function($sub_item) use ($item) {
                            return $sub_item->menu_item_parent == $item->ID;
                         });
@@ -128,7 +134,6 @@
                         $is_current = ($id == $queried_object_id) 
                            || in_array($queried_object_id, $children_page_ids)
                            || in_array($queried_object_id, $all_level_2_children_page_ids);
-                           // || (endsWith($link, '/blog/') && is_single());
                         
                         if ($is_current) {
                            $current_sub1_menu_items = $children;
@@ -139,14 +144,14 @@
                                  echo ($is_current ? ' header-current-menu-item' : '');
                                  echo (!empty($children) ? ' has-children' : '');
                                  ?>">
-                           <a href="<?php echo $link; ?>">
+                           <a href="<?php echo $url; ?>">
                               <?php echo $item->title; ?>
                            </a>
                            <?php if (!empty($children)) { ?>
                               <ul class="header-context-menu">
                                  <?php foreach ($children as $child) {
                                     $child_id = get_page_id($child);
-                                    $child_link = get_page_link($child_id);
+                                    $child_url = $child->url;
                                     $level_2_children = array_filter($sub2_menu_items, function($sub_item) use ($child) { 
                                        return $sub_item->menu_item_parent == $child->ID;
                                     });
@@ -161,17 +166,17 @@
                                     <li class="header-context-menu-item<?php
                                        echo (!empty($level_2_children) ? ' has-children' : '');
                                     ?>">
-                                       <a href="<?php echo $child_link; ?>">
+                                       <a href="<?php echo $child_url; ?>">
                                           <?php echo $child->title; ?>
                                        </a>
                                        <?php if (!empty($level_2_children)) { ?>
                                           <ul class="header-context-menu header-2nd-context-menu">
                                              <?php foreach ($level_2_children as $level_2_child) {
                                                 $level_2_child_id = get_page_id($level_2_child);
-                                                $level_2_child_link = get_page_link($level_2_child_id);
+                                                $level_2_child_url = $level_2_child->url;
                                                 ?>
                                                 <li class="header-context-menu-item">
-                                                   <a href="<?php echo $level_2_child_link; ?>">
+                                                   <a href="<?php echo $level_2_child_url; ?>">
                                                       <?php echo $level_2_child->title; ?>
                                                    </a>
                                                 </li>
@@ -206,12 +211,12 @@
                      <ul class="header-menu">
                         <?php foreach ($items as $item):
                            $id = get_page_id($item);
-                           $link = get_page_link($id);
+                           $url = $item->url;
                            global $wp_query;
                            $is_current = $id == (int) $wp_query->queried_object_id || $id == $current_sub1_menu_item_id;
                            ?>
                            <li class="header-menu-item <?php echo ($is_current ? 'header-current-menu-item' : ''); ?>">
-                              <a href="<?php echo $link; ?>">
+                              <a href="<?php echo $url; ?>">
                                  <?php echo $item->title; ?>
                               </a>
                            </li>
