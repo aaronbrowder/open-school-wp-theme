@@ -93,7 +93,6 @@
       }
       
       $is_spanish = get_locale() == "es_MX";
-      
       $home_url = $is_spanish ? "/es" : "/";
       
       ?>

@@ -657,3 +657,42 @@
 [09-Jan-2019 04:21:25 UTC] PHP  16. call_user_func:{/home/ubuntu/workspace/wp-includes/shortcodes.php:319}() /home/ubuntu/workspace/wp-includes/shortcodes.php:319
 [09-Jan-2019 04:21:25 UTC] PHP  17. contact_form_shortcode_callback() /home/ubuntu/workspace/wp-includes/shortcodes.php:319
 [09-Jan-2019 04:21:25 UTC] PHP  18. render_php() /home/ubuntu/workspace/wp-content/themes/theopenschool/functions.php:265
+[05-Mar-2019 00:30:17 UTC] PHP Fatal error:  Cannot redeclare school_description_es_callback() (previously declared in /home/ubuntu/workspace/wp-content/plugins/oc-home-page/oc-home-page.php:121) in /home/ubuntu/workspace/wp-content/plugins/oc-home-page/oc-home-page.php on line 131
+[05-Mar-2019 00:30:17 UTC] PHP Stack trace:
+[05-Mar-2019 00:30:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[05-Mar-2019 00:30:17 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[05-Mar-2019 00:30:17 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[05-Mar-2019 00:30:17 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:93
+[05-Mar-2019 00:34:16 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'second_banner_text_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1653
+[05-Mar-2019 00:34:16 UTC] PHP Stack trace:
+[05-Mar-2019 00:34:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[05-Mar-2019 00:34:16 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:253
+[05-Mar-2019 00:34:16 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:465
+[05-Mar-2019 00:34:16 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[05-Mar-2019 00:34:16 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[05-Mar-2019 00:34:16 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[05-Mar-2019 00:34:16 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/plugins/oc-home-page/oc-home-page.php:23
+[05-Mar-2019 00:34:16 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1611
+[05-Mar-2019 00:34:16 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1653}() /home/ubuntu/workspace/wp-admin/includes/template.php:1653
+[05-Mar-2019 00:34:16 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'second_banner_text_es_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1653
+[05-Mar-2019 00:34:16 UTC] PHP Stack trace:
+[05-Mar-2019 00:34:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[05-Mar-2019 00:34:16 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:253
+[05-Mar-2019 00:34:16 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:465
+[05-Mar-2019 00:34:16 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[05-Mar-2019 00:34:16 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[05-Mar-2019 00:34:16 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[05-Mar-2019 00:34:16 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/plugins/oc-home-page/oc-home-page.php:23
+[05-Mar-2019 00:34:16 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1611
+[05-Mar-2019 00:34:16 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1653}() /home/ubuntu/workspace/wp-admin/includes/template.php:1653
+[05-Mar-2019 00:34:16 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'event1_title_callback' not found or invalid function name in /home/ubuntu/workspace/wp-admin/includes/template.php on line 1653
+[05-Mar-2019 00:34:16 UTC] PHP Stack trace:
+[05-Mar-2019 00:34:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin.php:0
+[05-Mar-2019 00:34:16 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin.php:253
+[05-Mar-2019 00:34:16 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:465
+[05-Mar-2019 00:34:16 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[05-Mar-2019 00:34:16 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[05-Mar-2019 00:34:16 UTC] PHP   6. edit_home_page_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[05-Mar-2019 00:34:16 UTC] PHP   7. do_settings_sections() /home/ubuntu/workspace/wp-content/plugins/oc-home-page/oc-home-page.php:23
+[05-Mar-2019 00:34:16 UTC] PHP   8. do_settings_fields() /home/ubuntu/workspace/wp-admin/includes/template.php:1611
+[05-Mar-2019 00:34:16 UTC] PHP   9. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1653}() /home/ubuntu/workspace/wp-admin/includes/template.php:1653
