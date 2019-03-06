@@ -29,11 +29,13 @@
                   <?php fb_like_box(); ?>
                   <div class="footer-donate">
                      <?php if (!empty(get_option('paypal-hosted-button-id'))) { ?>
-                        <h4>Support our school</h4>
+                        <h4><?php echo custom_text('support-our-school-string') ?></h4>
                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                               <input name="cmd" type="hidden" value="_s-xclick" />
                               <input name="hosted_button_id" type="hidden" value="<?php echo get_option('paypal-hosted-button-id'); ?>" />
-                              <button type="submit" name="submit" class="small-button donate-button">Donate</button>
+                              <button type="submit" name="submit" class="small-button donate-button">
+                                 <?php echo custom_text('donate-string') ?>
+                              </button>
                            </form>
                      <?php } ?>
                   </div>
@@ -49,7 +51,7 @@
                   <?php echo get_option('email') ?>
                   <br/><?php echo get_option('phone') ?>
                </p>
-               <p><a href="/wp/contact-us">Contact Us</a></p>
+               <p><a href="/wp/contact-us"><?php echo custom_text('contact-us-string') ?></a></p>
             </div>
          </div>
       </footer>

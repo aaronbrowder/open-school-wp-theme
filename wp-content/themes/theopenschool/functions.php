@@ -91,6 +91,30 @@ function school_meta_page() { ?>
    </div>
 <?php }
 
+function contact_us_string_callback() { ?>
+  <input type="text" name="contact-us-string" size="20" value="<?php echo get_option('contact-us-string'); ?>" />
+<?php }
+
+function contact_us_string_es_callback() { ?>
+  <input type="text" name="contact-us-string-es" size="20" value="<?php echo get_option('contact-us-string-es'); ?>" />
+<?php }
+
+function support_our_school_string_callback() { ?>
+  <input type="text" name="support-our-school-string" size="20" value="<?php echo get_option('support-our-school-string'); ?>" />
+<?php }
+
+function support_our_school_string_es_callback() { ?>
+  <input type="text" name="support-our-school-string-es" size="20" value="<?php echo get_option('support-our-school-string-es'); ?>" />
+<?php }
+
+function donate_string_callback() { ?>
+  <input type="text" name="donate-string" size="20" value="<?php echo get_option('donate-string'); ?>" />
+<?php }
+
+function donate_string_es_callback() { ?>
+  <input type="text" name="donate-string-es" size="20" value="<?php echo get_option('donate-string-es'); ?>" />
+<?php }
+
 function facebook_callback() { ?>
   <input type="text" name="facebook" size="70" value="<?php echo get_option('facebook'); ?>" />
 <?php }
@@ -144,12 +168,20 @@ function contact_recipient_1_name_callback() {
   contact_recipient_callback(1, 'name');
 }
 
+function contact_recipient_1_name_es_callback() {
+  contact_recipient_callback(1, 'name-es');
+}
+
 function contact_recipient_1_address_callback() {
   contact_recipient_callback(1, 'address');
 }
 
 function contact_recipient_2_name_callback() {
   contact_recipient_callback(2, 'name');
+}
+
+function contact_recipient_2_name_es_callback() {
+  contact_recipient_callback(2, 'name-es');
 }
 
 function contact_recipient_2_address_callback() {
@@ -160,12 +192,20 @@ function contact_recipient_3_name_callback() {
   contact_recipient_callback(3, 'name');
 }
 
+function contact_recipient_3_name_es_callback() {
+  contact_recipient_callback(3, 'name-es');
+}
+
 function contact_recipient_3_address_callback() {
   contact_recipient_callback(3, 'address');
 }
 
 function contact_recipient_4_name_callback() {
   contact_recipient_callback(4, 'name');
+}
+
+function contact_recipient_4_name_es_callback() {
+  contact_recipient_callback(4, 'name-es');
 }
 
 function contact_recipient_4_address_callback() {
@@ -176,6 +216,12 @@ add_action('admin_init', 'school_meta_page_setup');
 function school_meta_page_setup() {
    add_settings_section('content', 'Content', null, 'school-meta');
    
+   add_settings_field('contact-us-string', '"Contact Us" String', 'contact_us_string_callback', 'school-meta', 'content');
+   add_settings_field('contact-us-string-es', '"Contact Us" String (Spanish)', 'contact_us_string_es_callback', 'school-meta', 'content');
+   add_settings_field('support-our-school-string', '"Support Our School" String', 'support_our_school_string_callback', 'school-meta', 'content');
+   add_settings_field('support-our-school-string-es', '"Support Our School" String (Spanish)', 'support_our_school_string_es_callback', 'school-meta', 'content');
+   add_settings_field('donate-string', '"Donate" String', 'donate_string_callback', 'school-meta', 'content');
+   add_settings_field('donate-string-es', '"Donate" String (Spanish)', 'donate_string_es_callback', 'school-meta', 'content');
    add_settings_field('facebook', 'Facebook URL', 'facebook_callback', 'school-meta', 'content');
    add_settings_field('twitter', 'Twitter URL', 'twitter_callback', 'school-meta', 'content');
    add_settings_field('pinterest', 'Pinterest URL', 'pinterest_callback', 'school-meta', 'content');
@@ -188,14 +234,24 @@ function school_meta_page_setup() {
    add_settings_field('phone', 'Phone', 'phone_callback', 'school-meta', 'content');
    add_settings_field('map', 'Map Embed Code', 'map_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-1-name', 'Contact Recipient 1 Name', 'contact_recipient_1_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-1-name-es', 'Contact Recipient 1 Name (Spanish)', 'contact_recipient_1_name_es_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-1-address', 'Contact Recipient 1 Address', 'contact_recipient_1_address_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-2-name', 'Contact Recipient 2 Name', 'contact_recipient_2_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-2-name-es', 'Contact Recipient 2 Name (Spanish)', 'contact_recipient_2_name_es_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-2-address', 'Contact Recipient 2 Address', 'contact_recipient_2_address_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-3-name', 'Contact Recipient 3 Name', 'contact_recipient_3_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-3-name-es', 'Contact Recipient 3 Name (Spanish)', 'contact_recipient_3_name_es_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-3-address', 'Contact Recipient 3 Address', 'contact_recipient_3_address_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-4-name', 'Contact Recipient 4 Name', 'contact_recipient_4_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-4-name-es', 'Contact Recipient 4 Name (Spanish)', 'contact_recipient_4_name_es_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-4-address', 'Contact Recipient 4 Address', 'contact_recipient_4_address_callback', 'school-meta', 'content');
 
+   register_setting('school-meta', 'contact-us-string');
+   register_setting('school-meta', 'contact-us-string-es');
+   register_setting('school-meta', 'support-our-school-string');
+   register_setting('school-meta', 'support-our-school-string-es');
+   register_setting('school-meta', 'donate-string');
+   register_setting('school-meta', 'donate-string-es');
    register_setting('school-meta', 'facebook');
    register_setting('school-meta', 'twitter');
    register_setting('school-meta', 'pinterest');
@@ -208,12 +264,16 @@ function school_meta_page_setup() {
    register_setting('school-meta', 'phone');
    register_setting('school-meta', 'map');
    register_setting('school-meta', 'contact-recipient-1-name');
+   register_setting('school-meta', 'contact-recipient-1-name-es');
    register_setting('school-meta', 'contact-recipient-1-address');
    register_setting('school-meta', 'contact-recipient-2-name');
+   register_setting('school-meta', 'contact-recipient-2-name-es');
    register_setting('school-meta', 'contact-recipient-2-address');
    register_setting('school-meta', 'contact-recipient-3-name');
+   register_setting('school-meta', 'contact-recipient-3-name-es');
    register_setting('school-meta', 'contact-recipient-3-address');
    register_setting('school-meta', 'contact-recipient-4-name');
+   register_setting('school-meta', 'contact-recipient-4-name-es');
    register_setting('school-meta', 'contact-recipient-4-address');
 }
 
@@ -377,6 +437,13 @@ function get_page_title_prefix() {
 function contact_form_generate_response($type, $message){
    if ($type == 'success') return "<div class='contact-us-success'>{$message}</div>";
    else return "<div class='contact-us-error'>{$message}</div>";
+}
+
+function custom_text($id) {
+   if (get_locale() == 'es_MX') {
+      $id .= '-es';
+   }
+   return get_option($id);
 }
 
 function page_template($content_function) {

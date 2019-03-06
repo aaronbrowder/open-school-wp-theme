@@ -38,13 +38,6 @@ function get_image_src_data($id, $size = "full")
    return 'data: ' . finfo_buffer($finfo, $image) . ';base64,' . $data;
 }
 
-function custom_text($id) {
-   if (get_locale() == 'es_MX') {
-      $id .= '-es';
-   }
-   return get_option($id);
-}
-
 function event($number) {
    $suffix = get_locale() == 'es_MX' ? '-es' : '';
    $title = get_option('event' . $number . '-title' . $suffix);
