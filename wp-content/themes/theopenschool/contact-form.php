@@ -71,7 +71,9 @@ $message_label = $is_spanish ? 'Message Es' : 'Message';
             <th><?php echo $recipient_label; ?></th>
             <td>
                <select name="message_recipient" required>
-                  <option></option>
+                  <?php if (sizeof($recipients) > 1) { ?>
+                     <option></option>
+                  <?php } ?>
                   <?php foreach ($recipients as $recipient) {
                      $name_id = "contact-recipient-$recipient-name";
                      if (get_locale() == 'es_MX') {
