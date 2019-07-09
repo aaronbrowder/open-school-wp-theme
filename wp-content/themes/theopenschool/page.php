@@ -23,6 +23,7 @@ if ($_POST['contact-submitted']) {
    $state = $_POST['message_state'];
    $zip = $_POST['message_zip'];
    $message = $_POST['message_text'];
+   $preference = $_POST['message_preference'];
    
    if (!empty($recipient)) {
       $recipient_address = get_option("contact-recipient-$recipient-address");
@@ -39,6 +40,10 @@ if ($_POST['contact-submitted']) {
    
    if ($phone) {
       $message = $message . ' <p>Phone number: ' . $phone;
+   }
+
+   if ($preference) {
+      $message = $message . ' <p>Preferred method of contact: ' . $preference;
    }
    
    if ($address) {

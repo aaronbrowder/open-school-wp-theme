@@ -319,6 +319,7 @@ function contact_form_shortcode_callback($atts = [], $content = null) {
      'show-phone' => 'true',
      'show-address' => 'false',
      'show-message' => 'true',
+     'show-preference' => 'false',
      'recipient-label' => 'Send to',
      'recipients' => '1,2,3,4'
      ),

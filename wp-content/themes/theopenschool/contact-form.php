@@ -10,6 +10,7 @@ $button_text = $atts['button-text'];
 $show_phone = $atts['show-phone'] == 'true';
 $show_address = $atts['show-address'] == 'true';
 $show_message = $atts['show-message'] == 'true';
+$show_preference = $atts['show-preference'] == 'true';
 
 $recipient_label = $atts['recipient-label'];
 $recipients = explode(',', $atts['recipients']);  
@@ -18,11 +19,13 @@ $is_spanish = get_locale() == 'es_MX';
 $name_label = $is_spanish ? 'Name Es' : 'Name';
 $email_label = $is_spanish ? 'Email Es' : 'Email';
 $phone_label = $is_spanish ? 'Phone Es' : 'Phone';
+$text_label = $is_spanish ? 'Text Es' : 'Text';
 $address_label = $is_spanish ? 'Address Es' : 'Address';
 $city_label = $is_spanish ? 'City Es' : 'City';
 $state_label = $is_spanish ? 'State Es' : 'State';
 $zip_label = $is_spanish ? 'Zip Es' : 'Zip';
 $message_label = $is_spanish ? 'Message Es' : 'Message';
+$preference_label = $is_spanish ? 'Preference Es' : 'Preference';
 
 ?>
 
@@ -65,6 +68,18 @@ $message_label = $is_spanish ? 'Message Es' : 'Message';
             <tr>
                <th><?php echo $message_label; ?></th>
                <td><textarea name="message_text" rows="<?php echo $textarea_rows; ?>" required><?php echo $default_message; ?></textarea></td>
+            </tr>
+         <?php } ?>
+         <?php if ($show_preference) { ?>
+            <tr>
+               <th><?php echo $preference_label; ?></th>
+               <td>
+                  <select name="message_preference" required>
+                     <option value="Email"><?php echo $email_label; ?></option>
+                     <option value="Text"><?php echo $text_label; ?></option>
+                     <option value="Phone"><?php echo $phone_label; ?></option>
+                  </select>
+               </td>
             </tr>
          <?php } ?>
          <tr>
