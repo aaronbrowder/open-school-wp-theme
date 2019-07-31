@@ -49,11 +49,9 @@ blockquote.blog-sharable {
   clear: both;
   padding-top: 15px;
   font-size: 17px; }
-  .blog-subscribe label {
-    display: none; }
-  .blog-subscribe .es_form_container {
+  .blog-subscribe .emaillist {
     margin-top: -7px; }
-  .blog-subscribe .es_textbox {
+  .blog-subscribe .es-field-wrap {
     display: inline-block; }
   .blog-subscribe input[type=email] {
     margin: 6px 0;
