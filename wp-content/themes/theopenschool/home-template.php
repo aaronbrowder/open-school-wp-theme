@@ -94,7 +94,7 @@ function event($number) {
       </div>
    </div>
    
-   <div class="home-greenscreen home-greenscreen-3">
+   <div class="home-greenscreen home-greenscreen-3" id="apply-subscribe">
       <div class="home-greenscreen-text home-greenscreen-text-left">
          <div class="home-apply-and-subscribe">
             <div class="home-apply-block">
