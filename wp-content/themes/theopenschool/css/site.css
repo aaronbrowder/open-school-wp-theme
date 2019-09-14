@@ -1,3 +1,9 @@
+/*
+How to compile this into css:
+1. Open a command prompt
+2. Navigate to the folder where this file is located
+3. Run "sass site.scss site.css"
+*/
 .blog-excerpt-container {
   margin-top: 35px; }
   .blog-excerpt-container .entry-subtitle {
@@ -359,7 +365,6 @@ iframe {
   border-radius: 8px;
   font-size: 18px;
   padding: 7px;
-  text-align: center;
   margin-top: 3px;
   border-radius: 5px;
   font-size: 17px;
@@ -368,10 +373,34 @@ iframe {
     background: #007A02;
     color: #fff; }
 
-.donate-button {
-  width: 135px;
-  background: #0072d6; }
-  .donate-button:hover, .donate-button:focus {
+.footer-donate-button {
+  background: #0072d6;
+  width: 135px; }
+  .footer-donate-button:hover, .footer-donate-button:focus {
+    background: #0065bd; }
+
+.page-donate-button {
+  display: inline-block;
+  background: #009102;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  padding: 12px 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  background: #0072d6;
+  width: 190px;
+  padding: 12px 0;
+  margin-top: 12px; }
+  .page-donate-button:hover, .page-donate-button:focus {
+    background: #007A02;
+    color: #fff; }
+  .page-donate-button:hover, .page-donate-button:focus {
     background: #0065bd; }
 
 .fb-like {
@@ -983,6 +1012,9 @@ h2[id]:before {
     vertical-align: middle;
     cursor: pointer; }
 
+.spanish .home-subscribe-header {
+  font-size: 17px; }
+
 .home-events-block h2 {
   font-weight: normal;
   font-size: 2.3em; }
@@ -991,6 +1023,8 @@ h2[id]:before {
   color: #fff;
   margin-bottom: 15px;
   font-family: "Delius"; }
+  .spanish .home-event {
+    font-size: 0.85em; }
   .home-event a {
     color: #fff;
     display: block;
@@ -1054,12 +1088,17 @@ h2[id]:before {
   .home-subscribe input {
     width: 226px; }
 
+  .spanish .home-subscribe-header {
+    font-size: 20px; }
+
   .home-events-block h2 {
     margin-top: 20px; }
 
   .home-event {
     margin-bottom: 15px;
     font-size: 1em; }
+    .spanish .home-event {
+      font-size: 0.95em; }
     .home-event a {
       margin-top: -0.5em;
       margin-bottom: -0.2em; } }
@@ -1070,10 +1109,7 @@ h2[id]:before {
     font-size: 22px; }
 
   .home-events-block h2 {
-    font-size: 2.3em; }
-
-  .home-event {
-    font-size: 1em; } }
+    font-size: 2.3em; } }
 @media (min-width: 1200px) {
   .home-greenscreen-3 {
     padding-top: 40px; }

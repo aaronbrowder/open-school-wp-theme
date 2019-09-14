@@ -3,7 +3,10 @@
 Template Name: Home
 */
 
-get_header(); 
+get_header();
+
+$container_class = get_locale() == 'es_MX' ? 'spanish' : '';
+$learn_more_about_text = get_locale() == 'es_MX' ? 'Aprenda más sobre' : 'Learn more about';
 
 function banner_loader($alt, $image_id, $placeholder_image_id = null) {
    if (get_locale() == 'es_MX') {
@@ -59,7 +62,7 @@ function event($number) {
    <?php }
 } ?>
 
-<div class="home-container">
+<div class="home-container <?php echo $container_class; ?>">
    
    <div class="home-greenscreen home-greenscreen-1">
       <div class="home-greenscreen-text home-greenscreen-text-right">
@@ -103,7 +106,7 @@ function event($number) {
             </div>
             <div class="home-subscribe" id="mc_embed_signup">
                <form id="mc-embedded-subscribe-form" class="validate" action="http://openschooloc.us5.list-manage2.com/subscribe/post?u=a49271ebde5f88b50cced6c93&amp;id=4b41a39b87" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-                  <label for="mce-EMAIL"><?php echo custom_text('subscribe-message'); ?></label>
+                  <label for="mce-EMAIL" class="home-subscribe-header"><?php echo custom_text('subscribe-message'); ?></label>
                   <div style="position: absolute; left: -5000px;">
                      <input name="b_a49271ebde5f88b50cced6c93_4b41a39b87" type="text" value="" />
                   </div>
@@ -155,7 +158,9 @@ function event($number) {
    </div>
    
    <div class="home-learn-more">
-      <a href="/wp/introduction">Learn more about<br>The Open School <span class="home-link-arrow">&raquo;</span></a>
+      <a href="<?php echo custom_text('introduction-url') ?>">
+         <?php echo $learn_more_about_text; ?><br>The Open School <span class="home-link-arrow">&raquo;</span>
+      </a>
    </div>
    
    <div class="home-nonprofit-badge">

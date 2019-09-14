@@ -79,20 +79,31 @@ iframe {
 .small-button {
    @include button-primary;
    padding: 7px;
-   text-align: center;
    margin-top: 3px;
    border-radius: 5px;
    font-size: 17px;
    width: 96px;
 }
 
-.donate-button {
-   width: 135px;
+@mixin donate-button {
    background: #0072d6;
    &:hover,
    &:focus {
       background: #0065bd;
    }
+}
+
+.footer-donate-button {
+   @include donate-button;
+   width: 135px;
+}
+
+.page-donate-button {
+   @include button-primary;
+   @include donate-button;
+   width: 190px;
+   padding: 12px 0;
+   margin-top: 12px;
 }
 
 .fb-like {

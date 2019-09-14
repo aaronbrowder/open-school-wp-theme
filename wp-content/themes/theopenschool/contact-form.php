@@ -17,7 +17,7 @@ $recipients = explode(',', $atts['recipients']);
 
 $is_spanish = get_locale() == 'es_MX';
 $name_label = $is_spanish ? 'Nombre' : 'Name';
-$email_label = $is_spanish ? 'Correo electrónico' : 'Email';
+$email_label = $is_spanish ? 'Email' : 'Email';
 $phone_label = $is_spanish ? 'Celular' : 'Phone';
 $text_label = $is_spanish ? 'Texto' : 'Text';
 $address_label = $is_spanish ? 'Dirección' : 'Address';

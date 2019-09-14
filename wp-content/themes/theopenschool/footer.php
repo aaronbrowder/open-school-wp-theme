@@ -30,13 +30,9 @@
                   <div class="footer-donate">
                      <?php if (!empty(get_option('paypal-hosted-button-id'))) { ?>
                         <h4><?php echo custom_text('support-our-school-string') ?></h4>
-                           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                              <input name="cmd" type="hidden" value="_s-xclick" />
-                              <input name="hosted_button_id" type="hidden" value="<?php echo get_option('paypal-hosted-button-id'); ?>" />
-                              <button type="submit" name="submit" class="small-button donate-button">
-                                 <?php echo custom_text('donate-string') ?>
-                              </button>
-                           </form>
+                        <a class="small-button footer-donate-button" href="<?php echo custom_text('donate-url') ?>">
+                           <?php echo custom_text('donate-string') ?>
+                        </a>
                      <?php } ?>
                   </div>
                </div>
