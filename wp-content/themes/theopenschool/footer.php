@@ -51,7 +51,7 @@
                   <?php echo get_option('email') ?>
                   <br/><?php echo get_option('phone') ?>
                </p>
-               <p><a href="/wp/contact-us"><?php echo custom_text('contact-us-string') ?></a></p>
+               <p><a href="<?php echo custom_text('contact-us-url') ?>"><?php echo custom_text('contact-us-string') ?></a></p>
             </div>
          </div>
       </footer>

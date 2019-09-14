@@ -16,16 +16,16 @@ $recipient_label = $atts['recipient-label'];
 $recipients = explode(',', $atts['recipients']);  
 
 $is_spanish = get_locale() == 'es_MX';
-$name_label = $is_spanish ? 'Name Es' : 'Name';
-$email_label = $is_spanish ? 'Email Es' : 'Email';
-$phone_label = $is_spanish ? 'Phone Es' : 'Phone';
-$text_label = $is_spanish ? 'Text Es' : 'Text';
-$address_label = $is_spanish ? 'Address Es' : 'Address';
-$city_label = $is_spanish ? 'City Es' : 'City';
-$state_label = $is_spanish ? 'State Es' : 'State';
-$zip_label = $is_spanish ? 'Zip Es' : 'Zip';
-$message_label = $is_spanish ? 'Message Es' : 'Message';
-$preference_label = $is_spanish ? 'Preference Es' : 'Preference';
+$name_label = $is_spanish ? 'Nombre' : 'Name';
+$email_label = $is_spanish ? 'Correo electrónico' : 'Email';
+$phone_label = $is_spanish ? 'Celular' : 'Phone';
+$text_label = $is_spanish ? 'Texto' : 'Text';
+$address_label = $is_spanish ? 'Dirección' : 'Address';
+$city_label = $is_spanish ? 'Cuidad' : 'City';
+$state_label = $is_spanish ? 'Estado' : 'State';
+$zip_label = $is_spanish ? 'Codigo postal' : 'Zip';
+$message_label = $is_spanish ? 'Mensaje' : 'Message';
+$preference_label = $is_spanish ? 'Preferencia' : 'Preference';
 
 ?>
 

@@ -99,6 +99,14 @@ function contact_us_string_es_callback() { ?>
   <input type="text" name="contact-us-string-es" size="20" value="<?php echo get_option('contact-us-string-es'); ?>" />
 <?php }
 
+function contact_us_url_callback() { ?>
+  <input type="text" name="contact-us-url" size="20" value="<?php echo get_option('contact-us-url'); ?>" />
+<?php }
+
+function contact_us_url_es_callback() { ?>
+  <input type="text" name="contact-us-url-es" size="20" value="<?php echo get_option('contact-us-url-es'); ?>" />
+<?php }
+
 function support_our_school_string_callback() { ?>
   <input type="text" name="support-our-school-string" size="20" value="<?php echo get_option('support-our-school-string'); ?>" />
 <?php }
@@ -218,6 +226,8 @@ function school_meta_page_setup() {
    
    add_settings_field('contact-us-string', '"Contact Us" String', 'contact_us_string_callback', 'school-meta', 'content');
    add_settings_field('contact-us-string-es', '"Contact Us" String (Spanish)', 'contact_us_string_es_callback', 'school-meta', 'content');
+   add_settings_field('contact-us-url', '"Contact Us" URL', 'contact_us_url_callback', 'school-meta', 'content');
+   add_settings_field('contact-us-url-es', '"Contact Us" URL (Spanish)', 'contact_us_url_es_callback', 'school-meta', 'content');
    add_settings_field('support-our-school-string', '"Support Our School" String', 'support_our_school_string_callback', 'school-meta', 'content');
    add_settings_field('support-our-school-string-es', '"Support Our School" String (Spanish)', 'support_our_school_string_es_callback', 'school-meta', 'content');
    add_settings_field('donate-string', '"Donate" String', 'donate_string_callback', 'school-meta', 'content');
@@ -248,6 +258,8 @@ function school_meta_page_setup() {
 
    register_setting('school-meta', 'contact-us-string');
    register_setting('school-meta', 'contact-us-string-es');
+   register_setting('school-meta', 'contact-us-url');
+   register_setting('school-meta', 'contact-us-url-es');
    register_setting('school-meta', 'support-our-school-string');
    register_setting('school-meta', 'support-our-school-string-es');
    register_setting('school-meta', 'donate-string');
