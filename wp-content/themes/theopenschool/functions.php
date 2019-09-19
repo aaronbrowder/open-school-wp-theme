@@ -115,6 +115,14 @@ function introduction_url_es_callback() { ?>
   <input type="text" name="introduction-url-es" size="20" value="<?php echo get_option('introduction-url-es'); ?>" />
 <?php }
 
+function admissions_url_callback() { ?>
+  <input type="text" name="admissions-url" size="20" value="<?php echo get_option('admissions-url'); ?>" />
+<?php }
+
+function admissions_url_es_callback() { ?>
+  <input type="text" name="admissions-url-es" size="20" value="<?php echo get_option('admissions-url-es'); ?>" />
+<?php }
+
 function donate_url_callback() { ?>
   <input type="text" name="donate-url" size="20" value="<?php echo get_option('donate-url'); ?>" />
 <?php }
@@ -246,6 +254,8 @@ function school_meta_page_setup() {
    add_settings_field('contact-us-url-es', '"Contact Us" URL (Spanish)', 'contact_us_url_es_callback', 'school-meta', 'content');
    add_settings_field('introduction-url', '"Introduction" URL', 'introduction_url_callback', 'school-meta', 'content');
    add_settings_field('introduction-url-es', '"Introduction" URL (Spanish)', 'introduction_url_es_callback', 'school-meta', 'content');
+   add_settings_field('admissions-url', '"Admissions" URL', 'admissions_url_callback', 'school-meta', 'content');
+   add_settings_field('admissions-url-es', '"Admissions" URL (Spanish)', 'admissions_url_es_callback', 'school-meta', 'content');
    add_settings_field('donate-url', '"Donate" URL', 'donate_url_callback', 'school-meta', 'content');
    add_settings_field('donate-url-es', '"Donate" URL (Spanish)', 'donate_url_es_callback', 'school-meta', 'content');
    add_settings_field('support-our-school-string', '"Support Our School" String', 'support_our_school_string_callback', 'school-meta', 'content');
@@ -282,6 +292,8 @@ function school_meta_page_setup() {
    register_setting('school-meta', 'contact-us-url-es');
    register_setting('school-meta', 'introduction-url');
    register_setting('school-meta', 'introduction-url-es');
+   register_setting('school-meta', 'admissions-url');
+   register_setting('school-meta', 'admissions-url-es');
    register_setting('school-meta', 'donate-url');
    register_setting('school-meta', 'donate-url-es');
    register_setting('school-meta', 'support-our-school-string');
