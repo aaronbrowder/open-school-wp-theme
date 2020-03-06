@@ -254,9 +254,17 @@ blockquote.blog-sharable {
       color: #8FEA8A;
       text-decoration: none; }
 
-.footer-other-promotions {
+.footer-links {
   text-align: left;
   margin-top: 30px; }
+  .footer-links a {
+    color: #ccc; }
+    .footer-links a:hover {
+      color: #8FEA8A; }
+
+.footer-other-promotions {
+  text-align: left;
+  margin-top: 10px; }
 
 .footer-donate {
   display: inline-block; }
@@ -266,6 +274,9 @@ blockquote.blog-sharable {
 @media (min-width: 550px) {
   .footer-social {
     float: right; }
+
+  .footer-links {
+    text-align: right; }
 
   .footer-other-promotions {
     text-align: right; }
@@ -1272,16 +1283,16 @@ h2[id]:before {
   .page-table-of-contents li {
     margin: 8px 0; }
 
-.page-staff-bio p {
+.page-staff-bio p, .page-profile-bio p {
   margin-top: 4px; }
 
 @media (min-width: 800px) {
   .page {
     margin-bottom: 40px; }
 
-  .page-staff {
+  .page-staff, .page-profile {
     margin-bottom: 24px; }
-    .page-staff:after {
+    .page-staff:after, .page-profile:after {
       clear: both;
       display: table;
       content: ' '; }
@@ -1293,7 +1304,15 @@ h2[id]:before {
     overflow: hidden;
     padding-left: 18px; }
     .page-staff-bio p {
-      margin: 0; } }
+      margin: 0; }
+
+  .page-profile-bio {
+    float: right;
+    width: 500px;
+    padding-left: 18px; }
+
+  .page-profile-pic {
+    overflow: hidden; } }
 @media (min-width: 992px) {
   .page .image-block.left {
     width: 50%;

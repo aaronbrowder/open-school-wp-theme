@@ -6,7 +6,7 @@ add_action('wp_enqueue_scripts', 'theopenschool_scripts');
 function theopenschool_scripts() {
    wp_enqueue_style('site', get_template_directory_uri() . '/css/site.css');
 	wp_enqueue_script('front-end', get_template_directory_uri() . '/js/front-end.js');
-	wp_enqueue_script('font_awesome', 'https://use.fontawesome.com/6e05896b8d.js');
+	wp_enqueue_script('font_awesome', 'https://kit.fontawesome.com/93e7c8feba.js');
 }
 
 add_action('admin_enqueue_scripts', 'admin_scripts');
@@ -105,6 +105,10 @@ function contact_us_url_callback() { ?>
 
 function contact_us_url_es_callback() { ?>
   <input type="text" name="contact-us-url-es" size="20" value="<?php echo get_option('contact-us-url-es'); ?>" />
+<?php }
+
+function speaker_url_callback() { ?>
+  <input type="text" name="speaker-url" size="20" value="<?php echo get_option('speaker-url'); ?>" />
 <?php }
 
 function introduction_url_callback() { ?>
@@ -252,6 +256,7 @@ function school_meta_page_setup() {
    add_settings_field('contact-us-string-es', '"Contact Us" String (Spanish)', 'contact_us_string_es_callback', 'school-meta', 'content');
    add_settings_field('contact-us-url', '"Contact Us" URL', 'contact_us_url_callback', 'school-meta', 'content');
    add_settings_field('contact-us-url-es', '"Contact Us" URL (Spanish)', 'contact_us_url_es_callback', 'school-meta', 'content');
+   add_settings_field('speaker-url', '"Request a Speaker" URL', 'speaker_url_callback', 'school-meta', 'content');
    add_settings_field('introduction-url', '"Introduction" URL', 'introduction_url_callback', 'school-meta', 'content');
    add_settings_field('introduction-url-es', '"Introduction" URL (Spanish)', 'introduction_url_es_callback', 'school-meta', 'content');
    add_settings_field('admissions-url', '"Admissions" URL', 'admissions_url_callback', 'school-meta', 'content');
@@ -290,6 +295,7 @@ function school_meta_page_setup() {
    register_setting('school-meta', 'contact-us-string-es');
    register_setting('school-meta', 'contact-us-url');
    register_setting('school-meta', 'contact-us-url-es');
+   register_setting('school-meta', 'speaker-url');
    register_setting('school-meta', 'introduction-url');
    register_setting('school-meta', 'introduction-url-es');
    register_setting('school-meta', 'admissions-url');

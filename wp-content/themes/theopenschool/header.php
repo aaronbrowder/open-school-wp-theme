@@ -107,11 +107,11 @@
                   </a>
                   
                   <div id="hamburger" class="header-hamburger">
-                     <i class="fa fa-bars"></i>
+                     <i class="fas fa-bars"></i>
                   </div>
                   
                   <div id="search-activator" class="header-search-activator">
-                     <i class="fa fa-search"></i>
+                     <i class="fas fa-search"></i>
                   </div>
                   
                   <ul id="main-menu" class="header-menu">

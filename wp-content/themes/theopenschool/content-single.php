@@ -39,17 +39,17 @@ if (sizeof($pieces) > 0 && $pieces[0] == 'product') {
          <a class="blog-share-facebook" 
             href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>"
             target="_blank">
-           <i class="fa fa-facebook-square"></i>
+           <i class="fab fa-facebook-square"></i>
          </a>
          <a class="blog-share-twitter" 
             href="https://twitter.com/share"
             target="_blank">
-           <i class="fa fa-twitter"></i>
+           <i class="fab fa-twitter"></i>
          </a>
          <a class="blog-share-email"
             href="mailto:?subject=<?php echo $title; ?>&body=<?php echo $email_body; ?>"
             target="_blank">
-            <i class="fa fa-envelope"></i>
+            <i class="fas fa-envelope"></i>
          </a>
       </div>
       

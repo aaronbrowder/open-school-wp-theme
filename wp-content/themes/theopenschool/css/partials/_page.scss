@@ -39,7 +39,7 @@
    }
 }
 
-.page-staff-bio p {
+.page-staff-bio p, .page-profile-bio p {
    margin-top: 4px;
 }
 
@@ -47,7 +47,7 @@
    .page {
       margin-bottom: 40px;
    }
-   .page-staff {
+   .page-staff, .page-profile {
       @include clear-after;
       margin-bottom: 24px;
    }
@@ -60,6 +60,14 @@
       p {
          margin: 0;
       }
+   }
+   .page-profile-bio {
+      float: right;
+      width: 500px;
+      padding-left: 18px;
+   }
+   .page-profile-pic {
+      overflow: hidden;
    }
 }
 
