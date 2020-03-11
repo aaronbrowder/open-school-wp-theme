@@ -130,9 +130,10 @@
                         });
                         $all_level_2_children_page_ids = array_map('get_page_id', $all_level_2_children);
                         
-                        $is_current = ($id == $queried_object_id) 
+                        $is_current = $queried_object_id != 0 &&
+                           ($id == $queried_object_id
                            || in_array($queried_object_id, $children_page_ids)
-                           || in_array($queried_object_id, $all_level_2_children_page_ids);
+                           || in_array($queried_object_id, $all_level_2_children_page_ids));
                         
                         if ($is_current) {
                            $current_sub1_menu_items = $children;

@@ -4,7 +4,7 @@
 	   <div class="page">
 	      
 	      <h1>
-	         <?php printf( esc_html__( 'Search Results for "%s"', stackstar ), '<span>' . get_search_query() . '</span>' ); ?>
+	      	Search Results for "<?php echo get_search_query(); ?>"
          </h1>
 	      
          <div class="search-form">
