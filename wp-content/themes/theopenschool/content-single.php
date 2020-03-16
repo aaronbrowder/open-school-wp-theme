@@ -1,6 +1,6 @@
-<h2 class="page-title">
+<h1 class="post-title">
    <?php the_title(); ?>
-</h2>
+</h1>
 
 <?php
 $is_product_page = false;
@@ -13,7 +13,7 @@ if (sizeof($pieces) > 0 && $pieces[0] == 'product') {
 ?>
 
 <?php if (!$is_product_page) { ?>
-   <blockquote>
+   <blockquote class="post-meta">
       <?php
       the_custom_author();
       the_date();
