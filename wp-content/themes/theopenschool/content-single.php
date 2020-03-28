@@ -66,17 +66,8 @@ if (sizeof($pieces) > 0 && $pieces[0] == 'product') {
             <h4>Join our school</h4>
             <a href="/wp/admissions" class="small-button">Apply Now</a>
          </div>
-         <?php fb_like_box(); ?>
-<!--          <div class="blog-subscribe">
-            <h4>Get notified about new posts by email</h4>
-            <?php es_subbox($namefield = "NO", $desc = "", $group = "Blog"); ?>
-         </div> -->
       </div>
       
-      <div class="blog-fb-like-full">
-         <?php fb_page_plugin_large(); ?>
-      </div>
-         
    </div>
 
    <nav class="blog-paginator">
