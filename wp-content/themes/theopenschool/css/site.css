@@ -739,7 +739,9 @@ h2[id]:before {
   width: 150px;
   margin: auto; }
   .home-logo img {
-    width: 100%; }
+    width: 100%;
+    height: auto;
+    display: block; }
 
 .home-title {
   font-family: "Pompiere";
@@ -761,7 +763,9 @@ h2[id]:before {
   margin: auto;
   margin-top: 45px; }
   .home-greenscreen-image img {
-    width: 100%; }
+    width: 100%;
+    height: auto;
+    display: block; }
   .home-greenscreen-2 .home-greenscreen-image {
     width: 60%; }
   .home-greenscreen-3 .home-greenscreen-image {
@@ -1172,7 +1176,9 @@ h2[id]:before {
   max-width: 1000px;
   margin: auto; }
   .home-new-banner img {
-    width: 100%; }
+    width: 100%;
+    height: auto;
+    display: block; }
 
 .home-new-banner-1 {
   width: 160%;

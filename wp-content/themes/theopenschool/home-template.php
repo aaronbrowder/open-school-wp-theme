@@ -8,30 +8,6 @@ get_header();
 $container_class = get_locale() == 'es_MX' ? 'spanish' : '';
 $learn_more_about_text = get_locale() == 'es_MX' ? 'Aprenda más sobre' : 'Learn more about';
 
-function banner_loader($alt, $image_id, $placeholder_image_id = null) {
-   if (get_locale() == 'es_MX') {
-      $image_id .= '-es';
-      $placeholder_image_id .= '-es'; 
-   }
-   image_loader($alt, $image_id, $placeholder_image_id);
-}
-
-function image_loader($alt, $image_id, $placeholder_image_id = null) { 
-   if (empty($placeholder_image_id)) { ?>
-      <img class="home-banner-preloaded" alt="<?php echo $alt; ?>" src="<?php echo get_image_src_data($image_id); ?>">
-   <?php }
-   else { ?>
-      <img class="home-banner-placeholder" alt="<?php echo $alt; ?>" src="<?php echo get_image_src_data($placeholder_image_id); ?>">
-      <img class="home-banner-loader" alt="<?php echo $alt; ?>"
-         data-src-large="<?php echo get_image_src($image_id, "large"); ?>"
-         data-src-full="<?php echo get_image_src($image_id, "full"); ?>">
-   <?php }
-}
-
-function get_image_src($id, $size = "full") {
-   return wp_get_attachment_image_src(get_option($id), $size)[0];
-}
-
 function get_image_src_data($id, $size = "full")
 {
    $src = wp_get_attachment_image_src(get_option($id), $size)[0];
@@ -39,6 +15,25 @@ function get_image_src_data($id, $size = "full")
    $finfo = finfo_open(FILEINFO_MIME_TYPE);
    $data = base64_encode($image);
    return 'data: ' . finfo_buffer($finfo, $image) . ';base64,' . $data;
+}
+
+function render_logo($image_id) { ?>
+   <img class="home-banner-preloaded" alt="Open School leaf logo" src="<?php echo get_image_src_data($image_id); ?>">
+<?php }
+
+function get_banner($image_id) {
+   return wp_get_attachment_image(get_option($image_id), 'full');
+}
+
+function get_banner_with_locale($image_id) {
+   return wp_get_attachment_image(get_option(get_image_id_with_locale($image_id)), 'full');
+}
+
+function get_image_id_with_locale($image_id) {
+   if (get_locale() == 'es_MX') {
+      return $image_id . '-es';
+   }
+   return $image_id;
 }
 
 function event($number) {
@@ -67,7 +62,7 @@ function event($number) {
    <div class="home-greenscreen home-greenscreen-1">
       <div class="home-greenscreen-text home-greenscreen-text-right">
          <div class="home-logo">
-            <?php image_loader("Open School leaf logo", "logo-image-attachment-id"); ?>
+            <?php render_logo("logo-image-attachment-id"); ?>
          </div>
          <h1 class="home-title">
             The Open School
@@ -77,7 +72,7 @@ function event($number) {
          </p>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-left">
-         <?php image_loader("Two girls laughing", "greenscreen-1-image-attachment-id"); ?>
+         <?php echo get_banner("greenscreen-1-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -87,13 +82,13 @@ function event($number) {
          <?php echo custom_text('second-banner-text'); ?>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">
-         <?php image_loader("A girl holding a stuffed elephant", "greenscreen-2-image-attachment-id", "greenscreen-2-tiny-image-attachment-id"); ?>
+         <?php echo get_banner("greenscreen-2-image-attachment-id"); ?>
       </div>
    </div>
    
    <div class="home-new-banner-container">
       <div class="home-new-banner home-new-banner-1">
-         <?php banner_loader("Follow your passions", "new-banner-1-image-attachment-id", "new-banner-1-tiny-image-attachment-id"); ?>
+         <?php echo get_banner_with_locale("new-banner-1-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -123,13 +118,13 @@ function event($number) {
          </div>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">
-         <?php image_loader("Two boys laughing while playing a Nintendo Switch video game", "greenscreen-3-image-attachment-id", "greenscreen-3-tiny-image-attachment-id"); ?>
+         <?php echo get_banner("greenscreen-3-image-attachment-id"); ?>
       </div>
    </div>
    
    <div class="home-new-banner-container">
       <div class="home-new-banner home-new-banner-2">
-         <?php banner_loader("Go outside", "new-banner-2-image-attachment-id", "new-banner-2-tiny-image-attachment-id"); ?>
+         <?php echo get_banner_with_locale("new-banner-2-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -139,13 +134,13 @@ function event($number) {
          <br><br><br>&nbsp; &nbsp; ~ <?php echo custom_text('testimonial1-attribution'); ?>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-left">
-         <?php image_loader("A little girl showing off her drawing", "greenscreen-4-image-attachment-id", "greenscreen-4-tiny-image-attachment-id"); ?>
+         <?php echo get_banner("greenscreen-4-image-attachment-id"); ?>
       </div>
    </div>
    
    <div class="home-new-banner-container">
       <div class="home-new-banner home-new-banner-3">
-         <?php banner_loader("Age mixing", "new-banner-3-image-attachment-id", "new-banner-3-tiny-image-attachment-id"); ?>
+         <?php echo get_banner_with_locale("new-banner-3-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -155,7 +150,7 @@ function event($number) {
          <br><br><br>&nbsp; &nbsp; ~ <?php echo custom_text('testimonial2-attribution'); ?>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">
-         <?php image_loader("A boy doing a skateboard trick", "greenscreen-5-image-attachment-id", "greenscreen-5-tiny-image-attachment-id"); ?>
+         <?php echo get_banner("greenscreen-5-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -167,7 +162,7 @@ function event($number) {
    
    <div class="home-nonprofit-badge">
       <a href="https://www.ocnonprofitcentral.org/organizations/the-open-school">
-         <?php image_loader("OC Nonprofit Central Badge", "nonprofit-image-attachment-id"); ?>
+         <?php echo get_banner("nonprofit-image-attachment-id"); ?>
       </a>
    </div>
    
