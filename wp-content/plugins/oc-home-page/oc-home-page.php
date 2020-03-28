@@ -2,7 +2,7 @@
 /*
 Plugin Name: OC Home Page
 Description: 
-Version: 1.0
+Version: 1.1
 Author: Aaron Browder
 */
 
@@ -50,88 +50,45 @@ function greenscreen_1_image_attachment_callback() {
    image_attachment_callback('greenscreen-1-image-attachment-id');
 }
 
-function greenscreen_1_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-1-tiny-image-attachment-id');
-}
-
 function greenscreen_2_image_attachment_callback() { 
    image_attachment_callback('greenscreen-2-image-attachment-id');
 }
 
-function greenscreen_2_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-2-tiny-image-attachment-id');
-}
 
 function greenscreen_3_image_attachment_callback() { 
    image_attachment_callback('greenscreen-3-image-attachment-id');
-}
-
-function greenscreen_3_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-3-tiny-image-attachment-id');
 }
 
 function greenscreen_4_image_attachment_callback() { 
    image_attachment_callback('greenscreen-4-image-attachment-id');
 }
 
-function greenscreen_4_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-4-tiny-image-attachment-id');
-}
-
 function greenscreen_5_image_attachment_callback() { 
    image_attachment_callback('greenscreen-5-image-attachment-id');
-}
-
-function greenscreen_5_tiny_image_attachment_callback() { 
-   image_attachment_callback('greenscreen-5-tiny-image-attachment-id');
 }
 
 function new_banner_1_image_attachment_callback() { 
    image_attachment_callback('new-banner-1-image-attachment-id');
 }
 
-function new_banner_1_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-1-tiny-image-attachment-id');
-}
-
 function new_banner_1_es_image_attachment_callback() { 
    image_attachment_callback('new-banner-1-image-attachment-id-es');
-}
-
-function new_banner_1_es_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-1-tiny-image-attachment-id-es');
 }
 
 function new_banner_2_image_attachment_callback() { 
    image_attachment_callback('new-banner-2-image-attachment-id');
 }
 
-function new_banner_2_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-2-tiny-image-attachment-id');
-}
-
 function new_banner_2_es_image_attachment_callback() { 
    image_attachment_callback('new-banner-2-image-attachment-id-es');
-}
-
-function new_banner_2_es_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-2-tiny-image-attachment-id-es');
 }
 
 function new_banner_3_image_attachment_callback() { 
    image_attachment_callback('new-banner-3-image-attachment-id');
 }
 
-function new_banner_3_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-3-tiny-image-attachment-id');
-}
-
 function new_banner_3_es_image_attachment_callback() { 
    image_attachment_callback('new-banner-3-image-attachment-id-es');
-}
-
-function new_banner_3_es_tiny_image_attachment_callback() { 
-   image_attachment_callback('new-banner-3-tiny-image-attachment-id-es');
 }
 
 function nonprofit_image_attachment_callback() { 
@@ -305,27 +262,16 @@ function edit_home_page_page_setup() {
    
    add_settings_field('logo-image-attachment-id', 'Logo', 'logo_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('greenscreen-1-image-attachment-id', 'Greenscreen 1', 'greenscreen_1_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-1-tiny-image-attachment-id', 'Greenscreen 1 Tiny', 'greenscreen_1_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('greenscreen-2-image-attachment-id', 'Greenscreen 2', 'greenscreen_2_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-2-tiny-image-attachment-id', 'Greenscreen 2 Tiny', 'greenscreen_2_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('greenscreen-3-image-attachment-id', 'Greenscreen 3', 'greenscreen_3_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-3-tiny-image-attachment-id', 'Greenscreen 3 Tiny', 'greenscreen_3_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('greenscreen-4-image-attachment-id', 'Greenscreen 4', 'greenscreen_4_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-4-tiny-image-attachment-id', 'Greenscreen 4 Tiny', 'greenscreen_4_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('greenscreen-5-image-attachment-id', 'Greenscreen 5', 'greenscreen_5_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('greenscreen-5-tiny-image-attachment-id', 'Greenscreen 5 Tiny', 'greenscreen_5_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-1-image-attachment-id', 'New Banner 1', 'new_banner_1_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-1-tiny-image-attachment-id', 'New Banner 1 Tiny', 'new_banner_1_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-1-image-attachment-id-es', 'New Banner 1 (Spanish)', 'new_banner_1_es_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-1-tiny-image-attachment-id-es', 'New Banner 1 Tiny (Spanish)', 'new_banner_1_es_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-2-image-attachment-id', 'New Banner 2', 'new_banner_2_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-2-tiny-image-attachment-id', 'New Banner 2 Tiny', 'new_banner_2_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-2-image-attachment-id-es', 'New Banner 2 (Spanish)', 'new_banner_2_es_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-2-tiny-image-attachment-id-es', 'New Banner 2 Tiny (Spanish)', 'new_banner_2_es_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-3-image-attachment-id', 'New Banner 3', 'new_banner_3_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-3-tiny-image-attachment-id', 'New Banner 3 Tiny', 'new_banner_3_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('new-banner-3-image-attachment-id-es', 'New Banner 3 (Spanish)', 'new_banner_3_es_image_attachment_callback', 'edit-home-page', 'content');
-   add_settings_field('new-banner-3-tiny-image-attachment-id-es', 'New Banner 3 Tiny (Spanish)', 'new_banner_3_es_tiny_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('nonprofit-image-attachment-id', 'Nonprofit Badge', 'nonprofit_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('school-description', 'School Description', 'school_description_callback', 'edit-home-page', 'content');
    add_settings_field('school-description-es', 'School Description (Spanish)', 'school_description_es_callback', 'edit-home-page', 'content');
@@ -370,27 +316,16 @@ function edit_home_page_page_setup() {
 
    register_setting('edit-home-page', 'logo-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-1-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-1-tiny-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-2-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-2-tiny-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-3-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-3-tiny-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-4-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-4-tiny-image-attachment-id');
    register_setting('edit-home-page', 'greenscreen-5-image-attachment-id');
-   register_setting('edit-home-page', 'greenscreen-5-tiny-image-attachment-id');
    register_setting('edit-home-page', 'new-banner-1-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-1-tiny-image-attachment-id');
    register_setting('edit-home-page', 'new-banner-1-image-attachment-id-es');
-   register_setting('edit-home-page', 'new-banner-1-tiny-image-attachment-id-es');
    register_setting('edit-home-page', 'new-banner-2-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-2-tiny-image-attachment-id');
    register_setting('edit-home-page', 'new-banner-2-image-attachment-id-es');
-   register_setting('edit-home-page', 'new-banner-2-tiny-image-attachment-id-es');
    register_setting('edit-home-page', 'new-banner-3-image-attachment-id');
-   register_setting('edit-home-page', 'new-banner-3-tiny-image-attachment-id');
    register_setting('edit-home-page', 'new-banner-3-image-attachment-id-es');
-   register_setting('edit-home-page', 'new-banner-3-tiny-image-attachment-id-es');
    register_setting('edit-home-page', 'nonprofit-image-attachment-id');
    register_setting('edit-home-page', 'school-description');
    register_setting('edit-home-page', 'school-description-es');
