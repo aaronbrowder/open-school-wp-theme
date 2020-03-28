@@ -27,9 +27,6 @@ blockquote.blog-sharable {
 .blog-share {
   float: left; }
 
-.blog-fb-like-full {
-  padding-top: 110px; }
-
 .blog-share-facebook {
   font-size: 32px;
   color: #3b5996; }
@@ -45,8 +42,6 @@ blockquote.blog-sharable {
 
 .blog-buttons {
   padding-bottom: 12px; }
-  .blog-buttons .fb-like {
-    display: none; }
 
 .blog-apply {
   float: right; }
@@ -83,7 +78,7 @@ blockquote.blog-sharable {
     .blog-subscribe .es_button:after {
       content: "\00bb";
       color: #fff;
-      font-family: "Open Sans Condensed";
+      font-family: Open Sans Condensed, Candara, sans-serif;
       font-weight: bold;
       font-size: 36px;
       pointer-events: none;
@@ -151,14 +146,6 @@ blockquote.blog-sharable {
   font-weight: normal;
   margin-top: 6px; }
 
-@media (min-width: 475px) {
-  .blog-buttons .fb-like {
-    float: right;
-    display: block;
-    margin-top: 32px; }
-
-  .blog-fb-like-full {
-    display: none; } }
 .contact-us-table {
   border-spacing: 10px;
   margin-left: -10px;
@@ -401,13 +388,6 @@ iframe {
     color: #fff; }
   .page-donate-button:hover, .page-donate-button:focus {
     background: #0065bd; }
-
-.fb-like {
-  vertical-align: bottom;
-  margin-right: 30px; }
-
-.fb-page, .fb-page iframe[style], .fb-page span {
-  width: 100% !important; }
 
 .image-block {
   background: #ebebeb;
@@ -744,7 +724,7 @@ h2[id]:before {
     display: block; }
 
 .home-title {
-  font-family: "Pompiere";
+  font-family: Pompiere, Candara, sans-serif;
   text-transform: uppercase;
   font-weight: normal;
   color: #fff;
@@ -752,7 +732,7 @@ h2[id]:before {
   margin-bottom: 5px; }
 
 .home-title-caption {
-  font-family: "Delius";
+  font-family: Delius, Verdana, sans-serif;
   color: #fff;
   margin: auto;
   width: 250px;
@@ -781,7 +761,7 @@ h2[id]:before {
 
 .home-greenscreen-testimonial {
   max-width: 300px;
-  font-family: "Delius";
+  font-family: Delius, Candara, Verdana, sans-serif;
   margin: 0 40px; }
 
 @media (min-width: 380px) {
@@ -992,13 +972,13 @@ h2[id]:before {
 
 .home-link-arrow {
   font-size: 1.7em;
-  font-family: "Pompiere"; }
+  font-family: Pompiere, Candara, sans-serif; }
 
 .home-apply-block,
 .home-subscribe label,
 .home-events-block h2 {
   color: #fff;
-  font-family: "Pompiere";
+  font-family: Pompiere, Candara, sans-serif;
   text-transform: uppercase;
   font-size: 22px; }
 
@@ -1007,7 +987,7 @@ h2[id]:before {
   display: block;
   font-size: 1.31em;
   margin-top: -0.8em;
-  font-family: "Open Sans Condensed"; }
+  font-family: Open Sans Condensed, Candara, sans-serif; }
 
 .home-subscribe {
   margin-top: 20px; }
@@ -1023,7 +1003,7 @@ h2[id]:before {
     padding-bottom: 16px;
     padding-left: 6px;
     font-size: 4em;
-    font-family: "Pompiere";
+    font-family: Pompiere, Candara, sans-serif;
     font-weight: bold;
     border: none;
     line-height: 0.78;
@@ -1040,7 +1020,7 @@ h2[id]:before {
 .home-event {
   color: #fff;
   margin-bottom: 15px;
-  font-family: "Delius"; }
+  font-family: Delius, Candara, Verdana, sans-serif; }
   .spanish .home-event {
     font-size: 0.85em; }
   .home-event a {
@@ -1048,7 +1028,7 @@ h2[id]:before {
     display: block;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: "Open Sans Condensed";
+    font-family: Open Sans Condensed, Candara, sans-serif;
     font-size: 1.3em;
     margin-top: -0.5em;
     margin-bottom: -0.2em; }
@@ -1151,7 +1131,7 @@ h2[id]:before {
     padding-top: 10px; }
   .home-greenscreen-2 h2 {
     color: #fff;
-    font-family: "Pompiere";
+    font-family: Pompiere, Candara, sans-serif;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 3.2em;
@@ -1249,7 +1229,7 @@ h2[id]:before {
   line-height: 0.87; }
   .home-learn-more a {
     color: #fff;
-    font-family: "Delius";
+    font-family: Delius, Candara, Verdana, sans-serif;
     font-size: 1.18em;
     font-weight: normal; }
 

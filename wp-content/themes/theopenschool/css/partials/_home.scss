@@ -25,7 +25,7 @@
 }
 
 .home-title {
-   font-family: "Pompiere";
+   font-family: Pompiere, Candara, sans-serif;
    text-transform: uppercase;
    font-weight: normal;
    color: #fff;
@@ -34,7 +34,7 @@
 }
 
 .home-title-caption {
-   font-family: "Delius";
+   font-family: Delius, Verdana, sans-serif;
    color: #fff;
    margin: auto;
    width: 250px;
@@ -71,7 +71,7 @@
 
 .home-greenscreen-testimonial {
    max-width: 300px;
-   font-family: "Delius";
+   font-family: Delius, Candara, Verdana, sans-serif;
    margin: 0 40px;
 }
 
@@ -376,14 +376,14 @@
 
 .home-link-arrow {
    font-size: 1.7em;
-   font-family: "Pompiere";
+   font-family: Pompiere, Candara, sans-serif;
 }
 
 .home-apply-block,
 .home-subscribe label,
 .home-events-block h2 {
    color: #fff;
-   font-family: "Pompiere";
+   font-family: Pompiere, Candara, sans-serif;
    text-transform: uppercase;
    font-size: 22px;
 }
@@ -394,7 +394,7 @@
       display: block;
       font-size: 1.31em;
       margin-top: -0.8em;
-      font-family: "Open Sans Condensed";
+      font-family: Open Sans Condensed, Candara, sans-serif;
    }
 }
 
@@ -414,7 +414,7 @@
       padding-bottom: 16px;
       padding-left: 6px;
       font-size: 4em;
-      font-family: "Pompiere";
+      font-family: Pompiere, Candara, sans-serif;
       font-weight: bold;
       border: none;
       line-height: 0.78;
@@ -437,7 +437,7 @@
 .home-event {
    color: #fff;
    margin-bottom: 15px;
-   font-family: "Delius";
+   font-family: Delius, Candara, Verdana, sans-serif;
    .spanish & {
       font-size: 0.85em;
    }
@@ -446,7 +446,7 @@
       display: block;
       font-weight: bold;
       text-transform: uppercase;
-      font-family: "Open Sans Condensed";
+      font-family: Open Sans Condensed, Candara, sans-serif;
       font-size: 1.3em;
       margin-top: -0.5em;
       margin-bottom: -0.2em;
@@ -584,7 +584,7 @@
    }
    h2 {
       color: #fff;
-      font-family: "Pompiere";
+      font-family: Pompiere, Candara, sans-serif;
       text-transform: uppercase;
       font-weight: normal;
       font-size: 3.2em;
@@ -716,7 +716,7 @@
    line-height: 0.87;
    a {
       color: #fff;
-      font-family: "Delius";
+      font-family: Delius, Candara, Verdana, sans-serif;
       font-size: 1.18em;
       font-weight: normal;
    }
