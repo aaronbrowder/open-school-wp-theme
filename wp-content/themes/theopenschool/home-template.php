@@ -166,7 +166,7 @@ function event($number) {
    </div>
    
    <div class="home-nonprofit-badge">
-      <a href="https://www.ocnonprofitcentral.org/profile/1162992/the-open-school/">
+      <a href="https://www.ocnonprofitcentral.org/organizations/the-open-school">
          <?php image_loader("OC Nonprofit Central Badge", "nonprofit-image-attachment-id"); ?>
       </a>
    </div>

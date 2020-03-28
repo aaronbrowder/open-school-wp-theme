@@ -216,6 +216,17 @@
       .header-current-menu-item {
          @include menu-item-with-arrow;
       }
+      .header-donate {
+         background: #007ac1;
+         border-radius: 4px;
+         a {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            &:hover, &:focus {
+               color: #aee1ff;
+            }
+         }
+      }
       .header-context-menu {
          display: none;
          position: absolute;

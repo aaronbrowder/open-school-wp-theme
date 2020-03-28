@@ -93,7 +93,7 @@
       }
       
       $is_spanish = get_locale() == "es_MX";
-      $home_url = $is_spanish ? "/wp/es" : "/wp";
+      $home_url = $is_spanish ? "/es" : "/";
       
       ?>
 
@@ -138,13 +138,17 @@
                         if ($is_current) {
                            $current_sub1_menu_items = $children;
                         }
+
+                        $is_donate = strtolower($item->title) == 'donate';
+
                         ?>
                         
                         <li class="header-menu-item<?php
                                  echo ($is_current ? ' header-current-menu-item' : '');
                                  echo (!empty($children) ? ' has-children' : '');
+                                 echo ($is_donate ? ' header-donate' : '');
                                  ?>">
-                           <a href="<?php echo $url; ?>">
+                           <a href="<?php echo $url; ?>" <?php echo $is_donate ? 'target="_blank"' : '' ?>>
                               <?php echo $item->title; ?>
                            </a>
                            <?php if (!empty($children)) { ?>

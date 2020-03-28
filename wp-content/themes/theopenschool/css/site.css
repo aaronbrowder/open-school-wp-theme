@@ -242,7 +242,6 @@ blockquote.blog-sharable {
     color: #8FEA8A; }
 
 .footer-social {
-  text-align: right;
   margin-right: 10px;
   margin-bottom: 40px; }
   .footer-social .social-link {
@@ -262,23 +261,12 @@ blockquote.blog-sharable {
     .footer-links a:hover {
       color: #8FEA8A; }
 
-.footer-other-promotions {
-  text-align: left;
-  margin-top: 10px; }
-
-.footer-donate {
-  display: inline-block; }
-  .footer-donate h4 {
-    color: #ccc; }
-
 @media (min-width: 550px) {
   .footer-social {
-    float: right; }
-
-  .footer-links {
+    float: right;
     text-align: right; }
 
-  .footer-other-promotions {
+  .footer-links {
     text-align: right; }
 
   .footer-contact {
@@ -634,6 +622,18 @@ h2[id]:before {
     border-right: 5px solid transparent;
     border-bottom: 5px solid #fff;
     border-left: 5px solid transparent; }
+  .main-masthead-wrapper nav .header-donate,
+  .sub-masthead-wrapper nav .header-donate {
+    background: #007ac1;
+    border-radius: 4px; }
+    .main-masthead-wrapper nav .header-donate a,
+    .sub-masthead-wrapper nav .header-donate a {
+      padding-top: 5px;
+      padding-bottom: 5px; }
+      .main-masthead-wrapper nav .header-donate a:hover, .main-masthead-wrapper nav .header-donate a:focus,
+      .sub-masthead-wrapper nav .header-donate a:hover,
+      .sub-masthead-wrapper nav .header-donate a:focus {
+        color: #aee1ff; }
   .main-masthead-wrapper nav .header-context-menu,
   .sub-masthead-wrapper nav .header-context-menu {
     display: none;

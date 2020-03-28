@@ -30,17 +30,6 @@
                      <a href="<?php echo custom_text('speaker-url') ?>"><i class="fas fa-comment"></i>&nbsp; Request a Speaker</a>
                   </div>
                <?php } ?>
-               <div class="footer-other-promotions">
-                  <?php fb_like_box(); ?>
-                  <div class="footer-donate">
-                     <?php if (!empty(get_option('paypal-hosted-button-id'))) { ?>
-                        <h4><?php echo custom_text('support-our-school-string') ?></h4>
-                        <a class="small-button footer-donate-button" href="<?php echo custom_text('donate-url') ?>">
-                           <?php echo custom_text('donate-string') ?>
-                        </a>
-                     <?php } ?>
-                  </div>
-               </div>
             </div>
             <div class="footer-contact">
                <h4><?php echo get_bloginfo('name'); ?></h4>

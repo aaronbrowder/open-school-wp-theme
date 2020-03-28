@@ -33,7 +33,15 @@ if (sizeof($pieces) > 0 && $pieces[0] == 'product') {
          <h4>Share this</h4>
          <?php
          $url = urlencode(get_permalink());
-         $title = urlencode(get_the_title() . ' – ' . get_bloginfo('name'));
+         $title = get_the_title();
+         $span_str = '<span class="entry-title-primary">';
+         if (startsWith($title, $span_str)) {
+            $span_length = strlen($span_str);
+            $title = substr($title, $span_length);
+            $end_span_pos = strpos($title, '</span>');
+            $title = substr($title, 0, $end_span_pos);
+         }
+         $subject = urlencode($title . ' – ' . get_bloginfo('name'));
          $email_body = urlencode("Hi,\n\nI thought you'd like this:\n" . get_permalink());
          ?>
          <a class="blog-share-facebook" 
@@ -47,7 +55,7 @@ if (sizeof($pieces) > 0 && $pieces[0] == 'product') {
            <i class="fab fa-twitter"></i>
          </a>
          <a class="blog-share-email"
-            href="mailto:?subject=<?php echo $title; ?>&body=<?php echo $email_body; ?>"
+            href="mailto:?subject=<?php echo $subject; ?>&body=<?php echo $email_body; ?>"
             target="_blank">
             <i class="fas fa-envelope"></i>
          </a>

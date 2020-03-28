@@ -24,7 +24,6 @@
 }
 
 .footer-social {
-   text-align: right;
    margin-right: 10px;
    margin-bottom: 40px;
    .social-link {
@@ -53,26 +52,12 @@
    }
 }
 
-.footer-other-promotions {
-   text-align: left;
-   margin-top: 10px;
-}
-
-.footer-donate {
-   display: inline-block;
-   h4 {
-      color: #ccc;
-   }
-}
-
 @media (min-width: 550px) {
    .footer-social {
       float: right;
-   }
-   .footer-links {
       text-align: right;
    }
-   .footer-other-promotions {
+   .footer-links {
       text-align: right;
    }
    .footer-contact {
