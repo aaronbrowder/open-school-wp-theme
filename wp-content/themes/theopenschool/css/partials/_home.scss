@@ -377,10 +377,10 @@
 .home-link-arrow {
    font-size: 1.7em;
    font-family: Pompiere, Candara, sans-serif;
+   font-weight: bold;
 }
 
 .home-apply-block,
-.home-subscribe label,
 .home-events-block h2 {
    color: #fff;
    font-family: Pompiere, Candara, sans-serif;
@@ -388,43 +388,37 @@
    font-size: 22px;
 }
 
-.home-apply-block {
-   a {
+.home-apply-block,
+.home-subscribe {
+   display: block;
+   font-weight: normal;
+   &:hover {
       color: #fff;
-      display: block;
-      font-size: 1.31em;
-      margin-top: -0.8em;
-      font-family: Open Sans Condensed, Candara, sans-serif;
    }
+}
+
+.home-apply-button {
+   font-size: 1.31em;
+   margin-top: -0.8em;
+   font-family: Open Sans Condensed, Candara, sans-serif;
 }
 
 .home-subscribe {
    margin-top: 20px;
-   label {
-      margin-bottom: -11px;
-   }
-   input {
-      border: 3px solid #fff;
-      width: 192px;
-   }
-   button {
-      background: none;
-      color: #fff;
-      padding: 0;
-      padding-bottom: 16px;
-      padding-left: 6px;
-      font-size: 4em;
-      font-family: Pompiere, Candara, sans-serif;
-      font-weight: bold;
-      border: none;
-      line-height: 0.78;
-      vertical-align: middle;
-      cursor: pointer;
+   margin-bottom: 36px;
+   color: #fff;
+   font-family: Pompiere, Candara, sans-serif;
+   text-transform: uppercase;
+   font-size: 2.3em;
+   .spanish & {
+      font-size: 1.7em;
    }
 }
 
-.spanish .home-subscribe-header {
-   font-size: 17px;
+.home-subscribe-button {
+   font-size: 16px;
+   font-family: Open Sans Condensed, Candara, sans-serif;
+   line-height: 0.4;
 }
 
 .home-events-block {
@@ -489,12 +483,18 @@
       padding: 0;
    }
    .home-apply-block,
-   .home-subscribe label,
    .home-events-block h2 {
       font-size: 18px;
    }
    .home-subscribe {
       margin-top: 10px;
+      font-size: 1.9em;
+      .spanish & {
+         font-size: 1.5em;
+      }
+   }
+   .home-subscribe-button {
+      font-size: 15px;
    }
    .home-events-block h2 {
       margin-top: 10px;
@@ -517,12 +517,6 @@
    .home-subscribe {
       margin-top: 20px;
    }
-   .home-subscribe input {
-      width: 226px;
-   }
-   .spanish .home-subscribe-header {
-      font-size: 20px;
-   }
    .home-events-block h2 {
       margin-top: 20px;
    }
@@ -540,11 +534,10 @@
 }
 
 @media (min-width: 1100px) {
-   .home-apply-block,
-   .home-subscribe label,
-   .home-events-block h2 {
+   .home-apply-block {
       font-size: 22px;
    }
+   .home-subscribe,
    .home-events-block h2 {
       font-size: 2.3em;
    }
@@ -559,18 +552,14 @@
    }
    .home-subscribe {
       margin-top: 28px;
-   }
-   .home-events-block {
-      margin-top: 36px;
+      margin-bottom: 48px;
    }
 }
 
 @media (min-width: 1260px) {
    .home-subscribe {
       margin-top: 40px;
-   }
-   .home-events-block {
-      margin-top: 45px;
+      margin-bottom: 60px;
    }
 }
 
@@ -697,17 +686,6 @@
       display: block;
       animation-name: blur_up;
       animation-duration: 0.4s;
-   }
-}
-
-.home-subscribe {
-   label {
-      display: block;
-   }
-   input.email {
-      margin: 6px 0;
-      padding: 6px;
-      font-size: 0.9em;
    }
 }
 

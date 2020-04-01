@@ -95,22 +95,18 @@ function event($number) {
    <div class="home-greenscreen home-greenscreen-3" id="apply-subscribe">
       <div class="home-greenscreen-text home-greenscreen-text-left">
          <div class="home-apply-and-subscribe">
-            <div class="home-apply-block">
+            <a class="home-apply-block" href="<?php echo custom_text('admissions-url') ?>">
                <?php echo custom_text('enrollment-message'); ?>
-               <a href="<?php echo custom_text('admissions-url') ?>">
+               <div class="home-apply-button">
                   <?php echo custom_text('apply-button-text'); ?> <span class="home-link-arrow">&raquo;</span>
-               </a>
-            </div>
-            <div class="home-subscribe" id="mc_embed_signup">
-               <form id="mc-embedded-subscribe-form" class="validate" action="http://openschooloc.us5.list-manage2.com/subscribe/post?u=a49271ebde5f88b50cced6c93&amp;id=4b41a39b87" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-                  <label for="mce-EMAIL" class="home-subscribe-header"><?php echo custom_text('subscribe-message'); ?></label>
-                  <div style="position: absolute; left: -5000px;">
-                     <input name="b_a49271ebde5f88b50cced6c93_4b41a39b87" type="text" value="" />
-                  </div>
-                  <input id="mce-EMAIL" class="email" name="EMAIL" required="" type="email" value="" placeholder="<?php echo custom_text('email-placeholder'); ?>" />
-                  <button id="mc-embedded-subscribe" class="button" name="subscribe" type="submit">&raquo;</button>
-               </form>
-            </div>
+               </div>
+            </a>
+            <a class="home-subscribe" href="<?php echo get_option('subscribe-url'); ?>">
+               <?php echo custom_text('subscribe-message'); ?>
+               <div class="home-subscribe-button">
+                  <?php echo custom_text('subscribe-button-text'); ?> <span class="home-link-arrow">&raquo;</span>
+               </div>
+            </a>
          </div>
          <div class="home-events-block">
             <h2><?php echo custom_text('events-header'); ?></h2>

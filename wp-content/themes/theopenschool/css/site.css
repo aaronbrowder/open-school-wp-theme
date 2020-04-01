@@ -60,7 +60,7 @@ blockquote.blog-sharable {
     font-size: 0.9em; }
   .blog-subscribe input[type=submit] {
     padding: 0 12px;
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Open Sans Condensed", Candara, sans-serif;
     font-size: 40px;
     background: #555;
     border: none;
@@ -182,7 +182,7 @@ blockquote.blog-sharable {
   color: #fff;
   border: none;
   outline: none;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Open Sans Condensed", Candara, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -284,7 +284,7 @@ h3,
 h4 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Open Sans Condensed", Candara, sans-serif;
   font-weight: bold;
   color: #333;
   line-height: 1.1; }
@@ -342,7 +342,7 @@ iframe {
   color: #fff;
   border: none;
   outline: none;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Open Sans Condensed", Candara, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -371,7 +371,7 @@ iframe {
   color: #fff;
   border: none;
   outline: none;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Open Sans Condensed", Candara, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -434,7 +434,7 @@ h2[id]:before {
 
 .main-masthead,
 .sub-masthead {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Open Sans Condensed", Candara, sans-serif;
   font-weight: bold;
   position: fixed;
   width: 100%; }
@@ -972,46 +972,43 @@ h2[id]:before {
 
 .home-link-arrow {
   font-size: 1.7em;
-  font-family: Pompiere, Candara, sans-serif; }
+  font-family: Pompiere, Candara, sans-serif;
+  font-weight: bold; }
 
 .home-apply-block,
-.home-subscribe label,
 .home-events-block h2 {
   color: #fff;
   font-family: Pompiere, Candara, sans-serif;
   text-transform: uppercase;
   font-size: 22px; }
 
-.home-apply-block a {
-  color: #fff;
+.home-apply-block,
+.home-subscribe {
   display: block;
+  font-weight: normal; }
+  .home-apply-block:hover,
+  .home-subscribe:hover {
+    color: #fff; }
+
+.home-apply-button {
   font-size: 1.31em;
   margin-top: -0.8em;
   font-family: Open Sans Condensed, Candara, sans-serif; }
 
 .home-subscribe {
-  margin-top: 20px; }
-  .home-subscribe label {
-    margin-bottom: -11px; }
-  .home-subscribe input {
-    border: 3px solid #fff;
-    width: 192px; }
-  .home-subscribe button {
-    background: none;
-    color: #fff;
-    padding: 0;
-    padding-bottom: 16px;
-    padding-left: 6px;
-    font-size: 4em;
-    font-family: Pompiere, Candara, sans-serif;
-    font-weight: bold;
-    border: none;
-    line-height: 0.78;
-    vertical-align: middle;
-    cursor: pointer; }
+  margin-top: 20px;
+  margin-bottom: 36px;
+  color: #fff;
+  font-family: Pompiere, Candara, sans-serif;
+  text-transform: uppercase;
+  font-size: 2.3em; }
+  .spanish .home-subscribe {
+    font-size: 1.7em; }
 
-.spanish .home-subscribe-header {
-  font-size: 17px; }
+.home-subscribe-button {
+  font-size: 16px;
+  font-family: Open Sans Condensed, Candara, sans-serif;
+  line-height: 0.4; }
 
 .home-events-block h2 {
   font-weight: normal;
@@ -1059,12 +1056,17 @@ h2[id]:before {
     padding: 0; }
 
   .home-apply-block,
-  .home-subscribe label,
   .home-events-block h2 {
     font-size: 18px; }
 
   .home-subscribe {
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-size: 1.9em; }
+    .spanish .home-subscribe {
+      font-size: 1.5em; }
+
+  .home-subscribe-button {
+    font-size: 15px; }
 
   .home-events-block h2 {
     margin-top: 10px;
@@ -1083,12 +1085,6 @@ h2[id]:before {
   .home-subscribe {
     margin-top: 20px; }
 
-  .home-subscribe input {
-    width: 226px; }
-
-  .spanish .home-subscribe-header {
-    font-size: 20px; }
-
   .home-events-block h2 {
     margin-top: 20px; }
 
@@ -1101,11 +1097,10 @@ h2[id]:before {
       margin-top: -0.5em;
       margin-bottom: -0.2em; } }
 @media (min-width: 1100px) {
-  .home-apply-block,
-  .home-subscribe label,
-  .home-events-block h2 {
+  .home-apply-block {
     font-size: 22px; }
 
+  .home-subscribe,
   .home-events-block h2 {
     font-size: 2.3em; } }
 @media (min-width: 1200px) {
@@ -1115,16 +1110,12 @@ h2[id]:before {
       margin-left: 15%; }
 
   .home-subscribe {
-    margin-top: 28px; }
-
-  .home-events-block {
-    margin-top: 36px; } }
+    margin-top: 28px;
+    margin-bottom: 48px; } }
 @media (min-width: 1260px) {
   .home-subscribe {
-    margin-top: 40px; }
-
-  .home-events-block {
-    margin-top: 45px; } }
+    margin-top: 40px;
+    margin-bottom: 60px; } }
 .home-greenscreen-2 {
   background: #c43c59; }
   .home-greenscreen-2 .home-greenscreen-image {
@@ -1216,13 +1207,6 @@ h2[id]:before {
     display: block;
     animation-name: blur_up;
     animation-duration: 0.4s; }
-
-.home-subscribe label {
-  display: block; }
-.home-subscribe input.email {
-  margin: 6px 0;
-  padding: 6px;
-  font-size: 0.9em; }
 
 .home-learn-more {
   padding: 70px 0;

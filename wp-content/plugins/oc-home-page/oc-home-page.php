@@ -143,12 +143,16 @@ function subscribe_message_es_callback() { ?>
    <input type="text" name="subscribe-message-es" size="20" value="<?php echo get_option('subscribe-message-es'); ?>" />
 <?php }
 
-function email_placeholder_callback() { ?>
-   <input type="text" name="email-placeholder" size="20" value="<?php echo get_option('email-placeholder'); ?>" />
+function subscribe_button_text_callback() { ?>
+   <input type="text" name="subscribe-button-text" size="20" value="<?php echo get_option('subscribe-button-text'); ?>" />
 <?php }
 
-function email_placeholder_es_callback() { ?>
-   <input type="text" name="email-placeholder-es" size="20" value="<?php echo get_option('email-placeholder-es'); ?>" />
+function subscribe_button_text_es_callback() { ?>
+   <input type="text" name="subscribe-button-text-es" size="20" value="<?php echo get_option('subscribe-button-text-es'); ?>" />
+<?php }
+
+function subscribe_url_callback() { ?>
+   <input type="text" name="subscribe-url" size="20" value="<?php echo get_option('subscribe-url'); ?>" />
 <?php }
 
 function events_header_callback() { ?>
@@ -285,8 +289,9 @@ function edit_home_page_page_setup() {
    add_settings_field('apply-button-text-es', 'Apply Button Text (Spanish)', 'apply_button_text_es_callback', 'edit-home-page', 'content');
    add_settings_field('subscribe-message', 'Subscribe Message', 'subscribe_message_callback', 'edit-home-page', 'content');
    add_settings_field('subscribe-message-es', 'Subscribe Message (Spanish)', 'subscribe_message_es_callback', 'edit-home-page', 'content');
-   add_settings_field('email-placeholder', 'Email Placeholder', 'email_placeholder_callback', 'edit-home-page', 'content');
-   add_settings_field('email-placeholder-es', 'Email Placeholder (Spanish)', 'email_placeholder_es_callback', 'edit-home-page', 'content');
+   add_settings_field('subscribe-button-text', 'Subscribe Button Text', 'subscribe_button_text_callback', 'edit-home-page', 'content');
+   add_settings_field('subscribe-button-text-es', 'Subscribe Button Text (Spanish)', 'subscribe_button_text_es_callback', 'edit-home-page', 'content');
+   add_settings_field('subscribe-url', 'Subscribe URL', 'subscribe_url_callback', 'edit-home-page', 'content');
    add_settings_field('events-header', 'Events Header', 'events_header_callback', 'edit-home-page', 'content');
    add_settings_field('events-header-es', 'Events Header (Spanish)', 'events_header_es_callback', 'edit-home-page', 'content');
    add_settings_field('event1-title', 'Event 1 Title', 'event1_title_callback', 'edit-home-page', 'content');
@@ -339,8 +344,9 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'apply-button-text-es');
    register_setting('edit-home-page', 'subscribe-message');
    register_setting('edit-home-page', 'subscribe-message-es');
-   register_setting('edit-home-page', 'email-placeholder');
-   register_setting('edit-home-page', 'email-placeholder-es');
+   register_setting('edit-home-page', 'subscribe-button-text');
+   register_setting('edit-home-page', 'subscribe-button-text-es');
+   register_setting('edit-home-page', 'subscribe-url');
    register_setting('edit-home-page', 'events-header');
    register_setting('edit-home-page', 'events-header-es');
    register_setting('edit-home-page', 'event1-title');

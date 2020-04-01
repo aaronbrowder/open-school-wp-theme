@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', hamburgerMenu, false);
 document.addEventListener('DOMContentLoaded', searchSetup, false);
 document.addEventListener('DOMContentLoaded', bannerLoader, false);
 
+
 function bannerLoader() {
    
    var loaders = document.getElementsByClassName('home-banner-loader');
