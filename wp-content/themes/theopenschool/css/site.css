@@ -425,6 +425,30 @@ h2[id]:before {
 @media (min-width: 992px) {
   .container {
     max-width: 1000px; } }
+.header-covid-banner {
+  background: #fff700;
+  padding: 12px; }
+
+.header-covid-link {
+  display: block;
+  color: #000;
+  overflow: hidden;
+  line-height: 1; }
+
+.header-covid-close {
+  float: right;
+  display: block;
+  margin-left: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  padding-top: 6px;
+  font-size: 1.1em;
+  color: #837f1f; }
+  .header-covid-close:hover {
+    cursor: pointer;
+    color: #595608; }
+
 .main-masthead-wrapper,
 .sub-masthead-wrapper {
   height: 39px; }

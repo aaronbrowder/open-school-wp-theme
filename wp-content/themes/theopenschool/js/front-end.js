@@ -2,7 +2,17 @@ document.addEventListener('DOMContentLoaded', contextMenu, false);
 document.addEventListener('DOMContentLoaded', hamburgerMenu, false);
 document.addEventListener('DOMContentLoaded', searchSetup, false);
 document.addEventListener('DOMContentLoaded', bannerLoader, false);
+document.addEventListener('DOMContentLoaded', covidSetup, false);
 
+function covidSetup() {
+   var closeButtons = document.getElementsByClassName('header-covid-close');
+   if (closeButtons.length) {
+      closeButtons[0].addEventListener('click', function(event) {
+         var banner = document.getElementsByClassName('header-covid-banner')[0];
+         banner.style.display = 'none';
+      });
+   }
+}
 
 function bannerLoader() {
    

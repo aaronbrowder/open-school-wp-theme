@@ -7,22 +7,6 @@
       <meta http-equiv="Cache-Control" content="no-store" />
       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-      <!-- Facebook Pixel Code -->
-      <!-- <script>
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-      document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '670072246516416'); // Insert your pixel ID here.
-      fbq('track', 'PageView');
-      </script>
-      <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=670072246516416&ev=PageView&noscript=1"
-      /></noscript> -->
-      <!-- DO NOT MODIFY -->
-      <!-- End Facebook Pixel Code -->
-      
       <!-- Global site tag (gtag.js) - Google AdWords: 846232865 -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-846232865"></script>
       <script>
@@ -81,6 +65,19 @@
 
       <div class="main-masthead-wrapper">
          <div class="main-masthead">
+            <?php if (is_front_page() && !$is_spanish && !empty(get_option('notice-text'))) { ?>
+               <div class="header-covid-banner">
+                  <div class="container">
+                     <button class="header-covid-close">
+                        <i class="fas fa-times"></i>
+                     </button>
+                     <a class="header-covid-link" href="<?php echo get_option('notice-url'); ?>">
+                        <?php echo get_option('notice-text'); ?>
+                        <span class="home-link-arrow">&raquo;</span>
+                     </a>
+                  </div>
+               </div>
+            <?php } ?>
             <div class="container">
                <nav>
                   
@@ -121,7 +118,7 @@
                            $current_sub1_menu_items = $children;
                         }
 
-                        $is_donate = strtolower($item->title) == 'donate';
+                        $is_donate = strtolower($item->title) == 'give' || strtolower($item->title) == 'donar';
 
                         ?>
                         
