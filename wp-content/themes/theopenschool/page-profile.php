@@ -13,10 +13,10 @@ page_template(function() {
    
    foreach ($items as &$item) {
       if (empty($item)) continue;
-      $split = explode('/noscript></p>', $item);
+      $split = explode('/></p>', $item);
       $image_content = $split[0];
       $text_content = $split[1];
-      $image_part = "<div class='page-profile-pic'><img{$image_content}/noscript></div>";
+      $image_part = "<div class='page-profile-pic'><img{$image_content}/></div>";
       $text_part = "<div class='page-profile-bio'>{$text_content}</div>";
       $item = "<div class='page-profile'>{$text_part}{$image_part}</div>";
    }
