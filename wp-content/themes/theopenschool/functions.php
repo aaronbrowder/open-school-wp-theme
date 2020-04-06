@@ -34,6 +34,14 @@ function mytheme_google_fonts() {
 }
 
 //////////////////////////////////////////////////////////////////////
+// Add custom query variables
+function theopenschool_query_vars($qvars) {
+    $qvars[] = 'submitted';
+    return $qvars;
+}
+add_filter('query_vars', 'theopenschool_query_vars');
+
+//////////////////////////////////////////////////////////////////////
 // Header
 
 add_action('admin_menu', 'edit_header_add_menu');
@@ -379,6 +387,12 @@ function contact_form_shortcode_callback($atts = [], $content = null) {
      ),
      $atts);
 	return render_php('contact-form.php', $atts, $content);
+}
+
+// [prospective-parent-form]
+add_shortcode('prospective-parent-form', 'prospective_parent_form_shortcode_callback');
+function prospective_parent_form_shortcode_callback($atts = [], $content = null) {
+  return render_php('network-for-good-form.php', $atts, $content);
 }
 
 // [base-tuition]

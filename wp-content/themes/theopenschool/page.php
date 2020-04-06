@@ -4,6 +4,16 @@ page_template(function() {
 
 $error = null;
 $success_response = null;
+$message_sent = "Thank you! Your message has been sent. We'll get in touch with you shortly.";
+
+if (get_locale() == 'es_MX') {
+   $message_sent = '¡Gracias! Su mensaje ha sido mandado. Nos pondremos en contacto pronto.';
+}
+
+$submitted = get_query_var('submitted');
+if (!empty($submitted)) {
+   $success_response = $message_sent;
+}
 
 if ($_POST['contact-submitted']) {
    $school_email = get_option('email');
@@ -12,11 +22,6 @@ if ($_POST['contact-submitted']) {
    $missing_content = 'Recipient, name, and message are required. Please try again.';
    $email_invalid   = 'The email address you provided is invalid. Please try again.';
    $message_unsent  = 'Your message was not sent. Please try again.';
-   $message_sent    = "Thank you! Your message has been sent. We'll get in touch with you shortly.";
-
-   if (get_locale() == 'es_MX') {
-      $message_sent = '¡Gracias! Su mensaje ha sido mandado. Nos pondremos en contacto pronto.';
-   }
    
    $recipient = $_POST['message_recipient'];
    $name = $_POST['message_name'];

@@ -154,7 +154,7 @@ blockquote.blog-sharable {
   .contact-us-table th {
     text-align: left;
     background: #e9e9e9;
-    padding: 0 12px;
+    padding: 6px 12px;
     width: 1px;
     white-space: nowrap; }
   .contact-us-table input[type=text],
@@ -175,6 +175,13 @@ blockquote.blog-sharable {
     font-family: inherit; }
   .contact-us-table select {
     background: #fff; }
+
+.contact-us-compact-label {
+  font-size: .85em; }
+
+.contact-us-state-select {
+  width: 100%;
+  max-width: 380px; }
 
 .contact-us-send {
   display: inline-block;
