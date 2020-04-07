@@ -101,7 +101,7 @@ blockquote.blog-sharable {
 .blog-paginator {
   padding-top: 30px; }
   .blog-paginator ul {
-    padding: 0;
+    padding: 0 !important;
     margin: 0; }
     .blog-paginator ul li {
       display: inline-block;
@@ -127,16 +127,50 @@ blockquote.blog-sharable {
     padding: 12px 16px;
     border-bottom: 1px solid #bbb; }
 
+.page .comments-area img {
+  width: auto !important; }
+
 .comments-area {
-  border-top: 1px solid #aaa;
-  margin-top: 30px;
   padding-top: 10px; }
 
 .comment-list {
-  padding-left: 0; }
+  padding-left: 0 !important; }
 
 .comment {
   display: block; }
+
+.comment .reply {
+  display: none; }
+
+#email-notes {
+  display: block; }
+
+.comment-form-comment label {
+  display: none; }
+.comment-form-comment textarea {
+  width: calc(100% - 14px);
+  padding: 6px; }
+
+.comment-form-author label, .comment-form-email label, .comment-form-url label {
+  display: inline-block;
+  width: 60px; }
+.comment-form-author input, .comment-form-email input, .comment-form-url input {
+  width: calc(100% - 80px);
+  max-width: 300px;
+  padding: 6px; }
+
+.comment-form .submit {
+  background: #fff;
+  color: #444;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 1px 2px 2px #999;
+  cursor: pointer; }
+  .comment-form .submit:hover {
+    background: #f4f4f4; }
 
 .comment-author cite {
   font-style: normal; }
