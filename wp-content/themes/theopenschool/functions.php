@@ -515,16 +515,18 @@ function custom_text($id) {
    return get_option($id);
 }
 
-function page_template($content_function) {
+function page_template($content_function, $show_title = true) {
    get_header(); ?>
    <div class="container">
       <?php if (have_posts()) {
          while (have_posts()) {
-            the_post(); ?>
-            <h1 class="page-title">
-               <span class="text-light-green"><?php the_title(); ?></span>
-            </h1>
-            <?php $content_function();
+            the_post();
+            if ($show_title) { ?>
+              <h1 class="page-title">
+                 <span class="text-light-green"><?php the_title(); ?></span>
+              </h1>
+            <?php }
+            $content_function();
          }
       } ?>
    </div>
