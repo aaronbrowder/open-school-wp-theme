@@ -72,6 +72,9 @@
 .main-masthead-wrapper,
 .sub-masthead-wrapper {
    height: 39px;
+   &.has-notice {
+      height: 89px;
+   }
 }
 
 .sub-masthead-wrapper {

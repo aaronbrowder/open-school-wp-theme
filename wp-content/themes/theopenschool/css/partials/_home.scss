@@ -629,6 +629,15 @@
    margin-left: -13.5%;
 }
 
+.home-promoted-event {
+   margin: auto;
+   img {
+      margin: auto;
+      height: auto;
+      display: block;
+   }
+}
+
 @media (min-width: 550px) {
    .home-new-banner-1 {
       width: 130%;

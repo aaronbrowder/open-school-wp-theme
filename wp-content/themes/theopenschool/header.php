@@ -60,12 +60,14 @@
       
       $is_spanish = get_locale() == "es_MX";
       $home_url = $is_spanish ? "/es" : "/";
+
+      $show_notice = is_front_page() && !$is_spanish && !empty(get_option('notice-text'));
       
       ?>
 
-      <div class="main-masthead-wrapper">
+      <div class="main-masthead-wrapper<?php echo ($show_notice ? ' has-notice' : ''); ?>">
          <div class="main-masthead">
-            <?php if (is_front_page() && !$is_spanish && !empty(get_option('notice-text'))) { ?>
+            <?php if ($show_notice) { ?>
                <div class="header-covid-banner">
                   <div class="container">
                      <button class="header-covid-close">

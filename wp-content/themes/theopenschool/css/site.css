@@ -493,6 +493,9 @@ h2[id]:before {
 .main-masthead-wrapper,
 .sub-masthead-wrapper {
   height: 39px; }
+  .main-masthead-wrapper.has-notice,
+  .sub-masthead-wrapper.has-notice {
+    height: 89px; }
 
 .sub-masthead-wrapper {
   display: none; }
@@ -1227,6 +1230,13 @@ h2[id]:before {
 .home-new-banner-2 {
   width: 134%;
   margin-left: -13.5%; }
+
+.home-promoted-event {
+  margin: auto; }
+  .home-promoted-event img {
+    margin: auto;
+    height: auto;
+    display: block; }
 
 @media (min-width: 550px) {
   .home-new-banner-1 {

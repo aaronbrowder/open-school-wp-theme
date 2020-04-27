@@ -8,8 +8,10 @@ function covidSetup() {
    var closeButtons = document.getElementsByClassName('header-covid-close');
    if (closeButtons.length) {
       closeButtons[0].addEventListener('click', function(event) {
+         var wrapper = document.getElementsByClassName('main-masthead-wrapper')[0];
          var banner = document.getElementsByClassName('header-covid-banner')[0];
          banner.style.display = 'none';
+         wrapper.classList.remove('has-notice');
       });
    }
 }

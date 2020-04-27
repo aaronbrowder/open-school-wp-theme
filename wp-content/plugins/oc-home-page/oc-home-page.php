@@ -235,6 +235,14 @@ function event2_line2_es_callback() { ?>
   <input type="text" name="event2-line2-es" size="25" value="<?php echo get_option('event2-line2-es'); ?>" />
 <?php }
 
+function promoted_event_url_callback() { ?>
+  <input type="text" name="promoted-event-url" size="50" value="<?php echo get_option('promoted-event-url'); ?>" />
+<?php }
+
+function promoted_event_image_attachment_callback() { 
+   image_attachment_callback('promoted-event-image-attachment-id');
+}
+
 function testimonial1_callback() {
    custom_text_callback('testimonial1', 6);
 }
@@ -320,6 +328,8 @@ function edit_home_page_page_setup() {
    add_settings_field('event2-url-es', 'Event 2 URL (Spanish)', 'event2_url_es_callback', 'edit-home-page', 'content');
    add_settings_field('event2-line1-es', 'Event 2 Line 1 (Spanish)', 'event2_line1_es_callback', 'edit-home-page', 'content');
    add_settings_field('event2-line2-es', 'Event 2 Line 2 (Spanish)', 'event2_line2_es_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-url', 'Promoted Event URL', 'promoted_event_url_callback', 'edit-home-page', 'content');
+   add_settings_field('promoted-event-image-attachment-id', 'Promoted Event Image', 'promoted_event_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('testimonial1', 'Testimonial 1', 'testimonial1_callback', 'edit-home-page', 'content');
    add_settings_field('testimonial1-attribution', 'Testimonial 1 Attribution', 'testimonial1_attribution_callback', 'edit-home-page', 'content');
    add_settings_field('testimonial1-es', 'Testimonial 1 (Spanish)', 'testimonial1_es_callback', 'edit-home-page', 'content');
@@ -377,6 +387,8 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'event2-url-es');
    register_setting('edit-home-page', 'event2-line1-es');
    register_setting('edit-home-page', 'event2-line2-es');
+   register_setting('edit-home-page', 'promoted-event-url');
+   register_setting('edit-home-page', 'promoted-event-image-attachment-id');
    register_setting('edit-home-page', 'testimonial1');
    register_setting('edit-home-page', 'testimonial1-attribution');
    register_setting('edit-home-page', 'testimonial1-es');

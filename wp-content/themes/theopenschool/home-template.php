@@ -36,6 +36,19 @@ function get_image_id_with_locale($image_id) {
    return $image_id;
 }
 
+function promoted_event() {
+   $url = get_option('promoted-event-url');
+   if (!empty($url) && get_locale() != 'es_MX') { ?>
+      <div class="home-new-banner-container">
+         <div class="home-promoted-event">
+            <a href="<?php echo $url; ?>">
+               <?php echo get_banner("promoted-event-image-attachment-id"); ?>
+            </a>
+         </div>
+      </div>
+   <?php }
+}
+
 function event($number) {
    $suffix = get_locale() == 'es_MX' ? '-es' : '';
    $title = get_option('event' . $number . '-title' . $suffix);
@@ -75,6 +88,8 @@ function event($number) {
          <?php echo get_banner("greenscreen-1-image-attachment-id"); ?>
       </div>
    </div>
+
+   <?php promoted_event(); ?>
    
    <div class="home-greenscreen home-greenscreen-2">
       <div class="home-greenscreen-testimonial home-greenscreen-text home-greenscreen-text-left">
