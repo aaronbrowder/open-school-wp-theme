@@ -1316,6 +1316,9 @@ h2[id]:before {
   .page li {
     margin-bottom: 5px; }
 
+.page .et-boc img {
+  width: auto !important; }
+
 .page-wide {
   max-width: none; }
 

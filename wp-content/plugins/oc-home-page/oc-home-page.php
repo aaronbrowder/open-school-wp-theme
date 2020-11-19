@@ -99,8 +99,16 @@ function notice_text_callback() {
    custom_text_callback('notice-text', 1);
 }
 
+function notice_text_es_callback() {
+   custom_text_callback('notice-text-es', 1);
+}
+
 function notice_url_callback() { ?>
    <input type="text" name="notice-url" size="50" value="<?php echo get_option('notice-url'); ?>" />
+<?php }
+
+function notice_url_es_callback() { ?>
+   <input type="text" name="notice-url-es" size="50" value="<?php echo get_option('notice-url-es'); ?>" />
 <?php }
 
 function school_description_callback() {
@@ -297,6 +305,8 @@ function edit_home_page_page_setup() {
    add_settings_field('school-description-es', 'School Description (Spanish)', 'school_description_es_callback', 'edit-home-page', 'content');
    add_settings_field('notice-text', 'Notice Text', 'notice_text_callback', 'edit-home-page', 'content');
    add_settings_field('notice-url', 'Notice URL', 'notice_url_callback', 'edit-home-page', 'content');
+   add_settings_field('notice-text-es', 'Notice Text (Spanish)', 'notice_text_es_callback', 'edit-home-page', 'content');
+   add_settings_field('notice-url-es', 'Notice URL (Spanish)', 'notice_url_es_callback', 'edit-home-page', 'content');
    add_settings_field('second-banner-header', '2nd Banner Header', 'second_banner_header_callback', 'edit-home-page', 'content');
    add_settings_field('second-banner-header-es', '2nd Banner Header (Spanish)', 'second_banner_header_es_callback', 'edit-home-page', 'content');
    add_settings_field('second-banner-text', '2nd Banner Text', 'second_banner_text_callback', 'edit-home-page', 'content');
@@ -354,6 +364,8 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'nonprofit-image-attachment-id');
    register_setting('edit-home-page', 'notice-text');
    register_setting('edit-home-page', 'notice-url');
+   register_setting('edit-home-page', 'notice-text-es');
+   register_setting('edit-home-page', 'notice-url-es');
    register_setting('edit-home-page', 'school-description');
    register_setting('edit-home-page', 'school-description-es');
    register_setting('edit-home-page', 'second-banner-header');

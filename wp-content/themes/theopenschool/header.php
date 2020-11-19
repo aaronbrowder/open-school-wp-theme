@@ -61,8 +61,19 @@
       $is_spanish = get_locale() == "es_MX";
       $home_url = $is_spanish ? "/es" : "/";
 
-      $show_notice = is_front_page() && !$is_spanish && !empty(get_option('notice-text'));
-      
+      $notice_text = null;
+      $notice_url = null;
+      if (is_front_page()) {
+         if ($is_spanish) {
+            $notice_text = get_option('notice-text-es');
+            $notice_url = get_option('notice-url-es');
+         } else {
+            $notice_text = get_option('notice-text');
+            $notice_url = get_option('notice-url');
+         }
+      }
+      $show_notice = !empty($notice_text);
+
       ?>
 
       <div class="main-masthead-wrapper<?php echo ($show_notice ? ' has-notice' : ''); ?>">
@@ -73,8 +84,8 @@
                      <button class="header-covid-close">
                         <i class="fas fa-times"></i>
                      </button>
-                     <a class="header-covid-link" href="<?php echo get_option('notice-url'); ?>">
-                        <?php echo get_option('notice-text'); ?>
+                     <a class="header-covid-link" href="<?php echo $notice_url; ?>">
+                        <?php echo $notice_text; ?>
                         <span class="home-link-arrow">&raquo;</span>
                      </a>
                   </div>
