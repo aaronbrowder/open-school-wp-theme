@@ -256,6 +256,18 @@ function contact_recipient_4_address_callback() {
   contact_recipient_callback(4, 'address');
 }
 
+function contact_recipient_5_name_callback() {
+  contact_recipient_callback(5, 'name');
+}
+
+function contact_recipient_5_name_es_callback() {
+  contact_recipient_callback(5, 'name-es');
+}
+
+function contact_recipient_5_address_callback() {
+  contact_recipient_callback(5, 'address');
+}
+
 add_action('admin_init', 'school_meta_page_setup');
 function school_meta_page_setup() {
    add_settings_section('content', 'Content', null, 'school-meta');
@@ -298,6 +310,9 @@ function school_meta_page_setup() {
    add_settings_field('contact-recipient-4-name', 'Contact Recipient 4 Name', 'contact_recipient_4_name_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-4-name-es', 'Contact Recipient 4 Name (Spanish)', 'contact_recipient_4_name_es_callback', 'school-meta', 'content');
    add_settings_field('contact-recipient-4-address', 'Contact Recipient 4 Address', 'contact_recipient_4_address_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-5-name', 'Contact Recipient 5 Name', 'contact_recipient_5_name_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-5-name-es', 'Contact Recipient 5 Name (Spanish)', 'contact_recipient_5_name_es_callback', 'school-meta', 'content');
+   add_settings_field('contact-recipient-5-address', 'Contact Recipient 5 Address', 'contact_recipient_5_address_callback', 'school-meta', 'content');
 
    register_setting('school-meta', 'contact-us-string');
    register_setting('school-meta', 'contact-us-string-es');
@@ -337,6 +352,9 @@ function school_meta_page_setup() {
    register_setting('school-meta', 'contact-recipient-4-name');
    register_setting('school-meta', 'contact-recipient-4-name-es');
    register_setting('school-meta', 'contact-recipient-4-address');
+   register_setting('school-meta', 'contact-recipient-5-name');
+   register_setting('school-meta', 'contact-recipient-5-name-es');
+   register_setting('school-meta', 'contact-recipient-5-address');
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -383,7 +401,7 @@ function contact_form_shortcode_callback($atts = [], $content = null) {
      'show-message' => 'true',
      'show-preference' => 'false',
      'recipient-label' => 'Send to',
-     'recipients' => '1,2,3,4'
+     'recipients' => '1,2,3,4,5'
      ),
      $atts);
 	return render_php('contact-form.php', $atts, $content);
