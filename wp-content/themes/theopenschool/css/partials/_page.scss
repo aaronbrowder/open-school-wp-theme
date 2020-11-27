@@ -69,6 +69,12 @@ blockquote.post-meta {
    margin-top: 4px;
 }
 
+.page-indexed-section-header {
+   background: #555;
+   color: #fff;
+   padding: 10px 15px;
+}
+
 @include min-tablet {
    .page {
       margin-bottom: 40px;

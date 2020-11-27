@@ -434,7 +434,7 @@ iframe {
   background: #ebebeb;
   text-align: center; }
 
-h2[id]:before {
+h2[id]:before, h3[id]:before {
   display: block;
   content: " ";
   visibility: hidden;
@@ -460,7 +460,7 @@ h2[id]:before {
   .container {
     padding: 0 15px; }
 
-  .has-double-header h2[id]:before {
+  .has-double-header h2[id]:before, .has-double-header h3[id]:before {
     margin-top: -88px;
     height: 88px; } }
 @media (min-width: 992px) {
@@ -1354,6 +1354,11 @@ blockquote.post-meta {
 
 .page-staff-bio p, .page-profile-bio p {
   margin-top: 4px; }
+
+.page-indexed-section-header {
+  background: #555;
+  color: #fff;
+  padding: 10px 15px; }
 
 @media (min-width: 800px) {
   .page {

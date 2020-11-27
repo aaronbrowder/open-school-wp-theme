@@ -111,7 +111,7 @@ iframe {
    text-align: center;
 }
 
-h2[id]:before {
+h2[id]:before, h3[id]:before {
    display: block;
    content: " ";
    visibility: hidden;
@@ -138,9 +138,11 @@ h2[id]:before {
    .container {
       padding: 0 15px;
    }
-   .has-double-header h2[id]:before {
-      margin-top: -88px;
-      height: 88px;
+   .has-double-header {
+      h2[id]:before, h3[id]:before {
+         margin-top: -88px;
+         height: 88px;
+      }
    }
 }
 
