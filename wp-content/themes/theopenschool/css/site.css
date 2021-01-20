@@ -893,10 +893,12 @@ h2[id]:before, h3[id]:before {
     padding-top: 0; }
 
   .home-title-caption {
-    font-size: 0.95em;
+    font-size: 0.85em;
     width: 270px;
     text-align: center;
     margin: auto; }
+    .spanish .home-title-caption {
+      font-size: 0.8em; }
 
   .home-greenscreen-testimonial {
     font-size: 1em;
@@ -958,12 +960,19 @@ h2[id]:before, h3[id]:before {
   .home-greenscreen-testimonial {
     margin-top: 50px; } }
 @media (min-width: 900px) {
+  .home-title-caption {
+    font-size: 0.9em; }
+    .spanish .home-title-caption {
+      font-size: 0.8em; }
+
   .home-greenscreen-testimonial {
     font-size: 1.1em; } }
 @media (min-width: 950px) {
   .home-title-caption {
     width: 300px;
     font-size: 1.05em; }
+    .spanish .home-title-caption {
+      font-size: 0.9em; }
 
   .home-greenscreen-1 .home-greenscreen-text,
   .home-greenscreen-3 .home-greenscreen-text {
@@ -981,6 +990,9 @@ h2[id]:before, h3[id]:before {
   .home-logo {
     width: 150px; }
 
+  .home-title-caption .spanish {
+    font-size: 0.95em; }
+
   .home-greenscreen-testimonial {
     font-size: 1.2em;
     max-width: 340px; } }
@@ -994,6 +1006,9 @@ h2[id]:before, h3[id]:before {
 @media (min-width: 1200px) {
   .home-logo {
     width: 180px; }
+
+  .home-title-caption .spanish {
+    font-size: 1em; }
 
   .home-greenscreen-testimonial {
     margin-top: 70px; }
@@ -1027,6 +1042,8 @@ h2[id]:before, h3[id]:before {
 
   .home-title-caption {
     width: 360px; }
+    .spanish .home-title-caption {
+      font-size: 1em; }
 
   .home-greenscreen-1 .home-greenscreen-text,
   .home-greenscreen-3 .home-greenscreen-text {

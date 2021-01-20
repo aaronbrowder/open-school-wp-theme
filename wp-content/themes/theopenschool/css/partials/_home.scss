@@ -161,7 +161,10 @@
    }
 
    .home-title-caption {
-      font-size: 0.95em;
+      font-size: 0.85em;
+      .spanish & {
+         font-size: 0.8em;
+      }
       width: 270px;
       text-align: center;
       margin: auto;
@@ -255,6 +258,12 @@
 }
 
 @media (min-width: 900px) {
+   .home-title-caption {
+      font-size: 0.9em;
+      .spanish & {
+         font-size: 0.8em;
+      }
+   }
    .home-greenscreen-testimonial {
       font-size: 1.1em;
    }
@@ -264,6 +273,9 @@
    .home-title-caption {
       width: 300px;
       font-size: 1.05em;
+      .spanish & {
+         font-size: 0.9em;
+      }
    }
    .home-greenscreen-1,
    .home-greenscreen-3 {
@@ -286,6 +298,9 @@
    .home-logo {
       width: 150px;
    }
+   .home-title-caption .spanish {
+      font-size: 0.95em;
+   }
    .home-greenscreen-testimonial {
       font-size: 1.2em;
       max-width: 340px;
@@ -307,6 +322,9 @@
 @include min-large-desktop {
    .home-logo {
       width: 180px;
+   }
+   .home-title-caption .spanish {
+      font-size: 1em;
    }
    .home-greenscreen-testimonial {
       margin-top: 70px;
@@ -352,6 +370,9 @@
    }
    .home-title-caption {
       width: 360px;
+      .spanish & {
+         font-size: 1em;
+      }
    }
    .home-greenscreen-1,
    .home-greenscreen-3 {

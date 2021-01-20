@@ -5,8 +5,9 @@ Template Name: Home
 
 get_header();
 
-$container_class = get_locale() == 'es_MX' ? 'spanish' : '';
-$learn_more_about_text = get_locale() == 'es_MX' ? 'Aprenda más sobre' : 'Learn more about';
+$is_spanish = get_locale() == "es_MX";
+$container_class = $is_spanish ? 'spanish' : '';
+$learn_more_about_text = $is_spanish ? 'Aprenda más sobre' : 'Learn more about';
 
 function get_image_src_data($id, $size = "full")
 {
