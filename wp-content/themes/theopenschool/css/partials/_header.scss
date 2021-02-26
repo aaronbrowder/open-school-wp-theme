@@ -257,6 +257,12 @@
                color: #aee1ff;
             }
          }
+         .header-context-menu {
+            margin-top: 5px;
+         }
+         &:after {
+            top: 33px;
+         }
       }
       .header-context-menu {
          display: none;
