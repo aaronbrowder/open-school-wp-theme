@@ -238,9 +238,19 @@
          $is_second = true;
          create_sub_menu_nav($current_sub2_menu_items, null, $is_last, $is_second);
       }
+
+      $has_triple_header = $has_sub2_menu_nav;
+      $has_double_header = !$has_triple_header && $has_sub1_menu_nav;
       
       ?>
       
       <div class="nav-divider <?php empty($current_sub1_menu_items) ? 'no-sub-header' : '' ?>"></div>
       
-      <div class="<?php echo empty($current_sub1_menu_items) ? '' : 'has-double-header'; ?>">
+      <div class="<?php
+         if ($has_triple_header) {
+            echo 'has-triple-header';
+         }
+         else if ($has_double_header) {
+            echo 'has-double-header';
+         }
+      ?>">
