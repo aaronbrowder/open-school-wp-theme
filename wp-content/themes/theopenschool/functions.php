@@ -42,6 +42,15 @@ function theopenschool_query_vars($qvars) {
 add_filter('query_vars', 'theopenschool_query_vars');
 
 //////////////////////////////////////////////////////////////////////
+// Remove author from open graph metadata
+add_filter( 'oembed_response_data', 'disable_embeds_filter_oembed_response_data_' );
+function disable_embeds_filter_oembed_response_data_( $data ) {
+    unset($data['author_url']);
+    unset($data['author_name']);
+    return $data;
+}
+
+//////////////////////////////////////////////////////////////////////
 // Header
 
 add_action('admin_menu', 'edit_header_add_menu');
