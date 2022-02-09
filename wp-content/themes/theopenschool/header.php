@@ -9,6 +9,8 @@
 
       <!-- Global site tag (gtag.js) - Google AdWords: 846232865 -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-846232865"></script>
+      <!-- For Pinterest -->
+      <meta name="p:domain_verify" content="f4e0ef1edc29c700a3f9e014a1505b47"/>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
