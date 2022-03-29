@@ -97,7 +97,7 @@
                <nav>
                   
                   <a class="header-logo" href="<?php echo $home_url; ?>">
-                     <img height="30" src="<?php echo wp_get_attachment_url(get_option('header-logo-image-attachment-id')); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>
+                     <img style="height:30px;" src="<?php echo wp_get_attachment_url(get_option('header-logo-image-attachment-id')); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>
                   </a>
                   
                   <div id="hamburger" class="header-hamburger">
