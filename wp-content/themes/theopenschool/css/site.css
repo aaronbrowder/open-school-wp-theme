@@ -29,8 +29,25 @@ blockquote.blog-sharable {
   content: " ";
 }
 
-.blog-share {
+.blog-book-promo .blog-book-promo-image {
   float: left;
+}
+.blog-book-promo .blog-book-promo-image img {
+  width: 150px !important;
+}
+
+.blog-book-promo-text {
+  overflow-x: hidden;
+  width: 120px;
+  padding-left: 10px;
+}
+.blog-book-promo-text a {
+  display: block;
+  margin-top: 5px;
+}
+
+.blog-promo-divider {
+  clear: both;
 }
 
 .blog-share-facebook {
@@ -53,10 +70,20 @@ blockquote.blog-sharable {
   padding-bottom: 12px;
 }
 
-.blog-apply {
-  float: right;
-}
+@media (min-width: 450px) {
+  .blog-book-promo {
+    float: left;
+  }
 
+  .blog-other-promo {
+    float: right;
+    padding-right: 10px;
+  }
+
+  .blog-promo-divider {
+    clear: none;
+  }
+}
 .blog-subscribe {
   clear: both;
   padding-top: 15px;
