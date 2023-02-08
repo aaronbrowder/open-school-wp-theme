@@ -2,7 +2,7 @@
 /*
 Plugin Name: OC Home Page
 Description: 
-Version: 1.1
+Version: 1.1.1
 Author: Aaron Browder
 */
 
@@ -117,6 +117,42 @@ function school_description_callback() {
 
 function school_description_es_callback() {
    custom_text_callback('school-description-es', 3);
+}
+
+function key_message_1_callback() {
+   custom_text_callback('key-message-1', 2);
+}
+
+function key_message_1_link_callback() {
+   custom_text_callback('key-message-1-link', 1);
+}
+
+function key_message_1_link_text_callback() {
+   custom_text_callback('key-message-1-link-text', 1);
+}
+
+function key_message_2_callback() {
+   custom_text_callback('key-message-2', 2);
+}
+
+function key_message_2_link_callback() {
+   custom_text_callback('key-message-2-link', 1);
+}
+
+function key_message_2_link_text_callback() {
+   custom_text_callback('key-message-2-link-text', 1);
+}
+
+function key_message_3_callback() {
+   custom_text_callback('key-message-3', 2);
+}
+
+function key_message_3_link_callback() {
+   custom_text_callback('key-message-3-link', 1);
+}
+
+function key_message_3_link_text_callback() {
+   custom_text_callback('key-message-3-link-text', 1);
 }
 
 function second_banner_header_callback() { ?>
@@ -303,6 +339,15 @@ function edit_home_page_page_setup() {
    add_settings_field('nonprofit-image-attachment-id', 'Nonprofit Badge', 'nonprofit_image_attachment_callback', 'edit-home-page', 'content');
    add_settings_field('school-description', 'School Description', 'school_description_callback', 'edit-home-page', 'content');
    add_settings_field('school-description-es', 'School Description (Spanish)', 'school_description_es_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-1', 'Key Message 1', 'key_message_1_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-1-link', 'Key Message 1 Link', 'key_message_1_link_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-1-link-text', 'Key Message 1 Link Text', 'key_message_1_link_text_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-2', 'Key Message 2', 'key_message_2_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-2-link', 'Key Message 2 Link', 'key_message_2_link_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-2-link-text', 'Key Message 2 Link Text', 'key_message_2_link_text_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-3', 'Key Message 3', 'key_message_3_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-3-link', 'Key Message 3 Link', 'key_message_3_link_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-4-link-text', 'Key Message 3 Link Text', 'key_message_3_link_text_callback', 'edit-home-page', 'content');
    add_settings_field('notice-text', 'Notice Text', 'notice_text_callback', 'edit-home-page', 'content');
    add_settings_field('notice-url', 'Notice URL', 'notice_url_callback', 'edit-home-page', 'content');
    add_settings_field('notice-text-es', 'Notice Text (Spanish)', 'notice_text_es_callback', 'edit-home-page', 'content');
@@ -368,6 +413,15 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'notice-url-es');
    register_setting('edit-home-page', 'school-description');
    register_setting('edit-home-page', 'school-description-es');
+   register_setting('edit-home-page', 'key-message-1');
+   register_setting('edit-home-page', 'key-message-1-link');
+   register_setting('edit-home-page', 'key-message-1-link-text');
+   register_setting('edit-home-page', 'key-message-2');
+   register_setting('edit-home-page', 'key-message-2-link');
+   register_setting('edit-home-page', 'key-message-2-link-text');
+   register_setting('edit-home-page', 'key-message-3');
+   register_setting('edit-home-page', 'key-message-3-link');
+   register_setting('edit-home-page', 'key-message-3-link-text');
    register_setting('edit-home-page', 'second-banner-header');
    register_setting('edit-home-page', 'second-banner-header-es');
    register_setting('edit-home-page', 'second-banner-text');

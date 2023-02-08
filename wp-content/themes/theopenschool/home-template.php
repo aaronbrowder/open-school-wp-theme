@@ -75,15 +75,12 @@ function event($number) {
    
    <div class="home-greenscreen home-greenscreen-1">
       <div class="home-greenscreen-text home-greenscreen-text-right">
-         <div class="home-logo">
-            <?php render_logo("logo-image-attachment-id"); ?>
-         </div>
-         <h1 class="home-title">
-            The Open School
-         </h1>
          <p class="home-title-caption">
-            <?php echo custom_text('school-description'); ?>
+            <?php echo custom_text('key-message-1'); ?>
          </p>
+         <a href="<?php echo custom_text('key-message-1-link'); ?>" class="home-call-to-action">
+            <?php echo custom_text('key-message-1-link-text'); ?>
+         </a>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-left">
          <?php echo get_banner("greenscreen-1-image-attachment-id"); ?>
