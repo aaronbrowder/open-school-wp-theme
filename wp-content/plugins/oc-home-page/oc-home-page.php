@@ -2,7 +2,7 @@
 /*
 Plugin Name: OC Home Page
 Description: 
-Version: 1.1.1
+Version: 1.1.2
 Author: Aaron Browder
 */
 
@@ -153,6 +153,34 @@ function key_message_3_link_callback() {
 
 function key_message_3_link_text_callback() {
    custom_text_callback('key-message-3-link-text', 1);
+}
+
+function long_key_message_1_callback() {
+   custom_text_callback('long-key-message-1', 3);
+}
+
+function long_key_message_2_callback() {
+   custom_text_callback('long-key-message-2', 3);
+}
+
+function long_key_message_3_callback() {
+   custom_text_callback('long-key-message-3', 3);
+}
+
+function long_key_message_4_callback() {
+   custom_text_callback('long-key-message-4', 3);
+}
+
+function long_key_message_5_callback() {
+   custom_text_callback('long-key-message-5', 3);
+}
+
+function open_house_url_callback() {
+   custom_text_callback('open-house-url', 1);
+}
+
+function open_house_text_callback() {
+   custom_text_callback('open-house-text', 1);
 }
 
 function second_banner_header_callback() { ?>
@@ -347,7 +375,14 @@ function edit_home_page_page_setup() {
    add_settings_field('key-message-2-link-text', 'Key Message 2 Link Text', 'key_message_2_link_text_callback', 'edit-home-page', 'content');
    add_settings_field('key-message-3', 'Key Message 3', 'key_message_3_callback', 'edit-home-page', 'content');
    add_settings_field('key-message-3-link', 'Key Message 3 Link', 'key_message_3_link_callback', 'edit-home-page', 'content');
-   add_settings_field('key-message-4-link-text', 'Key Message 3 Link Text', 'key_message_3_link_text_callback', 'edit-home-page', 'content');
+   add_settings_field('key-message-3-link-text', 'Key Message 3 Link Text', 'key_message_3_link_text_callback', 'edit-home-page', 'content');
+   add_settings_field('long-key-message-1', 'Long Key Message 1', 'long_key_message_1_callback', 'edit-home-page', 'content');
+   add_settings_field('long-key-message-2', 'Long Key Message 2', 'long_key_message_2_callback', 'edit-home-page', 'content');
+   add_settings_field('long-key-message-3', 'Long Key Message 3', 'long_key_message_3_callback', 'edit-home-page', 'content');
+   add_settings_field('long-key-message-4', 'Long Key Message 4', 'long_key_message_4_callback', 'edit-home-page', 'content');
+   add_settings_field('long-key-message-5', 'Long Key Message 5', 'long_key_message_5_callback', 'edit-home-page', 'content');
+   add_settings_field('open-house-url', 'Open House URL', 'open_house_url_callback', 'edit-home-page', 'content');
+   add_settings_field('open-house-text', 'Open House Text', 'open_house_text_callback', 'edit-home-page', 'content');
    add_settings_field('notice-text', 'Notice Text', 'notice_text_callback', 'edit-home-page', 'content');
    add_settings_field('notice-url', 'Notice URL', 'notice_url_callback', 'edit-home-page', 'content');
    add_settings_field('notice-text-es', 'Notice Text (Spanish)', 'notice_text_es_callback', 'edit-home-page', 'content');
@@ -422,6 +457,13 @@ function edit_home_page_page_setup() {
    register_setting('edit-home-page', 'key-message-3');
    register_setting('edit-home-page', 'key-message-3-link');
    register_setting('edit-home-page', 'key-message-3-link-text');
+   register_setting('edit-home-page', 'long-key-message-1');
+   register_setting('edit-home-page', 'long-key-message-2');
+   register_setting('edit-home-page', 'long-key-message-3');
+   register_setting('edit-home-page', 'long-key-message-4');
+   register_setting('edit-home-page', 'long-key-message-5');
+   register_setting('edit-home-page', 'open-house-url');
+   register_setting('edit-home-page', 'open-house-text');
    register_setting('edit-home-page', 'second-banner-header');
    register_setting('edit-home-page', 'second-banner-header-es');
    register_setting('edit-home-page', 'second-banner-text');
