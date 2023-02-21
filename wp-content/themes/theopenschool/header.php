@@ -7,15 +7,15 @@
       <meta http-equiv="Cache-Control" content="no-store" />
       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-      <!-- Global site tag (gtag.js) - Google AdWords: 846232865 -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-846232865"></script>
+      <!-- Global site tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34437376-1"></script>
       <!-- For Pinterest -->
       <meta name="p:domain_verify" content="f4e0ef1edc29c700a3f9e014a1505b47"/>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'AW-846232865');
+        gtag('config', 'UA-34437376-1');
       </script>
     
       <?php wp_head(); ?>

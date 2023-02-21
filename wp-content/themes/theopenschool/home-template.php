@@ -5,10 +5,6 @@ Template Name: Home
 
 get_header();
 
-$is_spanish = get_locale() == "es_MX";
-$container_class = $is_spanish ? 'spanish' : '';
-$learn_more_about_text = $is_spanish ? 'Aprenda más sobre' : 'Learn more about';
-
 function get_image_src_data($id, $size = "full")
 {
    $src = wp_get_attachment_image_src(get_option($id), $size)[0];
@@ -18,23 +14,12 @@ function get_image_src_data($id, $size = "full")
    return 'data: ' . finfo_buffer($finfo, $image) . ';base64,' . $data;
 }
 
-function render_logo($image_id) { ?>
-   <img class="home-banner-preloaded" alt="Open School leaf logo" src="<?php echo get_image_src_data($image_id); ?>">
+function preloaded_image($image_id) { ?>
+   <img src="<?php echo get_image_src_data($image_id); ?>">
 <?php }
 
 function get_banner($image_id) {
    return wp_get_attachment_image(get_option($image_id), 'full');
-}
-
-function get_banner_with_locale($image_id) {
-   return wp_get_attachment_image(get_option(get_image_id_with_locale($image_id)), 'full');
-}
-
-function get_image_id_with_locale($image_id) {
-   if (get_locale() == 'es_MX') {
-      return $image_id . '-es';
-   }
-   return $image_id;
 }
 
 function check_mark() { ?>
@@ -54,12 +39,52 @@ function promoted_event() {
    <?php }
 }
 
+function key_message($number) {
+   $message = custom_text('key-message-' . $number);
+   if (!empty($message)) { ?>
+      <div class="home-slider-item">
+         <div class="home-greenscreen-text home-greenscreen-text-right">
+            <p class="home-title-caption">
+               <?php echo $message; ?>
+            </p>
+            <a href="<?php echo custom_text('key-message-link'); ?>" class="home-call-to-action">
+               <?php echo custom_text('key-message-link-text'); ?>
+            </a>
+         </div>
+         <div class="home-greenscreen-image home-greenscreen-image-left">
+            <?php echo preloaded_image('greenscreen-' . $number . '-image-attachment-id'); ?>
+         </div>
+      </div>
+   <?php }
+}
+
 function long_key_message($number) {
    $message = custom_text('long-key-message-' . $number);
    if (!empty($message)) { ?>
       <p class="home-long-key-message">
          <?php check_mark(); ?>
          <span class="home-long-key-message-text"><?php echo $message; ?></span>
+      </p>
+   <?php }
+}
+
+function metric($i) {
+   $number = custom_text('metric-' . $i . '-number');
+   $text = custom_text('metric-' . $i . '-text');
+   if (!empty($number)) { ?>
+      <div class="home-metric-box">
+         <div class="home-metric-number"><?php echo $number; ?></div>
+         <hr>
+         <div class="home-metric-text"><?php echo $text; ?></div>
+      </div>
+   <?php }
+}
+
+function testimonial($i) {
+   $text = custom_text('testimonial' . $i);
+   if (!empty($text)) { ?>
+      <p class="home-slider-item">
+         <?php echo $text; ?>
       </p>
    <?php }
 }
@@ -85,19 +110,17 @@ function event($number) {
    <?php }
 } ?>
 
-<div class="home-container <?php echo $container_class; ?>">
+<div class="home-container">
    
    <div class="home-greenscreen home-greenscreen-1">
-      <div class="home-greenscreen-text home-greenscreen-text-right">
-         <p class="home-title-caption">
-            <?php echo custom_text('key-message-1'); ?>
-         </p>
-         <a href="<?php echo custom_text('key-message-1-link'); ?>" class="home-call-to-action">
-            <?php echo custom_text('key-message-1-link-text'); ?>
-         </a>
-      </div>
-      <div class="home-greenscreen-image home-greenscreen-image-left">
-         <?php echo get_banner("greenscreen-1-image-attachment-id"); ?>
+      <div class="home-slider-container">
+         <button class="home-slider-button-left">&langle;</button>
+         <button class="home-slider-button-right">&rangle;</button>
+         <div class="home-slider-track" data-time="7000"><?php
+            key_message(1); 
+            key_message(2);
+            key_message(3);
+         ?></div>
       </div>
    </div>
 
@@ -107,11 +130,11 @@ function event($number) {
       <div class="home-greenscreen-text">
          <h2><?php echo custom_text('second-banner-header'); ?></h2>
          <?php
-            echo long_key_message(1);
-            echo long_key_message(2);
-            echo long_key_message(3);
-            echo long_key_message(4);
-            echo long_key_message(5);
+            long_key_message(1);
+            long_key_message(2);
+            long_key_message(3);
+            long_key_message(4);
+            long_key_message(5);
             $open_house_url = get_option('open-house-url');
             $open_house_text = get_option('open-house-text');
             if (!empty($open_house_url)) { ?>
@@ -123,10 +146,34 @@ function event($number) {
          ?>
       </div>
    </div>
-   
-   <div class="home-new-banner-container">
-      <div class="home-new-banner home-new-banner-1">
-         <?php echo get_banner_with_locale("new-banner-1-image-attachment-id"); ?>
+
+   <div class="home-greenscreen home-greenscreen-6">
+      <div class="home-greenscreen-text home-greenscreen-text-left"> <?php
+         metric(1);
+         metric(2);
+         metric(3);
+         metric(4);
+      ?> </div>
+      <div class="home-greenscreen-image home-greenscreen-image-right">
+         <?php echo get_banner("metrics-image-attachment-id"); ?>
+      </div>
+   </div>
+
+   <div class="home-greenscreen home-greenscreen-4">
+      <div class="home-greenscreen-testimonial home-greenscreen-text home-greenscreen-text-right">
+         <h2>What Our Parents Say</h2>
+         <div class="home-slider-container">
+            <div class="home-slider-track" data-time="7000"><?php
+               testimonial(1); 
+               testimonial(2);
+               testimonial(3);
+               testimonial(4);
+               testimonial(5);
+            ?></div>
+         </div>
+      </div>
+      <div class="home-greenscreen-image home-greenscreen-image-left">
+         <?php echo get_banner("testimonials-image-attachment-id"); ?>
       </div>
    </div>
    
@@ -152,52 +199,8 @@ function event($number) {
          </div>
       </div>
       <div class="home-greenscreen-image home-greenscreen-image-right">
-         <?php echo get_banner("greenscreen-3-image-attachment-id"); ?>
+         <?php echo get_banner("announcements-image-attachment-id"); ?>
       </div>
-   </div>
-   
-   <div class="home-new-banner-container">
-      <div class="home-new-banner home-new-banner-2">
-         <?php echo get_banner_with_locale("new-banner-2-image-attachment-id"); ?>
-      </div>
-   </div>
-   
-   <div class="home-greenscreen home-greenscreen-4">
-      <div class="home-greenscreen-testimonial home-greenscreen-text home-greenscreen-text-right">
-         <?php echo custom_text('testimonial1'); ?>
-         <br><br><br>&nbsp; &nbsp; ~ <?php echo custom_text('testimonial1-attribution'); ?>
-      </div>
-      <div class="home-greenscreen-image home-greenscreen-image-left">
-         <?php echo get_banner("greenscreen-4-image-attachment-id"); ?>
-      </div>
-   </div>
-   
-   <div class="home-new-banner-container">
-      <div class="home-new-banner home-new-banner-3">
-         <?php echo get_banner_with_locale("new-banner-3-image-attachment-id"); ?>
-      </div>
-   </div>
-   
-   <div class="home-greenscreen home-greenscreen-5">
-      <div class="home-greenscreen-testimonial home-greenscreen-text home-greenscreen-text-left">
-         <?php echo custom_text('testimonial2'); ?>
-         <br><br><br>&nbsp; &nbsp; ~ <?php echo custom_text('testimonial2-attribution'); ?>
-      </div>
-      <div class="home-greenscreen-image home-greenscreen-image-right">
-         <?php echo get_banner("greenscreen-5-image-attachment-id"); ?>
-      </div>
-   </div>
-   
-   <div class="home-learn-more">
-      <a href="<?php echo custom_text('introduction-url') ?>">
-         <?php echo $learn_more_about_text; ?><br>The Open School <span class="home-link-arrow">&raquo;</span>
-      </a>
-   </div>
-   
-   <div class="home-nonprofit-badge">
-      <a href="https://www.ocnonprofitcentral.org/organizations/the-open-school">
-         <?php echo get_banner("nonprofit-image-attachment-id"); ?>
-      </a>
    </div>
    
 </div>

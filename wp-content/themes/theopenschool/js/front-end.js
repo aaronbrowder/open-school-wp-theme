@@ -3,6 +3,56 @@ document.addEventListener('DOMContentLoaded', hamburgerMenu, false);
 document.addEventListener('DOMContentLoaded', searchSetup, false);
 document.addEventListener('DOMContentLoaded', bannerLoader, false);
 document.addEventListener('DOMContentLoaded', covidSetup, false);
+document.addEventListener('DOMContentLoaded', sliderSetup, false);
+
+function sliderSetup() {
+   const tracks = document.getElementsByClassName('home-slider-track');
+   for (let track of tracks) {
+      const time = Number(track.getAttribute('data-time'));
+      const itemCount = track.getElementsByClassName('home-slider-item').length;
+      const leftButton = track.parentElement.querySelector('.home-slider-button-left');
+      const rightButton = track.parentElement.querySelector('.home-slider-button-right');
+      let i = 0;
+      let freeze = false;
+      updateButtons();
+      setInterval(() => {
+         if (!freeze) {
+            slide(1);
+         }
+      }, time);
+      if (leftButton) {
+         leftButton.addEventListener('click', () => {
+            slide(-1);
+            freeze = true;
+         });
+      }
+      if (rightButton) {
+         rightButton.addEventListener('click', () => {
+            slide(1);
+            freeze = true;
+         });
+      }
+      function slide(direction) {
+         i += direction;
+         if (i >= itemCount) {
+            i = 0;
+         }
+         if (i < 0) {
+            i = itemCount - 1;
+         }
+         track.style.transform = `translateX(-${i * 100}%)`;
+         updateButtons();
+      }
+      function updateButtons() {
+         if (leftButton) {
+            leftButton.disabled = i === 0;
+         }
+         if (rightButton) {
+            rightButton.disabled = i === itemCount - 1;
+         }
+      }
+   }
+}
 
 function covidSetup() {
    var closeButtons = document.getElementsByClassName('header-covid-close');
