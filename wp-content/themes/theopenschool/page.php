@@ -19,7 +19,7 @@ if ($_POST['contact-submitted']) {
    $school_email = get_option('email');
    $recip = $school_email;
    
-   $missing_content = 'Recipient, name, and message are required. Please try again.';
+   $missing_content = 'Name, program, and message are required. Please try again.';
    $email_invalid   = 'The email address you provided is invalid. Please try again.';
    $message_unsent  = 'Your message was not sent. Please try again.';
    
@@ -33,11 +33,14 @@ if ($_POST['contact-submitted']) {
    $zip = $_POST['message_zip'];
    $message = $_POST['message_text'];
    $preference = $_POST['message_preference'];
+   $program = $_POST['message_program'];
    
-   if (!empty($recipient)) {
-      $recipient_address = get_option("contact-recipient-$recipient-address");
+   if (empty($recipient)) {
+      $recipient = 1;
    }
-   
+
+   $recipient_address = get_option("contact-recipient-$recipient-address");
+
    $subject = $name . ' sent a message from The Open School\'s website';
 
    $headers[] = 'MIME-Version: 1.0';
@@ -49,6 +52,10 @@ if ($_POST['contact-submitted']) {
    
    if ($phone) {
       $message = $message . ' <p>Phone number: ' . $phone;
+   }
+
+   if ($program) {
+      $message = $message . ' <p>Program: ' . $program;
    }
 
    if ($preference) {
@@ -73,7 +80,7 @@ if ($_POST['contact-submitted']) {
    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $error = $email_invalid;
    }
-   else if (empty($recipient) || empty($name) || empty($message)) {
+   else if (empty($name) || empty($program) || empty($message)) {
       $error = $missing_content;
    }
    else {

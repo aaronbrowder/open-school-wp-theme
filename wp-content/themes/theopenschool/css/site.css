@@ -1115,6 +1115,14 @@ h2[id]:before, h3[id]:before {
   margin: 0;
 }
 
+.home-inquire-now {
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin: auto;
+  max-width: 700px;
+}
+
 @media (min-width: 380px) {
   .home-greenscreen-testimonial {
     margin: auto;

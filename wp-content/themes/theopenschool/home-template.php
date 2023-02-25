@@ -108,7 +108,9 @@ function event($number) {
          } ?>
       </div>
    <?php }
-} ?>
+}
+
+?>
 
 <div class="home-container">
    
@@ -201,6 +203,12 @@ function event($number) {
       <div class="home-greenscreen-image home-greenscreen-image-right">
          <?php echo get_banner("announcements-image-attachment-id"); ?>
       </div>
+   </div>
+
+   <div class="home-inquire-now">
+      <h2>Inquire Now</h2>
+      <p>For more information, please fill out the form below and press Send.</p>
+      <?php echo contact_form_shortcode_callback(array('success-url' => '/contact')); ?>
    </div>
    
 </div>
