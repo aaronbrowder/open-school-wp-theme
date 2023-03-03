@@ -208,7 +208,7 @@ function event($number) {
    <div class="home-inquire-now">
       <h2>Inquire Now</h2>
       <p>For more information, please fill out the form below and press Send.</p>
-      <?php echo contact_form_shortcode_callback(array('success-url' => '/contact')); ?>
+      <?php echo contact_form_shortcode_callback(); ?>
    </div>
    
 </div>

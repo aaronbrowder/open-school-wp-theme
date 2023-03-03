@@ -411,7 +411,8 @@ function contact_form_shortcode_callback($atts = [], $content = null) {
      'show-preference' => 'false',
      'show-recipients' => 'false',
      'recipient-label' => 'Send to',
-     'recipients' => '1,2,3,4,5'
+     'recipients' => '1,2,3,4,5',
+     'success-url' => '/contact-us',
      ),
      $atts);
 	return render_php('contact-form.php', $atts, $content);
