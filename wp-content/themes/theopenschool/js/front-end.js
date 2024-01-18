@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', searchSetup, false);
 document.addEventListener('DOMContentLoaded', bannerLoader, false);
 document.addEventListener('DOMContentLoaded', covidSetup, false);
 document.addEventListener('DOMContentLoaded', sliderSetup, false);
+document.addEventListener('DOMContentLoaded', schoolMintConnectSetup, false);
 
 function sliderSetup() {
    const tracks = document.getElementsByClassName('home-slider-track');
@@ -249,4 +250,16 @@ function contextMenu() {
       return menuItem.children && menuItem.children.length > 1 ? menuItem.children[1] : null;
    }
 
+}
+
+function schoolMintConnectSetup() {
+   var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+   script.src = 'https://connect.schoolmint.com/api/noAuth/widget/getWidgetScriptForSchool/d407b6a71f4241f4af25faf20dbedd23';
+   tag.parentNode.insertBefore(script, tag);
+   script.onerror= function() {
+       etWidgetDivs = document.getElementsByClassName('et-widget');
+       var testDivs = Array.prototype.filter.call(etWidgetDivs, function(etWidgetDiv) {
+           etWidgetDiv.innerHTML = '<p><span style="color:red">We are sorry for the inconvenience, but our forms are currently undergoing maintenance. Please check back again shortly.</span></p>';
+       });
+   }
 }
