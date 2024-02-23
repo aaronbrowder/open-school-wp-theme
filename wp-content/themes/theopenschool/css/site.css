@@ -1940,6 +1940,14 @@ blockquote.post-meta {
   padding: 10px 15px;
 }
 
+.page .page-profile-pic {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.page .page-profile-pic img {
+  width: 200px !important;
+}
+
 @media (min-width: 800px) {
   .page {
     margin-bottom: 40px;
@@ -1967,13 +1975,12 @@ blockquote.post-meta {
   }
 
   .page-profile-bio {
-    float: right;
-    width: 500px;
-    padding-left: 18px;
+    overflow: hidden;
   }
 
   .page-profile-pic {
-    overflow: hidden;
+    float: left;
+    padding-right: 18px;
   }
 }
 @media (min-width: 992px) {
