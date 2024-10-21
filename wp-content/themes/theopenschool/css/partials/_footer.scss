@@ -52,6 +52,12 @@
    }
 }
 
+.footer-subscribe {
+   max-width: 300px;
+   margin-top: -30px;
+   margin-left: 0;
+}
+
 @media (min-width: 550px) {
    .footer-social {
       float: right;
@@ -59,6 +65,9 @@
    }
    .footer-links {
       text-align: right;
+   }
+   .footer-subscribe {
+      margin-left: 30px;
    }
    .footer-contact {
       overflow: hidden;

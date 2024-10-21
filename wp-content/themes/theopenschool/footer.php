@@ -30,6 +30,10 @@
                      <a href="<?php echo custom_text('speaker-url') ?>"><i class="fas fa-comment"></i>&nbsp; Request a Speaker</a>
                   </div>
                <?php } ?>
+               <!-- ConvertKit newsletter subscribe inline form -->
+               <div class="footer-subscribe">
+                  <script async data-uid="f68ef86dff" src="https://fierce-leader-3919.ck.page/f68ef86dff/index.js"></script>
+               </div>
             </div>
             <div class="footer-contact">
                <h4><?php echo get_bloginfo('name'); ?></h4>
