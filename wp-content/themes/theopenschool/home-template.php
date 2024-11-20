@@ -14,8 +14,10 @@ function get_image_src_data($id, $size = "full")
    return 'data: ' . finfo_buffer($finfo, $image) . ';base64,' . $data;
 }
 
-function preloaded_image($image_id) { ?>
-   <img src="<?php echo get_image_src_data($image_id); ?>">
+function preloaded_image($image_id) {
+   $alt = get_post_meta(get_option($image_id), '_wp_attachment_image_alt', true);
+   ?>
+   <img src="<?php echo get_image_src_data($image_id); ?>" alt="<?php echo $alt; ?>">
 <?php }
 
 function get_banner($image_id) {

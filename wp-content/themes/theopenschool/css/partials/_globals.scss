@@ -157,3 +157,22 @@ h2[id]:before, h3[id]:before {
       max-width: 1000px;
    }
 }
+
+.tuition-table {
+   border-collapse: collapse;
+   border: 1px solid #bbb;
+
+   th {
+      text-align: left;
+   }
+
+   th, td {
+      padding: 7px 11px;
+      border-left: 1px solid #bbb;
+      white-space: nowrap;
+   }
+
+   tr:nth-child(even) {
+      background: #eaeaea;
+   }
+}

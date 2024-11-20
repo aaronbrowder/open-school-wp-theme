@@ -42,41 +42,41 @@ $virtual_label = $is_spanish ? 'Virtual' : 'Virtual';
    <table class="contact-us-table">
       <tbody>
          <tr>
-            <th><?php echo $name_label; ?></th>
-            <td><input type="text" name="message_name" required/></td>
+            <th><label for="name"><?php echo $name_label; ?></label></th>
+            <td><input type="text" name="message_name" id="name" required/></td>
          </tr>
          <tr>
-            <th><?php echo $email_label; ?></th>
-            <td><input type="email" name="message_email" required/></td>
+            <th><label for="email"><?php echo $email_label; ?></label></th>
+            <td><input type="email" name="message_email" id="email" required/></td>
          </tr>
          <?php if ($show_phone) { ?>
             <tr>
-               <th><?php echo $phone_label; ?></th>
-               <td><input type="text" class="contact-us-short" name="message_phone" required/></td>
+               <th><label for="phone"><?php echo $phone_label; ?></label></th>
+               <td><input type="text" class="contact-us-short" name="message_phone" id="phone" required/></td>
             </tr>
          <?php } ?>
          <?php if ($show_address) { ?>
             <tr>
-               <th><?php echo $address_label; ?></th>
-               <td><input type="text" name="message_address"/></td>
+               <th><label for="address"><?php echo $address_label; ?></label></th>
+               <td><input type="text" name="message_address" id="address"/></td>
             </tr>
             <tr>
-               <th><?php echo $city_label; ?></th>
-               <td><input type="text" class="contact-us-short" name="message_city"/></td>
+               <th><label for="city"><?php echo $city_label; ?></label></th>
+               <td><input type="text" class="contact-us-short" name="message_city" id="city"/></td>
             </tr>
             <tr>
-               <th><?php echo $state_label; ?></th>
-               <td><input type="text" class="contact-us-short" name="message_state"/></td>
+               <th><label for="state"><?php echo $state_label; ?></label></th>
+               <td><input type="text" class="contact-us-short" name="message_state" id="state"/></td>
             </tr>
             <tr>
-               <th><?php echo $zip_label; ?></th>
-               <td><input type="text" class="contact-us-short" name="message_zip"/></td>
+               <th><label for="zip"><?php echo $zip_label; ?></zip></th>
+               <td><input type="text" class="contact-us-short" name="message_zip" id="zip"/></td>
             </tr>
          <?php } ?>
          <tr>
-            <th><?php echo $program_label; ?></th>
+            <th><label for="program"><?php echo $program_label; ?></label></th>
             <td>
-               <select name="message_program" required>
+               <select name="message_program" id="program" required>
                   <option></option>
                   <option value="In-Person"><?php echo $in_person_label; ?></option>
                   <option value="Virtual"><?php echo $virtual_label; ?></option>
@@ -85,15 +85,15 @@ $virtual_label = $is_spanish ? 'Virtual' : 'Virtual';
          </tr>
          <?php if ($show_message) { ?>
             <tr>
-               <th><?php echo $message_label; ?></th>
-               <td><textarea name="message_text" rows="<?php echo $textarea_rows; ?>" required><?php echo $default_message; ?></textarea></td>
+               <th><label for="message"><?php echo $message_label; ?></label></th>
+               <td><textarea name="message_text" id="message" rows="<?php echo $textarea_rows; ?>" required><?php echo $default_message; ?></textarea></td>
             </tr>
          <?php } ?>
          <?php if ($show_preference) { ?>
             <tr>
-               <th><?php echo $preference_label; ?></th>
+               <th><label for="preference"><?php echo $preference_label; ?></label></th>
                <td>
-                  <select name="message_preference" required>
+                  <select name="message_preference" id="preference" required>
                      <option value="Email"><?php echo $email_label; ?></option>
                      <option value="Text"><?php echo $text_label; ?></option>
                      <option value="Phone"><?php echo $phone_label; ?></option>
@@ -103,9 +103,9 @@ $virtual_label = $is_spanish ? 'Virtual' : 'Virtual';
          <?php } ?>
          <?php if ($show_recipients) { ?>
             <tr>
-               <th><?php echo $recipient_label; ?></th>
+               <th><label for="recipient"><?php echo $recipient_label; ?></label></th>
                <td>
-                  <select name="message_recipient" required>
+                  <select name="message_recipient" id="recipient" required>
                      <?php if (sizeof($recipients) > 1) { ?>
                         <option></option>
                      <?php } ?>
