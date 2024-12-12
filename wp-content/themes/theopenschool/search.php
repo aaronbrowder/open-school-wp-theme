@@ -8,7 +8,7 @@
          </h1>
 	      
          <div class="search-form">
-            <?php get_search_form(); ?>
+            <?php //get_search_form(); ?>
          </div>
 		      
    		<?php if (have_posts()) { ?>

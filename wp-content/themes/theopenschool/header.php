@@ -104,9 +104,9 @@
                      <i class="fas fa-bars"></i>
                   </div>
                   
-                  <div id="search-activator" class="header-search-activator">
+                  <!-- <div id="search-activator" class="header-search-activator">
                      <i class="fas fa-search"></i>
-                  </div>
+                  </div> -->
                   
                   <ul id="main-menu" class="header-menu">
                      <?php foreach ($top_menu_items as $item):
@@ -192,7 +192,7 @@
                   
                   <div id="search-area" class="header-search-area">
             			<div class="search-form">
-                        <?php get_search_form(); ?>
+                        <?php //get_search_form(); ?>
                      </div>
                   </div>
                   
