@@ -34,6 +34,7 @@ if ($_POST['contact-submitted']) {
    $message = $_POST['message_text'];
    $preference = $_POST['message_preference'];
    $program = $_POST['message_program'];
+   $optin = $_POST['message_optin'];
    
    if (empty($recipient)) {
       $recipient = 1;
@@ -52,6 +53,10 @@ if ($_POST['contact-submitted']) {
    
    if ($phone) {
       $message = $message . ' <p>Phone number: ' . $phone;
+   }
+
+   if ($optin) {
+      $message = $message . ' <p>SMS opt-in: ' . ($optin == 'optin-yes' ? 'YES' : 'NO');
    }
 
    if ($program) {

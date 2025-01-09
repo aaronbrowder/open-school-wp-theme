@@ -334,6 +334,12 @@ blockquote.blog-sharable {
   color: #780000;
 }
 
+.contact-us-optin-notice {
+  margin: 7px 0;
+  font-size: 0.85em;
+  color: #888;
+}
+
 @media (min-width: 800px) {
   .contact-us-table {
     font-size: 14.5px;

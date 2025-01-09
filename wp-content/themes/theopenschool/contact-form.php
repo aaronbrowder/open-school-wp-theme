@@ -3,7 +3,7 @@
 $atts = $GLOBALS['atts'];
 $default_message = $GLOBALS['content'];
 
-$textarea_rows = $default_message ? 5 : 7;
+$textarea_rows = 5;
 
 $button_text = $atts['button-text'];
 
@@ -123,6 +123,17 @@ $virtual_label = $is_spanish ? 'Virtual' : 'Virtual';
                </td>
             </tr>
          <?php } ?>
+         <?php if ($show_phone) { ?>
+            <tr>
+               <td colspan="2">
+                  <input type="radio" id="optin-yes" name="message_optin" value="optin-yes" checked>
+                  <label for="optin-yes">Yes, I agree to receive text messages from The Open School to the number listed above.</label>
+                  <p class="contact-us-optin-notice"><em>Messaging frequency may vary and may include appointment reminders, informational messages, and promotional messages. Message and data rates apply. You may opt out at any time by replying "STOP". For help, reply "HELP".</em></p>
+                  <input type="radio" id="optin-no" name="message_optin" value="optin-no">
+                  <label for="optin-no">No, I do not want to receive text messages from The Open School.</label>
+               </td>
+            </tr>
+         <?php } ?>
       </tbody>
    </table>
    <?php if (!$show_message) { ?>
@@ -130,4 +141,5 @@ $virtual_label = $is_spanish ? 'Virtual' : 'Virtual';
    <?php } ?>
    <input type="hidden" name="contact-submitted" value="1">
    <button type="submit" class="contact-us-send"><?php echo $button_text; ?></button>
+   <p class="contact-us-optin-notice"><em>Read about our privacy policy <a href="/privacypolicy" target="_blank">here</a>.</em></p>
 </form>
