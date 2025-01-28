@@ -147,6 +147,7 @@
    }
    .header-menu {
       display: none;
+      position: relative;
       padding: 0;
       margin: 0 -10px;
       width: calc(100% + 20px);
@@ -174,6 +175,49 @@
          &:focus {
             color: $light-green;
             text-decoration: none;
+         }
+      }
+      &.header-contact {
+         display: inline-block;
+         position: absolute;
+         right: 0;
+         top: 40px;
+         background: #444;
+         color: #ccc;
+         border: none;
+         padding: 6px 10px;
+         width: 115px;
+         text-align: right;
+      }
+      .header-contact-phone {
+         font-size: 1.1em;
+      }
+      .header-contact-location {
+         font-size: 0.7em;
+      }
+      &.header-highlight {
+         display: inline-block;
+         position: absolute;
+         right: 0;
+         top: 0;
+         padding: 0 10px;
+         margin: 5px;
+         border-left: 1px solid #222;
+         width: 105px;
+         text-align: center;
+         background: #007ac1;
+         border-radius: 4px;
+         a {
+            padding: 5px 0;
+            &:hover, &:focus {
+               color: #aee1ff;
+            }
+         }
+         .header-context-menu {
+            margin-top: 5px;
+         }
+         &:after {
+            top: 33px;
          }
       }
    }
@@ -214,7 +258,7 @@
    }
 }
 
-@media (min-width: 835px) {
+@media (min-width: 935px) {
    .sub-masthead-wrapper {
       display: block;
    }
@@ -243,26 +287,30 @@
          a {
             display: block;
          }
+         &.header-contact {
+            position: initial;
+            background: none;
+            border: none;
+            padding: 0;
+            width: auto;
+            vertical-align: middle;
+            margin-left: 20px;
+            margin-top: -5px;
+         }
+         .header-contact-phone {
+            margin: -3px 0;
+         }
+         &.header-highlight {
+            position: initial;
+            padding: 0;
+            border: none;
+            width: 115px;
+            margin: 0;
+            margin-left: 13px;
+         }
       }
       .header-current-menu-item {
          @include menu-item-with-arrow;
-      }
-      .header-donate {
-         background: #007ac1;
-         border-radius: 4px;
-         a {
-            padding-top: 5px;
-            padding-bottom: 5px;
-            &:hover, &:focus {
-               color: #aee1ff;
-            }
-         }
-         .header-context-menu {
-            margin-top: 5px;
-         }
-         &:after {
-            top: 33px;
-         }
       }
       .header-context-menu {
          display: none;

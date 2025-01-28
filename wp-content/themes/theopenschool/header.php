@@ -133,14 +133,13 @@
                            $current_sub1_menu_items = $children;
                         }
 
-                        $is_donate = strtolower($item->title) == 'give' || strtolower($item->title) == 'donar';
+                        $is_donate = strtolower($item->title) == 'give' || strtolower($item->title) == 'support' || strtolower($item->title) == 'donar';
 
                         ?>
                         
                         <li class="header-menu-item<?php
                                  echo ($is_current ? ' header-current-menu-item' : '');
                                  echo (!empty($children) ? ' has-children' : '');
-                                 echo ($is_donate ? ' header-donate' : '');
                                  ?>">
                            <a href="<?php echo $url; ?>" <?php echo $is_donate ? 'target="_blank"' : '' ?>>
                               <?php echo $item->title; ?>
@@ -148,6 +147,7 @@
                            <?php if (!empty($children)) { ?>
                               <ul class="header-context-menu">
                                  <?php foreach ($children as $child) {
+                                    $is_child_donate = strtolower($child->title) == 'give' || strtolower($child->title) == 'donar';
                                     $child_id = get_page_id($child);
                                     $child_url = $child->url;
                                     $level_2_children = array_filter($sub2_menu_items, function($sub_item) use ($child) { 
@@ -164,7 +164,7 @@
                                     <li class="header-context-menu-item<?php
                                        echo (!empty($level_2_children) ? ' has-children' : '');
                                     ?>">
-                                       <a href="<?php echo $child_url; ?>">
+                                       <a href="<?php echo $child_url; ?>" <?php echo $is_child_donate ? 'target="_blank"' : '' ?>>
                                           <?php echo $child->title; ?>
                                        </a>
                                        <?php if (!empty($level_2_children)) { ?>
@@ -188,6 +188,17 @@
                         </li>
                            
                      <?php endforeach; ?>
+                     <li class="header-menu-item header-contact">
+                        <div class="header-contact-phone">
+                           <?php echo get_option('phone') ?>
+                        </div>
+                        <div class="header-contact-location">
+                           Santa Ana, Orange County                  
+                        </div>
+                     </li>
+                     <li class="header-menu-item header-highlight">
+                        <a href="/inquire-now">Inquire Now</a>
+                     </li>
                   </ul>
                   
                   <div id="search-area" class="header-search-area">

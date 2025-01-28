@@ -46,9 +46,16 @@ function key_message($number) {
    if (!empty($message)) { ?>
       <div class="home-slider-item">
          <div class="home-greenscreen-text home-greenscreen-text-right">
-            <p class="home-title-caption">
-               <?php echo $message; ?>
-            </p>
+            <?php if ($number == 1) { ?>
+               <h1 class="home-title-caption">
+                  <?php echo $message; ?>
+               </p>
+            <?php }
+            else { ?>
+               <p class="home-title-caption">
+                  <?php echo $message; ?>
+               </p>
+            <?php } ?>
             <a href="<?php echo custom_text('key-message-link'); ?>" class="home-call-to-action">
                <?php echo custom_text('key-message-link-text'); ?>
             </a>
@@ -208,7 +215,7 @@ function event($number) {
    </div>
 
    <div class="home-inquire-now">
-      <h2>Inquire Now</h2>
+      <h2>Contact Us</h2>
       <p>For more information, please fill out the form below and press Send.</p>
       <?php echo contact_form_shortcode_callback(); ?>
    </div>
