@@ -85,6 +85,11 @@ iframe {
    width: 96px;
 }
 
+.schoolmint-form {
+   padding: 10px;
+   background: #e8e8e8;
+}
+
 @mixin donate-button {
    background: #0072d6;
    &:hover,

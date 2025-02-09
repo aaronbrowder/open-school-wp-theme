@@ -537,6 +537,11 @@ iframe {
   color: #fff;
 }
 
+.schoolmint-form {
+  padding: 10px;
+  background: #e8e8e8;
+}
+
 .footer-donate-button {
   background: #0072d6;
   width: 135px;
@@ -2379,6 +2384,130 @@ blockquote.post-meta {
 }
 .vp-section3 {
   padding-top: 15px;
+}
+
+.custom-page-banner-image {
+  border-bottom-right-radius: 300% 100%;
+  border-bottom-left-radius: 300% 100%;
+}
+
+.custom-page-banner-header {
+  position: absolute;
+  top: 22vw;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  line-height: 1.25;
+  font-size: 18px;
+}
+
+.custom-page-banner-header-large {
+  font-size: 28px;
+}
+
+@media (min-width: 800px) {
+  .custom-page-banner-header {
+    top: 17vw;
+    font-size: 30px;
+  }
+  .custom-page-banner-header-large {
+    font-size: 56px;
+  }
+}
+.custom-page-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 0 10px;
+}
+.custom-page-container h2 {
+  margin-top: 32px;
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+.custom-page-container h3 {
+  margin-top: 32px;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+.custom-page-container p {
+  line-height: 1.5;
+}
+
+.custom-page-centered-header {
+  text-align: center;
+}
+
+.custom-page-tuition-blocks-container {
+  text-align: center;
+}
+
+.custom-page-tuition-block {
+  background: #ebebeb;
+  border-bottom: 1px solid #bbb;
+  padding: 12px 18px;
+  width: 240px;
+  display: block;
+  margin: auto;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 800px) {
+  .custom-page-tuition-block-inline {
+    display: inline-block;
+    margin-right: 8px;
+  }
+}
+.custom-page-tuition-header {
+  margin-bottom: 9px;
+}
+
+.custom-page-tuition-header-year {
+  font-weight: bold;
+}
+
+.custom-page-tuition-header-program {
+  margin-left: 2px;
+}
+
+.custom-page-tuition-range-container {
+  position: relative;
+}
+
+.custom-page-tuition-range-terminal-left, .custom-page-tuition-range-terminal-right {
+  width: 11px;
+  height: 11px;
+  background: #009102;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.custom-page-tuition-range-terminal-left {
+  left: 0;
+}
+
+.custom-page-tuition-range-terminal-right {
+  right: 0;
+}
+
+.custom-page-tuition-range-line {
+  width: 100%;
+  height: 3px;
+  background: #009102;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.custom-page-tuition-range-bottom {
+  float: left;
+}
+
+.custom-page-tuition-range-top {
+  margin-top: 22px;
+  text-align: right;
 }
 
 /*# sourceMappingURL=site.css.map */
