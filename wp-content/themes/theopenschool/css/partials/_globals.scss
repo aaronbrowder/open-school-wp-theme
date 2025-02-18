@@ -7,12 +7,17 @@ body {
    overflow-x: hidden;
 }
 
+p {
+   font-size: 15px;
+   line-height: 1.6;
+}
+
 h1,
 h2,
 h3,
 h4 {
-   margin-top: 20px;
-   margin-bottom: 10px;
+   margin-top: 32px;
+   margin-bottom: 18px;
    font-family: $header-font-family;
    font-weight: bold;
    color: #333;
@@ -20,19 +25,19 @@ h4 {
 }
 
 h1 {
-   font-size: 30px;
+   font-size: 32px;
 }
 
 h2 {
-   font-size: 25px;
+   font-size: 28px;
 }
 
 h3 {
-   font-size: 21px;
+   font-size: 24px;
 }
 
 h4 {
-   font-size: 18px;
+   font-size: 20px;
 }
 
 a {
@@ -128,17 +133,20 @@ h2[id]:before, h3[id]:before {
    body {
       font-size: 15px;
    }
+   p {
+      font-size: 16px;
+   }
    h1 {
       font-size: 36px;
    }
    h2 {
-      font-size: 30px;
+      font-size: 32px;
    }
    h3 {
-      font-size: 24px;
+      font-size: 26px;
    }
    h4 {
-      font-size: 18px;
+      font-size: 22px;
    }
    .container {
       padding: 0 15px;
