@@ -1,3 +1,6 @@
+<head>
+<meta name="robots" content="noindex">
+
 <?php get_header(); ?>
 
 	<div class="container">
