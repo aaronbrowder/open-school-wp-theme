@@ -21,7 +21,9 @@ if (sizeof($pieces) > 0 && $pieces[0] == 'product') {
    </blockquote>
 <?php } ?>
 
-<?php the_content(); ?>
+<div class="blog-page">
+   <?php the_content(); ?>
+</div>
 
 <hr/>
 <br/>

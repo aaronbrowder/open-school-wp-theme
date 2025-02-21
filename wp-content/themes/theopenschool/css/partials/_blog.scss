@@ -1,4 +1,13 @@
 @import '_core.scss';
+
+.blog-page {
+   max-width: 700px;
+   img {
+      width: 100% !important;
+      height: auto !important;
+   }
+}
+
 .blog-excerpt-container {
    margin-top: 35px;
    
